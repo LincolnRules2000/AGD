@@ -1,0 +1,11 @@
+//snowman base
+polySphere -r 5 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 5 0;
+
+//snowman middle
+polySphere -r 3 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 12 0;
+
+//snowman head
+polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 15.5 0;
