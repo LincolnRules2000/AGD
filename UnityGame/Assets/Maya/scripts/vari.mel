@@ -1,0 +1,15 @@
+/*int $numb;
+$numb - 1; */
+float $size = 3;
+string $name1 = "base";
+string $name2 = "middle";
+string $name3 = "head";
+
+polySphere -n $name1 -r $size -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 $size 0;
+
+polySphere -n $name2 -r ($size-1) -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 (($size*2)+($size-1)*0.9) 0;
+
+polySphere -n $name3 -r ($size-2) -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
+move -r -os -wd 0 (($size*2)+(($size-1)*2)+($size-2)*0.6) 0;
