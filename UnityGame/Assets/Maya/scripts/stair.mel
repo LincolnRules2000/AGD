@@ -1,0 +1,11 @@
+proc staircase(int $stairs, int $width, int $height, int $length, int $offset, int $stepheight, int $rot){
+    polyCylinder -r 1 -h 20 -sx 20 -sy 1 -sz 1 -ax 0 1 0 -rcp 0 -cuv 3 -ch 1;
+    move -r -os -wd 0 10 0;
+    for($i=0; $i<=$stairs; $i++){
+        polyCube -w $width -h $height -d $length -sx 1 -sy 1 -sz 1 -ax 0 1 0 -cuv 4 -ch 1;
+        move -r -os -wd (($stepheight*-1)*$i) ($stepheight*$i) $offset;
+        rotate -r -os -xyz 0 (($rot*-1)*$i) 0;
+    }
+}
+
+staircase(5,1,1,10,5,2,20);
