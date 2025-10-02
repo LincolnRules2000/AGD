@@ -2,9 +2,9 @@
 //sub - done
 //mult - done
 //div - done
-//pow 
+//pow - done
 //avg - done
-//med
+//med - done
 
 global proc float math_sum(float $input[]){
     float $result = 0;
@@ -15,8 +15,8 @@ global proc float math_sum(float $input[]){
 }
 
 global proc float math_diff(float $input[]){
-    float $result = 0;
-    for($i=0; $i<size($input); $i++){
+    float $result = $input[0];
+    for($i=1; $i<size($input); $i++){
         $result -= $input[$i];
     }
     return $result;
@@ -52,24 +52,69 @@ global proc float math_mean(float $input[]){
     return $sum/size($input);
 }
 
+global proc float math_med(float $input[]){
+    $input = `sort $input`;
+    float $result = 0;
+    int $isize = size($input);
+    if(size($input)%2 == 0){
+        $result = ($input[$isize/2]+ $input[($isize/2)-1])/2;
+        return $result;
+    }
+    else{
+        $result = $input[$isize/2];
+        return $result;
+    }
+}
+
 global proc calculator(string $funct, float $arry[]){
     if($funct == "add"){
-        print("Sum: " + math_sum($arry));
+        print("Sum of ");
+        for($i=0; $i<size($arry); $i++){
+            print($arry[$i] + " ");
+        }
+        print("is: " + math_sum($arry));
     }
     else if($funct == "sub"){
-        print("Diff: " + math_diff($arry));
+        print("Difference of ");
+        for($i=0; $i<size($arry); $i++){
+            print($arry[$i] + " ");
+        }
+        print("is: " + math_diff($arry));
     }
     else if($funct == "mult"){
-        print("Prod: " + math_prod($arry));
+        print("Product of ");
+        for($i=0; $i<size($arry); $i++){
+            print($arry[$i] + " ");
+        }
+        print("is: " + math_prod($arry));
     }
     else if($funct == "div"){
-        print("Quot: " + math_quot($arry));
+        print("Quotient of ");
+        for($i=0; $i<size($arry); $i++){
+            print($arry[$i] + " ");
+        }
+        print("is: " + math_quot($arry));
     }
     else if($funct == "pow"){
-        print("Pow: " + math_pow($arry));
+        print("Power of ");
+        for($i=0; $i<size($arry); $i++){
+            print($arry[$i] + " ");
+        }
+        print("is: " + math_pow($arry));
     }
     else if($funct == "avg"){
-        print("Avg: " + math_mean($arry));
+        print("Avg of ");
+        for($i=0; $i<size($arry); $i++){
+            print($arry[$i] + " ");
+        }
+        print("is: " + math_mean($arry));
+    }
+    else if($funct == "med"){
+        print("Median of ");
+        for($i=0; $i<size($arry); $i++){
+            print($arry[$i] + " ");
+        }
+        print("is: " + math_med($arry));
     }
     else{
         print("Invalid function.");
