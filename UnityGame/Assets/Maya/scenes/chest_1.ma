@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: chest_1.ma
-//Last modified: Tue, Oct 07, 2025 09:10:41 PM
+//Last modified: Tue, Oct 07, 2025 09:29:38 PM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "materialxStack" -nodeType "MaterialXSurfaceShader" -dataType "MxDocumentStackData"
@@ -14,7 +14,7 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "BE41CBE1-4948-10F7-5DFA-B8BB219C9729";
+fileInfo "UUID" "18DCDC22-4699-EE65-5B3A-10BFBCA0C783";
 createNode transform -s -n "persp";
 	rename -uid "4EDBAAEB-44A8-44B0-F40A-4D838F3B1EFB";
 	setAttr ".v" no;
