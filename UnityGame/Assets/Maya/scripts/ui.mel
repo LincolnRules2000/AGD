@@ -1,0 +1,32 @@
+string $window = `window -title "Duplication" -widthHeight 500 400`;
+gridLayout -numberOfColumns 2 -cellWidthHeight 100 100;
+    text -label "Number of duplicates:";
+    intField field1;
+    text -label "X range:";
+    floatField xfield;
+    text -label "Y range:";
+    floatField yfield;
+    text -label "Z range:";
+    floatField zfield;
+    button -label "Duplicate objects" -command "randomPlace()";
+showWindow $window;
+
+global proc randomPlace(){
+    int $numb = `intField -q -v field1`;
+    float $xval = `floatField -q -v xfield`;
+    float $yval = `floatField -q -v yfield`;
+    float $zval = `floatField -q -v zfield`;
+    string $inp[] = `ls -sl`;
+
+    if(size($inp) == 0){
+        error "no object selected";
+    }
+    else{
+        for($o=0; $o<size($inp); $o++){
+            for($i=0; $i<$numb; $i++){
+                duplicate($inp[$o]);
+                move -xyz (rand($xval))  (rand($yval)) (rand($zval)) $inp[$o];
+            }
+        }
+    }
+}
