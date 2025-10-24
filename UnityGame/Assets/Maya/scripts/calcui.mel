@@ -1,135 +1,86 @@
-
-
-global proc float math_sum(float $input[]){
-    float $result = 0;
-    for($i=0; $i<size($input); $i++){
-        $result += $input[$i];
-    }
-    return $result;
-}
-
-global proc float math_diff(float $input[]){
-    float $result = $input[0];
-    for($i=1; $i<size($input); $i++){
-        $result -= $input[$i];
-    }
-    return $result;
-}
-
-global proc float math_prod(float $input[]){
-    float $result = 1;
-    for($i=0; $i<size($input); $i++){
-        $result *= $input[$i];
-    }
-    return $result;
-}
-
-global proc float math_quot(float $input[]){
-    float $result = $input[0];
-    for($i=1; $i<size($input); $i++){
-        $result /= $input[$i];
-    }
-    return $result;
-}
-
-global proc float math_pow(float $input[]){
-    float $result = 0;
-    for($i=0; $i<size($input)-1; $i++){
-        float $res = pow($input[$i],$input[$i+1]);
-        $result += $res;
-    }
-    return $result;
-}
-
-global proc float math_mean(float $input[]){
-    float $sum = math_sum($input);
-    return $sum/size($input);
-}
-
-global proc float math_med(float $input[]){
-    $input = `sort $input`;
-    float $result = 0;
-    int $isize = size($input);
-    if(size($input)%2 == 0){
-        $result = ($input[$isize/2]+ $input[($isize/2)-1])/2;
-        return $result;
-    }
-    else{
-        $result = $input[$isize/2];
-        return $result;
-    }
-}
-
-global proc calculator(string $funct, float $arry[]){
+global proc float calculator(string $funct, float $input[]){
     if($funct == "add"){
-        print("Sum of ");
-        for($i=0; $i<size($arry); $i++){
-            print($arry[$i] + " ");
+        float $result = 0;
+        for($i=0; $i<size($input); $i++){
+            $result += $input[$i];
         }
-        print("is: " + math_sum($arry));
+        return $result;
     }
-    else if($funct == "sub"){
-        print("Difference of ");
-        for($i=0; $i<size($arry); $i++){
-            print($arry[$i] + " ");
+    else if($funct == "subtract"){
+        float $result = $input[0];
+        for($i=1; $i<size($input); $i++){
+            $result -= $input[$i];
         }
-        print("is: " + math_diff($arry));
+        return $result;
     }
-    else if($funct == "mult"){
-        print("Product of ");
-        for($i=0; $i<size($arry); $i++){
-            print($arry[$i] + " ");
+    else if($funct == "multiply"){
+        float $result = 1;
+        for($i=0; $i<size($input); $i++){
+            $result *= $input[$i];
         }
-        print("is: " + math_prod($arry));
+        return $result;
     }
-    else if($funct == "div"){
-        print("Quotient of ");
-        for($i=0; $i<size($arry); $i++){
-            print($arry[$i] + " ");
+    else if($funct == "divide"){
+        float $result = $input[0];
+        for($i=1; $i<size($input); $i++){
+            $result /= $input[$i];
         }
-        print("is: " + math_quot($arry));
+        return $result;
     }
-    else if($funct == "pow"){
-        print("Power of ");
-        for($i=0; $i<size($arry); $i++){
-            print($arry[$i] + " ");
+    else if($funct == "power"){
+        float $result = 0;
+        for($i=0; $i<size($input)-1; $i++){
+            float $res = pow($input[$i],$input[$i+1]);
+            $result += $res;
         }
-        print("is: " + math_pow($arry));
+        return $result;
     }
-    else if($funct == "avg"){
-        print("Avg of ");
-        for($i=0; $i<size($arry); $i++){
-            print($arry[$i] + " ");
-        }
-        print("is: " + math_mean($arry));
+    else if($funct == "average"){
+        float $sum = math_sum($input);
+        return $sum/size($input);
     }
     else if($funct == "med"){
-        print("Median of ");
-        for($i=0; $i<size($arry); $i++){
-            print($arry[$i] + " ");
+        $input = `sort $input`;
+        float $result = 0;
+        int $isize = size($input);
+        if(size($input)%2 == 0){
+            $result = ($input[$isize/2]+ $input[($isize/2)-1])/2;
+            return $result;
         }
-        print("is: " + math_med($arry));
+        else{
+            $result = $input[$isize/2];
+            return $result;
+        }
     }
     else{
         print("Invalid function.");
     }
+    return 0;
 }
 
 global proc Calc(){
-    string $calcwindow[] = `window -title "Calculator" -widthHeight 400 400`;
-    gridLayout - numberOfColumns -2 cellWidthHeight - 150 150;
+    string $calcwindow = `window -title "Calculator" -widthHeight 400 400`;
+    gridLayout -numberOfColumns 2 -cellWidthHeight 150 50;
     text -label "Operation:";
-    textField - text "add";
+    string $oper = `textField oper`;
     text -label "Numbers:";
-    textField -text "1,2,3" args;
-    string $operation = textField -q -text operation;
-    string $args = textField args;
-    button -label "Calculate" -command (CalculateResult);
-    text -label "Result";
+    string $args = `textField args`;
+    button -label "Calculate" -bgc 0 0 1 -command ("CalculateResult(\"" + $oper + "\", \"" + $args + "\")");
+    text -label "Result" result;
 
     showWindow $calcwindow;
 }
 
-global proc CalculateResult(){
-    
+global proc CalculateResult(string $operat, string $input){
+    string $operfield = `textField -q -text oper`;
+    string $inpfield = `textField -q -text args`;
+    string $args[] = stringToStringArray($inpfield, ",");
+    float $nums[];
+    for($arg in $args){
+        $nums[size($nums)] = (float)$arg;
+    } 
+    float $result = calculator($operfield, $nums);
+    text -edit -label("Result: "+$result) result;
 }
+
+Calc();
