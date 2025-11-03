@@ -119,3 +119,7 @@ UnityGame/Assets/Maya/exports/chest.fbx
 UnityGame/Assets/Maya/exports/cliff1.fbx
 
 *.fbx
+
+UnityGame/Assets/Maya/scenes/.mayaSwatches/vit_walk.ma.swatches
+
+UnityGame/Assets/Maya/scenes/vit_walk.ma
