@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
-//Name: gatewall.ma
-//Last modified: Tue, Nov 18, 2025 12:30:44 AM
+//Name: gatewall_2.ma
+//Last modified: Tue, Nov 18, 2025 07:56:02 PM
 //Codeset: 1252
 file -rdi 1 -ns "chest2" -rfn "chest2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/AGD/UnityGame/Assets/Maya//scenes/chest2.ma";
 file -rdi 2 -ns "chest_1" -rfn "chest2:chest_1RN" -op "v=0;" -typ "mayaAscii"
@@ -11,9 +11,8 @@ requires -nodeType "materialxStack" -nodeType "MaterialXSurfaceShader" -dataType
 		 "LookdevXMaya" "1.6.0";
 requires -nodeType "polyBoolean" "polyBoolean" "1.1";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
-		 -nodeType "aiAreaLight" -nodeType "aiStandardSurface" -nodeType "aiPhysicalSky" -nodeType "aiImagerDenoiserOidn"
-		 "mtoa" "5.4.5";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiStandardSurface"
+		 -nodeType "aiPhysicalSky" -nodeType "aiImagerDenoiserOidn" "mtoa" "5.4.5";
 requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -21,17 +20,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "C392B509-480F-DED7-5EFB-C4BD4A159BF6";
+fileInfo "UUID" "B07219DA-4A41-D845-2BDA-EE95768F8CB1";
 createNode transform -s -n "persp";
 	rename -uid "DEE379A6-4057-FC1D-81DC-D79595E17956";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 18.868599517477055 6.3988823733074964 -112.43804682054258 ;
-	setAttr ".r" -type "double3" 3.2616472713699118 890.99999999992838 0 ;
+	setAttr ".t" -type "double3" 294.03460019599379 65.695484826714946 131.73667831880786 ;
+	setAttr ".r" -type "double3" -8.1383527286288686 789.7999999998965 -2.3027593907761726e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2FD329E4-4BD1-29A8-001E-DC86D0C077D4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 98.927863733060903;
+	setAttr ".coi" 359.08471949235809;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1836,42 +1835,6 @@ createNode mesh -n "pCubeShape34" -p "pCube34";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "aiAreaLight1";
-	rename -uid "9C287F14-4726-C4AE-C377-28AA3E7D88B4";
-	setAttr ".t" -type "double3" 0 20.124044813019925 53 ;
-	setAttr ".s" -type "double3" 30.851202987541313 30.851202987541313 30.851202987541313 ;
-createNode aiAreaLight -n "aiAreaLightShape1" -p "aiAreaLight1";
-	rename -uid "2DA328A2-47F3-3F59-43C5-2A8E1A5ABE63";
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -k off ".v";
-	setAttr ".csh" no;
-	setAttr ".rcsh" no;
-	setAttr ".sc" -type "float3" 0.38350001 0.068300001 0 ;
-	setAttr ".ai_exposure" 14.740259170532227;
-	setAttr ".ai_translator" -type "string" "quad";
-	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
-createNode transform -n "aiSkyDomeLight2";
-	rename -uid "D6A9E7C5-4592-388A-A9B2-A5A8961AAAFA";
-createNode aiSkyDomeLight -n "aiSkyDomeLightShape2" -p "aiSkyDomeLight2";
-	rename -uid "DF1D47B8-4522-0241-93F4-7B89207C5315";
-	setAttr -k off ".v";
-	setAttr ".camera" 0.43243244290351868;
-	setAttr ".ai_exposure" -0.25974026322364807;
-createNode transform -n "aiAreaLight2";
-	rename -uid "ACD9E39A-4DEE-7C4E-115E-B791BBCA7EAF";
-	setAttr ".t" -type "double3" 0 82 39 ;
-	setAttr ".r" -type "double3" -27.62934483945152 0 0 ;
-	setAttr ".s" -type "double3" 30.851202987541313 30.851202987541313 30.851202987541313 ;
-createNode aiAreaLight -n "aiAreaLightShape2" -p "aiAreaLight2";
-	rename -uid "F32DEBC5-4FCE-A98E-D639-2A89D394678A";
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -k off ".v";
-	setAttr ".csh" no;
-	setAttr ".rcsh" no;
-	setAttr ".sc" -type "float3" 0.38350001 0.068300001 0 ;
-	setAttr ".ai_exposure" 14.740259170532227;
-	setAttr ".ai_translator" -type "string" "quad";
-	setAttr ".aal" -type "attributeAlias" 4 "exposure" "aiExposure" "normalize" "aiNormalize" ;
 createNode transform -n "chest2:chest_1:hinge1_chest2:chest_1:pCylinder5";
 	rename -uid "764AF4EF-4878-0BDD-D2B2-5E8E773209A1";
 	setAttr ".t" -type "double3" 16 1.497206062078476 9.3907668383884051 ;
@@ -1889,8 +1852,36 @@ createNode mesh -n "chest2:chest_1:hinge1_chest2:chest_1:pCylinder5Shape" -p "ch
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "spotLight1";
+	rename -uid "7E34FE58-4710-220C-BF35-43BC34AC4520";
+	setAttr ".t" -type "double3" 93.905361889014685 25.62057274427886 121.56067528461847 ;
+	setAttr ".r" -type "double3" 0 26.985938681649852 0 ;
+	setAttr ".s" -type "double3" 27.505156621436441 27.505156621436441 27.505156621436441 ;
+createNode spotLight -n "spotLightShape1" -p "spotLight1";
+	rename -uid "36164E46-4ED6-02E9-6F7D-CAAF5F492D1F";
+	setAttr -k off ".v";
+	setAttr ".ai_exposure" 16.818181991577148;
+createNode transform -n "spotLight2";
+	rename -uid "3363D2A3-4B2F-9231-6866-1AA2DFBBC235";
+	setAttr ".t" -type "double3" -112.64950968052952 29.916921085219812 115.42519995360851 ;
+	setAttr ".r" -type "double3" -15.254787187037032 -34.968059481008531 2.6351053422378272 ;
+	setAttr ".s" -type "double3" 27.505156621436441 27.505156621436441 27.505156621436441 ;
+createNode spotLight -n "spotLightShape2" -p "spotLight2";
+	rename -uid "ED70BAB7-4162-43BF-5247-9E965E1712EC";
+	setAttr -k off ".v";
+	setAttr ".ai_exposure" 13.99350643157959;
+createNode transform -n "spotLight3";
+	rename -uid "B07C7BE2-4B6B-B963-A716-FD91827CA538";
+	setAttr ".t" -type "double3" -89.30602674481257 22.999999999994749 -162.99106797172317 ;
+	setAttr ".r" -type "double3" 0 -160.6899543947211 0 ;
+	setAttr ".s" -type "double3" 27.505156621436441 27.505156621436441 27.505156621436441 ;
+createNode spotLight -n "spotLightShape3" -p "spotLight3";
+	rename -uid "59102E5D-4326-9A8E-F676-9A828DA88362";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 0.93220001 0.80559999 0.93379998 ;
+	setAttr ".ai_exposure" 16.205936431884766;
 createNode fosterParent -n "chest2RNfosterParent1";
-	rename -uid "A63544EE-4598-DC3F-F0D0-55A8B45DA247";
+	rename -uid "5FB0FAC8-4C97-AA31-B297-F4835185916E";
 createNode transform -n "chest2:chest_1:hinge1_chest2:chest_1:transform9" -p "chest2RNfosterParent1";
 	rename -uid "21CC4655-475A-4D92-AAF2-A785D37F7EE9";
 	setAttr ".v" no;
@@ -4236,7 +4227,6 @@ connectAttr "groupId45.id" "pCubeShape26.ciog.cog[1].cgid";
 connectAttr "polyCube5.out" "pCubeShape27.i";
 connectAttr "polyTweakUV12.out" "pCylinderShape1.i";
 connectAttr "polyTweakUV12.uvtk[0]" "pCylinderShape1.uvst[0].uvtw";
-connectAttr "aiPhysicalSky1.out" "aiSkyDomeLightShape2.sc";
 connectAttr "chest2:chest_1:hinge1_chest2:chest_1:groupParts2.og" "chest2:chest_1:hinge1_chest2:chest_1:pCylinder5Shape.i"
 		;
 connectAttr "chest2:chest_1:hinge1_chest2:chest_1:groupId25.id" "chest2:chest_1:hinge1_chest2:chest_1:pCylinder5Shape.iog.og[0].gid"
@@ -5112,9 +5102,9 @@ connectAttr "bump2d6.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "place2dTexture7.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "bump2d7.msg" ":defaultRenderUtilityList1.u" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "aiAreaLightShape1.ltd" ":lightList1.l" -na;
-connectAttr "aiSkyDomeLightShape2.ltd" ":lightList1.l" -na;
-connectAttr "aiAreaLightShape2.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape2.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape3.ltd" ":lightList1.l" -na;
 connectAttr "file1.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file3.msg" ":defaultTextureList1.tx" -na;
@@ -5224,7 +5214,7 @@ connectAttr "groupId42.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId43.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId44.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId45.msg" ":initialShadingGroup.gn" -na;
-connectAttr "aiAreaLight1.iog" ":defaultLightSet.dsm" -na;
-connectAttr "aiSkyDomeLight2.iog" ":defaultLightSet.dsm" -na;
-connectAttr "aiAreaLight2.iog" ":defaultLightSet.dsm" -na;
-// End of gatewall.ma
+connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight2.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight3.iog" ":defaultLightSet.dsm" -na;
+// End of gatewall_2.ma
