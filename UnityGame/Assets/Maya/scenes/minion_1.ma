@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: minion_1.ma
-//Last modified: Wed, Nov 19, 2025 01:54:13 AM
+//Last modified: Fri, Nov 21, 2025 12:56:22 AM
 //Codeset: 1252
 file -rdi 1 -ns "Minion" -rfn "MinionRN" -op "v=0;" -typ "mayaAscii" "C:/Users/lsrwh/OneDrive/Desktop/Minion.ma";
 file -rdi 1 -ns "sword" -rfn "swordRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/AGD/UnityGame/Assets/Maya//scenes/sword.ma";
@@ -17,17 +17,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "6814676C-4AA8-D313-59BD-518CFBDE03EE";
+fileInfo "UUID" "84AB8DE2-405B-0DBB-92C6-0E9E5C08CD6F";
 createNode transform -s -n "persp";
 	rename -uid "3DD37008-456E-7D0A-3258-9EAFB9353164";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.5038289940544534 2.9878996099006168 1.2734914091232281 ;
-	setAttr ".r" -type "double3" -0.3383527295096056 432.19999999950807 1.6256764853662486e-16 ;
+	setAttr ".t" -type "double3" -0.2155068607414915 2.676575803535131 10.185239638528564 ;
+	setAttr ".r" -type "double3" -0.33835273693827084 719.39999999997042 1.5530903724889068e-18 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D54FD51F-4E7E-C871-46B6-EE89B9C1D56F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 3.7518461466542381;
+	setAttr ".coi" 9.7130278075414509;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -85,7 +85,7 @@ createNode camera -s -n "sideShape" -p "side";
 createNode transform -n "sword:knob1";
 	rename -uid "A41E6F82-4AF9-6AB7-33E6-69854AD907DB";
 	setAttr ".t" -type "double3" -1.398499490111345 -6.7635035722279717 0.15465987590272301 ;
-	setAttr ".r" -type "double3" 0 91.132083459649593 0 ;
+	setAttr ".r" -type "double3" 0 91.132083459649607 0 ;
 	setAttr ".s" -type "double3" 0.15656784986336938 0.15656784986336938 0.15656784986336938 ;
 	setAttr ".rp" -type "double3" 0 9.185406753837535 -7.5707777297262524e-08 ;
 	setAttr ".rpt" -type "double3" 0 0 5.2939559203393771e-23 ;
@@ -93,6 +93,7 @@ createNode transform -n "sword:knob1";
 createNode mesh -n "sword:knobShape" -p "sword:knob1";
 	rename -uid "8D7ED9D9-4695-E268-B6E3-A999F6A0393A";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -102,8 +103,9 @@ createNode mesh -n "sword:knobShape" -p "sword:knob1";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pSphere1";
 	rename -uid "BBCD3861-4767-1175-D519-2E92E61901BC";
-	setAttr ".t" -type "double3" 4 3 0 ;
-	setAttr ".r" -type "double3" -90 0 0 ;
+	setAttr ".t" -type "double3" 1.410846819643212 1.7949375608260461 0.023544221482598909 ;
+	setAttr ".r" -type "double3" -97.169079967351678 0 0 ;
+	setAttr ".s" -type "double3" 0.57412052782091771 0.57412052782091771 0.57412052782091771 ;
 createNode mesh -n "pSphereShape1" -p "pSphere1";
 	rename -uid "12CC1D2B-43E0-313A-8C6E-37ADC47CDCD1";
 	setAttr -k off ".v";
@@ -216,10 +218,96 @@ createNode mesh -n "pSphereShape1" -p "pSphere1";
 		0 1.0885956 -0.004436973 0 -0.83919656 -0.0045570508;
 createNode transform -n "pCube1";
 	rename -uid "1044414A-43D4-F540-3746-7286A167047E";
-	setAttr ".t" -type "double3" 4 3 0.12759601168948598 ;
+	setAttr ".t" -type "double3" 1.410846819643212 1.7949375608260461 0.023544221482598909 ;
+	setAttr ".r" -type "double3" -7.1690799673516157 0 0 ;
+	setAttr ".s" -type "double3" 0.57412052782091771 0.57412052782091771 0.57412052782091771 ;
 createNode mesh -n "pCubeShape1" -p "pCube1";
 	rename -uid "C3FE2641-472B-D253-253C-598CC078F6FB";
 	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 6 ".pt";
+	setAttr ".pt[8]" -type "float3" 0 0 0.25010446 ;
+	setAttr ".pt[9]" -type "float3" 0 0 0.24594069 ;
+	setAttr ".pt[10]" -type "float3" 0 0 0.24594069 ;
+	setAttr ".pt[11]" -type "float3" 0 0 0.25010446 ;
+	setAttr ".pt[14]" -type "float3" 0 0 0.28847587 ;
+	setAttr ".pt[17]" -type "float3" 0 0 0.29223371 ;
+createNode transform -n "pCube2";
+	rename -uid "0143D844-408D-08C7-8E0A-7B9A25E04FFD";
+	setAttr ".t" -type "double3" -1.3573409820035229 2.6674857528021443 0.14218711108547299 ;
+createNode transform -n "transform4" -p "pCube2";
+	rename -uid "E1189D3E-4CB1-41A0-07C4-1DB96F88DD31";
+	setAttr ".v" no;
+createNode mesh -n "pCubeShape2" -p "transform4";
+	rename -uid "E14333E1-4657-A50E-C122-37BD7401A619";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 14 ".pt[0:13]" -type "float3"  -6.4392935e-15 0.16033328 
+		-0.034304067 -6.4392935e-15 0.16033328 0.034304067 -6.8417494e-15 -0.16033328 3.9474022e-17 
+		-6.6405215e-15 -0.16033328 -0.034304067 -6.8417494e-15 0.13268597 3.9474022e-17 -6.6405215e-15 
+		0.15158167 -0.034304067 -6.0368377e-15 -0.16033328 -3.9474022e-17 -6.2380656e-15 
+		-0.16033328 -0.034304067 -6.0368377e-15 0.13268597 -3.9474022e-17 -6.2380656e-15 
+		0.15158167 -0.034304067 -6.6405215e-15 -0.16033328 0.034304067 -6.6405215e-15 0.15158167 
+		0.034304067 -6.2380656e-15 -0.16033328 0.034304067 -6.2380656e-15 0.15158167 0.034304067;
+createNode transform -n "pCube3";
+	rename -uid "C79BCEA3-435A-DBA2-7CB3-B5BAF5B1350C";
+	setAttr ".t" -type "double3" -1.3573409820035229 2.0040926262198533 0.14218711108547299 ;
+createNode transform -n "transform3" -p "pCube3";
+	rename -uid "42503106-42EE-C8BA-80D1-4DB0ED3DBB59";
+	setAttr ".v" no;
+createNode mesh -n "pCubeShape3" -p "transform3";
+	rename -uid "356C92F4-4EF6-DE9E-AA3E-9AA4DA907094";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.625 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 30 ".pt[0:29]" -type "float3"  0.046978433 -5.5879354e-09 
+		-0.066745535 -0.046978433 -5.5879354e-09 -0.066745535 0.046978433 2.7939677e-09 -0.066745535 
+		-0.046978433 2.7939677e-09 -0.066745535 0.046978433 2.7939677e-09 0.066745535 -0.046978433 
+		2.7939677e-09 0.066745535 0.046978433 -5.5879354e-09 0.066745535 -0.046978433 -5.5879354e-09 
+		0.066745535 0 -0.017597441 -0.066745535 0 -0.017597441 0.066745535 0 0.017597459 
+		0.066745535 0 0.017597459 -0.066745535 0.046978433 2.7939677e-09 0 0.046978433 -5.5879354e-09 
+		0 0 0.017597459 0 -0.046978433 -5.5879354e-09 0 -0.046978433 2.7939677e-09 0 0 -0.017597441 
+		0 0.023489216 -0.017597441 -0.066745535 0.023489216 -0.017597441 0 0.023489216 -0.017597441 
+		0.066745535 0.023489216 0.017597459 0.066745535 0.023489216 0.017597459 0 0.023489216 
+		0.017597459 -0.066745535 -0.023489216 -0.017597441 -0.066745535 -0.023489216 -0.017597441 
+		0 -0.023489216 -0.017597441 0.066745535 -0.023489216 0.017597474 0.066745535 -0.023489216 
+		0.017597459 0 -0.023489216 0.017597459 -0.066745535;
+createNode transform -n "pCylinder1";
+	rename -uid "EBAFD572-40BF-22DD-A058-FD984CFC5EAA";
+	setAttr ".t" -type "double3" -1.3573409820035229 1.8158851270770247 0.14249938934318018 ;
+	setAttr ".s" -type "double3" 0.047276628922300105 0.047276628922300105 0.047276628922300105 ;
+createNode transform -n "transform2" -p "pCylinder1";
+	rename -uid "C23FC651-4D5A-9513-E3BE-1EBD495DE6D5";
+	setAttr ".v" no;
+createNode mesh -n "pCylinderShape1" -p "transform2";
+	rename -uid "C241040F-4CA6-8228-4779-61A4BFA2CF94";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -227,12 +315,83 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[0:7]" -type "float3"  0.3593384 -0.40152016 -0.47985744 
-		-0.3593384 -0.40152016 -0.47985744 0.3593384 0.40152016 -0.47985744 -0.3593384 0.40152016 
-		-0.47985744 0.3593384 0.40152016 0.47985744 -0.3593384 0.40152016 0.47985744 0.3593384 
-		-0.40152016 0.47985744 -0.3593384 -0.40152016 0.47985744;
+	setAttr -s 42 ".pt[0:41]" -type "float3"  3.9201975e-13 -2.884829 1.3322676e-15 
+		3.9201975e-13 -2.884829 5.884182e-15 3.9201975e-13 -2.884829 5.884182e-15 3.9496184e-13 
+		-2.884829 5.884182e-15 3.9790393e-13 -2.884829 1.1768364e-14 4.0084602e-13 -2.884829 
+		5.884182e-15 4.0378811e-13 -2.884829 5.884182e-15 4.0378811e-13 -2.884829 5.884182e-15 
+		4.0378811e-13 -2.884829 4.5519144e-15 4.096723e-13 -2.884829 1.1631444e-15 4.0378811e-13 
+		-2.884829 -1.3322676e-15 4.0378811e-13 -2.884829 -5.884182e-15 4.0378811e-13 -2.884829 
+		-5.884182e-15 4.0084602e-13 -2.884829 -5.884182e-15 3.9790393e-13 -2.884829 -1.1768364e-14 
+		3.9496184e-13 -2.884829 -5.884182e-15 3.9201975e-13 -2.884829 -5.884182e-15 3.9201975e-13 
+		-2.884829 -5.884182e-15 3.9201975e-13 -2.884829 -4.5519144e-15 3.9679371e-13 -2.884829 
+		-1.1631442e-15 3.9201975e-13 2.884829 1.3322676e-15 3.9201975e-13 2.884829 5.884182e-15 
+		3.9201975e-13 2.884829 5.884182e-15 3.9496184e-13 2.884829 5.884182e-15 3.9790393e-13 
+		2.884829 1.1768364e-14 4.0084602e-13 2.884829 5.884182e-15 4.0378811e-13 2.884829 
+		5.884182e-15 4.0378811e-13 2.884829 5.884182e-15 4.0378811e-13 2.884829 4.5519144e-15 
+		4.096723e-13 2.884829 1.1631444e-15 4.0378811e-13 2.884829 -1.3322676e-15 4.0378811e-13 
+		2.884829 -5.884182e-15 4.0378811e-13 2.884829 -5.884182e-15 4.0084602e-13 2.884829 
+		-5.884182e-15 3.9790393e-13 2.884829 -1.1768364e-14 3.9496184e-13 2.884829 -5.884182e-15 
+		3.9201975e-13 2.884829 -5.884182e-15 3.9201975e-13 2.884829 -5.884182e-15 3.9201975e-13 
+		2.884829 -4.5519144e-15 3.9679371e-13 2.884829 -1.1631442e-15 3.9790393e-13 -2.884829 
+		1.4290856e-28 3.9790393e-13 2.884829 1.4290856e-28;
+createNode transform -n "pSphere2";
+	rename -uid "661EFDAB-4E56-BBA1-F95C-4DA2DC608153";
+	setAttr ".t" -type "double3" -1.3576229206711128 1.5960774697789832 0.14299300017993291 ;
+	setAttr ".s" -type "double3" 0.060277110845469307 0.060277110845469307 0.060277110845469307 ;
+createNode transform -n "transform1" -p "pSphere2";
+	rename -uid "F48DE525-41BB-FBD3-8BF7-98B7587F20B2";
+	setAttr ".v" no;
+createNode mesh -n "pSphereShape2" -p "transform1";
+	rename -uid "0F87FD9A-4B7A-DA51-F592-5E8981B782A0";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube4";
+	rename -uid "EF55AD79-4830-34C2-E196-9F81B7545587";
+	setAttr ".t" -type "double3" 0 0.021966441054936059 0 ;
+	setAttr ".s" -type "double3" 1.1204879381600374 1.1204879381600374 1.1204879381600374 ;
+	setAttr ".rp" -type "double3" -1.3573409820035229 2.2743925277202521 0.14299298940154559 ;
+	setAttr ".sp" -type "double3" -1.3573409820035229 2.2743925277202521 0.14299298940154559 ;
+createNode mesh -n "pCube4Shape" -p "pCube4";
+	rename -uid "4359B494-41A4-B9A5-F8C3-37ADCC4775A7";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pSphere3";
+	rename -uid "92848612-4A86-37AF-00EF-E288D3767159";
+	setAttr ".t" -type "double3" 0 2.3520081764645693 0.058012054063048712 ;
+	setAttr ".s" -type "double3" 0.5721804261064829 0.5721804261064829 0.5721804261064829 ;
+createNode mesh -n "pSphereShape3" -p "pSphere3";
+	rename -uid "25BED1BA-4123-CDBD-7FA3-3AB7188C76DF";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.7000001072883606 0.45726941525936127 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".pt";
+	setAttr ".pt[13]" -type "float3" 0.14147846 0 0 ;
+	setAttr ".pt[15]" -type "float3" -0.14147846 0 0 ;
+	setAttr ".pt[214]" -type "float3" 0.14147846 0 0 ;
+	setAttr ".pt[216]" -type "float3" -0.14147846 0 0 ;
 createNode fosterParent -n "swordRNfosterParent1";
-	rename -uid "60DA11DD-4B3D-67DA-C15A-528ED46E1E52";
+	rename -uid "8481263A-43F2-0F43-0D2E-1A97798FBA48";
 createNode transform -n "sword:transform4" -p "swordRNfosterParent1";
 	rename -uid "ADA8C44F-4BEA-BE22-11BD-B5AA0BBDC11C";
 	setAttr ".v" no;
@@ -246,20 +405,20 @@ createNode transform -n "sword:transform1" -p "swordRNfosterParent1";
 	rename -uid "6826F6C4-4A5F-8B55-DCDB-B2A860F9A822";
 	setAttr ".v" no;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "2363BAE4-4526-7469-456E-0DB746E6509C";
+	rename -uid "3FAC52D6-481C-7D59-D89C-C2B83B7BB470";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D2ABBE60-4FF5-818B-EF74-88829B961C2A";
+	rename -uid "F03107EB-4255-873C-B2A8-D08E73CD8B90";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F0AC0EBC-41B7-BE93-E251-BDB0F3BCF1B0";
+	rename -uid "A7AAFB15-43E0-BB32-AA00-F7A0369B2ABC";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7AEB0257-4E43-25FF-185D-958EDC5F7F8D";
+	rename -uid "17BAA9D7-4510-482D-A24C-32A601A2CC33";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7257E622-4723-9104-9D5B-0492523A7859";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "43A55212-45E9-4B47-8BD5-F19AC41F969C";
+	rename -uid "4BF28894-42E6-64BD-231D-538A7CBF4CF0";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C5111FBA-4E1B-F4A6-0B1C-228E2A1D98D7";
 	setAttr ".g" yes;
@@ -292,49 +451,11 @@ lockNode -l 1 ;
 createNode reference -n "swordRN";
 	rename -uid "824F7A15-4F45-BF9E-0689-609C9395C610";
 	setAttr -s 57 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
 	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
 	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
-	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
-	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
-	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
-	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
-	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
-	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
-	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
-	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
-	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
-	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
-	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
-	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
-	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
 	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
 	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
 	setAttr ".phl[44]" 0;
 	setAttr ".phl[45]" 0;
 	setAttr ".phl[46]" 0;
@@ -349,67 +470,49 @@ createNode reference -n "swordRN";
 	setAttr ".phl[55]" 0;
 	setAttr ".phl[56]" 0;
 	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
+	setAttr ".phl[89]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"swordRN"
-		"swordRN" 0
-		"swordRN" 77
-		0 "|sword:bladeShape" "|swordRNfosterParent1|sword:transform1" "-s -r "
-		0 "|sword:crossguardShape" "|swordRNfosterParent1|sword:transform2" "-s -r "
-		
-		0 "|sword:hiltShape" "|swordRNfosterParent1|sword:transform3" "-s -r "
+		"swordRN" 13
 		0 "|sword:knobShape" "|swordRNfosterParent1|sword:transform4" "-s -r "
-		0 "|swordRNfosterParent1|sword:transform1" "|sword:blade" "-s -r "
-		0 "|swordRNfosterParent1|sword:transform2" "|sword:crossguard" "-s -r "
-		0 "|swordRNfosterParent1|sword:transform3" "|sword:hilt" "-s -r "
-		0 "|swordRNfosterParent1|sword:transform4" "|sword:knob" "-s -r "
-		2 "|sword:blade" "scale" " -type \"double3\" 1 1 1"
-		2 "|swordRNfosterParent1|sword:transform1|sword:bladeShape" "intermediateObject" 
-		" 1"
-		2 "|swordRNfosterParent1|sword:transform1|sword:bladeShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|swordRNfosterParent1|sword:transform1|sword:bladeShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|sword:crossguard" "scale" " -type \"double3\" 1 1 1"
-		2 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape" "intermediateObject" 
-		" 1"
-		2 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|sword:hilt" "scale" " -type \"double3\" 0.31222309822722205 0.31222309822722205 0.31222309822722205"
+		2 "|sword:knob1|sword:knobShape" "intermediateObject" " 1"
+		2 "|sword:knob1|sword:knobShape" "uvSet[0].uvSetName" " -type \"string\" \"map1\""
 		
-		2 "|swordRNfosterParent1|sword:transform3|sword:hiltShape" "intermediateObject" 
-		" 1"
-		2 "|swordRNfosterParent1|sword:transform3|sword:hiltShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|swordRNfosterParent1|sword:transform3|sword:hiltShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		2 "|sword:knob" "scale" " -type \"double3\" 0.42338857756446147 0.42338857756446147 0.42338857756446147"
-		
-		2 "|swordRNfosterParent1|sword:transform4|sword:knobShape" "intermediateObject" 
-		" 1"
-		2 "|swordRNfosterParent1|sword:transform4|sword:knobShape" "instObjGroups.objectGroups" 
-		" -s 2"
-		2 "|swordRNfosterParent1|sword:transform4|sword:knobShape" "uvSet[0].uvSetName" 
-		" -type \"string\" \"map1\""
-		3 "sword:polyTweakUV4.output" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.inMesh" 
-		""
 		3 "|swordRNfosterParent1|sword:transform4|sword:knobShape.instObjGroups" 
 		"sword:Maya_Lambert3SG.dagSetMembers" "-na"
-		3 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.instObjGroups" 
-		"sword:Maya_Lambert3SG.dagSetMembers" "-na"
-		3 "sword:polyTweakUV2.output" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.inMesh" 
-		""
-		3 "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups" 
-		"sword:Maya_Lambert2SG.dagSetMembers" "-na"
-		3 "sword:polyTweakUV3.output" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.inMesh" 
-		""
-		3 "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups" 
-		"sword:Maya_Lambert4SG.dagSetMembers" "-na"
 		3 "sword:polyTweakUV1.output" "|swordRNfosterParent1|sword:transform4|sword:knobShape.inMesh" 
 		""
-		5 3 "swordRN" "|sword:materialXStack1|sword:materialXStackShape1.stack" 
-		"swordRN.placeHolderList[1]" ""
 		5 4 "swordRN" "|swordRNfosterParent1|sword:transform4|sword:knobShape.inMesh" 
 		"swordRN.placeHolderList[2]" ""
 		5 3 "swordRN" "|swordRNfosterParent1|sword:transform4|sword:knobShape.worldMatrix" 
@@ -422,89 +525,144 @@ createNode reference -n "swordRN";
 		"swordRN.placeHolderList[7]" ""
 		5 4 "swordRN" "|swordRNfosterParent1|sword:transform4|sword:knobShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
 		"swordRN.placeHolderList[8]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.inMesh" 
-		"swordRN.placeHolderList[9]" ""
-		5 3 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.worldMatrix" 
-		"swordRN.placeHolderList[10]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"swordRN.placeHolderList[11]" ""
-		5 0 "swordRN" "sword:Maya_Lambert4SG.memberWireframeColor" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"swordRN.placeHolderList[12]" "swordRN.placeHolderList[13]" ""
-		5 3 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.outMesh" 
-		"swordRN.placeHolderList[14]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"swordRN.placeHolderList[15]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.inMesh" 
-		"swordRN.placeHolderList[16]" ""
-		5 3 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.worldMatrix" 
-		"swordRN.placeHolderList[17]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"swordRN.placeHolderList[18]" ""
-		5 0 "swordRN" "sword:Maya_Lambert3SG.memberWireframeColor" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"swordRN.placeHolderList[19]" "swordRN.placeHolderList[20]" ""
-		5 3 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.outMesh" 
-		"swordRN.placeHolderList[21]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"swordRN.placeHolderList[22]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.inMesh" 
-		"swordRN.placeHolderList[23]" ""
-		5 3 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.worldMatrix" 
-		"swordRN.placeHolderList[24]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups.objectGroups[0].objectGroupId" 
-		"swordRN.placeHolderList[25]" ""
-		5 0 "swordRN" "sword:Maya_Lambert2SG.memberWireframeColor" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups.objectGroups[0].objectGrpColor" 
-		"swordRN.placeHolderList[26]" "swordRN.placeHolderList[27]" ""
-		5 3 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.outMesh" 
-		"swordRN.placeHolderList[28]" ""
-		5 4 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
-		"swordRN.placeHolderList[29]" ""
-		5 3 "swordRN" "sword:polyTweakUV1.output" "swordRN.placeHolderList[30]" 
-		"|sword:knobShape.i"
-		5 3 "swordRN" "sword:polyTweakUV2.output" "swordRN.placeHolderList[31]" 
-		"sword:hiltShape.i"
-		5 3 "swordRN" "sword:polyTweakUV3.output" "swordRN.placeHolderList[32]" 
-		"sword:crossguardShape.i"
-		5 3 "swordRN" "sword:polyTweakUV4.output" "swordRN.placeHolderList[33]" 
-		"sword:bladeShape.i"
-		5 0 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups.objectGroups[0]" 
-		"sword:Maya_Lambert2SG.dagSetMembers" "swordRN.placeHolderList[34]" "swordRN.placeHolderList[35]" 
-		""
-		5 0 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.compInstObjGroups.compObjectGroups[0]" 
-		"sword:Maya_Lambert2SG.dagSetMembers" "swordRN.placeHolderList[36]" "swordRN.placeHolderList[37]" 
-		""
-		5 4 "swordRN" "sword:Maya_Lambert2SG.groupNodes" "swordRN.placeHolderList[38]" 
-		""
-		5 4 "swordRN" "sword:Maya_Lambert2SG.groupNodes" "swordRN.placeHolderList[39]" 
-		""
 		5 0 "swordRN" "|swordRNfosterParent1|sword:transform4|sword:knobShape.instObjGroups.objectGroups[0]" 
 		"sword:Maya_Lambert3SG.dagSetMembers" "swordRN.placeHolderList[40]" "swordRN.placeHolderList[41]" 
 		""
 		5 0 "swordRN" "|swordRNfosterParent1|sword:transform4|sword:knobShape.compInstObjGroups.compObjectGroups[0]" 
 		"sword:Maya_Lambert3SG.dagSetMembers" "swordRN.placeHolderList[42]" "swordRN.placeHolderList[43]" 
 		""
+		"swordRN" 70
+		0 "|sword:bladeShape" "|swordRNfosterParent1|sword:transform1" "-s -r "
+		0 "|sword:crossguardShape" "|swordRNfosterParent1|sword:transform2" "-s -r "
+		
+		0 "|sword:hiltShape" "|swordRNfosterParent1|sword:transform3" "-s -r "
+		0 "|swordRNfosterParent1|sword:transform1" "|sword:blade" "-s -r "
+		0 "|swordRNfosterParent1|sword:transform2" "|sword:crossguard" "-s -r "
+		0 "|swordRNfosterParent1|sword:transform3" "|sword:hilt" "-s -r "
+		0 "|swordRNfosterParent1|sword:transform4" "|sword:knob" "-s -r "
+		2 "|sword:blade" "visibility" " 0"
+		2 "|sword:blade" "translate" " -type \"double3\" 0 6.77173425716919297 0"
+		
+		2 "|sword:blade" "scale" " -type \"double3\" 1 1 1"
+		2 "|swordRNfosterParent1|sword:transform1|sword:bladeShape" "intermediateObject" 
+		" 1"
+		2 "|swordRNfosterParent1|sword:transform1|sword:bladeShape" "instObjGroups.objectGroups" 
+		" -s 2"
+		2 "|swordRNfosterParent1|sword:transform1|sword:bladeShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|sword:crossguard" "visibility" " 0"
+		2 "|sword:crossguard" "scale" " -type \"double3\" 1 1 1"
+		2 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape" "intermediateObject" 
+		" 1"
+		2 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape" "instObjGroups.objectGroups" 
+		" -s 2"
+		2 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|sword:hilt" "visibility" " 0"
+		2 "|sword:hilt" "scale" " -type \"double3\" 0.31222309822722205 0.31222309822722205 0.31222309822722205"
+		
+		2 "|swordRNfosterParent1|sword:transform3|sword:hiltShape" "intermediateObject" 
+		" 1"
+		2 "|swordRNfosterParent1|sword:transform3|sword:hiltShape" "instObjGroups.objectGroups" 
+		" -s 2"
+		2 "|swordRNfosterParent1|sword:transform3|sword:hiltShape" "uvSet[0].uvSetName" 
+		" -type \"string\" \"map1\""
+		2 "|sword:knob" "visibility" " 0"
+		2 "|sword:knob" "scale" " -type \"double3\" 0.42338857756446147 0.42338857756446147 0.42338857756446147"
+		
+		2 "|sword:materialXStack1" "visibility" " 0"
+		2 "|sword:materialXStack1" "translate" " -type \"double3\" 0 6 0"
+		3 "sword:polyTweakUV3.output" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.inMesh" 
+		""
+		3 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.instObjGroups" 
+		"sword:Maya_Lambert3SG.dagSetMembers" "-na"
+		3 "sword:polyTweakUV4.output" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.inMesh" 
+		""
+		3 "sword:polyTweakUV2.output" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.inMesh" 
+		""
+		3 "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups" 
+		"sword:Maya_Lambert2SG.dagSetMembers" "-na"
+		3 "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups" 
+		"sword:Maya_Lambert4SG.dagSetMembers" "-na"
+		5 3 "swordRN" "|sword:materialXStack1|sword:materialXStackShape1.stack" 
+		"swordRN.placeHolderList[44]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.inMesh" 
+		"swordRN.placeHolderList[45]" ""
+		5 3 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.worldMatrix" 
+		"swordRN.placeHolderList[46]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups.objectGroups[0].objectGroupId" 
+		"swordRN.placeHolderList[47]" ""
+		5 0 "swordRN" "sword:Maya_Lambert4SG.memberWireframeColor" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		"swordRN.placeHolderList[48]" "swordRN.placeHolderList[49]" ""
+		5 3 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.outMesh" 
+		"swordRN.placeHolderList[50]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"swordRN.placeHolderList[51]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.inMesh" 
+		"swordRN.placeHolderList[52]" ""
+		5 3 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.worldMatrix" 
+		"swordRN.placeHolderList[53]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.instObjGroups.objectGroups[0].objectGroupId" 
+		"swordRN.placeHolderList[54]" ""
+		5 0 "swordRN" "sword:Maya_Lambert3SG.memberWireframeColor" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		"swordRN.placeHolderList[55]" "swordRN.placeHolderList[56]" ""
+		5 3 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.outMesh" 
+		"swordRN.placeHolderList[57]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"swordRN.placeHolderList[58]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.inMesh" 
+		"swordRN.placeHolderList[59]" ""
+		5 3 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.worldMatrix" 
+		"swordRN.placeHolderList[60]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups.objectGroups[0].objectGroupId" 
+		"swordRN.placeHolderList[61]" ""
+		5 0 "swordRN" "sword:Maya_Lambert2SG.memberWireframeColor" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups.objectGroups[0].objectGrpColor" 
+		"swordRN.placeHolderList[62]" "swordRN.placeHolderList[63]" ""
+		5 3 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.outMesh" 
+		"swordRN.placeHolderList[64]" ""
+		5 4 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.compInstObjGroups.compObjectGroups[0].compObjectGroupId" 
+		"swordRN.placeHolderList[65]" ""
+		5 3 "swordRN" "sword:polyTweakUV1.output" "swordRN.placeHolderList[66]" 
+		""
+		5 3 "swordRN" "sword:polyTweakUV2.output" "swordRN.placeHolderList[67]" 
+		"sword:hiltShape.i"
+		5 3 "swordRN" "sword:polyTweakUV3.output" "swordRN.placeHolderList[68]" 
+		"sword:crossguardShape.i"
+		5 3 "swordRN" "sword:polyTweakUV4.output" "swordRN.placeHolderList[69]" 
+		"sword:bladeShape.i"
+		5 0 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups.objectGroups[0]" 
+		"sword:Maya_Lambert2SG.dagSetMembers" "swordRN.placeHolderList[70]" "swordRN.placeHolderList[71]" 
+		""
+		5 0 "swordRN" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.compInstObjGroups.compObjectGroups[0]" 
+		"sword:Maya_Lambert2SG.dagSetMembers" "swordRN.placeHolderList[72]" "swordRN.placeHolderList[73]" 
+		""
+		5 4 "swordRN" "sword:Maya_Lambert2SG.groupNodes" "swordRN.placeHolderList[74]" 
+		""
+		5 4 "swordRN" "sword:Maya_Lambert2SG.groupNodes" "swordRN.placeHolderList[75]" 
+		""
 		5 0 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.instObjGroups.objectGroups[0]" 
-		"sword:Maya_Lambert3SG.dagSetMembers" "swordRN.placeHolderList[44]" "swordRN.placeHolderList[45]" 
+		"sword:Maya_Lambert3SG.dagSetMembers" "swordRN.placeHolderList[76]" "swordRN.placeHolderList[77]" 
 		""
 		5 0 "swordRN" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.compInstObjGroups.compObjectGroups[0]" 
-		"sword:Maya_Lambert3SG.dagSetMembers" "swordRN.placeHolderList[46]" "swordRN.placeHolderList[47]" 
+		"sword:Maya_Lambert3SG.dagSetMembers" "swordRN.placeHolderList[78]" "swordRN.placeHolderList[79]" 
 		""
-		5 4 "swordRN" "sword:Maya_Lambert3SG.groupNodes" "swordRN.placeHolderList[48]" 
+		5 4 "swordRN" "sword:Maya_Lambert3SG.groupNodes" "swordRN.placeHolderList[80]" 
 		""
-		5 4 "swordRN" "sword:Maya_Lambert3SG.groupNodes" "swordRN.placeHolderList[49]" 
+		5 4 "swordRN" "sword:Maya_Lambert3SG.groupNodes" "swordRN.placeHolderList[81]" 
 		""
-		5 4 "swordRN" "sword:Maya_Lambert3SG.groupNodes" "swordRN.placeHolderList[50]" 
+		5 4 "swordRN" "sword:Maya_Lambert3SG.groupNodes" "swordRN.placeHolderList[82]" 
 		""
-		5 4 "swordRN" "sword:Maya_Lambert3SG.groupNodes" "swordRN.placeHolderList[51]" 
+		5 4 "swordRN" "sword:Maya_Lambert3SG.groupNodes" "swordRN.placeHolderList[83]" 
 		""
 		5 0 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups.objectGroups[0]" 
-		"sword:Maya_Lambert4SG.dagSetMembers" "swordRN.placeHolderList[52]" "swordRN.placeHolderList[53]" 
+		"sword:Maya_Lambert4SG.dagSetMembers" "swordRN.placeHolderList[84]" "swordRN.placeHolderList[85]" 
 		""
 		5 0 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.compInstObjGroups.compObjectGroups[0]" 
-		"sword:Maya_Lambert4SG.dagSetMembers" "swordRN.placeHolderList[54]" "swordRN.placeHolderList[55]" 
+		"sword:Maya_Lambert4SG.dagSetMembers" "swordRN.placeHolderList[86]" "swordRN.placeHolderList[87]" 
 		""
-		5 4 "swordRN" "sword:Maya_Lambert4SG.groupNodes" "swordRN.placeHolderList[56]" 
+		5 4 "swordRN" "sword:Maya_Lambert4SG.groupNodes" "swordRN.placeHolderList[88]" 
 		""
-		5 4 "swordRN" "sword:Maya_Lambert4SG.groupNodes" "swordRN.placeHolderList[57]" 
+		5 4 "swordRN" "sword:Maya_Lambert4SG.groupNodes" "swordRN.placeHolderList[89]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -620,6 +778,212 @@ createNode polySphere -n "polySphere1";
 createNode polyCube -n "polyCube1";
 	rename -uid "DF19EC1F-4FB9-BDCB-EC11-7CB05EBE726D";
 	setAttr ".cuv" 4;
+createNode polySplitRing -n "polySplitRing1";
+	rename -uid "007F694D-459D-1694-FFC9-EC8C1C284F7B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 2 "e[4:5]" "e[8:9]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 4 3 0.12759601168948598 1;
+	setAttr ".wt" 0.65936279296875;
+	setAttr ".dr" no;
+	setAttr ".re" 4;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".stp" 2;
+	setAttr ".div" 1;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak1";
+	rename -uid "CD1E9F9E-41D5-0050-705E-ABB552DD6C15";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  0.3593384 -0.40152016 -0.47985744
+		 -0.3593384 -0.40152016 -0.47985744 0.3593384 0.40152016 -0.47985744 -0.3593384 0.40152016
+		 -0.47985744 0.3593384 0.40152016 0.47985744 -0.3593384 0.40152016 0.47985744 0.3593384
+		 -0.40152016 0.47985744 -0.3593384 -0.40152016 0.47985744;
+createNode polySplitRing -n "polySplitRing2";
+	rename -uid "D07048A8-45D1-14AB-1E83-9783A434A918";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[0:3]" "e[16]" "e[19]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 4 3 0.12759601168948598 1;
+	setAttr ".wt" 0.59515351057052612;
+	setAttr ".dr" no;
+	setAttr ".re" 1;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".stp" 2;
+	setAttr ".div" 1;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyCube -n "polyCube2";
+	rename -uid "417E7E7C-43B4-ECD4-6B30-DD821FA3ED0B";
+	setAttr ".cuv" 4;
+createNode polyBevel3 -n "polyBevel1";
+	rename -uid "6A5B44C1-4134-C953-C3CF-61A330CBCC0C";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6:7]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -3 2 1 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 1;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyTweak -n "polyTweak2";
+	rename -uid "DD276EC3-42F5-99EA-2319-DFB3F27073D2";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  0.41377306 0 -0.44106194 -0.41377306
+		 0 -0.44106194 0.41377306 0 -0.44106194 -0.41377306 0 -0.44106194 0.41377306 0 0.44106194
+		 -0.41377306 0 0.44106194 0.41377306 0 0.44106194 -0.41377306 0 0.44106194;
+createNode polyBevel3 -n "polyBevel2";
+	rename -uid "DADC332F-48A7-B303-173F-D5AF53BC3924";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[2:3]" "e[7]" "e[10]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -3 2 1 1;
+	setAttr ".ws" yes;
+	setAttr ".oaf" yes;
+	setAttr ".f" 1;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyCube -n "polyCube3";
+	rename -uid "680FB7ED-4D43-2DBA-BCB3-91843E558774";
+	setAttr ".cuv" 4;
+createNode polySplitRing -n "polySplitRing3";
+	rename -uid "49D1052F-4647-7A12-6ED2-738F4DCF6419";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0:3]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -3 1.4079847508218351 1 1;
+	setAttr ".wt" 0.085226275026798248;
+	setAttr ".re" 1;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".stp" 2;
+	setAttr ".div" 1;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyTweak -n "polyTweak3";
+	rename -uid "85708775-4DA7-6473-A935-E6B7FD6E37ED";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  0.26834026 0.47270238 -0.37978318
+		 -0.26834026 0.47270238 -0.37978318 0.26834026 -0.47270232 -0.37978318 -0.26834026
+		 -0.47270232 -0.37978318 0.26834026 -0.47270232 0.37978318 -0.26834026 -0.47270232
+		 0.37978318 0.26834026 0.47270238 0.37978318 -0.26834026 0.47270238 0.37978318;
+createNode polySplitRing -n "polySplitRing4";
+	rename -uid "AA31378C-4A7C-6DA9-496C-8A8F271A9A2A";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 4 "e[6:7]" "e[10:11]" "e[14]" "e[18]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -3 1.4079847508218351 1 1;
+	setAttr ".wt" 0.46830356121063232;
+	setAttr ".re" 6;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".stp" 2;
+	setAttr ".div" 1;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing5";
+	rename -uid "786BC627-448D-9E21-D988-4693E1CA5D3F";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[0:3]" "e[24]" "e[31]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -3 1.4079847508218351 1 1;
+	setAttr ".wt" 0.28449055552482605;
+	setAttr ".re" 1;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".stp" 2;
+	setAttr ".div" 1;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polySplitRing -n "polySplitRing6";
+	rename -uid "078A01B0-47D4-FEA5-B5CA-7C98E3729997";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 5 "e[12:13]" "e[15]" "e[17]" "e[26]" "e[30]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -3 1.4079847508218351 1 1;
+	setAttr ".wt" 0.40434464812278748;
+	setAttr ".re" 12;
+	setAttr ".sma" 29.999999999999996;
+	setAttr ".stp" 2;
+	setAttr ".div" 1;
+	setAttr ".p[0]"  0 0 1;
+	setAttr ".fq" yes;
+createNode polyCylinder -n "polyCylinder1";
+	rename -uid "4C7566AB-43C5-9348-37E5-1D888A9FE151";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polySphere -n "polySphere2";
+	rename -uid "9D48327E-444B-E4D7-36DC-79A04AE5AEB0";
+createNode polyUnite -n "polyUnite2";
+	rename -uid "ABC1F5C2-4953-1BDF-C663-FA90706FD945";
+	setAttr -s 4 ".ip";
+	setAttr -s 4 ".im";
+createNode groupId -n "groupId1";
+	rename -uid "6C1EF382-4562-CBA4-92D0-1DBCC59E3AE0";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts1";
+	rename -uid "8D9E7D10-4C2E-C5BE-2BB3-F2A8AD112D8B";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:8]";
+createNode groupId -n "groupId2";
+	rename -uid "8E851198-40E6-24C9-E8A6-118B691C5A6B";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId3";
+	rename -uid "ADDF7516-4927-F586-D591-41B804DAEB76";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts2";
+	rename -uid "B74F6387-4CDA-051C-EB26-E787777F9383";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:27]";
+createNode groupId -n "groupId4";
+	rename -uid "801B52E4-4BD0-BF0D-7518-18B9CB14E4CB";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId5";
+	rename -uid "C6909820-4E24-DCDD-A032-DEB5E028C54B";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts3";
+	rename -uid "96BD0655-40CD-3CC1-09D2-029145C929E3";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:59]";
+createNode groupId -n "groupId6";
+	rename -uid "59173084-4FBF-97CB-AD3D-C6AEC8C250F0";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId7";
+	rename -uid "CC7229D2-40DD-BC70-2537-D7BF522EBBB3";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts4";
+	rename -uid "342C729C-4CCD-9A7E-AD21-CBAE8B9B9FD8";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:399]";
+createNode groupId -n "groupId8";
+	rename -uid "C2CED8B3-45E0-418E-5D99-B2B07F6E522E";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId9";
+	rename -uid "2D360976-4F71-EE96-CD4F-BCBEA604F78D";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts5";
+	rename -uid "9F2CC6B8-4DB4-7CDB-1337-F4B49F33C989";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:496]";
+createNode groupId -n "groupId10";
+	rename -uid "366F4C83-4C38-5076-4D1B-5BAC9F0A7726";
+	setAttr ".ihi" 0;
+createNode polySphere -n "polySphere3";
+	rename -uid "8526C844-46CC-91E3-F822-B3A14B85AEB7";
+createNode deleteComponent -n "deleteComponent1";
+	rename -uid "1EC191B8-4FDA-277D-D704-ACBE4B5C0B02";
+	setAttr ".dc" -type "componentList" 1 "f[80:179]";
+createNode deleteComponent -n "deleteComponent2";
+	rename -uid "AD125FCF-42BE-CE0E-4F15-3D90232AFE8F";
+	setAttr ".dc" -type "componentList" 2 "f[0:79]" "f[260:279]";
+createNode polyExtrudeEdge -n "polyExtrudeEdge1";
+	rename -uid "B80B76DA-4EF3-A43D-E08F-06891360FDAF";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 3 "e[0:11]" "e[13:14]" "e[16:19]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 4.2510663566363638 0 1;
+	setAttr ".ws" yes;
+	setAttr ".t" -type "double3" 0 -0.53476350587340082 0 ;
+	setAttr ".pvt" -type "float3" -1.1920929e-07 3.7163033 -1.7881393e-07 ;
+	setAttr ".rs" 40070;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -1.0000002384185791 4.2510663566363638 -1.0000004768371582 ;
+	setAttr ".cbx" -type "double3" 1 4.2510663566363638 1.0000001192092896 ;
 select -ne :time1;
 	setAttr ".o" 5;
 	setAttr ".unw" 5;
@@ -643,8 +1007,9 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
+	setAttr -s 13 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 9 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -667,56 +1032,67 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "swordRN.phl[1]" "Maya_Lambert1.sk";
-connectAttr "sword:groupParts1.og" "swordRN.phl[2]";
-connectAttr "swordRN.phl[3]" "polyUnite1.im[0]";
-connectAttr "sword:groupId1.id" "swordRN.phl[4]";
-connectAttr "swordRN.phl[5]" "swordRN.phl[6]";
-connectAttr "swordRN.phl[7]" "polyUnite1.ip[0]";
-connectAttr "sword:groupId2.id" "swordRN.phl[8]";
-connectAttr "sword:groupParts2.og" "swordRN.phl[9]";
-connectAttr "swordRN.phl[10]" "polyUnite1.im[1]";
-connectAttr "sword:groupId3.id" "swordRN.phl[11]";
-connectAttr "swordRN.phl[12]" "swordRN.phl[13]";
-connectAttr "swordRN.phl[14]" "polyUnite1.ip[1]";
-connectAttr "sword:groupId4.id" "swordRN.phl[15]";
-connectAttr "sword:groupParts3.og" "swordRN.phl[16]";
-connectAttr "swordRN.phl[17]" "polyUnite1.im[2]";
-connectAttr "sword:groupId5.id" "swordRN.phl[18]";
-connectAttr "swordRN.phl[19]" "swordRN.phl[20]";
-connectAttr "swordRN.phl[21]" "polyUnite1.ip[2]";
-connectAttr "sword:groupId6.id" "swordRN.phl[22]";
-connectAttr "sword:groupParts4.og" "swordRN.phl[23]";
-connectAttr "swordRN.phl[24]" "polyUnite1.im[3]";
-connectAttr "sword:groupId7.id" "swordRN.phl[25]";
-connectAttr "swordRN.phl[26]" "swordRN.phl[27]";
-connectAttr "swordRN.phl[28]" "polyUnite1.ip[3]";
-connectAttr "sword:groupId8.id" "swordRN.phl[29]";
-connectAttr "swordRN.phl[30]" "sword:groupParts1.ig";
-connectAttr "swordRN.phl[31]" "sword:groupParts2.ig";
-connectAttr "swordRN.phl[32]" "sword:groupParts3.ig";
-connectAttr "swordRN.phl[33]" "sword:groupParts4.ig";
-connectAttr "swordRN.phl[34]" "swordRN.phl[35]";
-connectAttr "swordRN.phl[36]" "swordRN.phl[37]";
-connectAttr "sword:groupId7.msg" "swordRN.phl[38]";
-connectAttr "sword:groupId8.msg" "swordRN.phl[39]";
-connectAttr "swordRN.phl[40]" "swordRN.phl[41]";
-connectAttr "swordRN.phl[42]" "swordRN.phl[43]";
-connectAttr "swordRN.phl[44]" "swordRN.phl[45]";
-connectAttr "swordRN.phl[46]" "swordRN.phl[47]";
-connectAttr "sword:groupId1.msg" "swordRN.phl[48]";
-connectAttr "sword:groupId2.msg" "swordRN.phl[49]";
-connectAttr "sword:groupId5.msg" "swordRN.phl[50]";
-connectAttr "sword:groupId6.msg" "swordRN.phl[51]";
-connectAttr "swordRN.phl[52]" "swordRN.phl[53]";
-connectAttr "swordRN.phl[54]" "swordRN.phl[55]";
-connectAttr "sword:groupId3.msg" "swordRN.phl[56]";
-connectAttr "sword:groupId4.msg" "swordRN.phl[57]";
+connectAttr "swordRN.phl[44]" "Maya_Lambert1.sk";
+connectAttr "sword:groupParts2.og" "swordRN.phl[45]";
+connectAttr "swordRN.phl[46]" "polyUnite1.im[1]";
+connectAttr "sword:groupId3.id" "swordRN.phl[47]";
+connectAttr "swordRN.phl[48]" "swordRN.phl[49]";
+connectAttr "swordRN.phl[50]" "polyUnite1.ip[1]";
+connectAttr "sword:groupId4.id" "swordRN.phl[51]";
+connectAttr "sword:groupParts3.og" "swordRN.phl[52]";
+connectAttr "swordRN.phl[53]" "polyUnite1.im[2]";
+connectAttr "sword:groupId5.id" "swordRN.phl[54]";
+connectAttr "swordRN.phl[55]" "swordRN.phl[56]";
+connectAttr "swordRN.phl[57]" "polyUnite1.ip[2]";
+connectAttr "sword:groupId6.id" "swordRN.phl[58]";
+connectAttr "sword:groupParts4.og" "swordRN.phl[59]";
+connectAttr "swordRN.phl[60]" "polyUnite1.im[3]";
+connectAttr "sword:groupId7.id" "swordRN.phl[61]";
+connectAttr "swordRN.phl[62]" "swordRN.phl[63]";
+connectAttr "swordRN.phl[64]" "polyUnite1.ip[3]";
+connectAttr "sword:groupId8.id" "swordRN.phl[65]";
+connectAttr "swordRN.phl[66]" "sword:groupParts1.ig";
+connectAttr "swordRN.phl[67]" "sword:groupParts2.ig";
+connectAttr "swordRN.phl[68]" "sword:groupParts3.ig";
+connectAttr "swordRN.phl[69]" "sword:groupParts4.ig";
+connectAttr "swordRN.phl[70]" "swordRN.phl[71]";
+connectAttr "swordRN.phl[72]" "swordRN.phl[73]";
+connectAttr "sword:groupId7.msg" "swordRN.phl[74]";
+connectAttr "sword:groupId8.msg" "swordRN.phl[75]";
+connectAttr "swordRN.phl[76]" "swordRN.phl[77]";
+connectAttr "swordRN.phl[78]" "swordRN.phl[79]";
+connectAttr "sword:groupId1.msg" "swordRN.phl[80]";
+connectAttr "sword:groupId2.msg" "swordRN.phl[81]";
+connectAttr "sword:groupId5.msg" "swordRN.phl[82]";
+connectAttr "sword:groupId6.msg" "swordRN.phl[83]";
+connectAttr "swordRN.phl[84]" "swordRN.phl[85]";
+connectAttr "swordRN.phl[86]" "swordRN.phl[87]";
+connectAttr "sword:groupId3.msg" "swordRN.phl[88]";
+connectAttr "sword:groupId4.msg" "swordRN.phl[89]";
 connectAttr "polyUnite1.out" "|sword:knob1|sword:knobShape.i";
 connectAttr "polySphere1.out" "pSphereShape1.i";
-connectAttr "polyCube1.out" "pCubeShape1.i";
+connectAttr "polySplitRing2.out" "pCubeShape1.i";
+connectAttr "groupId1.id" "pCubeShape2.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCubeShape2.iog.og[0].gco";
+connectAttr "groupParts1.og" "pCubeShape2.i";
+connectAttr "groupId2.id" "pCubeShape2.ciog.cog[0].cgid";
+connectAttr "groupId3.id" "pCubeShape3.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCubeShape3.iog.og[0].gco";
+connectAttr "groupParts2.og" "pCubeShape3.i";
+connectAttr "groupId4.id" "pCubeShape3.ciog.cog[0].cgid";
+connectAttr "groupId5.id" "pCylinderShape1.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCylinderShape1.iog.og[0].gco";
+connectAttr "groupParts3.og" "pCylinderShape1.i";
+connectAttr "groupId6.id" "pCylinderShape1.ciog.cog[0].cgid";
+connectAttr "groupId7.id" "pSphereShape2.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pSphereShape2.iog.og[0].gco";
+connectAttr "groupParts4.og" "pSphereShape2.i";
+connectAttr "groupId8.id" "pSphereShape2.ciog.cog[0].cgid";
+connectAttr "groupParts5.og" "pCube4Shape.i";
+connectAttr "groupId9.id" "pCube4Shape.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "pCube4Shape.iog.og[0].gco";
+connectAttr "groupId10.id" "pCube4Shape.ciog.cog[0].cgid";
+connectAttr "polyExtrudeEdge1.out" "pSphereShape3.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Maya_Lambert1SG.message" ":defaultLightSet.message";
@@ -731,7 +1107,15 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "sword:groupParts1.og" "swordRN.phl[2]";
+connectAttr "sword:groupId1.id" "swordRN.phl[4]";
+connectAttr "swordRN.phl[5]" "swordRN.phl[6]";
+connectAttr "sword:groupId2.id" "swordRN.phl[8]";
+connectAttr "swordRN.phl[40]" "swordRN.phl[41]";
+connectAttr "swordRN.phl[42]" "swordRN.phl[43]";
 connectAttr "swordRNfosterParent1.msg" "swordRN.fp";
+connectAttr "swordRN.phl[3]" "polyUnite1.im[0]";
+connectAttr "swordRN.phl[7]" "polyUnite1.ip[0]";
 connectAttr "sword:groupId1.id" "sword:groupParts1.gi";
 connectAttr "sword:groupId3.id" "sword:groupParts2.gi";
 connectAttr "sword:groupId5.id" "sword:groupParts3.gi";
@@ -741,9 +1125,70 @@ connectAttr "|sword:knob1|sword:knobShape.iog" "Maya_Lambert1SG.dsm" -na;
 connectAttr "Maya_Lambert1SG.msg" "materialInfo1.sg";
 connectAttr "Maya_Lambert1.msg" "materialInfo1.m";
 connectAttr "Maya_Lambert1.msg" "materialInfo1.t" -na;
+connectAttr "polyTweak1.out" "polySplitRing1.ip";
+connectAttr "pCubeShape1.wm" "polySplitRing1.mp";
+connectAttr "polyCube1.out" "polyTweak1.ip";
+connectAttr "polySplitRing1.out" "polySplitRing2.ip";
+connectAttr "pCubeShape1.wm" "polySplitRing2.mp";
+connectAttr "polyTweak2.out" "polyBevel1.ip";
+connectAttr "pCubeShape2.wm" "polyBevel1.mp";
+connectAttr "polyCube2.out" "polyTweak2.ip";
+connectAttr "polyBevel1.out" "polyBevel2.ip";
+connectAttr "pCubeShape2.wm" "polyBevel2.mp";
+connectAttr "polyTweak3.out" "polySplitRing3.ip";
+connectAttr "pCubeShape3.wm" "polySplitRing3.mp";
+connectAttr "polyCube3.out" "polyTweak3.ip";
+connectAttr "polySplitRing3.out" "polySplitRing4.ip";
+connectAttr "pCubeShape3.wm" "polySplitRing4.mp";
+connectAttr "polySplitRing4.out" "polySplitRing5.ip";
+connectAttr "pCubeShape3.wm" "polySplitRing5.mp";
+connectAttr "polySplitRing5.out" "polySplitRing6.ip";
+connectAttr "pCubeShape3.wm" "polySplitRing6.mp";
+connectAttr "pCubeShape2.o" "polyUnite2.ip[0]";
+connectAttr "pCubeShape3.o" "polyUnite2.ip[1]";
+connectAttr "pCylinderShape1.o" "polyUnite2.ip[2]";
+connectAttr "pSphereShape2.o" "polyUnite2.ip[3]";
+connectAttr "pCubeShape2.wm" "polyUnite2.im[0]";
+connectAttr "pCubeShape3.wm" "polyUnite2.im[1]";
+connectAttr "pCylinderShape1.wm" "polyUnite2.im[2]";
+connectAttr "pSphereShape2.wm" "polyUnite2.im[3]";
+connectAttr "polyBevel2.out" "groupParts1.ig";
+connectAttr "groupId1.id" "groupParts1.gi";
+connectAttr "polySplitRing6.out" "groupParts2.ig";
+connectAttr "groupId3.id" "groupParts2.gi";
+connectAttr "polyCylinder1.out" "groupParts3.ig";
+connectAttr "groupId5.id" "groupParts3.gi";
+connectAttr "polySphere2.out" "groupParts4.ig";
+connectAttr "groupId7.id" "groupParts4.gi";
+connectAttr "polyUnite2.out" "groupParts5.ig";
+connectAttr "groupId9.id" "groupParts5.gi";
+connectAttr "polySphere3.out" "deleteComponent1.ig";
+connectAttr "deleteComponent1.og" "deleteComponent2.ig";
+connectAttr "deleteComponent2.og" "polyExtrudeEdge1.ip";
+connectAttr "pSphereShape3.wm" "polyExtrudeEdge1.mp";
 connectAttr "Maya_Lambert1SG.pa" ":renderPartition.st" -na;
 connectAttr "Maya_Lambert1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pSphereShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape2.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape2.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape3.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape3.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape1.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCylinderShape1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pSphereShape2.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pSphereShape2.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCube4Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pCube4Shape.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "pSphereShape3.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId2.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId3.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId4.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId5.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId9.msg" ":initialShadingGroup.gn" -na;
 // End of minion_1.ma
