@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: gatewall.ma
-//Last modified: Wed, Nov 19, 2025 11:48:09 PM
+//Last modified: Thu, Nov 20, 2025 12:25:19 PM
 //Codeset: 1252
 file -rdi 1 -ns "chest2" -rfn "chest2RN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/AGD/UnityGame/Assets/Maya//scenes/chest2.ma";
 file -rdi 2 -ns "chest_1" -rfn "chest2:chest_1RN" -op "v=0;" -typ "mayaAscii"
@@ -20,17 +20,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "9289549F-44E8-030D-03CA-2E88FC49D96B";
+fileInfo "UUID" "C2D34C38-4F5C-D725-5007-A783006C94C7";
 createNode transform -s -n "persp";
 	rename -uid "DEE379A6-4057-FC1D-81DC-D79595E17956";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 55.746303048758286 47.07779871030192 104.16057608283418 ;
-	setAttr ".r" -type "double3" -8.1383527286328086 1097.399999999815 -2.0831719395087188e-16 ;
+	setAttr ".t" -type "double3" 61.00026186161454 48.630302320169775 134.33036849350216 ;
+	setAttr ".r" -type "double3" -3.3383527282783168 1460.1999999995351 -1.0590631084627968e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "2FD329E4-4BD1-29A8-001E-DC86D0C077D4";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 142.43070886406434;
+	setAttr ".coi" 205.06362982060361;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -1857,7 +1857,7 @@ createNode mesh -n "chest2:chest_1:hinge1_chest2:chest_1:pCylinder5Shape" -p "ch
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "chest2RNfosterParent1";
-	rename -uid "2BFAB9BE-4CDE-BA87-FE9A-B9ABA01EBBD9";
+	rename -uid "08A2AAC3-4644-8A2C-A057-F88FFD1D3F49";
 createNode transform -n "chest2:chest_1:hinge1_chest2:chest_1:transform9" -p "chest2RNfosterParent1";
 	rename -uid "21CC4655-475A-4D92-AAF2-A785D37F7EE9";
 	setAttr ".v" no;
@@ -3730,6 +3730,12 @@ createNode deleteComponent -n "deleteComponent3";
 createNode deleteComponent -n "deleteComponent4";
 	rename -uid "D700DDA9-4F8A-4CF4-90B8-6DA536F02159";
 	setAttr ".dc" -type "componentList" 1 "f[3]";
+createNode deleteComponent -n "deleteComponent5";
+	rename -uid "AA3CCF35-4047-6BBD-63D3-BE8F9B5C8DB3";
+	setAttr ".dc" -type "componentList" 6 "f[20:39]" "f[63]" "f[67]" "f[71]" "f[73]" "f[77]";
+createNode deleteComponent -n "deleteComponent6";
+	rename -uid "85770A40-4BB7-F0FB-1687-BBB058CEC0A4";
+	setAttr ".dc" -type "componentList" 1 "f[40:54]";
 select -ne :time1;
 	setAttr ".o" 5;
 	setAttr ".unw" 5;
@@ -3946,7 +3952,7 @@ connectAttr "groupId44.id" "pCubeShape26.iog.og[1].gid";
 connectAttr ":initialShadingGroup.mwc" "pCubeShape26.iog.og[1].gco";
 connectAttr "groupId45.id" "pCubeShape26.ciog.cog[1].cgid";
 connectAttr "polyCube5.out" "pCubeShape27.i";
-connectAttr "polyTweakUV12.out" "pCylinderShape1.i";
+connectAttr "deleteComponent6.og" "pCylinderShape1.i";
 connectAttr "polyTweakUV12.uvtk[0]" "pCylinderShape1.uvst[0].uvtw";
 connectAttr "aiPhysicalSky1.out" "aiSkyDomeLightShape2.sc";
 connectAttr "chest2:chest_1:hinge1_chest2:chest_1:groupId25.id" "chest2:chest_1:hinge1_chest2:chest_1:pCylinder5Shape.iog.og[0].gid"
@@ -4883,6 +4889,8 @@ connectAttr "chest2:chest_1:hinge1_chest2:chest_1:groupId26.id" "chest2:chest_1:
 		;
 connectAttr "polyMapDel6.out" "deleteComponent3.ig";
 connectAttr "deleteComponent3.og" "deleteComponent4.ig";
+connectAttr "polyTweakUV12.out" "deleteComponent5.ig";
+connectAttr "deleteComponent5.og" "deleteComponent6.ig";
 connectAttr "Maya_Lambert1SG.pa" ":renderPartition.st" -na;
 connectAttr "set1.pa" ":renderPartition.st" -na;
 connectAttr "set2.pa" ":renderPartition.st" -na;
