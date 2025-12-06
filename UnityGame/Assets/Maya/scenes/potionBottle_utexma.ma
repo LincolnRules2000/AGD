@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: potionBottle_utexma.ma
-//Last modified: Fri, Dec 05, 2025 12:50:39 AM
+//Last modified: Fri, Dec 05, 2025 01:00:59 AM
 //Codeset: 1252
 requires maya "2025ff03";
 requires -nodeType "materialxStack" -nodeType "MaterialXSurfaceShader" -dataType "MxDocumentStackData"
@@ -14,12 +14,12 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "4ED10767-4735-699F-BCF0-8B90A04F3E75";
+fileInfo "UUID" "EA0508C4-4926-9B8C-9454-ACBABC5999A5";
 createNode transform -s -n "persp";
 	rename -uid "E6B32A9A-4B9F-A7C7-6CA9-B0BDE67F1D3B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.28403082283615505 4.6498970348169406 17.237147829792438 ;
-	setAttr ".r" -type "double3" -6.3383527296133 0.99999999999956046 -1.863890138166026e-17 ;
+	setAttr ".t" -type "double3" 0.80012009943626383 4.4691136526082014 17.203260871786952 ;
+	setAttr ".r" -type "double3" -5.7383527296147125 4.5999999999997394 4.985676158671614e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "B3C9A824-4D5F-FE5A-421C-0688E5D4F7CF";
 	setAttr -k off ".v" no;
