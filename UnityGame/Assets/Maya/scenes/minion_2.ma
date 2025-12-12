@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: minion_2.ma
-//Last modified: Sat, Dec 06, 2025 12:01:49 AM
+//Last modified: Thu, Dec 11, 2025 10:44:54 PM
 //Codeset: 1252
 file -rdi 1 -ns "Minion" -rfn "MinionRN" -op "v=0;" -typ "mayaAscii" "C:/Users/lsrwh/OneDrive/Desktop/Minion.ma";
 file -rdi 1 -ns "sword" -rfn "swordRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/AGD/UnityGame/Assets/Maya//scenes/sword.ma";
@@ -18,17 +18,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "37A18FFD-4D7F-6A3D-0C98-D78C30B6BE56";
+fileInfo "UUID" "5D57C939-4170-051F-8942-3E86C3778E23";
 createNode transform -s -n "persp";
 	rename -uid "3DD37008-456E-7D0A-3258-9EAFB9353164";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.12285257539589578 2.4417251553012003 5.9788834907915405 ;
-	setAttr ".r" -type "double3" -8.738352737325199 1436.19999999999 -1.9922266493727902e-16 ;
+	setAttr ".t" -type "double3" 6.1511004766292761 3.2911715468172922 8.1855074943009303 ;
+	setAttr ".r" -type "double3" -9.9383527373252409 1476.5999999999869 -4.9521758988645464e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D54FD51F-4E7E-C871-46B6-EE89B9C1D56F";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.8089504425397829;
+	setAttr ".coi" 10.035180273353355;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -53,13 +53,13 @@ createNode camera -s -n "topShape" -p "top";
 createNode transform -s -n "front";
 	rename -uid "DC313B9C-4061-3FB6-42F9-0BA54FFF5EF5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 1000.1 ;
+	setAttr ".t" -type "double3" 0.43429740608960365 1.5345175015166015 1000.1 ;
 createNode camera -s -n "frontShape" -p "front";
 	rename -uid "89D3406C-43C1-AE1C-C47E-3DBB189B3ECE";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 9.5328280636668108;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -69,14 +69,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "B352A881-4A68-3FF2-494E-F29A62E8B04F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1 0 0 ;
+	setAttr ".t" -type "double3" 1000.1 1.7520652628099125 -0.099615750728323182 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "8D082258-4C03-DAB4-CF64-4194F7579258";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 7.717290806423593;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -3688,7 +3688,7 @@ createNode mesh -n "pCubeShape9" -p "pCube9";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode fosterParent -n "swordRNfosterParent1";
-	rename -uid "32410801-47E5-AD1F-B64A-F0BAA57E361A";
+	rename -uid "239605AA-4162-8284-5C74-E69A5605DEDE";
 createNode transform -n "sword:transform4" -p "swordRNfosterParent1";
 	rename -uid "ADA8C44F-4BEA-BE22-11BD-B5AA0BBDC11C";
 	setAttr ".v" no;
@@ -3702,20 +3702,20 @@ createNode transform -n "sword:transform1" -p "swordRNfosterParent1";
 	rename -uid "6826F6C4-4A5F-8B55-DCDB-B2A860F9A822";
 	setAttr ".v" no;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "32DEAF73-4F2C-489C-BDCB-13B3FBD8845C";
+	rename -uid "BD67B3B1-4EEC-0786-1450-428E60CB9DA8";
 	setAttr -s 9 ".lnk";
 	setAttr -s 9 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "90FB54C0-4364-18D6-CDC2-DB9B93E57D09";
+	rename -uid "54CCB50D-4343-12B0-1442-6CA073656E68";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "45D5F608-4922-380D-7647-B0BAED4279F2";
+	rename -uid "7A3572BC-49FF-2F6E-224E-A586AC8CFCCB";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "81BC8D40-440E-5085-370A-5B823CC4201F";
+	rename -uid "44C44BFF-4122-D954-9673-1F85FBF94D35";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "7257E622-4723-9104-9D5B-0492523A7859";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "14BABE7D-4109-3E09-4296-9A917693ED2B";
+	rename -uid "D603F66C-4F8D-8934-127B-C1A15ABA228C";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C5111FBA-4E1B-F4A6-0B1C-228E2A1D98D7";
 	setAttr ".g" yes;
@@ -3739,11 +3739,9808 @@ createNode reference -n "MinionRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"MinionRN"
 		"MinionRN" 0
-		"MinionRN" 3
+		"MinionRN" 4904
 		2 "|Minion:ArmsMesh" "rotate" " -type \"double3\" -103.52768777730533145 0 0"
 		
 		2 "|Minion:ArmsMesh" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		2 "|Minion:BodyMesh|Minion:BodyMeshShape" "uvSet[0].uvSetName" " -type \"string\" \"map1\"";
+		2 "|Minion:BodyMesh|Minion:BodyMeshShape" "uvSet[0].uvSetName" " -type \"string\" \"map1\""
+		
+		2 "Minion:polyTweakUV1" "uvTweak" " -s 382"
+		2 "Minion:polyTweakUV1" "uvTweak[0]" " -type \"float2\" -0.10121413999999999 -0.50212215999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[1]" " -type \"float2\" -0.090572475999999999 -0.52301306000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[2]" " -type \"float2\" -0.14970964 -0.56597984000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[3]" " -type \"float2\" -0.17073273999999999 -0.52471345999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[4]" " -type \"float2\" -0.073990851999999996 -0.53959464999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[5]" " -type \"float2\" -0.11695719 -0.59873193999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[6]" " -type \"float2\" -0.053100466999999998 -0.550237"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[7]" " -type \"float2\" -0.075691223000000002 -0.61975526999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[8]" " -type \"float2\" -0.029943079000000001 -0.55390930000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[9]" " -type \"float2\" -0.029943079000000001 -0.62700307"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[10]" " -type \"float2\" -0.0067857205999999996 -0.550237"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[11]" " -type \"float2\" 0.015804796999999999 -0.61975526999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[12]" " -type \"float2\" 0.014104456 -0.53959464999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[13]" " -type \"float2\" 0.057070880999999997 -0.59873193999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[14]" " -type \"float2\" 0.030686169999999999 -0.52301306000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[15]" " -type \"float2\" 0.089823245999999995 -0.56597984000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[16]" " -type \"float2\" 0.041333884000000001 -0.50212215999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[17]" " -type \"float2\" 0.11085227 -0.52471345999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[18]" " -type \"float2\" 0.045000613000000002 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[19]" " -type \"float2\" 0.11809355000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[20]" " -type \"float2\" 0.041333884000000001 -0.45580837000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[21]" " -type \"float2\" 0.11085227 -0.43321704999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[22]" " -type \"float2\" 0.030686169999999999 -0.43491751000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[23]" " -type \"float2\" 0.089823245999999995 -0.39195069999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[24]" " -type \"float2\" 0.014104456 -0.41833587999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[25]" " -type \"float2\" 0.057070880999999997 -0.35919859999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[26]" " -type \"float2\" -0.0067857205999999996 -0.40768805000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[27]" " -type \"float2\" 0.015804796999999999 -0.33816796999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[28]" " -type \"float2\" -0.029943079000000001 -0.40402123000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[29]" " -type \"float2\" -0.029943079000000001 -0.33092746000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[30]" " -type \"float2\" -0.053100466999999998 -0.40768805000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[31]" " -type \"float2\" -0.075691223000000002 -0.33816796999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[32]" " -type \"float2\" -0.073990851999999996 -0.41833587999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[33]" " -type \"float2\" -0.11695719 -0.35919859999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[34]" " -type \"float2\" -0.090572475999999999 -0.43491751000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[35]" " -type \"float2\" -0.14970964 -0.39195069999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[36]" " -type \"float2\" -0.10121413999999999 -0.45580837000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[37]" " -type \"float2\" -0.17073273999999999 -0.43321704999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[38]" " -type \"float2\" -0.1048868 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[39]" " -type \"float2\" -0.17797974 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[40]" " -type \"float2\" -0.20589711999999999 -0.60679936000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[41]" " -type \"float2\" -0.23678714000000001 -0.54617088999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[42]" " -type \"float2\" -0.15777764 -0.65491873"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[43]" " -type \"float2\" -0.097148567000000005 -0.68581139999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[44]" " -type \"float2\" -0.029943079000000001 -0.69645738999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[45]" " -type \"float2\" 0.037267982999999998 -0.68581139999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[46]" " -type \"float2\" 0.097897260999999999 -0.65491873"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[47]" " -type \"float2\" 0.14601082000000001 -0.60679936000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[48]" " -type \"float2\" 0.17690095 -0.54617088999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[49]" " -type \"float2\" 0.18754855000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[50]" " -type \"float2\" 0.17690095 -0.41175329999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[51]" " -type \"float2\" 0.14601082000000001 -0.35112479000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[52]" " -type \"float2\" 0.097897260999999999 -0.30300996000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[53]" " -type \"float2\" 0.037267982999999998 -0.27211916000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[54]" " -type \"float2\" -0.029943079000000001 -0.26147318000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[55]" " -type \"float2\" -0.097148567000000005 -0.27211916000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[56]" " -type \"float2\" -0.15777764 -0.30300996000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[57]" " -type \"float2\" -0.20589711999999999 -0.35112479000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[58]" " -type \"float2\" -0.23678714000000001 -0.41175329999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[59]" " -type \"float2\" -0.24742901 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[60]" " -type \"float2\" -0.25775283999999998 -0.64447564000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[61]" " -type \"float2\" -0.29774618000000003 -0.56597984000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[62]" " -type \"float2\" -0.19545203 -0.70677626000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[63]" " -type \"float2\" -0.11695719 -0.74677062000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[64]" " -type \"float2\" -0.029943079000000001 -0.76055258999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[65]" " -type \"float2\" 0.057070880999999997 -0.74677062000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[66]" " -type \"float2\" 0.13557145000000001 -0.70677626000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[67]" " -type \"float2\" 0.19786638000000001 -0.64447564000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[68]" " -type \"float2\" 0.23785987 -0.56597984000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[69]" " -type \"float2\" 0.25164217 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[70]" " -type \"float2\" 0.23785987 -0.39195069999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[71]" " -type \"float2\" 0.19786638000000001 -0.31344944000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[72]" " -type \"float2\" 0.13557145000000001 -0.2511543"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[73]" " -type \"float2\" 0.057070880999999997 -0.21115990000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[74]" " -type \"float2\" -0.029943079000000001 -0.19737795"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[75]" " -type \"float2\" -0.11695719 -0.21115990000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[76]" " -type \"float2\" -0.19545203 -0.2511543"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[77]" " -type \"float2\" -0.25774696000000002 -0.31344944000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[78]" " -type \"float2\" -0.29774618000000003 -0.39195069999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[79]" " -type \"float2\" -0.31152847 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[80]" " -type \"float2\" -0.30399239 -0.67807841000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[81]" " -type \"float2\" -0.35211176 -0.58364242"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[82]" " -type \"float2\" -0.22905463000000001 -0.75302243000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[83]" " -type \"float2\" -0.13462015999999999 -0.80113630999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[84]" " -type \"float2\" -0.029943079000000001 -0.81771707999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[85]" " -type \"float2\" 0.074733942999999997 -0.80113630999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[86]" " -type \"float2\" 0.16916832000000001 -0.75302243000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[87]" " -type \"float2\" 0.24411213000000001 -0.67807841000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[88]" " -type \"float2\" 0.29222547999999998 -0.58364242"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[89]" " -type \"float2\" 0.30880712999999999 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[90]" " -type \"float2\" 0.29222547999999998 -0.37428811000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[91]" " -type \"float2\" 0.24411213000000001 -0.27985211999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[92]" " -type \"float2\" 0.16916832000000001 -0.20490808999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[93]" " -type \"float2\" 0.074733942999999997 -0.15679418000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[94]" " -type \"float2\" -0.029943079000000001 -0.14021343999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[95]" " -type \"float2\" -0.13462015999999999 -0.15679418000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[96]" " -type \"float2\" -0.22905463000000001 -0.20490808999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[97]" " -type \"float2\" -0.30399239 -0.27985211999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[98]" " -type \"float2\" -0.35211176 -0.37428811000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[99]" " -type \"float2\" -0.36868772 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[100]" " -type \"float2\" -0.34349417999999998 -0.70677626000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[101]" " -type \"float2\" -0.39854249000000003 -0.59873193999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[102]" " -type \"float2\" -0.25775283999999998 -0.79251795999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[103]" " -type \"float2\" -0.14970964 -0.84756714"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[104]" " -type \"float2\" -0.029943079000000001 -0.86653548000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[105]" " -type \"float2\" 0.089823245999999995 -0.84756714"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[106]" " -type \"float2\" 0.19786638000000001 -0.79251795999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[107]" " -type \"float2\" 0.28360798999999998 -0.70677626000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[108]" " -type \"float2\" 0.33865627999999998 -0.59873193999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[109]" " -type \"float2\" 0.35762620000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[110]" " -type \"float2\" 0.33865627999999998 -0.35919859999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[111]" " -type \"float2\" 0.28360798999999998 -0.2511543"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[112]" " -type \"float2\" 0.19786638000000001 -0.16541258"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[113]" " -type \"float2\" 0.089823245999999995 -0.11036339000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[114]" " -type \"float2\" -0.029943079000000001 -0.091394140999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[115]" " -type \"float2\" -0.14970964 -0.11036339000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[116]" " -type \"float2\" -0.25774696000000002 -0.16541258"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[117]" " -type \"float2\" -0.34349417999999998 -0.2511543"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[118]" " -type \"float2\" -0.39854249000000003 -0.35919859999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[119]" " -type \"float2\" -0.41751263 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[120]" " -type \"float2\" -0.37526928999999998 -0.72985822"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[121]" " -type \"float2\" -0.43589865999999999 -0.61086642999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[122]" " -type \"float2\" -0.280835 -0.82429326000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[123]" " -type \"float2\" -0.16184354000000001 -0.88492358000000004"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[124]" " -type \"float2\" -0.029943079000000001 -0.90581440999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[125]" " -type \"float2\" 0.10196319 -0.88492358000000004"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[126]" " -type \"float2\" 0.22095466 -0.82429326000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[127]" " -type \"float2\" 0.31538295999999999 -0.72985822"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[128]" " -type \"float2\" 0.37601226999999998 -0.61086642999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[129]" " -type \"float2\" 0.39690286000000002 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[130]" " -type \"float2\" 0.37601226999999998 -0.34705865000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[131]" " -type \"float2\" 0.31538295999999999 -0.22806592000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[132]" " -type \"float2\" 0.22095466 -0.13363726000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[133]" " -type \"float2\" 0.10196319 -0.073006943000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[134]" " -type \"float2\" -0.029943079000000001 -0.052116099999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[135]" " -type \"float2\" -0.16184354000000001 -0.073006943000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[136]" " -type \"float2\" -0.280835 -0.13363726000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[137]" " -type \"float2\" -0.37526928999999998 -0.22806592000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[138]" " -type \"float2\" -0.43589865999999999 -0.34705865000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[139]" " -type \"float2\" -0.45678896000000002 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[140]" " -type \"float2\" -0.39854249000000003 -0.74677062000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[141]" " -type \"float2\" -0.46326086 -0.61975526999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[142]" " -type \"float2\" -0.29774618000000003 -0.84756714"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[143]" " -type \"float2\" -0.17073273999999999 -0.91228556999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[144]" " -type \"float2\" -0.029943079000000001 -0.93458079999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[145]" " -type \"float2\" 0.11085227 -0.91228556999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[146]" " -type \"float2\" 0.23785987 -0.84756714"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[147]" " -type \"float2\" 0.33865627999999998 -0.74677062000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[148]" " -type \"float2\" 0.40337443000000001 -0.61975526999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[149]" " -type \"float2\" 0.42567015000000002 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[150]" " -type \"float2\" 0.40337443000000001 -0.33816796999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[151]" " -type \"float2\" 0.33865627999999998 -0.21115990000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[152]" " -type \"float2\" 0.23785987 -0.11036339000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[153]" " -type \"float2\" 0.11085227 -0.045644995000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[154]" " -type \"float2\" -0.029943079000000001 -0.023349734"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[155]" " -type \"float2\" -0.17073273999999999 -0.045644995000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[156]" " -type \"float2\" -0.29774618000000003 -0.11036339000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[157]" " -type \"float2\" -0.39854249000000003 -0.21115990000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[158]" " -type \"float2\" -0.46325493000000001 -0.33816796999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[159]" " -type \"float2\" -0.48555632999999998 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[160]" " -type \"float2\" -0.41274121000000003 -0.75708765"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[161]" " -type \"float2\" -0.47994642999999998 -0.62518101999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[162]" " -type \"float2\" -0.30805843999999999 -0.86176573999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[163]" " -type \"float2\" -0.17615786 -0.92897134999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[164]" " -type \"float2\" -0.029943079000000001 -0.95213466999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[165]" " -type \"float2\" 0.11627144 -0.92897134999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[166]" " -type \"float2\" 0.24817782999999999 -0.86176573999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[167]" " -type \"float2\" 0.35285487999999998 -0.75708765"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[168]" " -type \"float2\" 0.42006573000000003 -0.62518101999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[169]" " -type \"float2\" 0.44322333000000003 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[170]" " -type \"float2\" 0.42006573000000003 -0.33274948999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[171]" " -type \"float2\" 0.35285487999999998 -0.20084283999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[172]" " -type \"float2\" 0.24817782999999999 -0.096164778000000006"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[173]" " -type \"float2\" 0.11627144 -0.028959184999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[174]" " -type \"float2\" -0.029943079000000001 -0.0057958704"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[175]" " -type \"float2\" -0.17615786 -0.028959184999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[176]" " -type \"float2\" -0.30805843999999999 -0.096164778000000006"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[177]" " -type \"float2\" -0.41274121000000003 -0.20084283999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[178]" " -type \"float2\" -0.47994642999999998 -0.33274948999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[179]" " -type \"float2\" -0.50310390999999999 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[180]" " -type \"float2\" -0.41751263 -0.76055258999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[181]" " -type \"float2\" -0.48555632999999998 -0.62700307"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[182]" " -type \"float2\" -0.31152847 -0.86653548000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[183]" " -type \"float2\" -0.17797974 -0.93458079999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[184]" " -type \"float2\" -0.029943079000000001 -0.95802832000000004"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[185]" " -type \"float2\" 0.11809355000000001 -0.93458079999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[186]" " -type \"float2\" 0.25164217 -0.86653548000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[187]" " -type \"float2\" 0.35762620000000001 -0.76055258999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[188]" " -type \"float2\" 0.42567015000000002 -0.62700307"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[189]" " -type \"float2\" 0.44912290999999999 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[190]" " -type \"float2\" 0.42567015000000002 -0.33092746000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[191]" " -type \"float2\" 0.35762620000000001 -0.19737795"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[192]" " -type \"float2\" 0.25164217 -0.091394140999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[193]" " -type \"float2\" 0.11809355000000001 -0.023349734"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[194]" " -type \"float2\" -0.029943079000000001 9.7753473000000005e-05"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[195]" " -type \"float2\" -0.17797974 -0.023349734"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[196]" " -type \"float2\" -0.31152847 -0.091394140999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[197]" " -type \"float2\" -0.41751263 -0.19737795"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[198]" " -type \"float2\" -0.48555632999999998 -0.33092746000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[199]" " -type \"float2\" -0.50900316000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[200]" " -type \"float2\" -0.41274121000000003 -0.75708765"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[201]" " -type \"float2\" -0.47994642999999998 -0.62518101999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[202]" " -type \"float2\" -0.30805843999999999 -0.86176573999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[203]" " -type \"float2\" -0.17615786 -0.92897134999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[204]" " -type \"float2\" -0.029943079000000001 -0.95213466999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[205]" " -type \"float2\" 0.11627144 -0.92897134999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[206]" " -type \"float2\" 0.24817782999999999 -0.86176573999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[207]" " -type \"float2\" 0.35285487999999998 -0.75708765"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[208]" " -type \"float2\" 0.42006573000000003 -0.62518101999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[209]" " -type \"float2\" 0.44322333000000003 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[210]" " -type \"float2\" 0.42006573000000003 -0.33274948999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[211]" " -type \"float2\" 0.35285487999999998 -0.20084283999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[212]" " -type \"float2\" 0.24817782999999999 -0.096164778000000006"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[213]" " -type \"float2\" 0.11627144 -0.028959184999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[214]" " -type \"float2\" -0.029943079000000001 -0.0057958704"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[215]" " -type \"float2\" -0.17615786 -0.028959184999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[216]" " -type \"float2\" -0.30805843999999999 -0.096164778000000006"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[217]" " -type \"float2\" -0.41274121000000003 -0.20084283999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[218]" " -type \"float2\" -0.47994642999999998 -0.33274948999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[219]" " -type \"float2\" -0.50310390999999999 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[220]" " -type \"float2\" -0.39854249000000003 -0.74677062000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[221]" " -type \"float2\" -0.46326086 -0.61975526999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[222]" " -type \"float2\" -0.29774618000000003 -0.84756714"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[223]" " -type \"float2\" -0.17073273999999999 -0.91228556999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[224]" " -type \"float2\" -0.029943079000000001 -0.93458079999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[225]" " -type \"float2\" 0.11085227 -0.91228556999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[226]" " -type \"float2\" 0.23785987 -0.84756714"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[227]" " -type \"float2\" 0.33865627999999998 -0.74677062000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[228]" " -type \"float2\" 0.40337443000000001 -0.61975526999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[229]" " -type \"float2\" 0.42567015000000002 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[230]" " -type \"float2\" 0.40337443000000001 -0.33816796999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[231]" " -type \"float2\" 0.33865627999999998 -0.21115990000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[232]" " -type \"float2\" 0.23785987 -0.11036339000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[233]" " -type \"float2\" 0.11085227 -0.045644995000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[234]" " -type \"float2\" -0.029943079000000001 -0.023349734"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[235]" " -type \"float2\" -0.17073273999999999 -0.045644995000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[236]" " -type \"float2\" -0.29774618000000003 -0.11036339000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[237]" " -type \"float2\" -0.39854249000000003 -0.21115990000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[238]" " -type \"float2\" -0.46325493000000001 -0.33816796999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[239]" " -type \"float2\" -0.48555632999999998 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[240]" " -type \"float2\" -0.37526928999999998 -0.72985822"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[241]" " -type \"float2\" -0.43589865999999999 -0.61086642999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[242]" " -type \"float2\" -0.280835 -0.82429326000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[243]" " -type \"float2\" -0.16184354000000001 -0.88492358000000004"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[244]" " -type \"float2\" -0.029943079000000001 -0.90581440999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[245]" " -type \"float2\" 0.10196319 -0.88492358000000004"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[246]" " -type \"float2\" 0.22095466 -0.82429326000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[247]" " -type \"float2\" 0.31538295999999999 -0.72985822"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[248]" " -type \"float2\" 0.37601226999999998 -0.61086642999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[249]" " -type \"float2\" 0.39690286000000002 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[250]" " -type \"float2\" 0.37601226999999998 -0.34705865000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[251]" " -type \"float2\" 0.31538295999999999 -0.22806592000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[252]" " -type \"float2\" 0.22095466 -0.13363726000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[253]" " -type \"float2\" 0.10196319 -0.073006943000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[254]" " -type \"float2\" -0.029943079000000001 -0.052116099999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[255]" " -type \"float2\" -0.16184354000000001 -0.073006943000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[256]" " -type \"float2\" -0.280835 -0.13363726000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[257]" " -type \"float2\" -0.37526928999999998 -0.22806592000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[258]" " -type \"float2\" -0.43589865999999999 -0.34705865000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[259]" " -type \"float2\" -0.45678896000000002 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[260]" " -type \"float2\" -0.34349417999999998 -0.70677626000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[261]" " -type \"float2\" -0.39854249000000003 -0.59873193999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[262]" " -type \"float2\" -0.25775283999999998 -0.79251795999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[263]" " -type \"float2\" -0.14970964 -0.84756714"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[264]" " -type \"float2\" -0.029943079000000001 -0.86653548000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[265]" " -type \"float2\" 0.089823245999999995 -0.84756714"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[266]" " -type \"float2\" 0.19786638000000001 -0.79251795999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[267]" " -type \"float2\" 0.28360798999999998 -0.70677626000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[268]" " -type \"float2\" 0.33865627999999998 -0.59873193999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[269]" " -type \"float2\" 0.35762620000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[270]" " -type \"float2\" 0.33865627999999998 -0.35919859999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[271]" " -type \"float2\" 0.28360798999999998 -0.2511543"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[272]" " -type \"float2\" 0.19786638000000001 -0.16541258"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[273]" " -type \"float2\" 0.089823245999999995 -0.11036339000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[274]" " -type \"float2\" -0.029943079000000001 -0.091394140999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[275]" " -type \"float2\" -0.14970964 -0.11036339000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[276]" " -type \"float2\" -0.25774696000000002 -0.16541258"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[277]" " -type \"float2\" -0.34349417999999998 -0.2511543"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[278]" " -type \"float2\" -0.39854249000000003 -0.35919859999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[279]" " -type \"float2\" -0.41751263 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[280]" " -type \"float2\" -0.30399239 -0.67807841000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[281]" " -type \"float2\" -0.35211176 -0.58364242"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[282]" " -type \"float2\" -0.22905463000000001 -0.75302243000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[283]" " -type \"float2\" -0.13462015999999999 -0.80113630999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[284]" " -type \"float2\" -0.029943079000000001 -0.81771707999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[285]" " -type \"float2\" 0.074733942999999997 -0.80113630999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[286]" " -type \"float2\" 0.16916832000000001 -0.75302243000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[287]" " -type \"float2\" 0.24411213000000001 -0.67807841000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[288]" " -type \"float2\" 0.29222547999999998 -0.58364242"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[289]" " -type \"float2\" 0.30880712999999999 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[290]" " -type \"float2\" 0.29222547999999998 -0.37428811000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[291]" " -type \"float2\" 0.24411213000000001 -0.27985211999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[292]" " -type \"float2\" 0.16916832000000001 -0.20490808999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[293]" " -type \"float2\" 0.074733942999999997 -0.15679418000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[294]" " -type \"float2\" -0.029943079000000001 -0.14021343999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[295]" " -type \"float2\" -0.13462015999999999 -0.15679418000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[296]" " -type \"float2\" -0.22905463000000001 -0.20490808999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[297]" " -type \"float2\" -0.30399239 -0.27985211999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[298]" " -type \"float2\" -0.35211176 -0.37428811000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[299]" " -type \"float2\" -0.36868772 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[300]" " -type \"float2\" -0.25775283999999998 -0.64447564000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[301]" " -type \"float2\" -0.29774618000000003 -0.56597984000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[302]" " -type \"float2\" -0.19545203 -0.70677626000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[303]" " -type \"float2\" -0.11695719 -0.74677062000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[304]" " -type \"float2\" -0.029943079000000001 -0.76055258999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[305]" " -type \"float2\" 0.057070880999999997 -0.74677062000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[306]" " -type \"float2\" 0.13557145000000001 -0.70677626000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[307]" " -type \"float2\" 0.19786638000000001 -0.64447564000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[308]" " -type \"float2\" 0.23785987 -0.56597984000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[309]" " -type \"float2\" 0.25164217 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[310]" " -type \"float2\" 0.23785987 -0.39195069999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[311]" " -type \"float2\" 0.19786638000000001 -0.31344944000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[312]" " -type \"float2\" 0.13557145000000001 -0.2511543"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[313]" " -type \"float2\" 0.057070880999999997 -0.21115990000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[314]" " -type \"float2\" -0.029943079000000001 -0.19737795"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[315]" " -type \"float2\" -0.11695719 -0.21115990000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[316]" " -type \"float2\" -0.19545203 -0.2511543"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[317]" " -type \"float2\" -0.25774696000000002 -0.31344944000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[318]" " -type \"float2\" -0.29774618000000003 -0.39195069999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[319]" " -type \"float2\" -0.31152847 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[320]" " -type \"float2\" -0.20589711999999999 -0.60679936000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[321]" " -type \"float2\" -0.23678714000000001 -0.54617088999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[322]" " -type \"float2\" -0.15777764 -0.65491873"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[323]" " -type \"float2\" -0.097148567000000005 -0.68581139999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[324]" " -type \"float2\" -0.029943079000000001 -0.69645738999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[325]" " -type \"float2\" 0.037267982999999998 -0.68581139999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[326]" " -type \"float2\" 0.097897260999999999 -0.65491873"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[327]" " -type \"float2\" 0.14601082000000001 -0.60679936000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[328]" " -type \"float2\" 0.17690095 -0.54617088999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[329]" " -type \"float2\" 0.18754855000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[330]" " -type \"float2\" 0.17690095 -0.41175329999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[331]" " -type \"float2\" 0.14601082000000001 -0.35112479000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[332]" " -type \"float2\" 0.097897260999999999 -0.30300996000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[333]" " -type \"float2\" 0.037267982999999998 -0.27211916000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[334]" " -type \"float2\" -0.029943079000000001 -0.26147318000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[335]" " -type \"float2\" -0.097148567000000005 -0.27211916000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[336]" " -type \"float2\" -0.15777764 -0.30300996000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[337]" " -type \"float2\" -0.20589711999999999 -0.35112479000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[338]" " -type \"float2\" -0.23678714000000001 -0.41175329999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[339]" " -type \"float2\" -0.24742901 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[340]" " -type \"float2\" -0.14970964 -0.56597984000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[341]" " -type \"float2\" -0.17073273999999999 -0.52471345999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[342]" " -type \"float2\" -0.11695719 -0.59873193999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[343]" " -type \"float2\" -0.075691223000000002 -0.61975526999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[344]" " -type \"float2\" -0.029943079000000001 -0.62700307"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[345]" " -type \"float2\" 0.015804796999999999 -0.61975526999999997"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[346]" " -type \"float2\" 0.057070880999999997 -0.59873193999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[347]" " -type \"float2\" 0.089823245999999995 -0.56597984000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[348]" " -type \"float2\" 0.11085227 -0.52471345999999996"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[349]" " -type \"float2\" 0.11809355000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[350]" " -type \"float2\" 0.11085227 -0.43321704999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[351]" " -type \"float2\" 0.089823245999999995 -0.39195069999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[352]" " -type \"float2\" 0.057070880999999997 -0.35919859999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[353]" " -type \"float2\" 0.015804796999999999 -0.33816796999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[354]" " -type \"float2\" -0.029943079000000001 -0.33092746000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[355]" " -type \"float2\" -0.075691223000000002 -0.33816796999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[356]" " -type \"float2\" -0.11695719 -0.35919859999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[357]" " -type \"float2\" -0.14970964 -0.39195069999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[358]" " -type \"float2\" -0.17073273999999999 -0.43321704999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[359]" " -type \"float2\" -0.17797974 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[360]" " -type \"float2\" -0.090572475999999999 -0.52301306000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[361]" " -type \"float2\" -0.10121413999999999 -0.50212215999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[362]" " -type \"float2\" -0.073990851999999996 -0.53959464999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[363]" " -type \"float2\" -0.053100466999999998 -0.550237"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[364]" " -type \"float2\" -0.029943079000000001 -0.55390930000000005"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[365]" " -type \"float2\" -0.0067857205999999996 -0.550237"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[366]" " -type \"float2\" 0.014104456 -0.53959464999999995"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[367]" " -type \"float2\" 0.030686169999999999 -0.52301306000000003"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[368]" " -type \"float2\" 0.041333884000000001 -0.50212215999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[369]" " -type \"float2\" 0.045000613000000002 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[370]" " -type \"float2\" 0.041333884000000001 -0.45580837000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[371]" " -type \"float2\" 0.030686169999999999 -0.43491751000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[372]" " -type \"float2\" 0.014104456 -0.41833587999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[373]" " -type \"float2\" -0.0067857205999999996 -0.40768805000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[374]" " -type \"float2\" -0.029943079000000001 -0.40402123000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[375]" " -type \"float2\" -0.053100466999999998 -0.40768805000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[376]" " -type \"float2\" -0.073990851999999996 -0.41833587999999999"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[377]" " -type \"float2\" -0.090572475999999999 -0.43491751000000001"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[378]" " -type \"float2\" -0.10121413999999999 -0.45580837000000002"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[379]" " -type \"float2\" -0.1048868 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[380]" " -type \"float2\" -0.029943079000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV1" "uvTweak[381]" " -type \"float2\" -0.029943079000000001 -0.47896435999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak" " -s 1264"
+		2 "Minion:polyTweakUV2" "uvTweak[0]" " -type \"float2\" -0.17294991000000001 -0.21617341000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1]" " -type \"float2\" -0.17515558000000001 -0.19687667"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[2]" " -type \"float2\" -0.17681711999999999 -0.19450503999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[3]" " -type \"float2\" -0.17366469000000001 -0.21959880000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[4]" " -type \"float2\" -0.17601675 -0.16956842"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[5]" " -type \"float2\" -0.17824762999999999 -0.16761085000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[6]" " -type \"float2\" -0.17672777000000001 -0.16711666999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[7]" " -type \"float2\" -0.17515022 -0.19410585999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[8]" " -type \"float2\" -0.17198132999999999 -0.21883464"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[9]" " -type \"float2\" -0.17561805 -0.14369889999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[10]" " -type \"float2\" -0.17818212999999999 -0.14184958"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[11]" " -type \"float2\" -0.17296737000000001 -0.12692431000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[12]" " -type \"float2\" -0.17431492000000001 -0.11960503"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[13]" " -type \"float2\" -0.17242825000000001 -0.11690757"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[14]" " -type \"float2\" -0.17686014999999999 -0.14083123"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[15]" " -type \"float2\" -0.17148340000000001 -0.14149281"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[16]" " -type \"float2\" -0.17130445999999999 -0.16593948"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[17]" " -type \"float2\" -0.16748208000000001 -0.11923354999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[18]" " -type \"float2\" -0.15909165 -0.12628170999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[19]" " -type \"float2\" -0.17351090999999999 -0.089036822000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[20]" " -type \"float2\" -0.17214346 -0.12953919"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[21]" " -type \"float2\" -0.17088102999999999 -0.19109291"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[22]" " -type \"float2\" -0.16889203 -0.21376756"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[23]" " -type \"float2\" -0.16975486000000001 -0.16913033"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[24]" " -type \"float2\" -0.16670900999999999 -0.19585642"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[25]" " -type \"float2\" -0.016768216999999998 -0.22524532999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[26]" " -type \"float2\" -0.015372037999999999 -0.21073734999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[27]" " -type \"float2\" -0.023093342999999999 -0.20978123000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[28]" " -type \"float2\" -0.024715006000000001 -0.22886476"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[29]" " -type \"float2\" -0.014500916000000001 -0.1864391"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[30]" " -type \"float2\" -0.022434056000000001 -0.18654817000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[31]" " -type \"float2\" -0.031372315999999997 -0.18640548000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[32]" " -type \"float2\" -0.031686127000000001 -0.20527965000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[33]" " -type \"float2\" -0.032922626000000003 -0.22067273000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[34]" " -type \"float2\" -0.015533923999999999 -0.16215827999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[35]" " -type \"float2\" -0.023226738 -0.16335448999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[36]" " -type \"float2\" -0.016998470000000002 -0.14766768"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[37]" " -type \"float2\" -0.024895674999999999 -0.14433512000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[38]" " -type \"float2\" -0.032700904000000003 -0.15230100999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[39]" " -type \"float2\" -0.031705975999999997 -0.16754048999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[40]" " -type \"float2\" -0.038356908000000002 -0.17030376"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[41]" " -type \"float2\" -0.038407139 -0.18577911999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[42]" " -type \"float2\" -0.038764894000000001 -0.1579507"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[43]" " -type \"float2\" -0.044222176000000002 -0.16187343000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[44]" " -type \"float2\" -0.044203408 -0.17207453"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[45]" " -type \"float2\" -0.044425963999999998 -0.18494116999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[46]" " -type \"float2\" -0.038969933999999998 -0.20130350999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[47]" " -type \"float2\" -0.039859421999999999 -0.21371635999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[48]" " -type \"float2\" -0.044975161999999999 -0.19783664000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[49]" " -type \"float2\" -0.045721471 -0.20810843000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[50]" " -type \"float2\" -0.051923326999999998 -0.19500103999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[51]" " -type \"float2\" -0.052454829000000001 -0.20388328999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[52]" " -type \"float2\" -0.051444530000000002 -0.18380767000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[53]" " -type \"float2\" -0.058463453999999998 -0.18268648000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[54]" " -type \"float2\" -0.058860540000000003 -0.19281366"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[55]" " -type \"float2\" -0.059236406999999998 -0.20084759999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[56]" " -type \"float2\" -0.051086119999999999 -0.17262524000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[57]" " -type \"float2\" -0.050822197999999999 -0.16375390000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[58]" " -type \"float2\" -0.057745158999999997 -0.16450402"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[59]" " -type \"float2\" -0.058092244000000001 -0.17255714999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[60]" " -type \"float2\" -0.064598142999999997 -0.17239359000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[61]" " -type \"float2\" -0.064914643999999994 -0.18183789"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[62]" " -type \"float2\" -0.064286590000000005 -0.16487389999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[63]" " -type \"float2\" -0.070259332999999993 -0.16510805000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[64]" " -type \"float2\" -0.070504546000000001 -0.17229407999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[65]" " -type \"float2\" -0.070756733000000002 -0.18131071000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[66]" " -type \"float2\" -0.065230191000000007 -0.19127854999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[67]" " -type \"float2\" -0.065515934999999997 -0.19877835999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[68]" " -type \"float2\" -0.071011007000000001 -0.19032647999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[69]" " -type \"float2\" -0.071247279999999996 -0.19750175"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[70]" " -type \"float2\" -0.076077281999999996 -0.18972354999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[71]" " -type \"float2\" -0.076297044999999994 -0.19668474999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[72]" " -type \"float2\" -0.075868486999999998 -0.18098660999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[73]" " -type \"float2\" -0.080722451000000001 -0.18082237000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[74]" " -type \"float2\" -0.080889761000000004 -0.18947747000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[75]" " -type \"float2\" -0.081070602000000005 -0.19638528999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[76]" " -type \"float2\" -0.075673878 -0.17225191000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[77]" " -type \"float2\" -0.075493752999999997 -0.16528967"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[78]" " -type \"float2\" -0.080461203999999995 -0.16527950999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[79]" " -type \"float2\" -0.080579339999999999 -0.17217371000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[80]" " -type \"float2\" -0.085641264999999994 -0.17203581000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[81]" " -type \"float2\" -0.085723639000000004 -0.18079888999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[82]" " -type \"float2\" -0.085593640999999998 -0.16504954999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[83]" " -type \"float2\" -0.091258227999999997 -0.16475728000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[84]" " -type \"float2\" -0.091229558000000002 -0.17193686999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[85]" " -type \"float2\" -0.091246068 -0.18096182"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[86]" " -type \"float2\" -0.085840940000000004 -0.18957146999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[87]" " -type \"float2\" -0.085990965000000003 -0.19657853"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[88]" " -type \"float2\" -0.091311037999999997 -0.19001243000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[89]" " -type \"float2\" -0.091423987999999998 -0.19724089"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[90]" " -type \"float2\" -0.097700952999999993 -0.19089850999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[91]" " -type \"float2\" -0.097770512000000004 -0.19841141000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[92]" " -type \"float2\" -0.097678602000000003 -0.18146634"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[93]" " -type \"float2\" -0.10413045 -0.18231320000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[94]" " -type \"float2\" -0.10413164 -0.19228419999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[95]" " -type \"float2\" -0.10418247999999999 -0.20017877000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[96]" " -type \"float2\" -0.097711860999999997 -0.17210215000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[97]" " -type \"float2\" -0.097798346999999994 -0.16469884000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[98]" " -type \"float2\" -0.10428643 -0.16467788999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[99]" " -type \"float2\" -0.10417843 -0.17245176000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[100]" " -type \"float2\" -0.10975724000000001 -0.17266002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[101]" " -type \"float2\" -0.10974699 -0.18336669"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[102]" " -type \"float2\" -0.10981798 -0.16418680999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[103]" " -type \"float2\" -0.11446004999999999 -0.162429"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[104]" " -type \"float2\" -0.11450618999999999 -0.17222977"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[105]" " -type \"float2\" -0.1145485 -0.18451867"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[106]" " -type \"float2\" -0.1097455 -0.19422436000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[107]" " -type \"float2\" -0.10975581 -0.20276396999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[108]" " -type \"float2\" -0.11458153 -0.19701563999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[109]" " -type \"float2\" -0.11455381000000001 -0.20690011999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[110]" " -type \"float2\" -0.11864918000000001 -0.20074859"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[111]" " -type \"float2\" -0.11860979000000001 -0.21301334999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[112]" " -type \"float2\" -0.11865895999999999 -0.18554503"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[113]" " -type \"float2\" -0.12241536 -0.18647506999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[114]" " -type \"float2\" -0.12250113 -0.20454493000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[115]" " -type \"float2\" -0.12243879000000001 -0.21949958999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[116]" " -type \"float2\" -0.11849171 -0.17084435000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[117]" " -type \"float2\" -0.11831599 -0.15888174999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[118]" " -type \"float2\" -0.12150759 -0.15462786000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[119]" " -type \"float2\" -0.12205046 -0.16905871"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[120]" " -type \"float2\" -0.12547916000000001 -0.16742757"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[121]" " -type \"float2\" -0.12616168999999999 -0.18703312"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[122]" " -type \"float2\" -0.12443006 -0.15104041000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[123]" " -type \"float2\" -0.12719296999999999 -0.14806250000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[124]" " -type \"float2\" -0.12876064000000001 -0.16602847000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[125]" " -type \"float2\" -0.12982564999999999 -0.18743937999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[126]" " -type \"float2\" -0.12653959000000001 -0.20751565999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[127]" " -type \"float2\" -0.12667376 -0.22474216999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[128]" " -type \"float2\" -0.13055586999999999 -0.21004573000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[129]" " -type \"float2\" -0.13093102000000001 -0.22932443"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[130]" " -type \"float2\" -0.13931209 -0.23853123000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[131]" " -type \"float2\" -0.13873379999999999 -0.21511470999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[132]" " -type \"float2\" -0.14449882999999999 -0.21778536000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[133]" " -type \"float2\" -0.14488166999999999 -0.24290656999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[134]" " -type \"float2\" -0.13754272000000001 -0.18804874999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[135]" " -type \"float2\" -0.14357048 -0.18793881000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[136]" " -type \"float2\" -0.15035862 -0.18694392000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[137]" " -type \"float2\" -0.15090625999999999 -0.21920153000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[138]" " -type \"float2\" -0.15084582999999999 -0.24576651999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[139]" " -type \"float2\" -0.1357199 -0.16304117000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[140]" " -type \"float2\" -0.14148854999999999 -0.159677"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[141]" " -type \"float2\" -0.1332373 -0.14226669"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[142]" " -type \"float2\" -0.13852954000000001 -0.13582677000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[143]" " -type \"float2\" -0.14491576 -0.1278832"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[144]" " -type \"float2\" -0.14816241999999999 -0.15511853"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[145]" " -type \"float2\" -0.16325843000000001 -0.18033843999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[146]" " -type \"float2\" -0.16153513999999999 -0.146548"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[147]" " -type \"float2\" -0.16920376000000001 -0.14474409999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[148]" " -type \"float2\" -0.17028075000000001 -0.17458220999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[149]" " -type \"float2\" -0.15879494 -0.11754816999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[150]" " -type \"float2\" -0.1673249 -0.12004231999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[151]" " -type \"float2\" -0.16236913 -0.24186635000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[152]" " -type \"float2\" -0.16323519 -0.21459395000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[153]" " -type \"float2\" -0.16992503 -0.20538914"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[154]" " -type \"float2\" -0.16895157 -0.22973621"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[155]" " -type \"float2\" -0.018545926000000001 -0.14124602"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[156]" " -type \"float2\" -0.026781447 -0.13453077999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[157]" " -type \"float2\" -0.021977961000000001 -0.14100254000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[158]" " -type \"float2\" -0.029467582999999999 -0.13391548"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[159]" " -type \"float2\" -0.035821863000000002 -0.14522561"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[160]" " -type \"float2\" -0.034187904999999998 -0.14470124000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[161]" " -type \"float2\" -0.027320451999999999 -0.14599380000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[162]" " -type \"float2\" -0.033295094999999997 -0.14209267"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[163]" " -type \"float2\" -0.031905055000000002 -0.15534302999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[164]" " -type \"float2\" -0.041278123999999999 -0.093627720999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[165]" " -type \"float2\" -0.045866124000000001 -0.099159478999999995"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[166]" " -type \"float2\" -0.037878572999999999 -0.15374789"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[167]" " -type \"float2\" -0.040935635999999997 -0.16106433000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[168]" " -type \"float2\" -0.040170126 -0.15323254"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[169]" " -type \"float2\" -0.048634231 -0.10620841"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[170]" " -type \"float2\" -0.051481247000000001 -0.1135273"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[171]" " -type \"float2\" -0.044373028000000002 -0.16543232999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[172]" " -type \"float2\" -0.044402658999999997 -0.15854844000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[173]" " -type \"float2\" -0.039351702000000002 -0.1522184"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[174]" " -type \"float2\" -0.044306463999999997 -0.15730911"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[175]" " -type \"float2\" -0.050546824999999997 -0.15980148"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[176]" " -type \"float2\" -0.050222627999999998 -0.16090003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[177]" " -type \"float2\" -0.056926972999999999 -0.16177762000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[178]" " -type \"float2\" -0.057362734999999998 -0.16087139"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[179]" " -type \"float2\" -0.049801640000000001 -0.16688364999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[180]" " -type \"float2\" -0.055896938 -0.120408"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[181]" " -type \"float2\" -0.061447679999999998 -0.12620485000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[182]" " -type \"float2\" -0.056442618 -0.16708004000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[183]" " -type \"float2\" -0.063137829000000006 -0.16706758999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[184]" " -type \"float2\" -0.063559598999999994 -0.16221440000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[185]" " -type \"float2\" -0.067341029999999996 -0.1304602"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[186]" " -type \"float2\" -0.073111594000000002 -0.13326681000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[187]" " -type \"float2\" -0.069424093000000006 -0.16704673"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[188]" " -type \"float2\" -0.069712937000000003 -0.16248240999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[189]" " -type \"float2\" -0.063943743999999997 -0.16144338"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[190]" " -type \"float2\" -0.069996417000000005 -0.16180148999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[191]" " -type \"float2\" -0.075310767000000001 -0.16207826"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[192]" " -type \"float2\" -0.075124860000000002 -0.16272131000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[193]" " -type \"float2\" -0.080267965999999996 -0.16271430000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[194]" " -type \"float2\" -0.080357492000000003 -0.16209241999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[195]" " -type \"float2\" -0.074953616000000001 -0.16711855"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[196]" " -type \"float2\" -0.078391790000000003 -0.13493550000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[197]" " -type \"float2\" -0.083546757999999999 -0.13562246999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[198]" " -type \"float2\" -0.080199598999999996 -0.16704886999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[199]" " -type \"float2\" -0.085640430000000003 -0.16679353"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[200]" " -type \"float2\" -0.085588098000000001 -0.16242777999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[201]" " -type \"float2\" -0.088981091999999998 -0.13536989999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[202]" " -type \"float2\" -0.094990551000000006 -0.13450015000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[203]" " -type \"float2\" -0.091595231999999999 -0.16664469000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[204]" " -type \"float2\" -0.091445087999999994 -0.16211619999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[205]" " -type \"float2\" -0.085576295999999996 -0.16181311000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[206]" " -type \"float2\" -0.091330826000000004 -0.16145155"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[207]" " -type \"float2\" -0.097941816000000001 -0.16136035000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[208]" " -type \"float2\" -0.098151207000000004 -0.16216674"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[209]" " -type \"float2\" -0.1048227 -0.16204914000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[210]" " -type \"float2\" -0.1044904 -0.16116907999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[211]" " -type \"float2\" -0.098416865000000006 -0.16699433"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[212]" " -type \"float2\" -0.10193831 -0.13325861"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[213]" " -type \"float2\" -0.10913438 -0.13041863000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[214]" " -type \"float2\" -0.10528034 -0.16726241"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[215]" " -type \"float2\" -0.11129778999999999 -0.16653454000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[216]" " -type \"float2\" -0.11053842 -0.16089991000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[217]" " -type \"float2\" -0.11583035999999999 -0.12497243"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[218]" " -type \"float2\" -0.12195742 -0.11585653"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[219]" " -type \"float2\" -0.11651361 -0.16373196000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[220]" " -type \"float2\" -0.11532444 -0.15759581"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[221]" " -type \"float2\" -0.11005181 -0.16017744"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[222]" " -type \"float2\" -0.11470145 -0.15735342999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[223]" " -type \"float2\" -0.118469 -0.15193166999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[224]" " -type \"float2\" -0.11916172999999999 -0.15122935000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[225]" " -type \"float2\" -0.12190455 -0.13946021"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[226]" " -type \"float2\" -0.12135661 -0.14551657000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[227]" " -type \"float2\" -0.12097216 -0.15793594999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[228]" " -type \"float2\" -0.1272701 -0.10249403"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[229]" " -type \"float2\" -0.13163059999999999 -0.082573025999999994"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[230]" " -type \"float2\" -0.123914 -0.14826912"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[231]" " -type \"float2\" -0.12375289 -0.14012827999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[232]" " -type \"float2\" -0.12332946 -0.13064468000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[233]" " -type \"float2\" -0.1250723 -0.12536423999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[234]" " -type \"float2\" -0.12595719 -0.13571540000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[235]" " -type \"float2\" -0.13093643999999999 -0.12805659"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[236]" " -type \"float2\" -0.13557583000000001 -0.11966673"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[237]" " -type \"float2\" -0.12795788 -0.12024048"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[238]" " -type \"float2\" -0.13265288 -0.11428215999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[239]" " -type \"float2\" -0.13847917000000001 -0.10315356000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[240]" " -type \"float2\" -0.14160614999999999 -0.10959869999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[241]" " -type \"float2\" -0.12592929999999999 -0.1299217"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[242]" " -type \"float2\" -0.12961555 -0.12388718"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[243]" " -type \"float2\" -0.14229029000000001 -0.057632177999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[244]" " -type \"float2\" -0.14677817000000001 -0.051713526000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[245]" " -type \"float2\" -0.15190428 -0.041354298999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[246]" " -type \"float2\" -0.13533819 -0.11226295999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[247]" " -type \"float2\" -0.15301703999999999 -0.089591771000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[248]" " -type \"float2\" -0.14880889999999999 -0.095703095000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[249]" " -type \"float2\" -0.15826392 -0.10291573"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[250]" " -type \"float2\" -0.16304737 -0.098728626999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[251]" " -type \"float2\" -0.14293694000000001 -0.1195845"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[252]" " -type \"float2\" -0.16947656999999999 -0.042836577000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[253]" " -type \"float2\" -0.15599895 -0.097787826999999994"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[254]" " -type \"float2\" -0.16545808000000001 -0.10437056"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[255]" " -type \"float2\" -0.036655419000000002 -0.16711097999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[256]" " -type \"float2\" -0.039599895000000003 -0.12207514"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[257]" " -type \"float2\" -0.038238645000000002 -0.18569579999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[258]" " -type \"float2\" -0.037941396000000002 -0.15498590000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[259]" " -type \"float2\" -0.043623202 -0.15236785999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[260]" " -type \"float2\" -0.044841468000000002 -0.12379524"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[261]" " -type \"float2\" -0.035958408999999997 -0.20422545"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[262]" " -type \"float2\" -0.036820471 -0.1878621"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[263]" " -type \"float2\" -0.030410111 -0.21591514000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[264]" " -type \"float2\" -0.035557515999999997 -0.21536905000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[265]" " -type \"float2\" -0.041062056999999999 -0.20459545000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[266]" " -type \"float2\" -0.042478979 -0.18074945000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[267]" " -type \"float2\" -0.046730041999999999 -0.17646187999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[268]" " -type \"float2\" -0.047561534000000003 -0.15197429000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[269]" " -type \"float2\" -0.045655370000000001 -0.19723373999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[270]" " -type \"float2\" -0.049741871999999999 -0.19218856000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[271]" " -type \"float2\" -0.050521016000000002 -0.17403257"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[272]" " -type \"float2\" -0.051107584999999997 -0.15283915000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[273]" " -type \"float2\" -0.048252641999999998 -0.12734923000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[274]" " -type \"float2\" -0.051468842000000001 -0.13164635999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[275]" " -type \"float2\" -0.056001901999999999 -0.13621428999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[276]" " -type \"float2\" -0.055860347999999997 -0.15475391999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[277]" " -type \"float2\" -0.061467171000000001 -0.15695152000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[278]" " -type \"float2\" -0.061532319000000002 -0.14035225000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[279]" " -type \"float2\" -0.055537811999999999 -0.17336093999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[280]" " -type \"float2\" -0.055073678000000001 -0.18936428"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[281]" " -type \"float2\" -0.061001539 -0.18795582999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[282]" " -type \"float2\" -0.061284064999999999 -0.17361884999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[283]" " -type \"float2\" -0.067095458999999996 -0.1740633"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[284]" " -type \"float2\" -0.067254543 -0.15874535000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[285]" " -type \"float2\" -0.066873430999999997 -0.18722504000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[286]" " -type \"float2\" -0.072437643999999995 -0.18683258"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[287]" " -type \"float2\" -0.072664976000000006 -0.17442688000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[288]" " -type \"float2\" -0.072858154999999994 -0.15997547000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[289]" " -type \"float2\" -0.067342221999999993 -0.14347969999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[290]" " -type \"float2\" -0.073011576999999994 -0.14556458999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[291]" " -type \"float2\" -0.078187346000000005 -0.14679074"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[292]" " -type \"float2\" -0.077953637000000006 -0.16068067999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[293]" " -type \"float2\" -0.082910299000000007 -0.16100347000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[294]" " -type \"float2\" -0.083234549000000005 -0.14730978"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[295]" " -type \"float2\" -0.077702760999999995 -0.17460528"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[296]" " -type \"float2\" -0.077441393999999997 -0.18655216999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[297]" " -type \"float2\" -0.082266151999999995 -0.18650052"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[298]" " -type \"float2\" -0.082584619999999997 -0.17472916999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[299]" " -type \"float2\" -0.087728797999999997 -0.17482560999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[300]" " -type \"float2\" -0.088144003999999998 -0.16097908999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[301]" " -type \"float2\" -0.087333560000000005 -0.18669527999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[302]" " -type \"float2\" -0.092965363999999995 -0.18691260000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[303]" " -type \"float2\" -0.093447387000000007 -0.17475684999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[304]" " -type \"float2\" -0.093963860999999996 -0.16062841"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[305]" " -type \"float2\" -0.088565111000000002 -0.14716238000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[306]" " -type \"float2\" -0.094480693000000004 -0.14654151000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[307]" " -type \"float2\" -0.10133451 -0.14556453"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[308]" " -type \"float2\" -0.10066801 -0.15986760999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[309]" " -type \"float2\" -0.10751139999999999 -0.15827858"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[310]" " -type \"float2\" -0.10835797 -0.14333403"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[311]" " -type \"float2\" -0.1000393 -0.17429742000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[312]" " -type \"float2\" -0.099473177999999995 -0.1868687"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[313]" " -type \"float2\" -0.10604167 -0.18677083"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[314]" " -type \"float2\" -0.1067338 -0.17342567"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[315]" " -type \"float2\" -0.11264436999999999 -0.17238253000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[316]" " -type \"float2\" -0.11367321 -0.15573421000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[317]" " -type \"float2\" -0.11176318 -0.18710935000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[318]" " -type \"float2\" -0.11677485999999999 -0.18869554999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[319]" " -type \"float2\" -0.11789954 -0.17157573000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[320]" " -type \"float2\" -0.11920047 -0.15213645000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[321]" " -type \"float2\" -0.11472887 -0.13921806"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[322]" " -type \"float2\" -0.12052572 -0.1326203"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[323]" " -type \"float2\" -0.12562751999999999 -0.12351570000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[324]" " -type \"float2\" -0.12407708000000001 -0.14796972"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[325]" " -type \"float2\" -0.12839608999999999 -0.14435713999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[326]" " -type \"float2\" -0.12992852999999999 -0.11493233"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[327]" " -type \"float2\" -0.12249833 -0.17180630999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[328]" " -type \"float2\" -0.12110132 -0.19257924000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[329]" " -type \"float2\" -0.12509429 -0.19793245000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[330]" " -type \"float2\" -0.12666707999999999 -0.17306589999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[331]" " -type \"float2\" -0.13066947000000001 -0.17522994"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[332]" " -type \"float2\" -0.13229787000000001 -0.14223620000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[333]" " -type \"float2\" -0.12912261 -0.20379981"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[334]" " -type \"float2\" -0.13302743 -0.20936548999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[335]" " -type \"float2\" -0.13430309000000001 -0.17758325"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[336]" " -type \"float2\" -0.13571215 -0.1410518"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[337]" " -type \"float2\" -0.13354432999999999 -0.10991695999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[338]" " -type \"float2\" -0.13430439999999999 -0.079652666999999996"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[339]" " -type \"float2\" -0.13663006 -0.10641223"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[340]" " -type \"float2\" -0.13696354999999999 -0.075684874999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[341]" " -type \"float2\" -0.14264452 -0.096504062000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[342]" " -type \"float2\" -0.14668792 -0.090842903000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[343]" " -type \"float2\" -0.14216572 -0.13765034000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[344]" " -type \"float2\" -0.14634501999999999 -0.13655996000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[345]" " -type \"float2\" -0.15096867 -0.13604759999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[346]" " -type \"float2\" -0.15150886999999999 -0.085236727999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[347]" " -type \"float2\" -0.14121776999999999 -0.1807597"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[348]" " -type \"float2\" -0.14558160000000001 -0.18276798999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[349]" " -type \"float2\" -0.14057755 -0.21782371"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[350]" " -type \"float2\" -0.14518260999999999 -0.22168678"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[351]" " -type \"float2\" -0.14989847000000001 -0.22442091"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[352]" " -type \"float2\" -0.15028435000000001 -0.18473479000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[353]" " -type \"float2\" -0.16123956 -0.13448304"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[354]" " -type \"float2\" -0.15952474 -0.18373549"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[355]" " -type \"float2\" -0.16519814999999999 -0.17687184"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[356]" " -type \"float2\" -0.16738969000000001 -0.13227722"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[357]" " -type \"float2\" -0.15873515999999999 -0.22122085"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[358]" " -type \"float2\" -0.16266394000000001 -0.21219473999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[359]" " -type \"float2\" -0.16237652 -0.078196734000000004"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[360]" " -type \"float2\" -0.1686753 -0.083510696999999995"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[361]" " -type \"float2\" -0.026341677000000001 -0.22628351999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[362]" " -type \"float2\" -0.032378793000000003 -0.23202294000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[363]" " -type \"float2\" -0.021386868999999999 -0.23170078"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[364]" " -type \"float2\" -0.028832085 -0.23964962000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[365]" " -type \"float2\" -0.036366463000000002 -0.22807246"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[366]" " -type \"float2\" -0.038857638999999999 -0.22016305"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[367]" " -type \"float2\" -0.018187642 -0.23162389"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[368]" " -type \"float2\" -0.026428766999999999 -0.23877454000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[369]" " -type \"float2\" -0.034375131000000003 -0.22832662000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[370]" " -type \"float2\" -0.041000366000000003 -0.21957496000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[371]" " -type \"float2\" -0.042505017999999999 -0.21870651999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[372]" " -type \"float2\" -0.046536922000000001 -0.21272236"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[373]" " -type \"float2\" -0.047594248999999998 -0.21150231"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[374]" " -type \"float2\" -0.04416424 -0.21120443999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[375]" " -type \"float2\" -0.048709928999999999 -0.20460408999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[376]" " -type \"float2\" -0.054448246999999998 -0.20038047"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[377]" " -type \"float2\" -0.053740918999999998 -0.2065661"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[378]" " -type \"float2\" -0.060138874000000002 -0.20334262"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[379]" " -type \"float2\" -0.060602844000000003 -0.19781852"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[380]" " -type \"float2\" -0.053049794999999997 -0.20779207"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[381]" " -type \"float2\" -0.059681832999999997 -0.20440516"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[382]" " -type \"float2\" -0.065863132000000005 -0.20215185999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[383]" " -type \"float2\" -0.066222310000000006 -0.20126817"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[384]" " -type \"float2\" -0.071523010999999997 -0.20076173999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[385]" " -type \"float2\" -0.071845709999999993 -0.20000013999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[386]" " -type \"float2\" -0.066572428000000003 -0.19625329999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[387]" " -type \"float2\" -0.072160005999999999 -0.19532055000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[388]" " -type \"float2\" -0.077154577000000002 -0.19471297000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[389]" " -type \"float2\" -0.076841950000000006 -0.19919013999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[390]" " -type \"float2\" -0.081603228999999999 -0.19891977"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[391]" " -type \"float2\" -0.081942201000000006 -0.19453105000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[392]" " -type \"float2\" -0.076513766999999996 -0.19987708000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[393]" " -type \"float2\" -0.081267059000000003 -0.19956866000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[394]" " -type \"float2\" -0.086194158000000007 -0.19982198000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[395]" " -type \"float2\" -0.086564422000000002 -0.19919323999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[396]" " -type \"float2\" -0.091678619000000003 -0.20056056999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[397]" " -type \"float2\" -0.092077315000000007 -0.19987339000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[398]" " -type \"float2\" -0.086949586999999995 -0.19478455"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[399]" " -type \"float2\" -0.092512965000000003 -0.19527325000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[400]" " -type \"float2\" -0.098963915999999999 -0.19577557000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[401]" " -type \"float2\" -0.098495603000000001 -0.20085107999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[402]" " -type \"float2\" -0.10494006 -0.20228466000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[403]" " -type \"float2\" -0.10545087 -0.19651929000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[404]" " -type \"float2\" -0.098090887000000002 -0.20177481"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[405]" " -type \"float2\" -0.10450733 -0.20355450999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[406]" " -type \"float2\" -0.11002755 -0.20625578999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[407]" " -type \"float2\" -0.11045837 -0.20461011000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[408]" " -type \"float2\" -0.11475325 -0.2110002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[409]" " -type \"float2\" -0.11516535 -0.20917124000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[410]" " -type \"float2\" -0.11103982 -0.19802320000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[411]" " -type \"float2\" -0.11585671 -0.20147359000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[412]" " -type \"float2\" -0.11993581 -0.20814255000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[413]" " -type \"float2\" -0.11908518999999999 -0.21722828999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[414]" " -type \"float2\" -0.12278187 -0.22637694999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[415]" " -type \"float2\" -0.1237697 -0.2162202"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[416]" " -type \"float2\" -0.11865394999999999 -0.21872225000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[417]" " -type \"float2\" -0.12249786 -0.22712531999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[418]" " -type \"float2\" -0.12681012999999999 -0.23419321000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[419]" " -type \"float2\" -0.12703764000000001 -0.23440080999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[420]" " -type \"float2\" -0.13121264999999999 -0.24029212999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[421]" " -type \"float2\" -0.13151681000000001 -0.24126338999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[422]" " -type \"float2\" -0.12791764999999999 -0.22386733"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[423]" " -type \"float2\" -0.13205950999999999 -0.23069447000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[424]" " -type \"float2\" -0.14015812 -0.24177539000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[425]" " -type \"float2\" -0.14495975 -0.24605045"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[426]" " -type \"float2\" -0.13978815 -0.25305670000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[427]" " -type \"float2\" -0.14491725 -0.25744971999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[428]" " -type \"float2\" -0.15042417999999999 -0.25978195999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[429]" " -type \"float2\" -0.1499095 -0.24876114999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[430]" " -type \"float2\" -0.13969558000000001 -0.25163150000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[431]" " -type \"float2\" -0.14502835 -0.25631088000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[432]" " -type \"float2\" -0.1506179 -0.25922309999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[433]" " -type \"float2\" -0.16079277 -0.25378904000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[434]" " -type \"float2\" -0.16168618000000001 -0.25416464"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[435]" " -type \"float2\" -0.16809297000000001 -0.23983120999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[436]" " -type \"float2\" -0.16685885 -0.23896703"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[437]" " -type \"float2\" -0.15984058000000001 -0.24366471000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[438]" " -type \"float2\" -0.16497511000000001 -0.23087531"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[439]" " -type \"float2\" -0.011057973 -0.1596002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[440]" " -type \"float2\" -0.014901996000000001 -0.15954347999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[441]" " -type \"float2\" -0.010528028 -0.18620845999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[442]" " -type \"float2\" -0.013864219000000001 -0.18598556999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[443]" " -type \"float2\" -0.12677526 -0.1215938"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[444]" " -type \"float2\" -0.12661821000000001 -0.11018062000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[445]" " -type \"float2\" -0.12764334999999999 -0.11268665999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[446]" " -type \"float2\" -0.12477428 -0.11302063"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[447]" " -type \"float2\" -0.12526894 -0.10017495999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[448]" " -type \"float2\" -0.12775819999999999 -0.099082530000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[449]" " -type \"float2\" -0.12942546999999999 -0.10313000999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[450]" " -type \"float2\" -0.12528694000000001 -0.12366655"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[451]" " -type \"float2\" -0.14155376 -0.037669420000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[452]" " -type \"float2\" -0.12711882999999999 -0.11373138000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[453]" " -type \"float2\" -0.12158382 -0.12464204"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[454]" " -type \"float2\" -0.13476866000000001 -0.052831679999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[455]" " -type \"float2\" -0.12874937 -0.14291446999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[456]" " -type \"float2\" -0.13731623000000001 -0.050485521999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[457]" " -type \"float2\" -0.13800448000000001 -0.029385984"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[458]" " -type \"float2\" -0.13551748 -0.029619574999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[459]" " -type \"float2\" -0.1340133 -0.026656388999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[460]" " -type \"float2\" -0.12445641 -0.13422495000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[461]" " -type \"float2\" -0.12243991999999999 -0.12511306999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[462]" " -type \"float2\" -0.12411714 -0.11947152"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[463]" " -type \"float2\" -0.12237006 -0.11120728000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[464]" " -type \"float2\" -0.12264675 -0.052119642000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[465]" " -type \"float2\" -0.1223045 -0.055907487999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[466]" " -type \"float2\" -0.12421602 -0.052481621999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[467]" " -type \"float2\" -0.12413150000000001 -0.046909362000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[468]" " -type \"float2\" -0.12389171 -0.063521235999999995"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[469]" " -type \"float2\" -0.14163445999999999 0.079161107999999994"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[470]" " -type \"float2\" -0.14455175000000001 0.079280138"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[471]" " -type \"float2\" -0.12675810000000001 -0.052077085000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[472]" " -type \"float2\" -0.12740087999999999 -0.045047223999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[473]" " -type \"float2\" -0.13314855 -0.085671603999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[474]" " -type \"float2\" -0.13107705 -0.078680663999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[475]" " -type \"float2\" -0.13227642000000001 -0.067865431000000004"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[476]" " -type \"float2\" -0.13457984000000001 -0.075510770000000005"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[477]" " -type \"float2\" -0.12760329000000001 -0.076846211999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[478]" " -type \"float2\" -0.12852204 -0.065340339999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[479]" " -type \"float2\" -0.12875967999999999 -0.055032402000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[480]" " -type \"float2\" -0.13275290000000001 -0.057847172000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[481]" " -type \"float2\" -0.13532406 -0.065290957999999996"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[482]" " -type \"float2\" -0.14535213 0.0098049044999999994"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[483]" " -type \"float2\" -0.13054573999999999 -0.097065984999999994"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[484]" " -type \"float2\" -0.13221728999999999 -0.086905449999999995"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[485]" " -type \"float2\" -0.14705777 0.027959584999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[486]" " -type \"float2\" -0.13345248000000001 -0.076271831999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[487]" " -type \"float2\" -0.12745696000000001 -0.085603833000000004"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[488]" " -type \"float2\" -0.12834686000000001 -0.10352936"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[489]" " -type \"float2\" -0.13773953999999999 0.0087423920999999995"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[490]" " -type \"float2\" -0.13899112 0.028524457999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[491]" " -type \"float2\" -0.1278522 -0.091588377999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[492]" " -type \"float2\" -0.14028357999999999 0.0064846872999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[493]" " -type \"float2\" -0.14157939 0.026031314999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[494]" " -type \"float2\" -0.14272386000000001 0.045675217999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[495]" " -type \"float2\" -0.14002955 0.047726035"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[496]" " -type \"float2\" -0.13870275000000001 0.051562785999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[497]" " -type \"float2\" -0.12319571 -0.087153584000000006"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[498]" " -type \"float2\" -0.12437123 -0.095278769999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[499]" " -type \"float2\" -0.12422079 -0.083501875000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[500]" " -type \"float2\" -0.12344205 -0.075433372999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[501]" " -type \"float2\" -0.12354034 -0.072463422999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[502]" " -type \"float2\" -0.12317693 -0.064602166000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[503]" " -type \"float2\" -0.13184773999999999 -0.16476273999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[504]" " -type \"float2\" -0.13329964999999999 -0.18775916000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[505]" " -type \"float2\" -0.12984592 -0.14557895000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[506]" " -type \"float2\" -0.13433187999999999 -0.21254112999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[507]" " -type \"float2\" -0.13489944000000001 -0.23394804999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[508]" " -type \"float2\" -0.12816553999999999 -0.1322256"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[509]" " -type \"float2\" -0.13763534999999999 -0.17924586000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[510]" " -type \"float2\" -0.13882816000000001 -0.13932048999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[511]" " -type \"float2\" -0.13666176999999999 -0.21388745000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[512]" " -type \"float2\" -0.13944376 -0.10186818"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[513]" " -type \"float2\" -0.13954699000000001 -0.069739520999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[514]" " -type \"float2\" -0.13531983 -0.24618569000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[515]" " -type \"float2\" -0.13550651 -0.24764588000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[516]" " -type \"float2\" -0.13601684999999999 -0.23673415"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[517]" " -type \"float2\" -0.12304722999999999 -0.11811396"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[518]" " -type \"float2\" -0.12321573 -0.10457414"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[519]" " -type \"float2\" -0.13989716999999999 -0.045743554999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[520]" " -type \"float2\" -0.14069777999999999 -0.026731759000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[521]" " -type \"float2\" -0.12965214 -0.054109632999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[522]" " -type \"float2\" -0.13114439999999999 -0.047248393"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[523]" " -type \"float2\" -0.14779955 0.077192842999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[524]" " -type \"float2\" -0.14955884 0.074730336999999994"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[525]" " -type \"float2\" -0.13245338000000001 -0.058596521999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[526]" " -type \"float2\" -0.13319010000000001 -0.053285359999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[527]" " -type \"float2\" -0.12465334 -0.080351710000000007"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[528]" " -type \"float2\" -0.12525195 -0.068611979000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[529]" " -type \"float2\" -0.12526608 -0.058006017999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[530]" " -type \"float2\" -0.14327168000000001 0.0059649943999999996"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[531]" " -type \"float2\" -0.14470738 0.024795174999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[532]" " -type \"float2\" -0.14602958999999999 0.044123470999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[533]" " -type \"float2\" -0.15702856000000001 -0.21877161000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[534]" " -type \"float2\" -0.15647078 -0.24635243000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[535]" " -type \"float2\" -0.15675770999999999 -0.18446504999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[536]" " -type \"float2\" -0.15468477999999999 -0.15037503999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[537]" " -type \"float2\" -0.15149361 -0.12094745"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[538]" " -type \"float2\" -0.14823007999999999 -0.10087374"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[539]" " -type \"float2\" -0.14503621999999999 -0.092974156000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[540]" " -type \"float2\" -0.14131373 -0.10076198"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[541]" " -type \"float2\" -0.15718811999999999 -0.031705140999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[542]" " -type \"float2\" -0.15660780999999999 -0.079930335000000005"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[543]" " -type \"float2\" -0.15578782999999999 -0.13552141000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[544]" " -type \"float2\" -0.15485001000000001 -0.18548672999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[545]" " -type \"float2\" -0.15435552999999999 -0.22492975000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[546]" " -type \"float2\" -0.15471476000000001 -0.24908271000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[547]" " -type \"float2\" -0.15546500999999999 -0.25986906999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[548]" " -type \"float2\" -0.15607910999999999 -0.25960809000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[549]" " -type \"float2\" -0.13225532000000001 -0.049859255999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[550]" " -type \"float2\" -0.13496274 -0.056525766999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[551]" " -type \"float2\" -0.12827748 -0.047293126999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[552]" " -type \"float2\" -0.13373130999999999 -0.066483945000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[553]" " -type \"float2\" -0.14969450000000001 0.063304365000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[554]" " -type \"float2\" -0.14091671 0.064812838999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[555]" " -type \"float2\" -0.12489467999999999 -0.070076019000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[556]" " -type \"float2\" -0.14377749000000001 0.063617170000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[557]" " -type \"float2\" -0.12235968999999999 -0.063090295000000005"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[558]" " -type \"float2\" -0.12240136 -0.055748433"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[559]" " -type \"float2\" -0.12468886 -0.049930691999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[560]" " -type \"float2\" -0.14707375 0.061767219999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[561]" " -type \"float2\" -0.12943298 -0.088849306000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[562]" " -type \"float2\" -0.13132113000000001 -0.094512016000000004"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[563]" " -type \"float2\" -0.12637245999999999 -0.088293165000000007"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[564]" " -type \"float2\" -0.12878913 -0.10542506"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[565]" " -type \"float2\" -0.14375407000000001 -0.0054882168999999996"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[566]" " -type \"float2\" -0.13655818 -0.0098866223999999996"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[567]" " -type \"float2\" -0.12838738999999999 -0.11502808"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[568]" " -type \"float2\" -0.13905256999999999 -0.011194766"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[569]" " -type \"float2\" -0.12423408 -0.10687757000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[570]" " -type \"float2\" -0.12274039 -0.098795742000000006"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[571]" " -type \"float2\" -0.12385690000000001 -0.092149347000000006"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[572]" " -type \"float2\" -0.14188528 -0.010349809999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[573]" " -type \"float2\" 0.63971865000000006 0.13575905999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[574]" " -type \"float2\" 0.63984631999999997 0.17241395000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[575]" " -type \"float2\" 0.64939731000000001 0.14762479000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[576]" " -type \"float2\" 0.64472651000000003 0.12743985999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[577]" " -type \"float2\" 0.64017915999999997 0.21135293999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[578]" " -type \"float2\" 0.65290356000000005 0.17124724"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[579]" " -type \"float2\" 0.65865582 0.17153673999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[580]" " -type \"float2\" 0.65437961 0.14574057000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[581]" " -type \"float2\" 0.64870970999999999 0.12317109"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[582]" " -type \"float2\" 0.63949590999999995 0.25143152000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[583]" " -type \"float2\" 0.65610891999999998 0.19548661000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[584]" " -type \"float2\" 0.63732891999999997 0.2802732"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[585]" " -type \"float2\" 0.65491319000000003 0.21824914000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[586]" " -type \"float2\" 0.65919506999999999 0.22199935000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[587]" " -type \"float2\" 0.66133136000000003 0.19763356000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[588]" " -type \"float2\" 0.66236322999999997 0.19793308000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[589]" " -type \"float2\" 0.66025959999999995 0.17249447000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[590]" " -type \"float2\" 0.66048264999999995 0.22058922"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[591]" " -type \"float2\" 0.65880543000000003 0.21463966000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[592]" " -type \"float2\" 0.65992993 0.19777304000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[593]" " -type \"float2\" 0.65819806000000003 0.17242461000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[594]" " -type \"float2\" 0.65651303999999999 0.14656699000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[595]" " -type \"float2\" 0.65130787999999995 0.12331926999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[596]" " -type \"float2\" 0.65515535999999996 0.14592826"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[597]" " -type \"float2\" 0.65139723000000005 0.12765497000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[598]" " -type \"float2\" 0.50149034999999997 0.19717710999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[599]" " -type \"float2\" 0.50857156999999997 0.21093929"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[600]" " -type \"float2\" 0.50488496000000005 0.22214311"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[601]" " -type \"float2\" 0.50522721000000004 0.19447355999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[602]" " -type \"float2\" 0.51376854999999999 0.23070747"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[603]" " -type \"float2\" 0.50421119000000003 0.25507956999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[604]" " -type \"float2\" 0.50959325 0.25445234999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[605]" " -type \"float2\" 0.51002687000000002 0.22593611"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[606]" " -type \"float2\" 0.51004296999999998 0.20184684"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[607]" " -type \"float2\" 0.51522838999999998 0.24917436000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[608]" " -type \"float2\" 0.50413178999999997 0.28821587999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[609]" " -type \"float2\" 0.51240045000000001 0.25970995000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[610]" " -type \"float2\" 0.5211401 0.25324917000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[611]" " -type \"float2\" 0.52572547999999997 0.23871361999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[612]" " -type \"float2\" 0.50925248999999995 0.2831552"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[613]" " -type \"float2\" 0.51309316999999999 0.27681851000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[614]" " -type \"float2\" 0.51384121000000005 0.25212145000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[615]" " -type \"float2\" 0.52754151999999999 0.22980349999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[616]" " -type \"float2\" 0.52956736000000004 0.22433734"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[617]" " -type \"float2\" 0.51706772999999995 0.26989168000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[618]" " -type \"float2\" 0.51800798999999997 0.24872637"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[619]" " -type \"float2\" 0.51445370999999995 0.22749710000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[620]" " -type \"float2\" 0.51473617999999999 0.20650613000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[621]" " -type \"float2\" 0.51874816000000001 0.22747450999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[622]" " -type \"float2\" 0.51925622999999999 0.20919615"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[623]" " -type \"float2\" 0.52461659999999999 0.22519654"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[624]" " -type \"float2\" 0.52532899 0.20916754000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[625]" " -type \"float2\" 0.52373289999999995 0.24377679999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[626]" " -type \"float2\" 0.53038781999999995 0.23842156"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[627]" " -type \"float2\" 0.53130257000000003 0.22182739000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[628]" " -type \"float2\" 0.53208451999999995 0.20752281"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[629]" " -type \"float2\" 0.52269458999999996 0.26221644999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[630]" " -type \"float2\" 0.53364539 0.22127926000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[631]" " -type \"float2\" 0.53931183000000005 0.21919477000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[632]" " -type \"float2\" 0.52937197999999996 0.25489539"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[633]" " -type \"float2\" 0.53613365000000002 0.24880253999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[634]" " -type \"float2\" 0.53705031000000003 0.23365211"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[635]" " -type \"float2\" 0.54547029999999996 0.21720271999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[636]" " -type \"float2\" 0.55150770999999998 0.21515924"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[637]" " -type \"float2\" 0.54250765000000001 0.24401474000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[638]" " -type \"float2\" 0.54330325000000002 0.22969328999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[639]" " -type \"float2\" 0.53790313000000001 0.21841514000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[640]" " -type \"float2\" 0.53865445000000001 0.2053054"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[641]" " -type \"float2\" 0.54406147999999999 0.21531122999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[642]" " -type \"float2\" 0.54474526999999995 0.20295769"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[643]" " -type \"float2\" 0.54949563999999995 0.2127068"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[644]" " -type \"float2\" 0.55010526999999998 0.20080101"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[645]" " -type \"float2\" 0.54883563999999996 0.22658253"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[646]" " -type \"float2\" 0.55408186000000004 0.22396779"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[647]" " -type \"float2\" 0.55464685000000002 0.21026701"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[648]" " -type \"float2\" 0.55518144000000003 0.19852059999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[649]" " -type \"float2\" 0.54815893999999998 0.24041425999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[650]" " -type \"float2\" 0.55704617999999995 0.21313256"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[651]" " -type \"float2\" 0.56248659000000001 0.21116268999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[652]" " -type \"float2\" 0.55351669000000003 0.23763543000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[653]" " -type \"float2\" 0.55902213000000001 0.23543011999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[654]" " -type \"float2\" 0.55948639 0.22160785999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[655]" " -type \"float2\" 0.56831746999999999 0.2091344"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[656]" " -type \"float2\" 0.57488989999999995 0.20665795000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[657]" " -type \"float2\" 0.56499803000000004 0.23344749000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[658]" " -type \"float2\" 0.56537287999999997 0.21932678999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[659]" " -type \"float2\" 0.55996036999999999 0.20776004000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[660]" " -type \"float2\" 0.56041837000000005 0.19589483999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[661]" " -type \"float2\" 0.56575655999999996 0.20516229"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[662]" " -type \"float2\" 0.56614374999999995 0.19297779000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[663]" " -type \"float2\" 0.57231677000000003 0.20252043"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[664]" " -type \"float2\" 0.57265310999999997 0.18987280000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[665]" " -type \"float2\" 0.57202547999999998 0.2170338"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[666]" " -type \"float2\" 0.57856613000000001 0.21550100999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[667]" " -type \"float2\" 0.57875586000000001 0.20022923000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[668]" " -type \"float2\" 0.57903247999999996 0.18675947000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[669]" " -type \"float2\" 0.57178675999999995 0.2314195"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[670]" " -type \"float2\" 0.58260411000000001 0.20330590000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[671]" " -type \"float2\" 0.59079652999999999 0.19990264999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[672]" " -type \"float2\" 0.57848149999999998 0.23057067000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[673]" " -type \"float2\" 0.58417428000000005 0.23196781"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[674]" " -type \"float2\" 0.58413917000000004 0.21530347999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[675]" " -type \"float2\" 0.59859960999999995 0.19758861999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[676]" " -type \"float2\" 0.60606210999999999 0.19720304"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[677]" " -type \"float2\" 0.58891296000000004 0.23610186999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[678]" " -type \"float2\" 0.58880739999999998 0.21643287"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[679]" " -type \"float2\" 0.58419829999999995 0.19847918000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[680]" " -type \"float2\" 0.58440965 0.18359143"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[681]" " -type \"float2\" 0.58881943999999997 0.19680631000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[682]" " -type \"float2\" 0.58898711000000004 0.17951887999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[683]" " -type \"float2\" 0.59280157 0.19437778"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[684]" " -type \"float2\" 0.59293437000000004 0.17345231999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[685]" " -type \"float2\" 0.59275734000000002 0.21837854000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[686]" " -type \"float2\" 0.59625267999999998 0.21989685"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[687]" " -type \"float2\" 0.59643745000000004 0.19105243999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[688]" " -type \"float2\" 0.59660535999999997 0.16604573"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[689]" " -type \"float2\" 0.59274316000000005 0.24290496"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[690]" " -type \"float2\" 0.61329734000000002 0.19958711000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[691]" " -type \"float2\" 0.62097073000000003 0.20638107999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[692]" " -type \"float2\" 0.59589809000000005 0.24928212"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[693]" " -type \"float2\" 0.59878187999999999 0.25220220999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[694]" " -type \"float2\" 0.59954523999999998 0.21996641"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[695]" " -type \"float2\" 0.59771894999999997 0.28210199000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[696]" " -type \"float2\" 0.60009544999999997 0.28423858000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[697]" " -type \"float2\" 0.60149026000000005 0.25387722000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[698]" " -type \"float2\" 0.60260230000000004 0.21930717999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[699]" " -type \"float2\" 0.60000777000000005 0.18685323000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[700]" " -type \"float2\" 0.60033917000000003 0.15810257"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[701]" " -type \"float2\" 0.60337441999999997 0.18254762999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[702]" " -type \"float2\" 0.60402577999999996 0.15051913"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[703]" " -type \"float2\" 0.61151814000000004 0.13838506"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[704]" " -type \"float2\" 0.61004822999999997 0.17566741"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[705]" " -type \"float2\" 0.61450207000000001 0.17131460000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[706]" " -type \"float2\" 0.61625850000000004 0.13233465"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[707]" " -type \"float2\" 0.60857046000000004 0.21901882"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[708]" " -type \"float2\" 0.61279934999999996 0.21761422999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[709]" " -type \"float2\" 0.61777621999999999 0.21534675"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[710]" " -type \"float2\" 0.61950015999999997 0.16683572999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[711]" " -type \"float2\" 0.62123424000000005 0.12723392"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[712]" " -type \"float2\" 0.60685127999999999 0.26002985000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[713]" " -type \"float2\" 0.61083167999999999 0.26309347"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[714]" " -type \"float2\" 0.60448210999999996 0.29862249000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[715]" " -type \"float2\" 0.62319206999999999 0.20328342999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[716]" " -type \"float2\" 0.62916075999999999 0.21059227"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[717]" " -type \"float2\" 0.61577349999999997 0.26564330000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[718]" " -type \"float2\" 0.62888681999999996 0.21136658999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[719]" " -type \"float2\" 0.62729060999999997 0.26700634000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[720]" " -type \"float2\" 0.63425511000000001 0.2591387"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[721]" " -type \"float2\" 0.63535403999999995 0.21080952999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[722]" " -type \"float2\" 0.62549882999999995 0.31479931"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[723]" " -type \"float2\" 0.64391547000000005 0.21693187999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[724]" " -type \"float2\" 0.63081127000000004 0.12556117999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[725]" " -type \"float2\" 0.62965172999999997 0.16258866"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[726]" " -type \"float2\" 0.63555318000000005 0.16668074999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[727]" " -type \"float2\" 0.63543981000000005 0.13148159000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[728]" " -type \"float2\" 0.50786757000000005 0.26782966000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[729]" " -type \"float2\" 0.51630812999999998 0.26949160999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[730]" " -type \"float2\" 0.50218647999999999 0.27113180999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[731]" " -type \"float2\" 0.51148850000000001 0.27613293999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[732]" " -type \"float2\" 0.51904762000000004 0.26181148999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[733]" " -type \"float2\" 0.52254825999999999 0.25429118000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[734]" " -type \"float2\" 0.49809742000000001 0.26957052999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[735]" " -type \"float2\" 0.50767695999999995 0.27442097999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[736]" " -type \"float2\" 0.49591011000000002 0.26242"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[737]" " -type \"float2\" 0.50471336 0.26384276000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[738]" " -type \"float2\" 0.51324974999999995 0.25325798999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[739]" " -type \"float2\" 0.51594280999999997 0.26147419"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[740]" " -type \"float2\" 0.52133006000000004 0.25174898000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[741]" " -type \"float2\" 0.52351093000000004 0.25115644999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[742]" " -type \"float2\" 0.51936954000000002 0.24552821999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[743]" " -type \"float2\" 0.52461964000000005 0.23944908000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[744]" " -type \"float2\" 0.52600126999999997 0.24427509"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[745]" " -type \"float2\" 0.52743178999999996 0.24328970999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[746]" " -type \"float2\" 0.52576005000000003 0.24383247"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[747]" " -type \"float2\" 0.52873020999999998 0.23660593999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[748]" " -type \"float2\" 0.53323620999999999 0.23202919999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[749]" " -type \"float2\" 0.53253824000000005 0.23797297000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[750]" " -type \"float2\" 0.53852761000000005 0.23411053000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[751]" " -type \"float2\" 0.53899640000000004 0.22880805000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[752]" " -type \"float2\" 0.53170037000000003 0.23898071000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[753]" " -type \"float2\" 0.53082876999999995 0.23491275"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[754]" " -type \"float2\" 0.53736287000000005 0.23129105999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[755]" " -type \"float2\" 0.53796743999999996 0.23498261000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[756]" " -type \"float2\" 0.54419112000000003 0.23161054"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[757]" " -type \"float2\" 0.54469007000000003 0.23087841000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[758]" " -type \"float2\" 0.54366356000000005 0.22812146"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[759]" " -type \"float2\" 0.54955887999999997 0.22525339999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[760]" " -type \"float2\" 0.55009240000000004 0.22863339999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[761]" " -type \"float2\" 0.55061948000000005 0.22801256"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[762]" " -type \"float2\" 0.54512249999999995 0.22603464000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[763]" " -type \"float2\" 0.55112273000000001 0.22349167"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[764]" " -type \"float2\" 0.55658191000000001 0.22114813"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[765]" " -type \"float2\" 0.55599814999999997 0.22547006999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[766]" " -type \"float2\" 0.56123917999999995 0.22327374999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[767]" " -type \"float2\" 0.56191701000000005 0.21904665000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[768]" " -type \"float2\" 0.55540853999999995 0.22602438999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[769]" " -type \"float2\" 0.55483037000000002 0.22271495999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[770]" " -type \"float2\" 0.55991787000000004 0.22046362999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[771]" " -type \"float2\" 0.56056433999999999 0.22377574"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[772]" " -type \"float2\" 0.56601166999999997 0.22173464000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[773]" " -type \"float2\" 0.56679988000000003 0.22127789"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[774]" " -type \"float2\" 0.56526761999999997 0.21833885"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[775]" " -type \"float2\" 0.57127987999999996 0.21602362"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[776]" " -type \"float2\" 0.57214451 0.21954535999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[777]" " -type \"float2\" 0.57306564000000004 0.21909903999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[778]" " -type \"float2\" 0.567608 0.21706063"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[779]" " -type \"float2\" 0.57400428999999997 0.21477419"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[780]" " -type \"float2\" 0.58152740999999997 0.21166939000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[781]" " -type \"float2\" 0.58043855 0.21620512"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[782]" " -type \"float2\" 0.58811294999999997 0.21351153"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[783]" " -type \"float2\" 0.58943164000000003 0.20870799000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[784]" " -type \"float2\" 0.57937938 0.21670054999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[785]" " -type \"float2\" 0.57838917000000001 0.21306037999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[786]" " -type \"float2\" 0.58571881000000003 0.21005946"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[787]" " -type \"float2\" 0.58686715 0.21396941"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[788]" " -type \"float2\" 0.59363197999999995 0.21241897000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[789]" " -type \"float2\" 0.59512978999999999 0.2122156"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[790]" " -type \"float2\" 0.59229421999999998 0.20793038999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[791]" " -type \"float2\" 0.59812790000000005 0.20738226000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[792]" " -type \"float2\" 0.59969050000000002 0.21297336"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[793]" " -type \"float2\" 0.60148363999999999 0.21332735"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[794]" " -type \"float2\" 0.5967983 0.20712059999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[795]" " -type \"float2\" 0.60363834999999999 0.20788264000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[796]" " -type \"float2\" 0.61000222000000004 0.21189409000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[797]" " -type \"float2\" 0.60717153999999995 0.21774041999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[798]" " -type \"float2\" 0.61212902999999996 0.22738832"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[799]" " -type \"float2\" 0.61495239000000002 0.22012770000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[800]" " -type \"float2\" 0.60505854999999997 0.21643722000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[801]" " -type \"float2\" 0.60328053999999998 0.20900339000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[802]" " -type \"float2\" 0.60765886000000002 0.21142243999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[803]" " -type \"float2\" 0.60940139999999998 0.22090375000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[804]" " -type \"float2\" 0.61277806999999995 0.22430122"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[805]" " -type \"float2\" 0.61435728999999994 0.23385990000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[806]" " -type \"float2\" 0.61146140000000004 0.21313040999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[807]" " -type \"float2\" 0.61491269000000004 0.21426307999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[808]" " -type \"float2\" 0.61575877999999995 0.22670180000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[809]" " -type \"float2\" 0.61686403000000001 0.23696291"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[810]" " -type \"float2\" 0.62226420999999998 0.22535843"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[811]" " -type \"float2\" 0.62507652999999996 0.22835981999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[812]" " -type \"float2\" 0.62241614000000001 0.23649149999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[813]" " -type \"float2\" 0.62669556999999998 0.23890143999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[814]" " -type \"float2\" 0.63200115999999995 0.24690706000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[815]" " -type \"float2\" 0.6303879 0.23703355000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[816]" " -type \"float2\" 0.62258773999999995 0.22968584"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[817]" " -type \"float2\" 0.62762081999999997 0.23466509999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[818]" " -type \"float2\" 0.62223958999999995 0.21607649000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[819]" " -type \"float2\" 0.62800341999999998 0.21947712"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[820]" " -type \"float2\" 0.63439177999999996 0.22424691999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[821]" " -type \"float2\" 0.63340169000000002 0.24146384000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[822]" " -type \"float2\" 0.64461433999999995 0.25425379999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[823]" " -type \"float2\" 0.64611076999999995 0.2472443"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[824]" " -type \"float2\" 0.65372014000000001 0.23767561000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[825]" " -type \"float2\" 0.65244537999999996 0.24210227000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[826]" " -type \"float2\" 0.64707844999999997 0.22872149999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[827]" " -type \"float2\" 0.6543563 0.22320122000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[828]" " -type \"float2\" 0.64209258999999996 0.24707872"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[829]" " -type \"float2\" 0.64891659999999995 0.23655909"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[830]" " -type \"float2\" 0.49359775 0.24743103999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[831]" " -type \"float2\" 0.50181120999999995 0.24399114"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[832]" " -type \"float2\" 0.49126035000000001 0.22266005999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[833]" " -type \"float2\" 0.49961334000000002 0.22030090999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[834]" " -type \"float2\" 0.50892735 0.21826124"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[835]" " -type \"float2\" 0.51083462999999996 0.23747528000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[836]" " -type \"float2\" 0.49093502999999999 0.19830017999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[837]" " -type \"float2\" 0.49888729999999998 0.19706756"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[838]" " -type \"float2\" 0.4914636 0.18393677"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[839]" " -type \"float2\" 0.49924749000000002 0.17827921999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[840]" " -type \"float2\" 0.50747644999999997 0.18404174000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[841]" " -type \"float2\" 0.50767916000000002 0.19926351"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[842]" " -type \"float2\" 0.51511907999999995 0.20133334"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[843]" " -type \"float2\" 0.51607840999999999 0.21697949999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[844]" " -type \"float2\" 0.51455890999999998 0.18893557999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[845]" " -type \"float2\" 0.52060490999999998 0.19268547999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[846]" " -type \"float2\" 0.52121198000000002 0.20295447"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[847]" " -type \"float2\" 0.52208257000000002 0.21593635999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[848]" " -type \"float2\" 0.51754515999999995 0.23274136000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[849]" " -type \"float2\" 0.52327042999999995 0.22899448999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[850]" " -type \"float2\" 0.52991628999999996 0.22591162000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[851]" " -type \"float2\" 0.52902943000000002 0.21461791"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[852]" " -type \"float2\" 0.53599613999999995 0.21294892000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[853]" " -type \"float2\" 0.53669732999999997 0.22315913000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[854]" " -type \"float2\" 0.52825712999999996 0.20335311"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[855]" " -type \"float2\" 0.52759606000000003 0.19444036000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[856]" " -type \"float2\" 0.53466075999999996 0.19466048"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[857]" " -type \"float2\" 0.53531461999999996 0.20275134"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[858]" " -type \"float2\" 0.54182421999999997 0.20147203999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[859]" " -type \"float2\" 0.54245852999999999 0.21099668999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[860]" " -type \"float2\" 0.54119861000000002 0.19389497999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[861]" " -type \"float2\" 0.54716253000000004 0.19249034000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[862]" " -type \"float2\" 0.54776495999999997 0.19975488999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[863]" " -type \"float2\" 0.54838049 0.20886672000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[864]" " -type \"float2\" 0.54308480000000003 0.22052537999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[865]" " -type \"float2\" 0.54899025000000001 0.21797937000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[866]" " -type \"float2\" 0.55423385000000003 0.21564388000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[867]" " -type \"float2\" 0.55360662999999999 0.20679349"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[868]" " -type \"float2\" 0.55860542999999996 0.20465374"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[869]" " -type \"float2\" 0.55927092 0.21343809"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[870]" " -type \"float2\" 0.55298513000000005 0.19794363000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[871]" " -type \"float2\" 0.55240029000000002 0.19088471000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[872]" " -type \"float2\" 0.55735451000000003 0.18885028000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[873]" " -type \"float2\" 0.55795771000000005 0.19586945"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[874]" " -type \"float2\" 0.56310212999999998 0.19334149"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[875]" " -type \"float2\" 0.56380545999999998 0.20226598000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[876]" " -type \"float2\" 0.56246454000000001 0.18620718"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[877]" " -type \"float2\" 0.56811148 0.18278468"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[878]" " -type \"float2\" 0.56881583000000002 0.1901651"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[879]" " -type \"float2\" 0.56960659999999996 0.19940329000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[880]" " -type \"float2\" 0.56454002999999997 0.21119159000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[881]" " -type \"float2\" 0.57044256000000004 0.20863390000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[882]" " -type \"float2\" 0.57742441 0.20537411999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[883]" " -type \"float2\" 0.57645822000000002 0.19574206999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[884]" " -type \"float2\" 0.58347236999999996 0.19171160000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[885]" " -type \"float2\" 0.58460164000000003 0.20191698999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[886]" " -type \"float2\" 0.57554108000000004 0.18607187"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[887]" " -type \"float2\" 0.57471912999999997 0.17837048"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[888]" " -type \"float2\" 0.58138853000000001 0.17330986000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[889]" " -type \"float2\" 0.58237897999999999 0.18143791000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[890]" " -type \"float2\" 0.58843869000000004 0.17669296000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[891]" " -type \"float2\" 0.58973335999999998 0.18791068"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[892]" " -type \"float2\" 0.58721948000000002 0.16787362"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[893]" " -type \"float2\" 0.59227048999999998 0.16134280000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[894]" " -type \"float2\" 0.59374702000000001 0.17153959999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[895]" " -type \"float2\" 0.59525114000000001 0.18441671000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[896]" " -type \"float2\" 0.59102624999999998 0.19902343"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[897]" " -type \"float2\" 0.59671514999999997 0.19713205"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[898]" " -type \"float2\" 0.60169530000000004 0.19658703"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[899]" " -type \"float2\" 0.60003452999999995 0.18144101000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[900]" " -type \"float2\" 0.60441345000000002 0.17879605000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[901]" " -type \"float2\" 0.60614042999999995 0.19663876"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[902]" " -type \"float2\" 0.59821075000000001 0.16583258000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[903]" " -type \"float2\" 0.59645671 0.15323144"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[904]" " -type \"float2\" 0.60038716000000003 0.14494430999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[905]" " -type \"float2\" 0.60238539999999996 0.16029829000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[906]" " -type \"float2\" 0.60674530000000004 0.15555548999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[907]" " -type \"float2\" 0.60867673 0.17646497"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[908]" " -type \"float2\" 0.60476940999999995 0.13788813"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[909]" " -type \"float2\" 0.60915476000000002 0.13153862999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[910]" " -type \"float2\" 0.61102407999999997 0.15131222999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[911]" " -type \"float2\" 0.61276180000000002 0.17435287999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[912]" " -type \"float2\" 0.61026287000000001 0.19646895"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[913]" " -type \"float2\" 0.61409754000000005 0.19613379"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[914]" " -type \"float2\" 0.62192196 0.19553238000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[915]" " -type \"float2\" 0.62800157000000001 0.19616865999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[916]" " -type \"float2\" 0.62099831999999999 0.17034679999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[917]" " -type \"float2\" 0.62703644999999997 0.16795373"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[918]" " -type \"float2\" 0.63370329000000003 0.16630160999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[919]" " -type \"float2\" 0.63467735000000003 0.19778424999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[920]" " -type \"float2\" 0.61939745999999996 0.14290053"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[921]" " -type \"float2\" 0.62509071999999999 0.13792162999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[922]" " -type \"float2\" 0.61758393 0.11896938"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[923]" " -type \"float2\" 0.62303227000000005 0.11246067"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[924]" " -type \"float2\" 0.62875252999999998 0.10725981"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[925]" " -type \"float2\" 0.631248 0.13399981999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[926]" " -type \"float2\" 0.64613872999999999 0.16759974"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[927]" " -type \"float2\" 0.64322895000000002 0.13384431999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[928]" " -type \"float2\" 0.64992738000000005 0.1401211"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[929]" " -type \"float2\" 0.65279847000000002 0.17022759000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[930]" " -type \"float2\" 0.64001428999999999 0.10670274"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[931]" " -type \"float2\" 0.64680247999999996 0.11614484"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[932]" " -type \"float2\" 0.64729291 0.20068854"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[933]" " -type \"float2\" 0.65415382 0.19938689000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[934]" " -type \"float2\" 0.49197435 0.17803811999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[935]" " -type \"float2\" 0.49960726 0.16869622000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[936]" " -type \"float2\" 0.49403489 0.17895055000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[937]" " -type \"float2\" 0.50068473999999996 0.16838443"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[938]" " -type \"float2\" 0.50804168000000005 0.17729877999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[939]" " -type \"float2\" 0.50750523999999997 0.17662697999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[940]" " -type \"float2\" 0.49806613 0.18569701999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[941]" " -type \"float2\" 0.5031234 0.17696333"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[942]" " -type \"float2\" 0.50915051 0.18578696"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[943]" " -type \"float2\" 0.51458554999999995 0.19221031999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[944]" " -type \"float2\" 0.51434058000000005 0.18436116"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[945]" " -type \"float2\" 0.51951860999999999 0.19659746"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[946]" " -type \"float2\" 0.51976573000000004 0.18951177999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[947]" " -type \"float2\" 0.51428096999999995 0.18321282"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[948]" " -type \"float2\" 0.52009207000000002 0.18813688000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[949]" " -type \"float2\" 0.52699023 0.19054466"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[950]" " -type \"float2\" 0.52642809999999995 0.19182724000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[951]" " -type \"float2\" 0.53339893000000005 0.19213831000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[952]" " -type \"float2\" 0.53404850000000004 0.19108396999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[953]" " -type \"float2\" 0.52589160000000001 0.19808632000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[954]" " -type \"float2\" 0.53275269000000003 0.19766407999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[955]" " -type \"float2\" 0.53932214000000001 0.19631112000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[956]" " -type \"float2\" 0.53997379999999995 0.19132763"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[957]" " -type \"float2\" 0.54537022000000002 0.19451356"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[958]" " -type \"float2\" 0.54598623999999996 0.18987954000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[959]" " -type \"float2\" 0.54060631999999997 0.19047827000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[960]" " -type \"float2\" 0.54658311999999998 0.18916612999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[961]" " -type \"float2\" 0.55181009000000003 0.18761015"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[962]" " -type \"float2\" 0.55125612000000002 0.18825006"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[963]" " -type \"float2\" 0.55623513000000002 0.18617463000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[964]" " -type \"float2\" 0.55676413000000002 0.18557536999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[965]" " -type \"float2\" 0.55068033999999999 0.19268113000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[966]" " -type \"float2\" 0.55570233000000002 0.19052201999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[967]" " -type \"float2\" 0.56088161000000003 0.18782371"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[968]" " -type \"float2\" 0.56137263999999998 0.18344879"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[969]" " -type \"float2\" 0.56655884000000001 0.18460518000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[970]" " -type \"float2\" 0.56702291999999999 0.18001676"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[971]" " -type \"float2\" 0.56187421000000004 0.18286693000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[972]" " -type \"float2\" 0.56752466999999995 0.17936980999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[973]" " -type \"float2\" 0.57410371000000004 0.17492145000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[974]" " -type \"float2\" 0.57354105 0.17580937999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[975]" " -type \"float2\" 0.57997370000000004 0.17108588999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[976]" " -type \"float2\" 0.58063476999999997 0.16983609999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[977]" " -type \"float2\" 0.57305634000000005 0.18090695000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[978]" " -type \"float2\" 0.57943535000000002 0.17690653000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[979]" " -type \"float2\" 0.58480679999999996 0.1725505"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[980]" " -type \"float2\" 0.58541244000000003 0.16589439"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[981]" " -type \"float2\" 0.58936977000000002 0.16662425"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[982]" " -type \"float2\" 0.59002929999999998 0.15887672"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[983]" " -type \"float2\" 0.58623915999999998 0.16426349000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[984]" " -type \"float2\" 0.59103382000000004 0.15708762000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[985]" " -type \"float2\" 0.59495598000000005 0.14730494999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[986]" " -type \"float2\" 0.59387290000000004 0.14871024999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[987]" " -type \"float2\" 0.59749859999999999 0.13755529999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[988]" " -type \"float2\" 0.59874921999999997 0.13701278"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[989]" " -type \"float2\" 0.59325439000000002 0.15780693000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[990]" " -type \"float2\" 0.59691775000000002 0.1476981"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[991]" " -type \"float2\" 0.60087489999999999 0.13798493000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[992]" " -type \"float2\" 0.60168248000000002 0.12753486999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[993]" " -type \"float2\" 0.60483646000000002 0.12910646000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[994]" " -type \"float2\" 0.60603934999999998 0.11872232000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[995]" " -type \"float2\" 0.60308850000000003 0.12805241000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[996]" " -type \"float2\" 0.60750276000000003 0.12008876"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[997]" " -type \"float2\" 0.6160177 0.10530602999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[998]" " -type \"float2\" 0.62130034000000001 0.098542869000000005"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[999]" " -type \"float2\" 0.61436331 0.10334169999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1000]" " -type \"float2\" 0.61951977000000003 0.096864343000000006"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1001]" " -type \"float2\" 0.62497365000000005 0.092364191999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1002]" " -type \"float2\" 0.6267817 0.093385338999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1003]" " -type \"float2\" 0.61293726999999998 0.11441493"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1004]" " -type \"float2\" 0.61782007999999999 0.10799921"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1005]" " -type \"float2\" 0.62294733999999996 0.10303669999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1006]" " -type \"float2\" 0.63552922000000001 0.093962312000000006"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1007]" " -type \"float2\" 0.63330280999999999 0.10370499"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1008]" " -type \"float2\" 0.63889426000000005 0.11354524000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1009]" " -type \"float2\" 0.64198834000000005 0.10598515999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1010]" " -type \"float2\" 0.63773250999999997 0.094108939000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1011]" " -type \"float2\" 0.64445220999999997 0.10574442000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1012]" " -type \"float2\" 0.48926586 0.19964677"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1013]" " -type \"float2\" 0.49396025999999998 0.20405762999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1014]" " -type \"float2\" 0.49000162000000003 0.22704726"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1015]" " -type \"float2\" 0.49740392 0.22879200999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1016]" " -type \"float2\" 0.60233581000000003 0.28839922000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1017]" " -type \"float2\" 0.60132951000000001 0.31195408000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1018]" " -type \"float2\" 0.61766750000000004 0.21758764999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1019]" " -type \"float2\" 0.59890306000000004 0.30886482999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1020]" " -type \"float2\" 0.59809148000000001 0.32946575"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1021]" " -type \"float2\" 0.60072327000000003 0.33054488999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1022]" " -type \"float2\" 0.60232722999999999 0.33524805000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1023]" " -type \"float2\" 0.62170552999999995 0.23208277999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1024]" " -type \"float2\" 0.62324142000000005 0.2448169"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1025]" " -type \"float2\" 0.62507849999999998 0.24228758"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1026]" " -type \"float2\" 0.6265617 0.25460726"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1027]" " -type \"float2\" 0.61614447999999999 0.2460261"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1028]" " -type \"float2\" 0.61525231999999996 0.24080604"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1029]" " -type \"float2\" 0.61848402000000002 0.24892860999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1030]" " -type \"float2\" 0.62079083999999995 0.26148676999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1031]" " -type \"float2\" 0.61831294999999997 0.25919430999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1032]" " -type \"float2\" 0.61731440000000004 0.25429796999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1033]" " -type \"float2\" 0.61750906999999999 0.23314571000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1034]" " -type \"float2\" 0.59461010000000003 0.31111728999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1035]" " -type \"float2\" 0.61927038000000001 0.24744642"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1036]" " -type \"float2\" 0.62422699000000004 0.24061286000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1037]" " -type \"float2\" 0.59181815000000004 0.43780892999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1038]" " -type \"float2\" 0.62839674999999995 0.31041764999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1039]" " -type \"float2\" 0.63133961000000005 0.31282502000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1040]" " -type \"float2\" 0.59309191000000006 0.43871104999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1041]" " -type \"float2\" 0.62819248000000005 0.3136043"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1042]" " -type \"float2\" 0.63011019999999995 0.31789689999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1043]" " -type \"float2\" 0.63375466999999996 0.31829381000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1044]" " -type \"float2\" 0.63460273 0.31156474000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1045]" " -type \"float2\" 0.59650963999999995 0.43727600999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1046]" " -type \"float2\" 0.62607217000000004 0.24755466000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1047]" " -type \"float2\" 0.60055530000000001 0.36276113999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1048]" " -type \"float2\" 0.60048807000000004 0.38151002000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1049]" " -type \"float2\" 0.63000149000000005 0.25833476"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1050]" " -type \"float2\" 0.59758144999999996 0.36496758000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1051]" " -type \"float2\" 0.59742682999999996 0.3844071"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1052]" " -type \"float2\" 0.59714692999999996 0.40388130999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1053]" " -type \"float2\" 0.60037594999999999 0.40087610000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1054]" " -type \"float2\" 0.60282296000000002 0.40223867000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1055]" " -type \"float2\" 0.63379580000000002 0.27237707"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1056]" " -type \"float2\" 0.63214486999999997 0.25912004999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1057]" " -type \"float2\" 0.63574874000000003 0.26968235000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1058]" " -type \"float2\" 0.63702691 0.28286630000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1059]" " -type \"float2\" 0.638767 0.28112793000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1060]" " -type \"float2\" 0.63950938000000002 0.29361689000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1061]" " -type \"float2\" 0.62206233 0.27860874000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1062]" " -type \"float2\" 0.62348062000000004 0.28363579999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1063]" " -type \"float2\" 0.62611901999999997 0.29568017000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1064]" " -type \"float2\" 0.62440388999999996 0.29057973999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1065]" " -type \"float2\" 0.62668431000000002 0.28510046"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1066]" " -type \"float2\" 0.62958020000000003 0.29694247000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1067]" " -type \"float2\" 0.63179856999999995 0.30760235000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1068]" " -type \"float2\" 0.62809247000000001 0.30649768999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1069]" " -type \"float2\" 0.62611519999999998 0.3014906"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1070]" " -type \"float2\" 0.59340607999999995 0.37434035999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1071]" " -type \"float2\" 0.62353265000000002 0.27191657000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1072]" " -type \"float2\" 0.62551999000000003 0.283876"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1073]" " -type \"float2\" 0.59315841999999996 0.39420146"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1074]" " -type \"float2\" 0.62687813999999997 0.29484606000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1075]" " -type \"float2\" 0.63073343000000004 0.28833258"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1076]" " -type \"float2\" 0.60395544999999995 0.25666266999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1077]" " -type \"float2\" 0.60540676000000004 0.21928251000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1078]" " -type \"float2\" 0.60653228000000003 0.17909384"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1079]" " -type \"float2\" 0.60758215000000004 0.14417922"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1080]" " -type \"float2\" 0.61880522999999998 0.22815268999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1081]" " -type \"float2\" 0.61960046999999996 0.23834968000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1082]" " -type \"float2\" 0.61816811999999999 0.21498489000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1083]" " -type \"float2\" 0.61495089999999997 0.14723748"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1084]" " -type \"float2\" 0.61653524999999998 0.17246317999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1085]" " -type \"float2\" 0.61318260000000002 0.12529111000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1086]" " -type \"float2\" 0.61761915999999994 0.19578182999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1087]" " -type \"float2\" 0.60876631999999997 0.12130314"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1088]" " -type \"float2\" 0.61006141000000003 0.11057079"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1089]" " -type \"float2\" 0.61162548999999999 0.11251056"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1090]" " -type \"float2\" 0.59643710000000005 0.30811815999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1091]" " -type \"float2\" 0.59555435000000001 0.33065813999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1092]" " -type \"float2\" 0.62124579999999996 0.24935483999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1093]" " -type \"float2\" 0.62401593 0.26039952"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1094]" " -type \"float2\" 0.63775342999999995 0.30739683000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1095]" " -type \"float2\" 0.60021853000000003 0.43406421000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1096]" " -type \"float2\" 0.63767384999999999 0.31432545000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1097]" " -type \"float2\" 0.63977629000000003 0.306934"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1098]" " -type \"float2\" 0.64002018999999999 0.30098038999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1099]" " -type \"float2\" 0.63849705000000001 0.29184681000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1100]" " -type \"float2\" 0.59492080999999997 0.36875117000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1101]" " -type \"float2\" 0.59473032000000003 0.38852656000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1102]" " -type \"float2\" 0.59440320999999996 0.40763986000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1103]" " -type \"float2\" 0.63080077999999995 0.28114259000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1104]" " -type \"float2\" 0.63385349999999996 0.29225617999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1105]" " -type \"float2\" 0.63626324999999995 0.30273873000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1106]" " -type \"float2\" 0.62445353999999997 0.16352998999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1107]" " -type \"float2\" 0.62601119000000005 0.12443155"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1108]" " -type \"float2\" 0.62301379000000001 0.21309476999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1109]" " -type \"float2\" 0.62111466999999998 0.26801597999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1110]" " -type \"float2\" 0.6337952 0.21822071000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1111]" " -type \"float2\" 0.63581591999999998 0.24523561999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1112]" " -type \"float2\" 0.63786489000000002 0.25396292999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1113]" " -type \"float2\" 0.63941990999999998 0.24714755999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1114]" " -type \"float2\" 0.64056705999999997 0.22823673"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1115]" " -type \"float2\" 0.64095670000000005 0.19972788999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1116]" " -type \"float2\" 0.63991427000000001 0.16620952"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1117]" " -type \"float2\" 0.63718385 0.13213712"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1118]" " -type \"float2\" 0.63421070999999996 0.10448825"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1119]" " -type \"float2\" 0.63211947999999996 0.090915739999999995"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1120]" " -type \"float2\" 0.63010949000000005 0.090186715000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1121]" " -type \"float2\" 0.62801587999999997 0.10061842"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1122]" " -type \"float2\" 0.60031599000000002 0.41862416000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1123]" " -type \"float2\" 0.63712323000000004 0.28227859999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1124]" " -type \"float2\" 0.59698026999999998 0.42171407"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1125]" " -type \"float2\" 0.64040697000000002 0.29187440999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1126]" " -type \"float2\" 0.64057492999999999 0.30305701000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1127]" " -type \"float2\" 0.62933700999999997 0.31471103"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1128]" " -type \"float2\" 0.62696772999999995 0.31021958999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1129]" " -type \"float2\" 0.63315224999999997 0.31577813999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1130]" " -type \"float2\" 0.62736027999999999 0.30384116999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1131]" " -type \"float2\" 0.59194422000000002 0.428505"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1132]" " -type \"float2\" 0.59388476999999995 0.42456490000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1133]" " -type \"float2\" 0.63741188999999998 0.31132286999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1134]" " -type \"float2\" 0.60054487000000001 0.34662449000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1135]" " -type \"float2\" 0.62274658999999999 0.23882776"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1136]" " -type \"float2\" 0.59772873000000004 0.34741008000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1137]" " -type \"float2\" 0.62851411000000001 0.25061541999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1138]" " -type \"float2\" 0.63017672000000002 0.26335603000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1139]" " -type \"float2\" 0.62080586000000004 0.27161174999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1140]" " -type \"float2\" 0.61964589000000003 0.26672667"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1141]" " -type \"float2\" 0.62363838999999999 0.27341235000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1142]" " -type \"float2\" 0.62138903000000001 0.26007992000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1143]" " -type \"float2\" 0.59356052000000004 0.35514981000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1144]" " -type \"float2\" 0.59513265000000004 0.35015339000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1145]" " -type \"float2\" 0.62737827999999995 0.27075732000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1146]" " -type \"float2\" -0.015047193 -0.21255878"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1147]" " -type \"float2\" -0.011213422000000001 -0.21283355000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1148]" " -type \"float2\" 0.49832904 0.25250512000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1149]" " -type \"float2\" 0.49307197000000003 0.25342268000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1150]" " -type \"float2\" -0.021575749000000002 -0.18583723999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1151]" " -type \"float2\" -0.020286559999999999 -0.20966023"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1152]" " -type \"float2\" -0.020178489000000001 -0.16197222"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1153]" " -type \"float2\" 0.48694675999999998 0.22496831"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1154]" " -type \"float2\" 0.48631477000000001 0.19808692"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1155]" " -type \"float2\" 0.48892598999999998 0.25197285000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1156]" " -type \"float2\" 0.62617951999999999 0.25331587"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1157]" " -type \"float2\" 0.59383326999999997 0.33477228999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1158]" " -type \"float2\" 0.62813437000000005 0.26505213999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1159]" " -type \"float2\" 0.60234045999999997 0.34985703000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1160]" " -type \"float2\" 0.62003827 0.22974145000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1161]" " -type \"float2\" 0.60252196000000002 0.36499733000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1162]" " -type \"float2\" 0.630656 0.29771829"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1163]" " -type \"float2\" 0.59267848999999995 0.41285652"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1164]" " -type \"float2\" 0.63077384000000003 0.30338549999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1165]" " -type \"float2\" 0.60277455999999996 0.41928296999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1166]" " -type \"float2\" 0.63403379999999998 0.27028751000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1167]" " -type \"float2\" 0.60212255000000003 0.43103450999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1168]" " -type \"float2\" 0.61893642000000004 0.31541335999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1169]" " -type \"float2\" 0.63838094000000001 0.22180717999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1170]" " -type \"float2\" 0.61347549999999995 0.30876344"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1171]" " -type \"float2\" 0.63775134 0.29444747999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1172]" " -type \"float2\" 0.63546997000000005 0.29861497999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1173]" " -type \"float2\" 0.62977331999999997 0.27706939000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1174]" " -type \"float2\" 0.60262959999999999 0.38324313999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1175]" " -type \"float2\" 0.63278197999999997 0.30190313000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1176]" " -type \"float2\" 0.62259555 0.22561717000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1177]" " -type \"float2\" 0.59534925000000005 0.28128927999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1178]" " -type \"float2\" 0.60271984000000001 0.31865376000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1179]" " -type \"float2\" 0.615125 0.19678967999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1180]" " -type \"float2\" 0.61678462999999994 0.19996035000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1181]" " -type \"float2\" 0.62041824999999995 0.22289138999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1182]" " -type \"float2\" 0.63825034999999997 0.14635413999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1183]" " -type \"float2\" 0.63304490000000002 0.29941540999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1184]" " -type \"float2\" 0.64745962999999995 0.20986557"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1185]" " -type \"float2\" 0.60857039999999996 0.30165511"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1186]" " -type \"float2\" 0.59301769999999998 0.26409160999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1187]" " -type \"float2\" 0.58931040999999995 0.25307357000000003"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1188]" " -type \"float2\" 0.58438796000000004 0.24637704999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1189]" " -type \"float2\" 0.57841872999999999 0.24357808"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1190]" " -type \"float2\" 0.57154625999999997 0.24377500999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1191]" " -type \"float2\" 0.56465684999999999 0.24552613000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1192]" " -type \"float2\" 0.5585928 0.24723255999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1193]" " -type \"float2\" 0.55297845999999995 0.24929607000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1194]" " -type \"float2\" 0.54749197000000005 0.25220125999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1195]" " -type \"float2\" 0.54170160999999994 0.25620156999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1196]" " -type \"float2\" 0.53517866000000003 0.26166909999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1197]" " -type \"float2\" 0.52826965000000004 0.26885533"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1198]" " -type \"float2\" 0.52148879000000004 0.27782667"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1199]" " -type \"float2\" 0.51587147 0.28785496999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1200]" " -type \"float2\" 0.51214689000000002 0.29790919999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1201]" " -type \"float2\" 0.50877886999999999 0.30785030000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1202]" " -type \"float2\" 0.50398522999999995 0.31690043000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1203]" " -type \"float2\" 0.49868773999999999 0.31106043"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1204]" " -type \"float2\" 0.49869341 0.28941095"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1205]" " -type \"float2\" 0.49916136 0.25448190999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1206]" " -type \"float2\" 0.50012648000000004 0.21941917999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1207]" " -type \"float2\" 0.64454555999999996 0.19347185"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1208]" " -type \"float2\" 0.64070439000000001 0.17148435000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1209]" " -type \"float2\" 0.63968705999999997 0.14999114999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1210]" " -type \"float2\" -0.13520926 -0.0060414075999999997"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1211]" " -type \"float2\" -0.12839001 -0.12762113999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1212]" " -type \"float2\" -0.13646823 0.01312083"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1213]" " -type \"float2\" -0.12252747999999999 -0.11534032"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1214]" " -type \"float2\" -0.14243507 -0.020476401000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1215]" " -type \"float2\" -0.12389231000000001 -0.1066753"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1216]" " -type \"float2\" -0.13937336 0.067324936000000002"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1217]" " -type \"float2\" -0.12675309000000001 -0.080113172999999996"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1218]" " -type \"float2\" -0.14026767000000001 0.077132760999999994"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1219]" " -type \"float2\" -0.12894744 -0.075155585999999996"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1220]" " -type \"float2\" -0.14868617000000001 0.046614706999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1221]" " -type \"float2\" -0.12961596 -0.067273200000000005"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1222]" " -type \"float2\" -0.13699991 -0.12698193999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1223]" " -type \"float2\" -0.16309994 -0.029679357999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1224]" " -type \"float2\" -0.13211232000000001 -0.13818327"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1225]" " -type \"float2\" -0.12806593999999999 -0.066635429999999995"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1226]" " -type \"float2\" -0.12603211 -0.065207004999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1227]" " -type \"float2\" -0.13771552000000001 0.032917082"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1228]" " -type \"float2\" -0.12558663 -0.096448958000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1229]" " -type \"float2\" -0.1244992 -0.064018487999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1230]" " -type \"float2\" -0.13310074999999999 -0.051103561999999998"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1231]" " -type \"float2\" -0.12891089999999999 -0.16336358000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1232]" " -type \"float2\" -0.12123036 -0.13695558999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1233]" " -type \"float2\" -0.12086487 -0.15162360999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1234]" " -type \"float2\" -0.11867726000000001 -0.15296262999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1235]" " -type \"float2\" -0.16469067000000001 -0.20490074"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1236]" " -type \"float2\" -0.030797429000000001 -0.19374406"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1237]" " -type \"float2\" -0.032128683999999998 -0.15886247000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1238]" " -type \"float2\" -0.033827959999999997 -0.12396392000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1239]" " -type \"float2\" -0.035345316000000002 -0.10245596999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1240]" " -type \"float2\" -0.15176976 -0.12080565"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1241]" " -type \"float2\" -0.17278938999999999 -0.060397446"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1242]" " -type \"float2\" -0.12624794 -0.14812922000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1243]" " -type \"float2\" -0.12441671 -0.13068178"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1244]" " -type \"float2\" -0.12344927 -0.17136282"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1245]" " -type \"float2\" -0.1180582 -0.17520258"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1246]" " -type \"float2\" -0.11223364 -0.17662217999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1247]" " -type \"float2\" -0.10581744 -0.17645493000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1248]" " -type \"float2\" -0.098700820999999994 -0.17561609"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1249]" " -type \"float2\" -0.091705799000000005 -0.17492800999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1250]" " -type \"float2\" -0.085605799999999996 -0.17482602999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1251]" " -type \"float2\" -0.080044031000000002 -0.17499527000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1252]" " -type \"float2\" -0.074697256000000004 -0.17516314999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1253]" " -type \"float2\" -0.069071531000000005 -0.17538112"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1254]" " -type \"float2\" -0.062707841 -0.17588144999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1255]" " -type \"float2\" -0.055893420999999999 -0.17665067000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1256]" " -type \"float2\" -0.049193441999999997 -0.17759204000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1257]" " -type \"float2\" -0.043970286999999997 -0.17775446"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1258]" " -type \"float2\" -0.041213571999999997 -0.17545765999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1259]" " -type \"float2\" -0.0395118 -0.17025821999999999"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1260]" " -type \"float2\" -0.037043326000000001 -0.15979636"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1261]" " -type \"float2\" -0.16264783999999999 -0.18774787000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1262]" " -type \"float2\" -0.15994518999999999 -0.16378781000000001"
+		
+		2 "Minion:polyTweakUV2" "uvTweak[1263]" " -type \"float2\" -0.15934443000000001 -0.14137545000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak" " -s 1862"
+		2 "Minion:polyTweakUV3" "uvTweak[0]" " -type \"float2\" 0.40967256000000002 0.44891768999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1]" " -type \"float2\" 0.044186741000000002 -0.087781943000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[2]" " -type \"float2\" -0.098332248999999997 0.00041033328"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[3]" " -type \"float2\" 0.41709 0.43841940000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[4]" " -type \"float2\" 0.054380283000000001 -0.068778798000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[5]" " -type \"float2\" -0.066199750000000002 0.0087933465999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[6]" " -type \"float2\" -0.042826696999999997 -0.0054622888999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[7]" " -type \"float2\" -0.078967868999999996 -0.013098665000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[8]" " -type \"float2\" 0.42575473000000003 0.42252970000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[9]" " -type \"float2\" 0.065421387999999997 -0.047079562999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[10]" " -type \"float2\" -0.034115262 0.018367491999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[11]" " -type \"float2\" 0.074520394000000004 -0.024133756999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[12]" " -type \"float2\" -0.0036868826 0.028126583"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[13]" " -type \"float2\" 0.021926269000000002 0.011197299000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[14]" " -type \"float2\" -0.0091538876000000005 0.0027065425999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[15]" " -type \"float2\" 0.075887203 -0.0049772150999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[16]" " -type \"float2\" 0.017415419000000001 0.035251662000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[17]" " -type \"float2\" 0.076400607999999995 0.011638104999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[18]" " -type \"float2\" 0.036577418 0.04072696"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[19]" " -type \"float2\" 0.062357605000000003 0.023012877000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[20]" " -type \"float2\" 0.043214686000000002 0.017790183000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[21]" " -type \"float2\" 0.074425458999999999 0.026488252"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[22]" " -type \"float2\" 0.052312448999999997 0.045450910999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[23]" " -type \"float2\" 0.067702844999999998 0.038249790999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[24]" " -type \"float2\" 0.059910022 0.048186227999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[25]" " -type \"float2\" 0.086934939000000003 0.030916885000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[26]" " -type \"float2\" 0.078764453999999998 0.027596056000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[27]" " -type \"float2\" 0.054604471000000002 0.045345194999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[28]" " -type \"float2\" 0.057760014999999998 0.048502236999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[29]" " -type \"float2\" 0.039082899999999997 0.049785361"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[30]" " -type \"float2\" 0.049736939000000001 0.04774262"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[31]" " -type \"float2\" 0.073178113000000003 0.033110215999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[32]" " -type \"float2\" 0.083614767000000007 0.032199054999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[33]" " -type \"float2\" -0.061897371 -0.029332235000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[34]" " -type \"float2\" 0.43334663000000001 0.40237671000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[35]" " -type \"float2\" -0.02276922 -0.022176087000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[36]" " -type \"float2\" -0.0078860335000000004 -0.041097343000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[37]" " -type \"float2\" -0.049998085999999997 -0.048310473999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[38]" " -type \"float2\" 0.43573558000000001 0.37814968999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[39]" " -type \"float2\" 0.0094740017999999995 -0.01500313"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[40]" " -type \"float2\" 0.039191521999999999 -0.0075962394000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[41]" " -type \"float2\" 0.049780309000000002 -0.027331709999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[42]" " -type \"float2\" 0.024186902 -0.034117043"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[43]" " -type \"float2\" 0.060604594999999997 -0.0011435150999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[44]" " -type \"float2\" 0.079940452999999995 0.0037449896"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[45]" " -type \"float2\" 0.091661483000000002 -0.016388818999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[46]" " -type \"float2\" 0.072036772999999998 -0.021074652999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[47]" " -type \"float2\" 0.096370205 0.0079702287999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[48]" " -type \"float2\" 0.10641551 0.011592745999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[49]" " -type \"float2\" 0.1186024 -0.0091042072000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[50]" " -type \"float2\" 0.10783085000000001 -0.012639076000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[51]" " -type \"float2\" 0.10336488000000001 0.013978213"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[52]" " -type \"float2\" 0.094917505999999999 0.016384333000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[53]" " -type \"float2\" 0.11263002 -0.0026565343"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[54]" " -type \"float2\" 0.12101286999999999 -0.0059225260999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[55]" " -type \"float2\" -0.04930412 -0.068626909999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[56]" " -type \"float2\" 0.42637992000000002 0.35092747000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[57]" " -type \"float2\" -0.0059878155999999998 -0.06163536"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[58]" " -type \"float2\" -0.0088768192000000003 -0.082671731999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[59]" " -type \"float2\" -0.054148151999999998 -0.089042142000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[60]" " -type \"float2\" 0.41261916999999998 0.32295537000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[61]" " -type \"float2\" 0.027802631000000001 -0.054683328000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[62]" " -type \"float2\" 0.055038899000000002 -0.047915697"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[63]" " -type \"float2\" 0.054904267 -0.069505184999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[64]" " -type \"float2\" 0.026121214 -0.076115771999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[65]" " -type \"float2\" 0.078672506000000003 -0.041587188999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[66]" " -type \"float2\" 0.098518305 -0.037193835000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[67]" " -type \"float2\" 0.099819652999999994 -0.058940947"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[68]" " -type \"float2\" 0.079737252999999994 -0.063537851000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[69]" " -type \"float2\" 0.1140789 -0.033873186"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[70]" " -type \"float2\" 0.12462229 -0.030926809"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[71]" " -type \"float2\" 0.12444319 -0.053079069"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[72]" " -type \"float2\" 0.11473994999999999 -0.055623381999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[73]" " -type \"float2\" 0.12785142999999999 -0.027903496999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[74]" " -type \"float2\" 0.12097603 -0.024809107"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[75]" " -type \"float2\" 0.12097047 -0.048106535999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[76]" " -type \"float2\" 0.12747405000000001 -0.050719454999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[77]" " -type \"float2\" -0.060679565999999997 -0.1098392"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[78]" " -type \"float2\" 0.39681285999999999 0.29333788"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[79]" " -type \"float2\" -0.016103774000000001 -0.10445327"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[80]" " -type \"float2\" -0.026015679999999999 -0.12678296999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[81]" " -type \"float2\" -0.068690658000000002 -0.13109298"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[82]" " -type \"float2\" 0.37944978000000001 0.26231044999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[83]" " -type \"float2\" 0.019025452000000002 -0.098606004999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[84]" " -type \"float2\" 0.048218414000000001 -0.092656925000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[85]" " -type \"float2\" 0.037065885999999999 -0.11697845"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[86]" " -type \"float2\" 0.0084727593000000004 -0.12209544"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[87]" " -type \"float2\" 0.073684491000000005 -0.086816743000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[88]" " -type \"float2\" 0.094084971000000003 -0.082069694999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[89]" " -type \"float2\" 0.082312978999999994 -0.10701716999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[90]" " -type \"float2\" 0.062014997000000002 -0.11170802000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[91]" " -type \"float2\" 0.10885892 -0.078752056000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[92]" " -type \"float2\" 0.11822468999999999 -0.076162055000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[93]" " -type \"float2\" 0.10639429 -0.10095206"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[94]" " -type \"float2\" 0.097398467000000002 -0.10343426"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[95]" " -type \"float2\" 0.12099720999999999 -0.073841362999999993"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[96]" " -type \"float2\" 0.11435798 -0.071809933000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[97]" " -type \"float2\" 0.10162793000000001 -0.096944093999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[98]" " -type \"float2\" 0.10847974000000001 -0.098977193000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[99]" " -type \"float2\" -0.079335764000000003 -0.15312619999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[100]" " -type \"float2\" 0.35907185000000003 0.22937052999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[101]" " -type \"float2\" -0.037911680000000003 -0.14959612"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[102]" " -type \"float2\" -0.050238576 -0.17243552000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[103]" " -type \"float2\" -0.090476981999999997 -0.17534959"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[104]" " -type \"float2\" 0.33853263 0.1961174"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[105]" " -type \"float2\" -0.0042152815000000001 -0.14567235000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[106]" " -type \"float2\" 0.023721269999999999 -0.1414146"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[107]" " -type \"float2\" 0.010436862999999999 -0.16565548999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[108]" " -type \"float2\" -0.017006889000000001 -0.16918841000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[109]" " -type \"float2\" 0.047708436999999999 -0.136924"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[110]" " -type \"float2\" 0.067178391000000004 -0.13260081000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[111]" " -type \"float2\" 0.051389292000000003 -0.15806189000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[112]" " -type \"float2\" 0.033172801000000002 -0.16191199000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[113]" " -type \"float2\" 0.081794782999999996 -0.12892437000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[114]" " -type \"float2\" 0.090214871000000002 -0.12632322000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[115]" " -type \"float2\" 0.072371512999999998 -0.15158504"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[116]" " -type \"float2\" 0.064951979000000007 -0.15443288999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[117]" " -type \"float2\" 0.091469764999999995 -0.12430748"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[118]" " -type \"float2\" 0.083772570000000005 -0.12239667999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[119]" " -type \"float2\" 0.064357325000000007 -0.14727670000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[120]" " -type \"float2\" 0.072638273000000003 -0.14928946000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[121]" " -type \"float2\" -0.1011266 -0.19759777000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[122]" " -type \"float2\" 0.31815478000000003 0.16304070000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[123]" " -type \"float2\" -0.06126558 -0.19516331000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[124]" " -type \"float2\" -0.070825218999999995 -0.21766189"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[125]" " -type \"float2\" -0.11071928 -0.21970981000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[126]" " -type \"float2\" 0.29873316999999999 0.13058977999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[127]" " -type \"float2\" -0.028066873999999999 -0.19247159"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[128]" " -type \"float2\" -0.00086399912999999997 -0.18953403999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[129]" " -type \"float2\" -0.010197625 -0.21299857"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[130]" " -type \"float2\" -0.037416957000000001 -0.2154336"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[131]" " -type \"float2\" 0.020914301 -0.18638991999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[132]" " -type \"float2\" 0.037609762999999997 -0.18312031000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[133]" " -type \"float2\" 0.026762411 -0.20757028"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[134]" " -type \"float2\" 0.011068404 -0.21035603"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[135]" " -type \"float2\" 0.049548604000000003 -0.17981198000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[136]" " -type \"float2\" 0.055681117000000002 -0.17673531000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[137]" " -type \"float2\" 0.041897154999999998 -0.2017554"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[138]" " -type \"float2\" 0.037210897 -0.20467078999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[139]" " -type \"float2\" 0.054968617999999997 -0.17418569"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[140]" " -type \"float2\" 0.046176925000000001 -0.17192938999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[141]" " -type \"float2\" 0.030944093999999998 -0.19658782999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[142]" " -type \"float2\" 0.040189043000000001 -0.19908127"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[143]" " -type \"float2\" -0.11863064 -0.24149345999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[144]" " -type \"float2\" 0.28105816 0.099116147000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[145]" " -type \"float2\" -0.078699275999999999 -0.23978031"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[146]" " -type \"float2\" -0.084881796999999995 -0.26139161"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[147]" " -type \"float2\" -0.12505235000000001 -0.26276490000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[148]" " -type \"float2\" -0.17208356999999999 -0.26406109"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[149]" " -type \"float2\" -0.045037652999999997 -0.23795696999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[150]" " -type \"float2\" -0.017542433 -0.23597190000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[151]" " -type \"float2\" -0.023032780999999999 -0.25837058000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[152]" " -type \"float2\" -0.050913888999999997 -0.25994387000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[153]" " -type \"float2\" 0.029150024 -0.22885957000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[154]" " -type \"float2\" 0.019356458999999999 -0.231464"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[155]" " -type \"float2\" 0.032895923000000001 -0.2262885"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[156]" " -type \"float2\" 0.027776896999999998 -0.25027045999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[157]" " -type \"float2\" 0.024376756999999999 -0.25249368"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[158]" " -type \"float2\" 0.014622249 -0.25472420000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[159]" " -type \"float2\" 0.030233622000000002 -0.22373541999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[160]" " -type \"float2\" 0.020392314000000002 -0.22115948999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[161]" " -type \"float2\" 0.01442422 -0.24540284000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[162]" " -type \"float2\" 0.024615899 -0.24791461000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[163]" " -type \"float2\" 0.1463207 -0.13495845000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[164]" " -type \"float2\" -0.15166299 -0.40545702"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[165]" " -type \"float2\" -0.16191383000000001 -0.41948003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[166]" " -type \"float2\" 0.12598655 -0.15651524"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[167]" " -type \"float2\" -0.11341023 -0.40703917000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[168]" " -type \"float2\" -0.12644009 -0.42144573000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[169]" " -type \"float2\" -0.14747726999999999 -0.43315168999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[170]" " -type \"float2\" -0.17887085999999999 -0.43057435999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[171]" " -type \"float2\" 0.10130668 -0.17471457000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[172]" " -type \"float2\" -0.080123633 -0.40866247"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[173]" " -type \"float2\" -0.095282837999999995 -0.42357823"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[174]" " -type \"float2\" -0.051491793000000001 -0.41030926000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[175]" " -type \"float2\" -0.067785374999999995 -0.42574656"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[176]" " -type \"float2\" -0.092019959999999998 -0.43898690000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[177]" " -type \"float2\" -0.11865252 -0.43593641999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[178]" " -type \"float2\" -0.027646158000000001 -0.41186394999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[179]" " -type \"float2\" -0.044376160999999997 -0.42786336000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[180]" " -type \"float2\" -0.0089915544000000007 -0.41335958"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[181]" " -type \"float2\" -0.025362863999999999 -0.42966126999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[182]" " -type \"float2\" -0.047840401999999997 -0.44452133999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[183]" " -type \"float2\" -0.066670977000000006 -0.44225076000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[184]" " -type \"float2\" 0.0035455078000000001 -0.41462698999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[185]" " -type \"float2\" -0.013338938 -0.43102077"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[186]" " -type \"float2\" 0.0082328244999999994 -0.41570227999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[187]" " -type \"float2\" -0.0094239712000000007 -0.43161001999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[188]" " -type \"float2\" -0.033651440999999997 -0.44548818000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[189]" " -type \"float2\" -0.036618209999999998 -0.44560804999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[190]" " -type \"float2\" 0.0036168694000000001 -0.41639510000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[191]" " -type \"float2\" -0.015145726999999999 -0.43131644000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[192]" " -type \"float2\" -0.011363886 -0.41668086999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[193]" " -type \"float2\" -0.031202614 -0.429858"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[194]" " -type \"float2\" -0.053317985999999998 -0.44112446999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[195]" " -type \"float2\" -0.040534273000000003 -0.44355032"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[196]" " -type \"float2\" -0.19811296 -0.4392935"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[197]" " -type \"float2\" 0.078790992000000004 -0.18924356000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[198]" " -type \"float2\" -0.17181370000000001 -0.44257395999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[199]" " -type \"float2\" -0.12536560999999999 -0.35210574"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[200]" " -type \"float2\" -0.13714603 -0.33795309000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[201]" " -type \"float2\" -0.14635292999999999 -0.32782304000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[202]" " -type \"float2\" -0.14615279 -0.44626132000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[203]" " -type \"float2\" -0.12003827 -0.45049864000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[204]" " -type \"float2\" -0.098473087000000001 -0.38632452"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[205]" " -type \"float2\" -0.11227325 -0.36841028999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[206]" " -type \"float2\" -0.095226027000000005 -0.45479452999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[207]" " -type \"float2\" -0.077014469000000002 -0.45722389000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[208]" " -type \"float2\" -0.078477307999999996 -0.41984558"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[209]" " -type \"float2\" -0.085695340999999994 -0.40424465999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[210]" " -type \"float2\" -0.066378123999999997 -0.45792456999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[211]" " -type \"float2\" -0.063209444000000004 -0.45689878"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[212]" " -type \"float2\" -0.080128229999999995 -0.44063550000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[213]" " -type \"float2\" -0.076806806000000005 -0.43202931"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[214]" " -type \"float2\" -0.068497479 -0.45372816999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[215]" " -type \"float2\" -0.078595265999999997 -0.44984636"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[216]" " -type \"float2\" -0.10516874 -0.45692754000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[217]" " -type \"float2\" -0.088646910999999995 -0.44502651999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[218]" " -type \"float2\" -0.15838227999999999 -0.34713399"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[219]" " -type \"float2\" 0.037105738999999999 -0.20750463"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[220]" " -type \"float2\" -0.14953251000000001 -0.36465669000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[221]" " -type \"float2\" -0.17879289000000001 -0.37422407000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[222]" " -type \"float2\" -0.18569996999999999 -0.35374676999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[223]" " -type \"float2\" -0.0013939738 -0.21939003000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[224]" " -type \"float2\" -0.13894372999999999 -0.38301331"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[225]" " -type \"float2\" -0.12714496 -0.40190207999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[226]" " -type \"float2\" -0.16171459999999999 -0.413701"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[227]" " -type \"float2\" -0.17042605999999999 -0.39414232999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[228]" " -type \"float2\" -0.1169584 -0.42000395000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[229]" " -type \"float2\" -0.11094904999999999 -0.43478816999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[230]" " -type \"float2\" -0.14936026999999999 -0.44569796"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[231]" " -type \"float2\" -0.15392481 -0.43149668000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[232]" " -type \"float2\" -0.10983925 -0.44562256"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[233]" " -type \"float2\" -0.11262302 -0.45242310000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[234]" " -type \"float2\" -0.14955862 -0.46122336000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[235]" " -type \"float2\" -0.14807076999999999 -0.45564586000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[236]" " -type \"float2\" -0.11907202 -0.45493244999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[237]" " -type \"float2\" -0.12590741999999999 -0.45510474000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[238]" " -type \"float2\" -0.15713315999999999 -0.46170329999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[239]" " -type \"float2\" -0.15318356 -0.46278733"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[240]" " -type \"float2\" -0.21786362000000001 -0.35924357000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[241]" " -type \"float2\" -0.047684282000000001 -0.23309171000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[242]" " -type \"float2\" -0.21235183999999999 -0.38179689999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[243]" " -type \"float2\" -0.24977788000000001 -0.38787568"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[244]" " -type \"float2\" -0.25398253999999998 -0.36400932000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[245]" " -type \"float2\" -0.099806069999999997 -0.24799043000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[246]" " -type \"float2\" -0.20698596999999999 -0.40190911000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[247]" " -type \"float2\" -0.20084985999999999 -0.42100471"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[248]" " -type \"float2\" -0.24242188000000001 -0.42605947999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[249]" " -type \"float2\" -0.24625443999999999 -0.40794349000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[250]" " -type \"float2\" -0.195251 -0.43843423999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[251]" " -type \"float2\" -0.19159950000000001 -0.45202147999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[252]" " -type \"float2\" -0.23544187999999999 -0.45562553"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[253]" " -type \"float2\" -0.23837335000000001 -0.44260716"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[254]" " -type \"float2\" -0.18994826000000001 -0.46140759999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[255]" " -type \"float2\" -0.18942492 -0.46750556999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[256]" " -type \"float2\" -0.23151948 -0.47186685"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[257]" " -type \"float2\" -0.23323186000000001 -0.46517372000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[258]" " -type \"float2\" -0.19132352999999999 -0.46814637999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[259]" " -type \"float2\" -0.19329975999999999 -0.46583864000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[260]" " -type \"float2\" -0.23176566000000001 -0.46968000999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[261]" " -type \"float2\" -0.23151632999999999 -0.47234451999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[262]" " -type \"float2\" -0.29483342000000001 -0.36719428999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[263]" " -type \"float2\" -0.157381 -0.26276767000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[264]" " -type \"float2\" -0.29146627000000003 -0.39171261000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[265]" " -type \"float2\" -0.33616894000000003 -0.39164381999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[266]" " -type \"float2\" -0.33877689 -0.36682564000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[267]" " -type \"float2\" -0.34146267000000002 -0.33768105999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[268]" " -type \"float2\" -0.28882456000000001 -0.41168856999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[269]" " -type \"float2\" -0.28585660000000002 -0.42909878000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[270]" " -type \"float2\" -0.33100951000000001 -0.42837322"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[271]" " -type \"float2\" -0.33355766999999997 -0.41127693999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[272]" " -type \"float2\" -0.28302765000000002 -0.44458442999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[273]" " -type \"float2\" -0.28033852999999997 -0.45730662"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[274]" " -type \"float2\" -0.32596552000000001 -0.45640366999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[275]" " -type \"float2\" -0.32848662000000001 -0.4436987"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[276]" " -type \"float2\" -0.27787193999999998 -0.46713758"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[277]" " -type \"float2\" -0.27538466 -0.47443162999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[278]" " -type \"float2\" -0.32106270999999997 -0.47426372999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[279]" " -type \"float2\" -0.32349133000000002 -0.46644962000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[280]" " -type \"float2\" -0.27403283000000001 -0.47522604000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[281]" " -type \"float2\" -0.27283173999999999 -0.47240042999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[282]" " -type \"float2\" -0.31636356999999998 -0.47187209000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[283]" " -type \"float2\" -0.31864630999999999 -0.47488457000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[284]" " -type \"float2\" -0.33438491999999997 -0.28708075999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[285]" " -type \"float2\" -0.42302986999999997 -0.35327721000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[286]" " -type \"float2\" -0.45853727999999999 -0.34360611000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[287]" " -type \"float2\" -0.38371685 -0.28965896000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[288]" " -type \"float2\" -0.42223954000000002 -0.37733072000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[289]" " -type \"float2\" -0.45940270999999999 -0.36639261000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[290]" " -type \"float2\" -0.49272191999999998 -0.35423315"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[291]" " -type \"float2\" -0.49015429999999999 -0.33369631"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[292]" " -type \"float2\" -0.42722732000000002 -0.29148798999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[293]" " -type \"float2\" -0.42076205999999999 -0.39747708999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[294]" " -type \"float2\" -0.45992017000000002 -0.38648473999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[295]" " -type \"float2\" -0.4195739 -0.41560250999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[296]" " -type \"float2\" -0.46111339000000001 -0.40548151999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[297]" " -type \"float2\" -0.50025134999999998 -0.39323448999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[298]" " -type \"float2\" -0.49645107999999999 -0.37393415000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[299]" " -type \"float2\" -0.41857716 -0.43213093000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[300]" " -type \"float2\" -0.46163707999999998 -0.42283207"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[301]" " -type \"float2\" -0.41641271000000002 -0.44516259000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[302]" " -type \"float2\" -0.46010827999999998 -0.43640225999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[303]" " -type \"float2\" -0.50217973999999999 -0.42494071"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[304]" " -type \"float2\" -0.50290877 -0.41079824999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[305]" " -type \"float2\" -0.41357993999999998 -0.45474774000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[306]" " -type \"float2\" -0.45661943999999999 -0.44586998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[307]" " -type \"float2\" -0.41032447999999999 -0.46153891000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[308]" " -type \"float2\" -0.45210509999999998 -0.45214968999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[309]" " -type \"float2\" -0.49152124000000003 -0.44092958999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[310]" " -type \"float2\" -0.49816572999999997 -0.43502997999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[311]" " -type \"float2\" -0.40549808999999998 -0.46215254"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[312]" " -type \"float2\" -0.44535422000000002 -0.45307201000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[313]" " -type \"float2\" -0.40070641000000001 -0.45967358000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[314]" " -type \"float2\" -0.43882959999999999 -0.45108401999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[315]" " -type \"float2\" -0.47448586999999998 -0.44241363"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[316]" " -type \"float2\" -0.48298164999999998 -0.44295979000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[317]" " -type \"float2\" -0.51712692000000005 -0.32320296999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[318]" " -type \"float2\" -0.46308147999999999 -0.29250895999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[319]" " -type \"float2\" -0.52200186000000004 -0.34042447999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[320]" " -type \"float2\" -0.43525620999999998 -0.37653779999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[321]" " -type \"float2\" -0.4155567 -0.36835449999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[322]" " -type \"float2\" -0.40094262000000003 -0.36224937000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[323]" " -type \"float2\" -0.52810341000000005 -0.35825127000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[324]" " -type \"float2\" -0.53501390999999998 -0.37655765000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[325]" " -type \"float2\" -0.48136162999999998 -0.39628953"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[326]" " -type \"float2\" -0.45765492000000002 -0.38591015000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[327]" " -type \"float2\" -0.53992456 -0.39423794000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[328]" " -type \"float2\" -0.5404371 -0.40885865999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[329]" " -type \"float2\" -0.52050792999999995 -0.41502540999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[330]" " -type \"float2\" -0.50413251000000003 -0.40660809999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[331]" " -type \"float2\" -0.53601122000000001 -0.41990733000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[332]" " -type \"float2\" -0.52784514000000005 -0.42725009000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[333]" " -type \"float2\" -0.53251212999999997 -0.42482387999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[334]" " -type \"float2\" -0.52987945000000003 -0.42106712000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[335]" " -type \"float2\" -0.51634318000000001 -0.43055349999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[336]" " -type \"float2\" -0.50491911 -0.43160045000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[337]" " -type \"float2\" -0.53103297999999999 -0.41980147000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[338]" " -type \"float2\" -0.52811706000000003 -0.42575185999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[339]" " -type \"float2\" -0.43400148 -0.36098021000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[340]" " -type \"float2\" -0.49412724000000002 -0.28589492999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[341]" " -type \"float2\" -0.45955365999999997 -0.36821579999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[342]" " -type \"float2\" -0.47966768999999998 -0.35737406999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[343]" " -type \"float2\" -0.44945004999999999 -0.35057484999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[344]" " -type \"float2\" -0.50352704999999998 -0.27557606000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[345]" " -type \"float2\" -0.48462908999999998 -0.37647456000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[346]" " -type \"float2\" -0.51012141 -0.38568132999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[347]" " -type \"float2\" -0.53330951999999998 -0.37278919999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[348]" " -type \"float2\" -0.50753462000000005 -0.36477470000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[349]" " -type \"float2\" -0.53419601999999999 -0.39531922000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[350]" " -type \"float2\" -0.55140792999999999 -0.40325934000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[351]" " -type \"float2\" -0.57557296999999996 -0.38883674000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[352]" " -type \"float2\" -0.55773877999999999 -0.38120323"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[353]" " -type \"float2\" -0.56081128000000002 -0.40950710000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[354]" " -type \"float2\" -0.56251973 -0.41382748000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[355]" " -type \"float2\" -0.58747804000000003 -0.40044993000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[356]" " -type \"float2\" -0.58569515000000005 -0.39527171999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[357]" " -type \"float2\" -0.55565332999999995 -0.41562921000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[358]" " -type \"float2\" -0.54401719999999998 -0.41625952999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[359]" " -type \"float2\" -0.56545842000000002 -0.40574445999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[360]" " -type \"float2\" -0.57938235999999999 -0.40350649"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[361]" " -type \"float2\" -0.46203238000000002 -0.33738625"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[362]" " -type \"float2\" -0.51192163999999996 -0.26195467"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[363]" " -type \"float2\" -0.49605804999999997 -0.34386313000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[364]" " -type \"float2\" -0.50408744999999999 -0.32748091000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[365]" " -type \"float2\" -0.46737072000000002 -0.32110733000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[366]" " -type \"float2\" -0.42581387999999998 -0.31499261000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[367]" " -type \"float2\" -0.52604698999999999 -0.35077506000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[368]" " -type \"float2\" -0.55249846000000002 -0.35793185"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[369]" " -type \"float2\" -0.56354165000000001 -0.34079831999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[370]" " -type \"float2\" -0.53606522000000001 -0.33404893000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[371]" " -type \"float2\" -0.57491731999999995 -0.36522209999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[372]" " -type \"float2\" -0.59290164999999995 -0.37225841999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[373]" " -type \"float2\" -0.60396974999999997 -0.35434698999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[374]" " -type \"float2\" -0.58631336999999994 -0.34755793000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[375]" " -type \"float2\" -0.60392922000000004 -0.37894042999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[376]" " -type \"float2\" -0.60684550000000004 -0.38475274999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[377]" " -type \"float2\" -0.61940824999999999 -0.36727774000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[378]" " -type \"float2\" -0.61555897999999998 -0.36091262000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[379]" " -type \"float2\" -0.60018444000000004 -0.38957336999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[380]" " -type \"float2\" -0.58331977999999995 -0.39296448"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[381]" " -type \"float2\" -0.59855913999999999 -0.37850784999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[382]" " -type \"float2\" -0.61407714999999996 -0.37314352000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[383]" " -type \"float2\" -0.44840830999999998 -0.049364746000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[384]" " -type \"float2\" -0.44238242999999999 -0.16572523"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[385]" " -type \"float2\" -0.44077766000000002 -0.14393502"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[386]" " -type \"float2\" -0.43879336000000002 -0.019513309"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[387]" " -type \"float2\" -0.48143485000000003 -0.16962658999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[388]" " -type \"float2\" -0.47967874999999999 -0.14738181"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[389]" " -type \"float2\" -0.47936617999999998 -0.12469184"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[390]" " -type \"float2\" -0.44040939000000001 -0.12169713"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[391]" " -type \"float2\" -0.43008348000000002 0.011082292000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[392]" " -type \"float2\" -0.51434791000000002 -0.17361646999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[393]" " -type \"float2\" -0.51238275 -0.15089132999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[394]" " -type \"float2\" -0.54123884 -0.17766320999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[395]" " -type \"float2\" -0.53898703999999997 -0.15443724"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[396]" " -type \"float2\" -0.53833317999999997 -0.13071266000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[397]" " -type \"float2\" -0.51191127000000003 -0.12769514000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[398]" " -type \"float2\" -0.57714736 -0.18574244000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[399]" " -type \"float2\" -0.586025 -0.18946394"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[400]" " -type \"float2\" -0.58333170000000001 -0.16487002000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[401]" " -type \"float2\" -0.57426964999999996 -0.16154191000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[402]" " -type \"float2\" -0.58865940999999999 -0.19315982000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[403]" " -type \"float2\" -0.58639067 -0.16821706"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[404]" " -type \"float2\" -0.58773850999999999 -0.14279233999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[405]" " -type \"float2\" -0.58366834999999995 -0.13981175000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[406]" " -type \"float2\" -0.57385063000000003 -0.13679746000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[407]" " -type \"float2\" -0.58479965 -0.19661164"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[408]" " -type \"float2\" -0.58312631000000004 -0.17149075999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[409]" " -type \"float2\" -0.57397050000000005 -0.19978729000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[410]" " -type \"float2\" -0.57275635000000003 -0.17465520000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[411]" " -type \"float2\" -0.57592069999999995 -0.14923331000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[412]" " -type \"float2\" -0.58554065 -0.1459454"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[413]" " -type \"float2\" -0.44151511999999998 -0.099124134000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[414]" " -type \"float2\" -0.42295215000000003 0.042076886000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[415]" " -type \"float2\" -0.48052128999999999 -0.10164376999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[416]" " -type \"float2\" -0.48297635 -0.078361510999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[417]" " -type \"float2\" -0.44352329000000001 -0.076353430999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[418]" " -type \"float2\" -0.41667259000000001 0.073245287000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[419]" " -type \"float2\" -0.51294379999999995 -0.10410839"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[420]" " -type \"float2\" -0.53943348000000002 -0.10657427"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[421]" " -type \"float2\" -0.54229908999999998 -0.082107365000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[422]" " -type \"float2\" -0.51550472000000003 -0.080241740000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[423]" " -type \"float2\" -0.55885291000000004 -0.13374415000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[424]" " -type \"float2\" -0.56054342000000001 -0.10907796"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[425]" " -type \"float2\" -0.57662833000000002 -0.11161995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[426]" " -type \"float2\" -0.58202540999999997 -0.086021990000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[427]" " -type \"float2\" -0.56441324999999998 -0.084031701"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[428]" " -type \"float2\" -0.58796 -0.11421365"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[429]" " -type \"float2\" -0.59358918999999999 -0.11700454"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[430]" " -type \"float2\" -0.60220443999999995 -0.091230988999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[431]" " -type \"float2\" -0.59506619000000005 -0.088278592000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[432]" " -type \"float2\" -0.59257090000000001 -0.12026727"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[433]" " -type \"float2\" -0.58361768999999997 -0.12382019"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[434]" " -type \"float2\" -0.59410786999999998 -0.09857291"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[435]" " -type \"float2\" -0.60238992999999996 -0.094729483000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[436]" " -type \"float2\" -0.44592935 -0.053522289000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[437]" " -type \"float2\" -0.41043394999999999 0.10441393"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[438]" " -type \"float2\" -0.48662379 -0.054963379999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[439]" " -type \"float2\" -0.48985022 -0.031599968999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[440]" " -type \"float2\" -0.44784042000000002 -0.030821055"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[441]" " -type \"float2\" -0.40386023999999998 0.13534125999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[442]" " -type \"float2\" -0.51966869999999998 -0.056199402000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[443]" " -type \"float2\" -0.54698497000000001 -0.057391672999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[444]" " -type \"float2\" -0.55161417000000001 -0.032610536000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[445]" " -type \"float2\" -0.52364193999999997 -0.032161086999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[446]" " -type \"float2\" -0.57031553999999995 -0.058632165"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[447]" " -type \"float2\" -0.58925784000000003 -0.060200691000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[448]" " -type \"float2\" -0.59580767000000001 -0.034453899000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[449]" " -type \"float2\" -0.57594049000000003 -0.033197670999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[450]" " -type \"float2\" -0.60354722000000005 -0.062397867000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[451]" " -type \"float2\" -0.61188436000000002 -0.065540462999999993"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[452]" " -type \"float2\" -0.61998766999999999 -0.040039330999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[453]" " -type \"float2\" -0.61075365999999998 -0.036735862000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[454]" " -type \"float2\" -0.61327385999999995 -0.069331974000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[455]" " -type \"float2\" -0.60579896 -0.073271065999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[456]" " -type \"float2\" -0.61586039999999997 -0.047638743999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[457]" " -type \"float2\" -0.62238680999999996 -0.043828785000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[458]" " -type \"float2\" -0.44724253000000003 -0.0087403953000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[459]" " -type \"float2\" -0.39431471000000001 0.16577283000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[460]" " -type \"float2\" -0.49120519000000001 -0.0087492242000000008"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[461]" " -type \"float2\" -0.49042757999999997 0.013214706999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[462]" " -type \"float2\" -0.44561937000000001 0.012586086999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[463]" " -type \"float2\" -0.38363960000000003 0.19536734"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[464]" " -type \"float2\" -0.52567315000000003 -0.0083437860000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[465]" " -type \"float2\" -0.55424558999999995 -0.0081226230000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[466]" " -type \"float2\" -0.55302340000000005 0.014883369"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[467]" " -type \"float2\" -0.52485758000000005 0.014101617"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[468]" " -type \"float2\" -0.57914578999999999 -0.0082717836000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[469]" " -type \"float2\" -0.59931361999999999 -0.0095490515000000008"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[470]" " -type \"float2\" -0.59749556000000004 0.013428598999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[471]" " -type \"float2\" -0.57742691000000002 0.014857090999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[472]" " -type \"float2\" -0.61425567000000003 -0.012079924000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[473]" " -type \"float2\" -0.62397444000000002 -0.015270143999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[474]" " -type \"float2\" -0.62298560000000003 0.0075878276999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[475]" " -type \"float2\" -0.61274945999999997 0.010858595"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[476]" " -type \"float2\" -0.62716192000000004 -0.018737732999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[477]" " -type \"float2\" -0.62103580999999997 -0.022536546000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[478]" " -type \"float2\" -0.62060307999999997 0.00088945031000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[479]" " -type \"float2\" -0.62659651000000005 0.0041244328000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[480]" " -type \"float2\" -0.44283475999999999 0.032993555000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[481]" " -type \"float2\" -0.37186714999999998 0.22368204999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[482]" " -type \"float2\" -0.48585781 0.034138112999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[483]" " -type \"float2\" -0.47691020000000001 0.054224729999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[484]" " -type \"float2\" -0.43486878000000001 0.052916795000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[485]" " -type \"float2\" -0.35595745000000001 0.25219741000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[486]" " -type \"float2\" -0.51920807000000002 0.035230786"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[487]" " -type \"float2\" -0.54592711000000005 0.036119132999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[488]" " -type \"float2\" -0.53383349999999996 0.056214317999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[489]" " -type \"float2\" -0.50866412999999999 0.055358693"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[490]" " -type \"float2\" -0.56913983999999995 0.036450595000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[491]" " -type \"float2\" -0.58916581000000001 0.034826695999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[492]" " -type \"float2\" -0.57559859999999996 0.055056571999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[493]" " -type \"float2\" -0.5557822 0.056450039"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[494]" " -type \"float2\" -0.60519624000000005 0.032191560000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[495]" " -type \"float2\" -0.61629999000000002 0.029239178000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[496]" " -type \"float2\" -0.60349876000000002 0.050304755999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[497]" " -type \"float2\" -0.59223645999999996 0.052750780999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[498]" " -type \"float2\" -0.62005043000000004 0.026404232"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[499]" " -type \"float2\" -0.61366814000000003 0.023645936999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[500]" " -type \"float2\" -0.59852426999999997 0.044984653999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[501]" " -type \"float2\" -0.60646175999999996 0.047565013000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[502]" " -type \"float2\" -0.41609575999999998 0.071065634000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[503]" " -type \"float2\" -0.32965928 0.27980250000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[504]" " -type \"float2\" -0.45528024 0.072576255000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[505]" " -type \"float2\" -0.42898809999999998 0.088703975000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[506]" " -type \"float2\" -0.39290335999999998 0.086399271999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[507]" " -type \"float2\" -0.30090456999999998 0.30403087000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[508]" " -type \"float2\" -0.48729327 0.073957086000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[509]" " -type \"float2\" -0.51668453000000003 0.075435116999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[510]" " -type \"float2\" -0.49301696 0.093726753999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[511]" " -type \"float2\" -0.46235794000000002 0.091241106000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[512]" " -type \"float2\" -0.53779714999999995 0.075756952000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[513]" " -type \"float2\" -0.55734908999999999 0.074462473000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[514]" " -type \"float2\" -0.53336287000000004 0.092923641000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[515]" " -type \"float2\" -0.51402329999999996 0.094059332999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[516]" " -type \"float2\" -0.57422280000000003 0.072520225999999993"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[517]" " -type \"float2\" -0.58481609999999995 0.069983466999999994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[518]" " -type \"float2\" -0.55901873000000002 0.088144242999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[519]" " -type \"float2\" -0.55023467999999998 0.091115862000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[520]" " -type \"float2\" -0.58228992999999996 0.066392018999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[521]" " -type \"float2\" -0.57445352999999999 0.062989070999999994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[522]" " -type \"float2\" -0.546763 0.078373775000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[523]" " -type \"float2\" -0.55647647 0.083250015999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[524]" " -type \"float2\" -0.36824208000000003 0.099188492000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[525]" " -type \"float2\" -0.27499020000000002 0.32394763999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[526]" " -type \"float2\" -0.39999034999999999 0.10266550000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[527]" " -type \"float2\" -0.45754488999999998 -0.034521433999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[528]" " -type \"float2\" -0.44266620000000001 -0.054554841999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[529]" " -type \"float2\" -0.43087136999999998 -0.068817705000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[530]" " -type \"float2\" -0.43139493000000001 0.10663866"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[531]" " -type \"float2\" -0.46116346000000003 0.11028734"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[532]" " -type \"float2\" -0.48979392999999999 0.012304023000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[533]" " -type \"float2\" -0.47423851 -0.011654332"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[534]" " -type \"float2\" -0.48188353 0.11093922000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[535]" " -type \"float2\" -0.50124608999999998 0.10979268"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[536]" " -type \"float2\" -0.50591295999999997 0.049225590999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[537]" " -type \"float2\" -0.49815428 0.032196260999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[538]" " -type \"float2\" -0.51748293999999995 0.10785858"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[539]" " -type \"float2\" -0.52589565999999999 0.10398032"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[540]" " -type \"float2\" -0.51170236000000002 0.075183107999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[541]" " -type \"float2\" -0.51124585 0.064036711999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[542]" " -type \"float2\" -0.52480698000000003 0.097997367000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[543]" " -type \"float2\" -0.51794344000000003 0.091391414000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[544]" " -type \"float2\" -0.48408675000000001 0.10141805"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[545]" " -type \"float2\" -0.50534307999999994 0.081143141000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[546]" " -type \"float2\" -0.41631701999999998 -0.042564295000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[547]" " -type \"float2\" -0.22356039 0.34762701000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[548]" " -type \"float2\" -0.42678294 -0.018620635999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[549]" " -type \"float2\" -0.38810420000000001 -0.0075491331999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[550]" " -type \"float2\" -0.38171359999999999 -0.034946457"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[551]" " -type \"float2\" -0.17498987999999999 0.36166661999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[552]" " -type \"float2\" -0.43917313000000002 0.0065941400999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[553]" " -type \"float2\" -0.45170999000000001 0.031332418000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[554]" " -type \"float2\" -0.40455585999999999 0.044233388999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[555]" " -type \"float2\" -0.39622509 0.018903851999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[556]" " -type \"float2\" -0.45800765999999998 0.051048771"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[557]" " -type \"float2\" -0.46519126999999999 0.066953577"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[558]" " -type \"float2\" -0.41636847999999999 0.078308879999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[559]" " -type \"float2\" -0.40959284000000001 0.063202478000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[560]" " -type \"float2\" -0.47045803000000003 0.080355033000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[561]" " -type \"float2\" -0.47182163999999999 0.089962213999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[562]" " -type \"float2\" -0.42506053999999999 0.099769949999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[563]" " -type \"float2\" -0.42204562000000001 0.090965143999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[564]" " -type \"float2\" -0.46770483000000002 0.093768105000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[565]" " -type \"float2\" -0.46203938 0.094345391000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[566]" " -type \"float2\" -0.42210439 0.10176274"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[567]" " -type \"float2\" -0.42401934000000002 0.10235809999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[568]" " -type \"float2\" -0.34165993 -0.028843354000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[569]" " -type \"float2\" -0.11818039 0.37735679999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[570]" " -type \"float2\" -0.34534392000000003 0.00055237858999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[571]" " -type \"float2\" -0.29963942999999998 0.0071563609000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[572]" " -type \"float2\" -0.29747533999999998 -0.024059409"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[573]" " -type \"float2\" -0.054886936999999997 0.39423466000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[574]" " -type \"float2\" -0.34838909000000001 0.027140840999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[575]" " -type \"float2\" -0.35267767 0.051960379000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[576]" " -type \"float2\" -0.29893887000000002 0.055974454"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[577]" " -type \"float2\" -0.30010891000000001 0.033425535999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[578]" " -type \"float2\" -0.37007364999999998 0.095841348000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[579]" " -type \"float2\" -0.36376676000000002 0.084127933000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[580]" " -type \"float2\" -0.37444293000000001 0.10458723"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[581]" " -type \"float2\" -0.32235759000000003 0.10517962"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[582]" " -type \"float2\" -0.31772773999999998 0.096935286999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[583]" " -type \"float2\" -0.31139523000000002 0.086342074000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[584]" " -type \"float2\" -0.37606263000000001 0.10733682"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[585]" " -type \"float2\" -0.37782219 0.10752606000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[586]" " -type \"float2\" -0.32935607 0.11112174"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[587]" " -type \"float2\" -0.32613345999999999 0.11029057"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[588]" " -type \"float2\" -0.24771236999999999 -0.023879355000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[589]" " -type \"float2\" 0.016065478000000001 0.40850225000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[590]" " -type \"float2\" -0.24961689000000001 0.0077310950000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[591]" " -type \"float2\" -0.20122029999999999 0.0055496319999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[592]" " -type \"float2\" -0.19795247999999999 -0.026604737999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[593]" " -type \"float2\" -0.194617 -0.064797767000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[594]" " -type \"float2\" -0.25071379999999999 0.034492742"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[595]" " -type \"float2\" -0.25084223999999999 0.056640389999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[596]" " -type \"float2\" -0.20769113 0.054874039999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[597]" " -type \"float2\" -0.20442629000000001 0.032418809999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[598]" " -type \"float2\" -0.30264315000000003 0.073334216999999993"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[599]" " -type \"float2\" -0.25279330999999999 0.074334934000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[600]" " -type \"float2\" -0.26114437000000001 0.086625002000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[601]" " -type \"float2\" -0.21430326 0.085492179000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[602]" " -type \"float2\" -0.21105700999999999 0.072495668999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[603]" " -type \"float2\" -0.26666339999999999 0.096069209000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[604]" " -type \"float2\" -0.27078679 0.10338804"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[605]" " -type \"float2\" -0.21981138 0.10059214"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[606]" " -type \"float2\" -0.21700886 0.093830757000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[607]" " -type \"float2\" -0.27420464 0.10858332"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[608]" " -type \"float2\" -0.27745491 0.10992721"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[609]" " -type \"float2\" -0.22548771000000001 0.10699566000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[610]" " -type \"float2\" -0.2226505 0.10554450999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[611]" " -type \"float2\" 0.22482484999999999 0.43932139999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[612]" " -type \"float2\" -0.099085330999999999 -0.036599562000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[613]" " -type \"float2\" -0.055674164999999998 -0.047347695000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[614]" " -type \"float2\" 0.28399634000000001 0.44326615000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[615]" " -type \"float2\" -0.10320704999999999 -0.0047987066"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[616]" " -type \"float2\" -0.057878286000000001 -0.01739011"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[617]" " -type \"float2\" -0.015508726 -0.031256768999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[618]" " -type \"float2\" -0.016384721000000001 -0.058977436000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[619]" " -type \"float2\" 0.33639776999999998 0.44631581999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[620]" " -type \"float2\" -0.10899335 0.021987139999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[621]" " -type \"float2\" -0.060932130000000001 0.0095873213999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[622]" " -type \"float2\" -0.11660689 0.045141142000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[623]" " -type \"float2\" -0.062898010000000004 0.034615692000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[624]" " -type \"float2\" -0.011135936000000001 0.020385396"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[625]" " -type \"float2\" -0.013241574000000001 -0.0048264861000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[626]" " -type \"float2\" -0.1166732 0.074684069000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[627]" " -type \"float2\" -0.11633897 0.084840245999999994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[628]" " -type \"float2\" -0.064321265000000002 0.077457435000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[629]" " -type \"float2\" -0.064430788000000003 0.066146127999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[630]" " -type \"float2\" -0.11762707999999999 0.092869826000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[631]" " -type \"float2\" -0.066115379000000002 0.086038820000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[632]" " -type \"float2\" -0.016313299999999999 0.0750136"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[633]" " -type \"float2\" -0.01292713 0.066201307000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[634]" " -type \"float2\" -0.012165143999999999 0.053805694000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[635]" " -type \"float2\" -0.11969179000000001 0.097870275000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[636]" " -type \"float2\" -0.070448965000000002 0.088779128999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[637]" " -type \"float2\" -0.12221695 0.098668739000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[638]" " -type \"float2\" -0.074475199000000006 0.089020684000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[639]" " -type \"float2\" -0.031230897000000001 0.077512540000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[640]" " -type \"float2\" -0.023517698 0.077807866000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[641]" " -type \"float2\" 0.017635949000000001 -0.071535400999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[642]" " -type \"float2\" 0.38044255999999999 0.44817870999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[643]" " -type \"float2\" 0.023106068 -0.047816113"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[644]" " -type \"float2\" 0.029765934000000001 -0.023099742999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[645]" " -type \"float2\" 0.036044262000000001 0.0010752864000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[646]" " -type \"float2\" -0.012501925000000001 0.039175610999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[647]" " -type \"float2\" 0.035756520999999999 0.020469457"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[648]" " -type \"float2\" 0.036208667 0.035894520999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[649]" " -type \"float2\" 0.034658343000000001 0.049162841999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[650]" " -type \"float2\" 0.029301316000000001 0.059058777999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[651]" " -type \"float2\" 0.018812164999999999 0.063463219000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[652]" " -type \"float2\" 0.0072464644999999999 0.064751945000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[653]" " -type \"float2\" -0.42420753999999999 0.093387901999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[654]" " -type \"float2\" -0.45710230000000002 0.089847282000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[655]" " -type \"float2\" -0.46591693000000001 0.082243204"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[656]" " -type \"float2\" -0.43169162 0.084328502"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[657]" " -type \"float2\" -0.47805244000000002 0.087617472000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[658]" " -type \"float2\" -0.49151999000000002 0.082055910999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[659]" " -type \"float2\" -0.51059412999999998 0.071868002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[660]" " -type \"float2\" -0.480813 0.071235642000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[661]" " -type \"float2\" -0.44333717 0.072197512000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[662]" " -type \"float2\" -0.33681949999999999 0.10058151"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[663]" " -type \"float2\" -0.38374313999999998 0.097424685999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[664]" " -type \"float2\" -0.39040016999999999 0.087376058000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[665]" " -type \"float2\" -0.34288754999999999 0.090107574999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[666]" " -type \"float2\" -0.40019729999999998 0.074330940999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[667]" " -type \"float2\" -0.35093194 0.076705842999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[668]" " -type \"float2\" -0.23693943000000001 0.074479073000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[669]" " -type \"float2\" -0.23397624 0.087482273999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[670]" " -type \"float2\" -0.28933470999999999 0.089716658000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[671]" " -type \"float2\" -0.29490155000000001 0.076446339000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[672]" " -type \"float2\" -0.23111090000000001 0.097477942999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[673]" " -type \"float2\" -0.28460929000000001 0.099931955000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[674]" " -type \"float2\" -0.039777069999999998 0.069464855000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[675]" " -type \"float2\" -0.079552471999999999 0.079012035999999994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[676]" " -type \"float2\" -0.078346729000000004 0.068898603000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[677]" " -type \"float2\" -0.037447109999999999 0.060274065000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[678]" " -type \"float2\" -0.12594806 0.088119373000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[679]" " -type \"float2\" -0.12550105 0.077579826000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[680]" " -type \"float2\" -0.12330476999999999 0.064090356000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[681]" " -type \"float2\" -0.074256837000000006 0.055711246999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[682]" " -type \"float2\" -0.031279355000000002 0.047918439"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[683]" " -type \"float2\" 0.012225866 0.055048793999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[684]" " -type \"float2\" -0.0077419430000000003 0.061052501000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[685]" " -type \"float2\" -0.0035536289 0.053103611000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[686]" " -type \"float2\" 0.021906331000000001 0.048376203"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[687]" " -type \"float2\" 0.0061226188999999997 0.041598468999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[688]" " -type \"float2\" 0.035949453999999999 0.037187501999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[689]" " -type \"float2\" -0.49959964000000001 0.057291538000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[690]" " -type \"float2\" -0.45903372999999997 0.057544409999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[691]" " -type \"float2\" -0.53273559000000004 0.058174222999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[692]" " -type \"float2\" -0.55432623999999997 0.040658481000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[693]" " -type \"float2\" -0.51914632000000005 0.039749174999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[694]" " -type \"float2\" -0.47603541999999999 0.039389505999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[695]" " -type \"float2\" -0.41199385999999999 0.058460115999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[696]" " -type \"float2\" -0.36026236 0.060022295000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[697]" " -type \"float2\" -0.42588046000000002 0.039514601000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[698]" " -type \"float2\" -0.36898442999999997 0.039385900000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[699]" " -type \"float2\" -0.24338165 0.036515369999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[700]" " -type \"float2\" -0.24007972999999999 0.057728872000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[701]" " -type \"float2\" -0.30127439 0.059684142000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[702]" " -type \"float2\" -0.30766283999999999 0.038501278"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[703]" " -type \"float2\" -0.068505570000000002 0.039708830000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[704]" " -type \"float2\" -0.021529316999999999 0.032973096"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[705]" " -type \"float2\" -0.12016925000000001 0.047329307000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[706]" " -type \"float2\" -0.11799796999999999 0.026664107999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[707]" " -type \"float2\" -0.061151743000000001 0.020603731"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[708]" " -type \"float2\" -0.010972902 0.014503032000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[709]" " -type \"float2\" 0.019055157999999999 0.027140959999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[710]" " -type \"float2\" 0.052366166999999998 0.022615150000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[711]" " -type \"float2\" 0.032204956 0.0091198831999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[712]" " -type \"float2\" 0.067612230999999995 0.0043621062999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[713]" " -type \"float2\" -0.53247153999999997 0.017690375000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[714]" " -type \"float2\" -0.48806094999999999 0.016729407000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[715]" " -type \"float2\" -0.56876802000000004 0.019153713999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[716]" " -type \"float2\" -0.57620656000000003 -0.0045895277999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[717]" " -type \"float2\" -0.53982198000000003 -0.0068129747999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[718]" " -type \"float2\" -0.49511527999999999 -0.0088591129000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[719]" " -type \"float2\" -0.43604565000000001 0.015856504"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[720]" " -type \"float2\" -0.37676027000000001 0.014805779"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[721]" " -type \"float2\" -0.44201766999999997 -0.010816917000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[722]" " -type \"float2\" -0.38169905999999998 -0.012812585"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[723]" " -type \"float2\" -0.25061017000000002 -0.017861142999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[724]" " -type \"float2\" -0.24691534000000001 0.010763422"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[725]" " -type \"float2\" -0.31306285 0.013212158999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[726]" " -type \"float2\" -0.31728306000000001 -0.015105202999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[727]" " -type \"float2\" -0.057895988000000002 -0.0031977444999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[728]" " -type \"float2\" -0.0058018714000000002 -0.0083808749999999994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[729]" " -type \"float2\" -0.11719176000000001 0.0020253211000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[730]" " -type \"float2\" -0.11955248 -0.025607258000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[731]" " -type \"float2\" -0.059144138999999998 -0.029913291000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[732]" " -type \"float2\" -0.0058650671999999999 -0.034146785999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[733]" " -type \"float2\" 0.038759768 -0.013351411000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[734]" " -type \"float2\" 0.075310662 -0.017697245"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[735]" " -type \"float2\" 0.039098285000000003 -0.038142680999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[736]" " -type \"float2\" 0.075780897999999999 -0.041840345000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[737]" " -type \"float2\" -0.54108131000000004 -0.032720952999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[738]" " -type \"float2\" -0.49647408999999998 -0.035917907999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[739]" " -type \"float2\" -0.57724726000000004 -0.029536903"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[740]" " -type \"float2\" -0.57211482999999996 -0.055536240000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[741]" " -type \"float2\" -0.53627895999999997 -0.059388547999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[742]" " -type \"float2\" -0.49253069999999999 -0.063188969999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[743]" " -type \"float2\" -0.44360822 -0.038867264999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[744]" " -type \"float2\" -0.38385037 -0.041591108000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[745]" " -type \"float2\" -0.44097248 -0.066708594999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[746]" " -type \"float2\" -0.38302388999999998 -0.069849193000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[747]" " -type \"float2\" -0.25804165000000001 -0.075765789"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[748]" " -type \"float2\" -0.25433992999999999 -0.047185778999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[749]" " -type \"float2\" -0.31982526 -0.044251770000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[750]" " -type \"float2\" -0.32128056999999999 -0.072777331000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[751]" " -type \"float2\" -0.064921810999999996 -0.057988866999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[752]" " -type \"float2\" -0.011810571000000001 -0.061266497000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[753]" " -type \"float2\" -0.12480903 -0.054385154999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[754]" " -type \"float2\" -0.13302632 -0.082599460999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[755]" " -type \"float2\" -0.074953273000000001 -0.085783511000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[756]" " -type \"float2\" -0.023173004000000001 -0.088500142000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[757]" " -type \"float2\" 0.033143282000000003 -0.064184353"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[758]" " -type \"float2\" 0.069674431999999994 -0.067007363"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[759]" " -type \"float2\" 0.020883619999999999 -0.090832070000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[760]" " -type \"float2\" 0.057082564000000002 -0.093011692000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[761]" " -type \"float2\" -0.52660370000000001 -0.085284024"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[762]" " -type \"float2\" -0.48400405000000002 -0.08936885"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[763]" " -type \"float2\" -0.56195521000000004 -0.081285119000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[764]" " -type \"float2\" -0.55008721000000005 -0.10635784"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[765]" " -type \"float2\" -0.51521002999999999 -0.11026379"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[766]" " -type \"float2\" -0.47386022999999999 -0.11418610999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[767]" " -type \"float2\" -0.43511564000000003 -0.093362212"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[768]" " -type \"float2\" -0.38024992000000002 -0.097032160000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[769]" " -type \"float2\" -0.42712762999999998 -0.11821675"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[770]" " -type \"float2\" -0.37593993999999997 -0.12227449"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[771]" " -type \"float2\" -0.26529037999999999 -0.12925279000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[772]" " -type \"float2\" -0.26172709 -0.10337855999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[773]" " -type \"float2\" -0.32196543 -0.10030472"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[774]" " -type \"float2\" -0.32145262000000002 -0.12595955"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[775]" " -type \"float2\" -0.088127017000000002 -0.11229908"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[776]" " -type \"float2\" -0.039060637000000002 -0.11450022"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[777]" " -type \"float2\" -0.14311293999999999 -0.10968238"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[778]" " -type \"float2\" -0.15456848000000001 -0.13477802"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[779]" " -type \"float2\" -0.10327624000000001 -0.136933"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[780]" " -type \"float2\" -0.056409507999999997 -0.13903677"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[781]" " -type \"float2\" 0.0037803202999999999 -0.11654117999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[782]" " -type \"float2\" 0.039398431999999997 -0.11856794"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[783]" " -type \"float2\" -0.014916584 -0.14117333000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[784]" " -type \"float2\" 0.02010785 -0.14327115000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[785]" " -type \"float2\" -0.50518072000000003 -0.13476288"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[786]" " -type \"float2\" -0.46481826999999998 -0.13843908999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[787]" " -type \"float2\" -0.53936470000000003 -0.13111191999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[788]" " -type \"float2\" -0.53160715000000003 -0.15581623"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[789]" " -type \"float2\" -0.49782789 -0.15904960000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[790]" " -type \"float2\" -0.45832237999999997 -0.16253646999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[791]" " -type \"float2\" -0.41972545 -0.14220658"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[792]" " -type \"float2\" -0.37128623999999999 -0.14600532999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[793]" " -type \"float2\" -0.41445019999999999 -0.16610688000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[794]" " -type \"float2\" -0.36803687000000002 -0.16979060000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[795]" " -type \"float2\" -0.27218555999999999 -0.17650518000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[796]" " -type \"float2\" -0.26875507999999998 -0.15286350000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[797]" " -type \"float2\" -0.32058740000000002 -0.14963995999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[798]" " -type \"float2\" -0.32031398999999999 -0.17331460000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[799]" " -type \"float2\" -0.11767037 -0.16060719000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[800]" " -type \"float2\" -0.072498664000000004 -0.16290423000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[801]" " -type \"float2\" -0.16618811 -0.15829145999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[802]" " -type \"float2\" -0.17626573000000001 -0.18179867"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[803]" " -type \"float2\" -0.12977775999999999 -0.18414654999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[804]" " -type \"float2\" -0.085885464999999994 -0.18657607000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[805]" " -type \"float2\" -0.032083079 -0.165227"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[806]" " -type \"float2\" 0.002088964 -0.16750327000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[807]" " -type \"float2\" -0.046470374000000002 -0.18901402"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[808]" " -type \"float2\" -0.012845993 -0.19161311"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[809]" " -type \"float2\" -0.49478608000000002 -0.18340888999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[810]" " -type \"float2\" -0.45577854000000001 -0.1865752"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[811]" " -type \"float2\" -0.52837825000000005 -0.18058166"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[812]" " -type \"float2\" -0.52934574999999995 -0.20503128000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[813]" " -type \"float2\" -0.49552318000000001 -0.20707302999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[814]" " -type \"float2\" -0.45649733999999997 -0.20993212"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[815]" " -type \"float2\" -0.41278451999999999 -0.19029256999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[816]" " -type \"float2\" -0.36752077999999999 -0.19422895000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[817]" " -type \"float2\" -0.41415661999999998 -0.21390181999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[818]" " -type \"float2\" -0.36934465 -0.21867391"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[819]" " -type \"float2\" -0.27897474 -0.22615451"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[820]" " -type \"float2\" -0.27558821 -0.20118048999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[821]" " -type \"float2\" -0.32155335000000002 -0.197938"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[822]" " -type \"float2\" -0.32406889999999999 -0.22269678000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[823]" " -type \"float2\" -0.13812089 -0.20802954000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[824]" " -type \"float2\" -0.095132217000000005 -0.21022171000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[825]" " -type \"float2\" -0.18349651 -0.20600203"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[826]" " -type \"float2\" -0.18828589000000001 -0.23030031000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[827]" " -type \"float2\" -0.14316884999999999 -0.23143736000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[828]" " -type \"float2\" -0.10080627 -0.23323336"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[829]" " -type \"float2\" -0.056330933999999999 -0.21285435999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[830]" " -type \"float2\" -0.023098916000000001 -0.21574198999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[831]" " -type \"float2\" -0.062129304000000003 -0.23602640999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[832]" " -type \"float2\" -0.02896145 -0.23953062"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[833]" " -type \"float2\" -0.47296154000000001 -0.39329386"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[834]" " -type \"float2\" -0.51055282000000002 -0.39016968000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[835]" " -type \"float2\" -0.50466931000000004 -0.40272333999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[836]" " -type \"float2\" -0.46973994000000002 -0.40630934000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[837]" " -type \"float2\" -0.54488802000000003 -0.38680586"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[838]" " -type \"float2\" -0.53532111999999998 -0.39929240999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[839]" " -type \"float2\" -0.52510071000000003 -0.41014987000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[840]" " -type \"float2\" -0.49830657 -0.41369718"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[841]" " -type \"float2\" -0.46675822 -0.41816571000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[842]" " -type \"float2\" -0.39012479999999999 -0.39892080000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[843]" " -type \"float2\" -0.43254292 -0.39619251999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[844]" " -type \"float2\" -0.43085890999999998 -0.40939080999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[845]" " -type \"float2\" -0.39037874 -0.41265413000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[846]" " -type \"float2\" -0.43001690999999997 -0.42186122999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[847]" " -type \"float2\" -0.39141405000000001 -0.42616943000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[848]" " -type \"float2\" -0.21781115000000001 -0.40884568999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[849]" " -type \"float2\" -0.26091477000000002 -0.40663356000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[850]" " -type \"float2\" -0.26325846000000003 -0.42082705999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[851]" " -type \"float2\" -0.22156081 -0.42244177999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[852]" " -type \"float2\" -0.30387281999999999 -0.40410644000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[853]" " -type \"float2\" -0.30584656999999998 -0.41835651000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[854]" " -type \"float2\" -0.30786945999999998 -0.43295433999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[855]" " -type \"float2\" -0.26522654000000001 -0.43514313999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[856]" " -type \"float2\" -0.22453381 -0.43587437000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[857]" " -type \"float2\" -0.13563104000000001 -0.41285308999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[858]" " -type \"float2\" -0.17570183 -0.41100292999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[859]" " -type \"float2\" -0.18135830999999999 -0.42391503000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[860]" " -type \"float2\" -0.14281172 -0.42544946"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[861]" " -type \"float2\" -0.18613252 -0.43619092999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[862]" " -type \"float2\" -0.14966361 -0.43696052000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[863]" " -type \"float2\" -0.064333930999999997 -0.41555365999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[864]" " -type \"float2\" -0.098363400000000004 -0.41433980999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[865]" " -type \"float2\" -0.10824201 -0.42631670999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[866]" " -type \"float2\" -0.077999830000000006 -0.42722233999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[867]" " -type \"float2\" -0.11841846 -0.43672186000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[868]" " -type \"float2\" -0.092056288999999999 -0.43719012000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[869]" " -type \"float2\" -0.49309623000000002 -0.42272228000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[870]" " -type \"float2\" -0.46456742000000001 -0.42812847999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[871]" " -type \"float2\" -0.51511370999999995 -0.41872021999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[872]" " -type \"float2\" -0.50776124 -0.42394871000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[873]" " -type \"float2\" -0.49075048999999998 -0.42878421999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[874]" " -type \"float2\" -0.46471565999999997 -0.43566743000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[875]" " -type \"float2\" -0.43007210000000001 -0.43298333999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[876]" " -type \"float2\" -0.39284158000000002 -0.43844619000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[877]" " -type \"float2\" -0.43106976000000002 -0.44159453999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[878]" " -type \"float2\" -0.39470071000000001 -0.44837016000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[879]" " -type \"float2\" -0.26721953999999998 -0.44863196999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[880]" " -type \"float2\" -0.22713860999999999 -0.44812909000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[881]" " -type \"float2\" -0.30994809000000001 -0.44690933999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[882]" " -type \"float2\" -0.31204968999999999 -0.45853769999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[883]" " -type \"float2\" -0.26922160000000001 -0.45966369000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[884]" " -type \"float2\" -0.22934999 -0.45809987000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[885]" " -type \"float2\" -0.18999471000000001 -0.44722441000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[886]" " -type \"float2\" -0.15556732000000001 -0.44669019999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[887]" " -type \"float2\" -0.19287035999999999 -0.45586172000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[888]" " -type \"float2\" -0.15906329 -0.45422393"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[889]" " -type \"float2\" -0.12718466 -0.44527492000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[890]" " -type \"float2\" -0.10540976000000001 -0.44479533999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[891]" " -type \"float2\" -0.13272849 -0.45112047"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[892]" " -type \"float2\" -0.11532177 -0.44912657"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[893]" " -type \"float2\" -0.23614794 0.33284506000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[894]" " -type \"float2\" -0.18640958999999999 0.34451022999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[895]" " -type \"float2\" -0.2012108 0.32318118000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[896]" " -type \"float2\" -0.25571072 0.31264934"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[897]" " -type \"float2\" -0.129013 0.35827777"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[898]" " -type \"float2\" -0.066423415999999999 0.37286928000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[899]" " -type \"float2\" -0.077507615000000002 0.34794623000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[900]" " -type \"float2\" -0.1414175 0.33501375"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[901]" " -type \"float2\" 0.0039451718000000002 0.38586946999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[902]" " -type \"float2\" 0.074599742999999996 0.39742273"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[903]" " -type \"float2\" 0.062787831000000002 0.37139189"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[904]" " -type \"float2\" -0.0073686241999999999 0.36007914000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[905]" " -type \"float2\" 0.27368187999999999 0.42177033000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[906]" " -type \"float2\" 0.21320111 0.41608757000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[907]" " -type \"float2\" 0.32877862000000002 0.42695439000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[908]" " -type \"float2\" 0.32332915000000001 0.40526021000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[909]" " -type \"float2\" 0.26413315999999998 0.39748489999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[910]" " -type \"float2\" 0.20128821999999999 0.39006608999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[911]" " -type \"float2\" 0.37732840000000001 0.43245201999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[912]" " -type \"float2\" 0.37809503 0.41348255"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[913]" " -type \"float2\" -0.27849459999999998 0.28846042999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[914]" " -type \"float2\" -0.21910286000000001 0.29821893999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[915]" " -type \"float2\" -0.23669456999999999 0.27033994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[916]" " -type \"float2\" -0.29928046000000003 0.26098307999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[917]" " -type \"float2\" -0.15464073 0.30915000999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[918]" " -type \"float2\" -0.088691711000000006 0.32047752000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[919]" " -type \"float2\" -0.098151922000000003 0.29177320000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[920]" " -type \"float2\" -0.16870378999999999 0.28068220999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[921]" " -type \"float2\" -0.018285513 0.3322041"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[922]" " -type \"float2\" 0.050857902000000003 0.34336792999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[923]" " -type \"float2\" 0.038419306 0.31321441999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[924]" " -type \"float2\" -0.028751909999999999 0.30275904999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[925]" " -type \"float2\" 0.25459766 0.37118381"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[926]" " -type \"float2\" 0.18885600999999999 0.36192595999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[927]" " -type \"float2\" 0.31904601999999999 0.380835"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[928]" " -type \"float2\" 0.31298696999999998 0.35373104"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[929]" " -type \"float2\" 0.24454904 0.34265267999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[930]" " -type \"float2\" 0.17406606999999999 0.33228964"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[931]" " -type \"float2\" 0.37953013000000002 0.39129770000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[932]" " -type \"float2\" 0.37682259000000001 0.36545931999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[933]" " -type \"float2\" -0.31374492999999998 0.23200931999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[934]" " -type \"float2\" -0.24840069000000001 0.24157687999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[935]" " -type \"float2\" -0.26045349000000001 0.21258515"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[936]" " -type \"float2\" -0.32552734 0.20339980999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[937]" " -type \"float2\" -0.17880285000000001 0.25184369000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[938]" " -type \"float2\" -0.10693771000000001 0.26265639000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[939]" " -type \"float2\" -0.11574221 0.23321133999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[940]" " -type \"float2\" -0.18942982 0.22268241999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[941]" " -type \"float2\" -0.038165033000000001 0.27299845"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[942]" " -type \"float2\" 0.025660156999999999 0.28259128"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[943]" " -type \"float2\" 0.012313604000000001 0.25191337000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[944]" " -type \"float2\" -0.049796522000000003 0.24257724999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[945]" " -type \"float2\" 0.23003882 0.31377017000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[946]" " -type \"float2\" 0.15801172999999999 0.30247246999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[947]" " -type \"float2\" 0.30028039000000001 0.32553845999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[948]" " -type \"float2\" 0.28723442999999999 0.29749697000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[949]" " -type \"float2\" 0.21518672 0.28486705000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[950]" " -type \"float2\" 0.14088344999999999 0.27237635999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[951]" " -type \"float2\" 0.36665379999999997 0.33771431000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[952]" " -type \"float2\" 0.35344487000000002 0.31001097"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[953]" " -type \"float2\" -0.33784323999999999 0.17350066"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[954]" " -type \"float2\" -0.27377117000000001 0.18238628000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[955]" " -type \"float2\" -0.28518336999999999 0.15176576"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[956]" " -type \"float2\" -0.34838888000000001 0.14297593"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[957]" " -type \"float2\" -0.20267028000000001 0.19242316000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[958]" " -type \"float2\" -0.12993436999999999 0.20283430999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[959]" " -type \"float2\" -0.14557555 0.17210238999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[960]" " -type \"float2\" -0.21589460999999999 0.1616832"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[961]" " -type \"float2\" -0.064028293 0.21260846"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[962]" " -type \"float2\" -0.0014260709000000001 0.22224932999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[963]" " -type \"float2\" -0.014940083 0.19249164999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[964]" " -type \"float2\" -0.079314678999999999 0.18231511"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[965]" " -type \"float2\" 0.20173240000000001 0.25558943000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[966]" " -type \"float2\" 0.12800252000000001 0.24298417999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[967]" " -type \"float2\" 0.27415645 0.26843673000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[968]" " -type \"float2\" 0.25858086000000002 0.23800373"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[969]" " -type \"float2\" 0.18806582999999999 0.22552741000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[970]" " -type \"float2\" 0.11669019 0.21350616"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[971]" " -type \"float2\" 0.33944273000000003 0.28090525"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[972]" " -type \"float2\" 0.32301955999999998 0.25025338000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[973]" " -type \"float2\" -0.35647789000000002 0.11214817000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[974]" " -type \"float2\" -0.29505607 0.12087631"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[975]" " -type \"float2\" -0.30480888 0.089802622999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[976]" " -type \"float2\" -0.36443200999999997 0.081114292000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[977]" " -type \"float2\" -0.22820270000000001 0.13055855"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[978]" " -type \"float2\" -0.15969658 0.14077955"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[979]" " -type \"float2\" -0.17297404999999999 0.10926062"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[980]" " -type \"float2\" -0.23996851 0.099271535999999994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[981]" " -type \"float2\" -0.093389659999999999 0.1510244"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[982]" " -type \"float2\" -0.028107375 0.161358"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[983]" " -type \"float2\" -0.041390806000000002 0.12973272999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[984]" " -type \"float2\" -0.10697271999999999 0.11940265"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[985]" " -type \"float2\" 0.17355493 0.19437051"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[986]" " -type \"float2\" 0.10416918999999999 0.18268197999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[987]" " -type \"float2\" 0.24151379000000001 0.20628947"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[988]" " -type \"float2\" 0.22434225999999999 0.17412322999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[989]" " -type \"float2\" 0.15848430999999999 0.16262119999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[990]" " -type \"float2\" 0.090729593999999997 0.15117431000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[991]" " -type \"float2\" 0.30409955999999999 0.21797478000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[992]" " -type \"float2\" 0.2851302 0.18531185"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[993]" " -type \"float2\" -0.37231417999999999 0.050127268000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[994]" " -type \"float2\" -0.31453729000000002 0.058796525000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[995]" " -type \"float2\" -0.32448268000000002 0.028109431000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[996]" " -type \"float2\" -0.38070684999999999 0.019382178999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[997]" " -type \"float2\" -0.25153181000000002 0.068094193999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[998]" " -type \"float2\" -0.18590920999999999 0.077883303000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[999]" " -type \"float2\" -0.19864746999999999 0.046933830000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1000]" " -type \"float2\" -0.26304364000000002 0.037307738999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1001]" " -type \"float2\" -0.12036631 0.087920367999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1002]" " -type \"float2\" -0.054798989999999999 0.098201631999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1003]" " -type \"float2\" -0.068240374000000006 0.067035793999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1004]" " -type \"float2\" -0.13362968 0.056847452999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1005]" " -type \"float2\" 0.14310908 0.13072944"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1006]" " -type \"float2\" 0.076782881999999997 0.11953145"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1007]" " -type \"float2\" 0.20711779999999999 0.14187490999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1008]" " -type \"float2\" 0.19022140000000001 0.10999906"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1009]" " -type \"float2\" 0.12774265000000001 0.099137604000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1010]" " -type \"float2\" 0.062635303000000003 0.088167250000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1011]" " -type \"float2\" 0.26613747999999998 0.15265625999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1012]" " -type \"float2\" 0.2477743 0.12047935"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1013]" " -type \"float2\" -0.39010692000000002 -0.010892391"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1014]" " -type \"float2\" -0.33480102 -0.0020048618"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1015]" " -type \"float2\" -0.34532234000000001 -0.031354606"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1016]" " -type \"float2\" -0.40003108999999998 -0.040418326999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1017]" " -type \"float2\" -0.27455797999999998 0.0071682333999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1018]" " -type \"float2\" -0.21123120000000001 0.016656219999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1019]" " -type \"float2\" -0.22357482000000001 -0.012818575"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1020]" " -type \"float2\" -0.28600871999999999 -0.022179246"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1021]" " -type \"float2\" -0.14672783 0.026414394000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1022]" " -type \"float2\" -0.081560700999999999 0.036467075000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1023]" " -type \"float2\" -0.094572604000000005 0.0066337584999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1024]" " -type \"float2\" -0.15952822999999999 -0.003246367"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1025]" " -type \"float2\" 0.11276749 0.068215429999999994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1026]" " -type \"float2\" 0.048680424999999999 0.057424426000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1027]" " -type \"float2\" 0.17407270999999999 0.078874886000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1028]" " -type \"float2\" 0.15875249999999999 0.048689484999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1029]" " -type \"float2\" 0.098416895000000004 0.038146674999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1030]" " -type \"float2\" 0.035180926000000001 0.027470171000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1031]" " -type \"float2\" 0.23070604 0.089161037999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1032]" " -type \"float2\" 0.21467167000000001 0.058881639999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1033]" " -type \"float2\" -0.46821719000000001 -0.23746341000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1034]" " -type \"float2\" -0.469129 -0.25586629"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1035]" " -type \"float2\" -0.41773441 -0.23030149999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1036]" " -type \"float2\" -0.42137465000000002 -0.24978226000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1037]" " -type \"float2\" -0.42133203000000002 -0.26573616"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1038]" " -type \"float2\" -0.46521111999999998 -0.27053207000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1039]" " -type \"float2\" -0.36245060000000001 -0.22284549000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1040]" " -type \"float2\" -0.36838283999999999 -0.24333245000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1041]" " -type \"float2\" -0.30356777000000001 -0.21494305"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1042]" " -type \"float2\" -0.31132494999999999 -0.2363953"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1043]" " -type \"float2\" -0.31788950999999999 -0.25494713000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1044]" " -type \"float2\" -0.37174159000000001 -0.26053947"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1045]" " -type \"float2\" -0.19924906000000001 -0.24053073"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1046]" " -type \"float2\" -0.18942279000000001 -0.21980970999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1047]" " -type \"float2\" -0.12765375000000001 -0.20983558999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1048]" " -type \"float2\" -0.13800900999999999 -0.23018168999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1049]" " -type \"float2\" -0.17946923000000001 -0.19743126999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1050]" " -type \"float2\" -0.11692691 -0.18768048000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1051]" " -type \"float2\" -0.055932820000000001 -0.17736953"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1052]" " -type \"float2\" -0.067714839999999998 -0.19923019"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1053]" " -type \"float2\" -0.080104469999999997 -0.21781962999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1054]" " -type \"float2\" 0.0021361410999999999 -0.16676921"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1055]" " -type \"float2\" -0.010981299 -0.18813920000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1056]" " -type \"float2\" 0.056013464999999998 -0.15601783999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1057]" " -type \"float2\" 0.041017294000000003 -0.17716783"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1058]" " -type \"float2\" 0.023464769 -0.19448048000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1059]" " -type \"float2\" -0.025929719 -0.20590568000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1060]" " -type \"float2\" 0.10418835 -0.14540774000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1061]" " -type \"float2\" 0.086731941000000007 -0.16658527000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1062]" " -type \"float2\" 0.066160767999999995 -0.18390590000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1063]" " -type \"float2\" -0.46204811000000001 -0.28257613999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1064]" " -type \"float2\" -0.42248255000000001 -0.27938597999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1065]" " -type \"float2\" -0.37650212999999999 -0.27578455000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1066]" " -type \"float2\" -0.32542172000000003 -0.27189862999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1067]" " -type \"float2\" -0.20890075 -0.25895225999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1068]" " -type \"float2\" -0.14794618000000001 -0.24797659999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1069]" " -type \"float2\" -0.090825468000000006 -0.23430704999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1070]" " -type \"float2\" -0.038493842 -0.22082226999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1071]" " -type \"float2\" 0.0086560547000000005 -0.20859664999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1072]" " -type \"float2\" 0.048416048000000003 -0.19776606999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1073]" " -type \"float2\" 0.0038499311 -0.23379657000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1074]" " -type \"float2\" -0.0011606812000000001 -0.25664135999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1075]" " -type \"float2\" -0.55954360999999997 -0.15799445000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1076]" " -type \"float2\" -0.56218159000000001 -0.18173605000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1077]" " -type \"float2\" -0.35620263000000002 0.069954969000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1078]" " -type \"float2\" -0.065747528999999999 0.052564733000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1079]" " -type \"float2\" -0.11933595 0.062420949000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1080]" " -type \"float2\" -0.44366541999999998 -0.32618185999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1081]" " -type \"float2\" -0.43444245999999997 -0.33466232000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1082]" " -type \"float2\" -0.40194111999999999 -0.33123404000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1083]" " -type \"float2\" -0.41335349999999998 -0.32148483"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1084]" " -type \"float2\" -0.42484912000000002 -0.34439605000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1085]" " -type \"float2\" -0.39209789 -0.34128650999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1086]" " -type \"float2\" -0.36048362 -0.33793959000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1087]" " -type \"float2\" -0.36759206999999999 -0.32665566000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1088]" " -type \"float2\" -0.37863543999999999 -0.31163099"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1089]" " -type \"float2\" -0.14450780999999999 -0.34307015000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1090]" " -type \"float2\" -0.17287727999999999 -0.33520579"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1091]" " -type \"float2\" -0.18681998999999999 -0.34342819000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1092]" " -type \"float2\" -0.15589333999999999 -0.35033119000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1093]" " -type \"float2\" -0.20414604 -0.32177976000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1094]" " -type \"float2\" -0.21920617000000001 -0.33514652"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1095]" " -type \"float2\" -0.229381 -0.34538301999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1096]" " -type \"float2\" -0.19929648999999999 -0.35217326999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1097]" " -type \"float2\" -0.16802481 -0.35882955999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1098]" " -type \"float2\" -0.47297505000000001 -0.32767677000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1099]" " -type \"float2\" -0.46705585999999999 -0.33607443999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1100]" " -type \"float2\" -0.50177950000000004 -0.32653918999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1101]" " -type \"float2\" -0.4995251 -0.33492333000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1102]" " -type \"float2\" -0.49519256 -0.34442726000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1103]" " -type \"float2\" -0.45992452 -0.34557092"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1104]" " -type \"float2\" -0.087631896000000001 -0.34957901000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1105]" " -type \"float2\" -0.11618355 -0.347651"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1106]" " -type \"float2\" -0.12426317000000001 -0.35522076000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1107]" " -type \"float2\" -0.092105179999999995 -0.35756797000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1108]" " -type \"float2\" -0.13396959999999999 -0.36382574000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1109]" " -type \"float2\" -0.099131658999999997 -0.36658579000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1110]" " -type \"float2\" -0.52848952999999999 -0.32247158999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1111]" " -type \"float2\" -0.53072679 -0.33076870000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1112]" " -type \"float2\" -0.55151123000000002 -0.31523865000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1113]" " -type \"float2\" -0.55849075000000004 -0.32315692000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1114]" " -type \"float2\" -0.56144035000000003 -0.33315729999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1115]" " -type \"float2\" -0.52960658000000005 -0.34052842999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1116]" " -type \"float2\" -0.036101893000000003 -0.34402597000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1117]" " -type \"float2\" -0.060423255000000002 -0.34847787000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1118]" " -type \"float2\" -0.060497835 -0.35692449999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1119]" " -type \"float2\" -0.031494066000000001 -0.35273895"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1120]" " -type \"float2\" -0.064510539000000006 -0.36668276999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1121]" " -type \"float2\" -0.031684711999999997 -0.36343160000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1122]" " -type \"float2\" -0.065707906999999996 -0.31147328000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1123]" " -type \"float2\" -0.076424389999999995 -0.31032786000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1124]" " -type \"float2\" -0.074976712000000001 -0.31568456"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1125]" " -type \"float2\" -0.062433838999999998 -0.31568914999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1126]" " -type \"float2\" -0.091983914 -0.30966482000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1127]" " -type \"float2\" -0.090016826999999994 -0.31545710999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1128]" " -type \"float2\" -0.088125274000000003 -0.32129725999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1129]" " -type \"float2\" -0.073235660999999994 -0.32128063000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1130]" " -type \"float2\" -0.060277327999999998 -0.32124608999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1131]" " -type \"float2\" -0.46289279999999999 -0.30115011000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1132]" " -type \"float2\" -0.47783339000000002 -0.29949206"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1133]" " -type \"float2\" -0.48183522000000001 -0.30472623999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1134]" " -type \"float2\" -0.46850314999999998 -0.30633399"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1135]" " -type \"float2\" -0.49328694000000001 -0.29770359000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1136]" " -type \"float2\" -0.49667605999999997 -0.30297390000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1137]" " -type \"float2\" -0.49939530999999998 -0.30735310999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1138]" " -type \"float2\" -0.48492783 -0.30884632000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1139]" " -type \"float2\" -0.47394276000000002 -0.30938559999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1140]" " -type \"float2\" -0.071966513999999995 -0.32646659"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1141]" " -type \"float2\" -0.060061529000000002 -0.32637413999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1142]" " -type \"float2\" -0.086237236999999994 -0.32661831000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1143]" " -type \"float2\" -0.084783523999999999 -0.33102730000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1144]" " -type \"float2\" -0.070965513999999993 -0.33062111999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1145]" " -type \"float2\" -0.061595603999999998 -0.32979800999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1146]" " -type \"float2\" -0.45964131000000003 -0.29044226000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1147]" " -type \"float2\" -0.47064105000000001 -0.28824835999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1148]" " -type \"float2\" -0.4742189 -0.29371941000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1149]" " -type \"float2\" -0.45999673000000002 -0.29514685000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1150]" " -type \"float2\" -0.48623949 -0.28618932000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1151]" " -type \"float2\" -0.48979201999999999 -0.29191232"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1152]" " -type \"float2\" -0.10565573 -0.31543016000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1153]" " -type \"float2\" -0.10364559 -0.32129376999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1154]" " -type \"float2\" -0.10771650000000001 -0.30984747000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1155]" " -type \"float2\" -0.11902551 -0.31068101999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1156]" " -type \"float2\" -0.11991417 -0.31519204000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1157]" " -type \"float2\" -0.11866293999999999 -0.32122024999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1158]" " -type \"float2\" -0.10115443 -0.32667594999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1159]" " -type \"float2\" -0.099276437999999995 -0.33090037"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1160]" " -type \"float2\" -0.11459103 -0.32675337999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1161]" " -type \"float2\" -0.11013369000000001 -0.33023521"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1162]" " -type \"float2\" -0.50485515999999997 -0.29036941999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1163]" " -type \"float2\" -0.50813341000000001 -0.29595596000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1164]" " -type \"float2\" -0.50193798999999995 -0.28500461999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1165]" " -type \"float2\" -0.51296436999999995 -0.28489872999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1166]" " -type \"float2\" -0.51739394999999999 -0.28888455000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1167]" " -type \"float2\" -0.52107941999999996 -0.29440957000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1168]" " -type \"float2\" -0.51085669 -0.30118904000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1169]" " -type \"float2\" -0.51304077999999997 -0.30538037000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1170]" " -type \"float2\" -0.52272426999999999 -0.29973139999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1171]" " -type \"float2\" -0.52215648000000003 -0.30346990000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1172]" " -type \"float2\" -0.12647231 -0.32755378000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1173]" " -type \"float2\" -0.11555496 -0.33208776000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1174]" " -type \"float2\" -0.13315167999999999 -0.32089517000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1175]" " -type \"float2\" -0.15004508 -0.32042738999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1176]" " -type \"float2\" -0.13949911000000001 -0.32891741000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1177]" " -type \"float2\" -0.12340346000000001 -0.33464234999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1178]" " -type \"float2\" -0.43162255999999999 -0.30398053000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1179]" " -type \"float2\" -0.44447093999999998 -0.31137218999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1180]" " -type \"float2\" -0.42978107999999998 -0.31534380000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1181]" " -type \"float2\" -0.41030484 -0.30627718999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1182]" " -type \"float2\" -0.46208855999999998 -0.31536046000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1183]" " -type \"float2\" -0.45338701999999997 -0.31993275999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1184]" " -type \"float2\" -0.10071371 -0.33426887"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1185]" " -type \"float2\" -0.084081202999999993 -0.33484765999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1186]" " -type \"float2\" -0.10431877000000001 -0.33780812999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1187]" " -type \"float2\" -0.084037840000000003 -0.33878522999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1188]" " -type \"float2\" -0.48194619999999999 -0.31645885000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1189]" " -type \"float2\" -0.47808832000000001 -0.32133402999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1190]" " -type \"float2\" -0.50237525000000005 -0.31523277999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1191]" " -type \"float2\" -0.50246148999999996 -0.3200615"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1192]" " -type \"float2\" -0.52493966000000003 -0.31633061000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1193]" " -type \"float2\" -0.54296266999999998 -0.30999558999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1194]" " -type \"float2\" -0.52071272999999996 -0.31195783999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1195]" " -type \"float2\" -0.53496480000000002 -0.30681360000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1196]" " -type \"float2\" -0.065266862999999994 -0.33759925000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1197]" " -type \"float2\" -0.068303049000000005 -0.33400630999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1198]" " -type \"float2\" -0.050039962 -0.33425653"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1199]" " -type \"float2\" -0.056571974999999997 -0.33156331999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1200]" " -type \"float2\" -0.050316468000000003 -0.32713853999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1201]" " -type \"float2\" -0.049051732000000001 -0.32104978000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1202]" " -type \"float2\" -0.040795669 -0.32853821"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1203]" " -type \"float2\" -0.037860811000000001 -0.32092198999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1204]" " -type \"float2\" -0.54262613999999998 -0.29979813"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1205]" " -type \"float2\" -0.554048 -0.30113536000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1206]" " -type \"float2\" -0.54347955999999997 -0.29145658000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1207]" " -type \"float2\" -0.55641598000000003 -0.29028030999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1208]" " -type \"float2\" -0.57273364000000004 -0.29028358999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1209]" " -type \"float2\" -0.56763863999999997 -0.30452247999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1210]" " -type \"float2\" -0.53696871000000002 -0.28287062000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1211]" " -type \"float2\" -0.54861205999999996 -0.27841905"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1212]" " -type \"float2\" -0.52229923 -0.27597054999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1213]" " -type \"float2\" -0.52970289999999998 -0.26766046999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1214]" " -type \"float2\" -0.54129755000000002 -0.25416087999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1215]" " -type \"float2\" -0.56343209999999999 -0.27350542"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1216]" " -type \"float2\" -0.052583009 -0.31444642"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1217]" " -type \"float2\" -0.060937582999999997 -0.30869392000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1218]" " -type \"float2\" -0.041987017000000001 -0.31228076999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1219]" " -type \"float2\" -0.054395436999999998 -0.30424743999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1220]" " -type \"float2\" -0.14072809 -0.30213531999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1221]" " -type \"float2\" -0.15079023999999999 -0.31055683000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1222]" " -type \"float2\" -0.13391559 -0.31347561000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1223]" " -type \"float2\" -0.12739243 -0.30748743000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1224]" " -type \"float2\" -0.43580924999999998 -0.28435379"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1225]" " -type \"float2\" -0.42816710000000002 -0.29408341999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1226]" " -type \"float2\" -0.40507406000000001 -0.29264351999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1227]" " -type \"float2\" -0.41474712000000002 -0.27834645000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1228]" " -type \"float2\" -0.37317868999999998 -0.291379"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1229]" " -type \"float2\" -0.38221556000000001 -0.26801913999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1230]" " -type \"float2\" -0.32994229000000003 -0.32495499"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1231]" " -type \"float2\" -0.33206564 -0.3105329"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1232]" " -type \"float2\" -0.32765170999999998 -0.33643170999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1233]" " -type \"float2\" -0.29422538999999998 -0.33697095999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1234]" " -type \"float2\" -0.29261678000000002 -0.32580310000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1235]" " -type \"float2\" -0.29072803000000003 -0.31221893000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1236]" " -type \"float2\" -0.26120916 -0.34021896000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1237]" " -type \"float2\" -0.25568551 -0.32922774999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1238]" " -type \"float2\" -0.24959776 -0.31535655000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1239]" " -type \"float2\" -0.47726157000000002 -0.27330389999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1240]" " -type \"float2\" -0.45400053000000001 -0.27722829999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1241]" " -type \"float2\" -0.44095582 -0.26869079000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1242]" " -type \"float2\" -0.47134206000000001 -0.26367214"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1243]" " -type \"float2\" -0.42624339 -0.25576242999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1244]" " -type \"float2\" -0.46515869999999998 -0.25013199000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1245]" " -type \"float2\" -0.11301433 -0.30439851000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1246]" " -type \"float2\" -0.094351798000000001 -0.30369759000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1247]" " -type \"float2\" -0.097363441999999994 -0.29649030999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1248]" " -type \"float2\" -0.12106675 -0.29747595999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1249]" " -type \"float2\" -0.075754537999999996 -0.30518630000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1250]" " -type \"float2\" -0.073827623999999994 -0.29877218999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1251]" " -type \"float2\" -0.50134283000000002 -0.27270895000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1252]" " -type \"float2\" -0.50164865999999997 -0.26325008"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1253]" " -type \"float2\" -0.50229776000000004 -0.24917971999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1254]" " -type \"float2\" -0.20399512 -0.30153184999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1255]" " -type \"float2\" -0.24563462 -0.29746103000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1256]" " -type \"float2\" -0.18889269 -0.28000075000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1257]" " -type \"float2\" -0.24027234 -0.27652204000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1258]" " -type \"float2\" -0.28552317999999999 -0.27406353"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1259]" " -type \"float2\" -0.28837347000000002 -0.29496612999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1260]" " -type \"float2\" -0.33108663999999999 -0.29231232000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1261]" " -type \"float2\" -0.33067769000000002 -0.27091533000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1262]" " -type \"float2\" -0.52483535000000003 -0.35140765000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1263]" " -type \"float2\" -0.48819976999999998 -0.35490221"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1264]" " -type \"float2\" -0.55909198999999998 -0.34530061000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1265]" " -type \"float2\" -0.55435950000000001 -0.35862705"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1266]" " -type \"float2\" -0.51893007999999996 -0.36337336999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1267]" " -type \"float2\" -0.48059945999999998 -0.36656979000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1268]" " -type \"float2\" -0.44998275999999998 -0.35621601000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1269]" " -type \"float2\" -0.41154533999999998 -0.35518324000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1270]" " -type \"float2\" -0.43869245000000001 -0.36834052"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1271]" " -type \"float2\" -0.38915303000000001 -0.368568"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1272]" " -type \"float2\" -0.38043734000000001 -0.35102781999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1273]" " -type \"float2\" -0.35392373999999999 -0.34744635000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1274]" " -type \"float2\" -0.3627919 -0.35968155000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1275]" " -type \"float2\" -0.34788918000000002 -0.35422759999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1276]" " -type \"float2\" -0.32598876999999998 -0.34644783000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1277]" " -type \"float2\" -0.29565375999999999 -0.34698874000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1278]" " -type \"float2\" -0.32609348999999999 -0.35552426999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1279]" " -type \"float2\" -0.29703867 -0.35688229999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1280]" " -type \"float2\" -0.24630894 -0.35996615999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1281]" " -type \"float2\" -0.23848721000000001 -0.35397297"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1282]" " -type \"float2\" -0.26566206999999997 -0.34986477999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1283]" " -type \"float2\" -0.26807957999999998 -0.35880141999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1284]" " -type \"float2\" -0.21347387000000001 -0.3604483"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1285]" " -type \"float2\" -0.18417230000000001 -0.36800745000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1286]" " -type \"float2\" -0.23323198000000001 -0.36700532000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1287]" " -type \"float2\" -0.21003561000000001 -0.37875419999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1288]" " -type \"float2\" -0.14689456000000001 -0.37332581999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1289]" " -type \"float2\" -0.10923657000000001 -0.37636891"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1290]" " -type \"float2\" -0.16163789000000001 -0.38416284000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1291]" " -type \"float2\" -0.12032089999999999 -0.38726377000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1292]" " -type \"float2\" -0.072614521000000001 -0.37724914999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1293]" " -type \"float2\" -0.037795097 -0.3756603"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1294]" " -type \"float2\" -0.082167581000000003 -0.38871640000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1295]" " -type \"float2\" -0.046561687999999997 -0.38863194000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1296]" " -type \"float2\" -0.15502609000000001 -0.331099"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1297]" " -type \"float2\" -0.13322497999999999 -0.33808395000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1298]" " -type \"float2\" -0.17159598000000001 -0.32021040000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1299]" " -type \"float2\" -0.10944755 -0.34206560000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1300]" " -type \"float2\" -0.085255264999999997 -0.34339925999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1301]" " -type \"float2\" -0.062296762999999998 -0.34218511000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1302]" " -type \"float2\" -0.043085828 -0.33807954000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1303]" " -type \"float2\" -0.030066729 -0.33099326000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1304]" " -type \"float2\" -0.025084987 -0.32127440000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1305]" " -type \"float2\" -0.017752825999999999 -0.33574533000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1306]" " -type \"float2\" -0.0093605071000000001 -0.32342598"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1307]" " -type \"float2\" -0.029646471000000001 -0.30956492000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1308]" " -type \"float2\" -0.045126869999999999 -0.29754587999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1309]" " -type \"float2\" -0.014167427999999999 -0.30736892999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1310]" " -type \"float2\" -0.030482217999999998 -0.28694325999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1311]" " -type \"float2\" -0.071079820000000002 -0.29004094000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1312]" " -type \"float2\" -0.10061467 -0.28669887999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1313]" " -type \"float2\" -0.066786259000000001 -0.27698489999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1314]" " -type \"float2\" -0.10308364 -0.27309325000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1315]" " -type \"float2\" -0.13156920999999999 -0.28779480000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1316]" " -type \"float2\" -0.15975845 -0.29389219999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1317]" " -type \"float2\" -0.14253784999999999 -0.27360624"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1318]" " -type \"float2\" -0.17304452000000001 -0.30648695999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1319]" " -type \"float2\" -0.45695508000000001 -0.30850279000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1320]" " -type \"float2\" -0.44844735000000002 -0.30249303999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1321]" " -type \"float2\" -0.46910742 -0.31188505999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1322]" " -type \"float2\" -0.48448788999999998 -0.312453"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1323]" " -type \"float2\" -0.50119901 -0.31120372000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1324]" " -type \"float2\" -0.51666403000000005 -0.30858624000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1325]" " -type \"float2\" -0.52767724000000005 -0.30474219000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1326]" " -type \"float2\" -0.53269637000000003 -0.29941726000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1327]" " -type \"float2\" -0.53227603000000001 -0.29289973000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1328]" " -type \"float2\" -0.52692543999999997 -0.28641825999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1329]" " -type \"float2\" -0.51697391000000004 -0.28143072000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1330]" " -type \"float2\" -0.50119150000000001 -0.27960423000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1331]" " -type \"float2\" -0.48224013999999998 -0.28033977999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1332]" " -type \"float2\" -0.46388437999999999 -0.28331107"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1333]" " -type \"float2\" -0.45047357999999998 -0.28818515"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1334]" " -type \"float2\" -0.44565391999999998 -0.29504338000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1335]" " -type \"float2\" -0.51380115999999998 -0.37634936000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1336]" " -type \"float2\" -0.47537332999999998 -0.37945476"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1337]" " -type \"float2\" -0.54944289000000002 -0.37248220999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1338]" " -type \"float2\" -0.091120556000000005 -0.40110287"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1339]" " -type \"float2\" -0.055569738 -0.40190762000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1340]" " -type \"float2\" -0.12929799 -0.39952156"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1341]" " -type \"float2\" -0.17020144000000001 -0.39713651"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1342]" " -type \"float2\" -0.21417062000000001 -0.39420794999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1343]" " -type \"float2\" -0.43404680000000001 -0.38192466000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1344]" " -type \"float2\" -0.38961771000000001 -0.38411795999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1345]" " -type \"float2\" -0.25867328000000001 -0.39256745999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1346]" " -type \"float2\" -0.30194479000000002 -0.39036231999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1347]" " -type \"float2\" -0.25805929 -0.37933862000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1348]" " -type \"float2\" -0.30010207999999999 -0.37776535999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1349]" " -type \"float2\" -0.34687361 -0.40167254000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1350]" " -type \"float2\" -0.34518039 -0.38759138999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1351]" " -type \"float2\" -0.34194588999999997 -0.37455279000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1352]" " -type \"float2\" -0.26421577000000002 -0.36813992000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1353]" " -type \"float2\" -0.29847585999999998 -0.36681834000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1354]" " -type \"float2\" -0.33257579999999998 -0.36426618999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1355]" " -type \"float2\" -0.064981981999999994 -0.25780081999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1356]" " -type \"float2\" -0.10322468 -0.25458658000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1357]" " -type \"float2\" -0.031039581 -0.26271936000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1358]" " -type \"float2\" -0.4987607 -0.22937346"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1359]" " -type \"float2\" -0.53387439000000003 -0.22893869999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1360]" " -type \"float2\" -0.45995593000000001 -0.23151305"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1361]" " -type \"float2\" -0.14541042000000001 -0.25372182999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1362]" " -type \"float2\" -0.19099463999999999 -0.25439644"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1363]" " -type \"float2\" -0.41799319000000001 -0.23625826999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1364]" " -type \"float2\" -0.37318718000000001 -0.24280848999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1365]" " -type \"float2\" -0.28234040999999999 -0.25079063000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1366]" " -type \"float2\" -0.23723145000000001 -0.25293943000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1367]" " -type \"float2\" -0.23375757 -0.22847371999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1368]" " -type \"float2\" -0.32727483000000002 -0.24723068000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1369]" " -type \"float2\" -0.58053421999999999 -0.31100931999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1370]" " -type \"float2\" -0.58835793000000003 -0.32075933000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1371]" " -type \"float2\" -0.58936118999999998 -0.29354739000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1372]" " -type \"float2\" -0.60472482000000005 -0.30089957000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1373]" " -type \"float2\" -0.0071319342000000004 -0.34402170999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1374]" " -type \"float2\" -0.0027297138999999998 -0.35562759999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1375]" " -type \"float2\" 0.017340644999999998 -0.34135407000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1376]" " -type \"float2\" 0.0054873674999999997 -0.32983827999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1377]" " -type \"float2\" -0.34850639 -0.4158985"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1378]" " -type \"float2\" -0.35058268999999997 -0.43022743000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1379]" " -type \"float2\" -0.35270511999999998 -0.44372186000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1380]" " -type \"float2\" -0.35486609000000002 -0.45473194"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1381]" " -type \"float2\" -0.36321381000000003 -0.47007578999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1382]" " -type \"float2\" -0.36665725999999998 -0.46921736000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1383]" " -type \"float2\" -0.35983442999999998 -0.46733159000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1384]" " -type \"float2\" -0.36907129999999999 -0.46190012000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1385]" " -type \"float2\" -0.37160140000000003 -0.45205646999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1386]" " -type \"float2\" -0.37395792999999999 -0.43932884999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1387]" " -type \"float2\" -0.37617384999999998 -0.42382592000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1388]" " -type \"float2\" -0.37828298999999999 -0.40640873"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1389]" " -type \"float2\" -0.38080304999999998 -0.38636296999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1390]" " -type \"float2\" -0.38260718999999999 -0.36175108"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1391]" " -type \"float2\" -0.27904308 -0.28275359"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1392]" " -type \"float2\" -0.26024206999999999 -0.24892992"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1393]" " -type \"float2\" -0.26940075000000002 -0.26707916999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1394]" " -type \"float2\" -0.24216935000000001 -0.20652229"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1395]" " -type \"float2\" -0.25116047000000002 -0.22851747"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1396]" " -type \"float2\" -0.22404658999999999 -0.17930043000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1397]" " -type \"float2\" -0.22957467000000001 -0.20379251000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1398]" " -type \"float2\" -0.20911144000000001 -0.13222143"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1399]" " -type \"float2\" -0.21693549000000001 -0.1557847"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1400]" " -type \"float2\" -0.19482194999999999 -0.079156667"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1401]" " -type \"float2\" -0.20143064999999999 -0.10665423"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1402]" " -type \"float2\" -0.18398064 -0.021534905"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1403]" " -type \"float2\" -0.18889872999999999 -0.050651877999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1404]" " -type \"float2\" -0.17923151000000001 0.032084717999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1405]" " -type \"float2\" -0.18083384999999999 0.0067829340999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1406]" " -type \"float2\" -0.17913250999999999 0.070111125999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1407]" " -type \"float2\" -0.17899065 0.053308337999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1408]" " -type \"float2\" -0.17780583999999999 0.093669817000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1409]" " -type \"float2\" -0.17877941999999999 0.083412230000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1410]" " -type \"float2\" -0.17123522999999999 0.10238914"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1411]" " -type \"float2\" -0.16891745 0.097256525999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1412]" " -type \"float2\" -0.17368164999999999 0.10370387"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1413]" " -type \"float2\" -0.16728493999999999 0.090099625000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1414]" " -type \"float2\" -0.16703035999999999 0.081001006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1415]" " -type \"float2\" -0.16936377 0.069387249999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1416]" " -type \"float2\" -0.16461721000000001 0.051539003999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1417]" " -type \"float2\" -0.15826946 0.028991382999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1418]" " -type \"float2\" -0.15291774 0.0018774606000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1419]" " -type \"float2\" -0.14837565999999999 -0.030129710000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1420]" " -type \"float2\" 0.15621823000000001 0.43097550000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1421]" " -type \"float2\" 0.14444143000000001 0.40748816999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1422]" " -type \"float2\" 0.13218944999999999 0.38104969"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1423]" " -type \"float2\" 0.11922139 0.35262114"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1424]" " -type \"float2\" 0.10509622 0.32257103999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1425]" " -type \"float2\" 0.089341461999999996 0.29204672999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1426]" " -type \"float2\" 0.074505090999999996 0.26146661999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1427]" " -type \"float2\" 0.061459303 0.23212361000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1428]" " -type \"float2\" 0.049727797999999997 0.20269126000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1429]" " -type \"float2\" 0.037352591999999997 0.1718027"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1430]" " -type \"float2\" 0.024304836999999999 0.1402747"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1431]" " -type \"float2\" 0.010863245000000001 0.10871917"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1432]" " -type \"float2\" -0.0027562379999999998 0.077475846000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1433]" " -type \"float2\" -0.01625973 0.046826123999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1434]" " -type \"float2\" -0.029408990999999999 0.016918956999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1435]" " -type \"float2\" -0.23276082000000001 -0.18308282000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1436]" " -type \"float2\" -0.16921484000000001 -0.17350823000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1437]" " -type \"float2\" -0.29537775999999999 -0.19222367000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1438]" " -type \"float2\" -0.28655290999999999 -0.16836350999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1439]" " -type \"float2\" -0.22313398000000001 -0.15870047000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1440]" " -type \"float2\" -0.15893212000000001 -0.14887719999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1441]" " -type \"float2\" -0.10608914 -0.16408407999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1442]" " -type \"float2\" -0.044199556000000001 -0.15421694999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1443]" " -type \"float2\" -0.095223664999999999 -0.13956034"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1444]" " -type \"float2\" -0.032701521999999997 -0.13002205"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1445]" " -type \"float2\" -0.35561603000000003 -0.20083641999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1446]" " -type \"float2\" -0.41236219000000002 -0.20907527000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1447]" " -type \"float2\" -0.40548769000000001 -0.18640155"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1448]" " -type \"float2\" -0.34759512999999997 -0.17758125"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1449]" " -type \"float2\" 0.015008152 -0.14391512000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1450]" " -type \"float2\" 0.070221095999999997 -0.13338768000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1451]" " -type \"float2\" 0.027207374999999999 -0.1200698"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1452]" " -type \"float2\" 0.083704621000000007 -0.10963881"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1453]" " -type \"float2\" -0.4649722 -0.21711332"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1454]" " -type \"float2\" -0.42550436000000003 -0.29767257000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1455]" " -type \"float2\" -0.42280181999999999 -0.27950578999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1456]" " -type \"float2\" -0.45907324999999999 -0.19510657000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1457]" " -type \"float2\" 0.12058437 -0.12271035"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1458]" " -type \"float2\" -0.19000156000000001 -0.38918942000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1459]" " -type \"float2\" 0.13532337999999999 -0.099093914000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1460]" " -type \"float2\" 0.18134707 -0.088422476999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1461]" " -type \"float2\" -0.14427425999999999 -0.39032146000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1462]" " -type \"float2\" -0.10422315 -0.39144778000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1463]" " -type \"float2\" -0.13969769000000001 -0.37424742999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1464]" " -type \"float2\" -0.098223187000000003 -0.37502289"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1465]" " -type \"float2\" -0.46947327 -0.30373626999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1466]" " -type \"float2\" -0.50796616000000006 -0.30986816"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1467]" " -type \"float2\" -0.50838572000000004 -0.29145649000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1468]" " -type \"float2\" -0.46842802 -0.28546"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1469]" " -type \"float2\" -0.069470777999999997 -0.39261659999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1470]" " -type \"float2\" -0.040029309999999999 -0.393747"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1471]" " -type \"float2\" -0.062603526000000007 -0.37576038"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1472]" " -type \"float2\" -0.032664433 -0.37646413000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1473]" " -type \"float2\" -0.54134536 -0.31616294"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1474]" " -type \"float2\" -0.56954979999999999 -0.32252051999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1475]" " -type \"float2\" -0.57128274000000001 -0.30356079000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1476]" " -type \"float2\" -0.542615 -0.29747927000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1477]" " -type \"float2\" -0.015957731999999999 -0.39487045999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1478]" " -type \"float2\" 0.0024560466000000001 -0.39597818000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1479]" " -type \"float2\" -0.0086289196999999995 -0.37714943000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1480]" " -type \"float2\" 0.0094645693999999992 -0.37785300999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1481]" " -type \"float2\" -0.59250665000000002 -0.32895788999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1482]" " -type \"float2\" -0.60991561000000005 -0.33542316999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1483]" " -type \"float2\" -0.61124193999999998 -0.31585309"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1484]" " -type \"float2\" -0.59417014999999995 -0.30968319999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1485]" " -type \"float2\" 0.014743865 -0.39710432000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1486]" " -type \"float2\" 0.019912124 -0.39832482000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1487]" " -type \"float2\" 0.021376781000000001 -0.37869370000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1488]" " -type \"float2\" 0.026578254999999999 -0.3798106"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1489]" " -type \"float2\" -0.62132096000000003 -0.34191804999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1490]" " -type \"float2\" -0.62576657999999996 -0.34850574000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1491]" " -type \"float2\" -0.62684607999999997 -0.32876217000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1492]" " -type \"float2\" -0.62229502000000003 -0.32216907"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1493]" " -type \"float2\" -0.60230022999999999 -0.27535763000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1494]" " -type \"float2\" -0.61220854999999996 -0.28089002000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1495]" " -type \"float2\" -0.60487676000000001 -0.25932520999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1496]" " -type \"float2\" -0.59530234000000004 -0.25440878"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1497]" " -type \"float2\" -0.61631237999999999 -0.28668448000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1498]" " -type \"float2\" -0.60837960000000002 -0.26425179999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1499]" " -type \"float2\" -0.60059892999999998 -0.24127424"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1500]" " -type \"float2\" -0.59739935 -0.23685315000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1501]" " -type \"float2\" -0.58797038000000001 -0.23230766999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1502]" " -type \"float2\" -0.56343240000000006 -0.26424149000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1503]" " -type \"float2\" -0.58615421999999995 -0.26986921000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1504]" " -type \"float2\" -0.57915616000000003 -0.24921711999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1505]" " -type \"float2\" -0.55662495000000001 -0.24379364000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1506]" " -type \"float2\" -0.57207489 -0.22740837999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1507]" " -type \"float2\" -0.55013107999999999 -0.22236823999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1508]" " -type \"float2\" -0.49883287999999998 -0.25295809000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1509]" " -type \"float2\" -0.53427469999999999 -0.25857317000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1510]" " -type \"float2\" -0.52808087999999997 -0.23839161"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1511]" " -type \"float2\" -0.49345921999999998 -0.23306732999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1512]" " -type \"float2\" -0.52252436000000002 -0.21740614999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1513]" " -type \"float2\" -0.48882017 -0.21252012000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1514]" " -type \"float2\" -0.48833959999999998 -0.15715873"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1515]" " -type \"float2\" -0.45748776000000002 -0.24739381999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1516]" " -type \"float2\" -0.45258597 -0.22781088999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1517]" " -type \"float2\" -0.47834072 -0.13208538"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1518]" " -type \"float2\" -0.44849855 -0.20768359"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1519]" " -type \"float2\" -0.40175408000000001 -0.20290247"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1520]" " -type \"float2\" -0.38665633999999999 -0.13833873999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1521]" " -type \"float2\" -0.43994364000000002 -0.14766145"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1522]" " -type \"float2\" -0.43011360999999998 -0.12258856999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1523]" " -type \"float2\" -0.37673643000000001 -0.1132741"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1524]" " -type \"float2\" -0.41999303999999998 -0.096353173"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1525]" " -type \"float2\" -0.36635353999999998 -0.087100155999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1526]" " -type \"float2\" -0.26776242 -0.1196745"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1527]" " -type \"float2\" -0.32893851000000002 -0.12902843999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1528]" " -type \"float2\" -0.31893510000000003 -0.10402662"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1529]" " -type \"float2\" -0.25774114999999997 -0.094776033999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1530]" " -type \"float2\" -0.30833476999999998 -0.077928602999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1531]" " -type \"float2\" -0.24702635000000001 -0.068760395000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1532]" " -type \"float2\" -0.13935866999999999 -0.10068004999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1533]" " -type \"float2\" -0.20410189000000001 -0.11024541"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1534]" " -type \"float2\" -0.19416401 -0.085460067000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1535]" " -type \"float2\" -0.12937054000000001 -0.075947464000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1536]" " -type \"float2\" -0.18349877000000001 -0.059532106000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1537]" " -type \"float2\" -0.11875218 -0.050015985999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1538]" " -type \"float2\" -0.011131883 -0.080912768999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1539]" " -type \"float2\" -0.074664295000000006 -0.090951443000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1540]" " -type \"float2\" -0.064421058000000003 -0.066010356000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1541]" " -type \"float2\" -0.00061902403999999998 -0.055748999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1542]" " -type \"float2\" -0.053678035999999998 -0.039890825999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1543]" " -type \"float2\" 0.010456353 -0.029365361"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1544]" " -type \"float2\" 0.10669139 -0.060677171000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1545]" " -type \"float2\" 0.049620360000000002 -0.070828974000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1546]" " -type \"float2\" 0.060700744000000001 -0.045402049999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1547]" " -type \"float2\" 0.11850595 -0.035061180999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1548]" " -type \"float2\" 0.072355538999999996 -0.018787860999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1549]" " -type \"float2\" 0.13092712000000001 -0.0083059072000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1550]" " -type \"float2\" -0.18705069999999999 -0.34008631"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1551]" " -type \"float2\" 0.15912341999999999 -0.050483525000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1552]" " -type \"float2\" 0.17178263999999999 -0.024831951000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1553]" " -type \"float2\" -0.18511415000000001 -0.32228013999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1554]" " -type \"float2\" 0.18510032000000001 0.0019235014999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1555]" " -type \"float2\" 0.23401343999999999 0.011943041999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1556]" " -type \"float2\" -0.095912977999999996 -0.34033753999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1557]" " -type \"float2\" -0.13863823 -0.34021174999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1558]" " -type \"float2\" -0.13695959999999999 -0.32214092999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1559]" " -type \"float2\" -0.094810045999999995 -0.32196652999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1560]" " -type \"float2\" -0.13403776000000001 -0.30316132000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1561]" " -type \"float2\" -0.092484294999999994 -0.30259380000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1562]" " -type \"float2\" -0.028703566999999999 -0.340345"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1563]" " -type \"float2\" -0.059124596000000001 -0.34036549999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1564]" " -type \"float2\" -0.058929036999999997 -0.32170880000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1565]" " -type \"float2\" -0.029161672999999999 -0.32135438999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1566]" " -type \"float2\" -0.057561572999999998 -0.30190325000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1567]" " -type \"float2\" -0.02878033 -0.30110865999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1568]" " -type \"float2\" 0.012475333999999999 -0.33992153000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1569]" " -type \"float2\" -0.0047840028999999997 -0.34018694999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1570]" " -type \"float2\" -0.0054774432999999999 -0.32085538000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1571]" " -type \"float2\" 0.011788122 -0.32010832"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1572]" " -type \"float2\" -0.0057378858000000001 -0.30024582"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1573]" " -type \"float2\" 0.011147752 -0.29916298000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1574]" " -type \"float2\" 0.025654577000000001 -0.29637711999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1575]" " -type \"float2\" 0.026772417 -0.31838596000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1576]" " -type \"float2\" 0.022386937999999999 -0.31919581000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1577]" " -type \"float2\" 0.021580546999999999 -0.29779303000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1578]" " -type \"float2\" 0.028189398000000001 -0.33978744999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1579]" " -type \"float2\" 0.023339762999999999 -0.33973908000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1580]" " -type \"float2\" -0.59090018 -0.21348165999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1581]" " -type \"float2\" -0.58179521999999995 -0.20931250000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1582]" " -type \"float2\" -0.59370244000000005 -0.21754354000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1583]" " -type \"float2\" -0.56638968000000001 -0.20489019"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1584]" " -type \"float2\" -0.54498029000000003 -0.20031804"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1585]" " -type \"float2\" -0.517838 -0.19580367000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1586]" " -type \"float2\" -0.48464718000000001 -0.19135827"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1587]" " -type \"float2\" -0.44502401000000003 -0.18698355999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1588]" " -type \"float2\" -0.45821761999999999 -0.078155748999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1589]" " -type \"float2\" -0.40998067999999999 -0.068939983999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1590]" " -type \"float2\" -0.35586506000000001 -0.059761524000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1591]" " -type \"float2\" -0.29732134999999998 -0.050599217000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1592]" " -type \"float2\" -0.23558432000000001 -0.041367649999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1593]" " -type \"float2\" -0.17188612 -0.032008587999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1594]" " -type \"float2\" -0.10707724 -0.022331953000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1595]" " -type \"float2\" -0.041955143 -0.012103796"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1596]" " -type \"float2\" 0.022410124999999999 -0.0015313029000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1597]" " -type \"float2\" 0.084936440000000002 0.0091125369000000008"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1598]" " -type \"float2\" 0.14435896000000001 0.019625962"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1599]" " -type \"float2\" 0.1994378 0.029819249999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1600]" " -type \"float2\" -0.17762810000000001 -0.28426635"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1601]" " -type \"float2\" -0.13012986000000001 -0.28334808"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1602]" " -type \"float2\" -0.089324728000000006 -0.28236735000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1603]" " -type \"float2\" -0.054987647000000001 -0.28128913"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1604]" " -type \"float2\" -0.026754837 -0.28009936000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1605]" " -type \"float2\" -0.0043274686000000003 -0.27880709999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1606]" " -type \"float2\" 0.011996605 -0.27727025999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1607]" " -type \"float2\" 0.022041738000000002 -0.27549097"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1608]" " -type \"float2\" 0.02567672 -0.27365740999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1609]" " -type \"float2\" 0.022768579000000001 -0.27161109"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1610]" " -type \"float2\" 0.012830451 -0.26917132999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1611]" " -type \"float2\" 0.014138237 -0.292384"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1612]" " -type \"float2\" 0.023287281 -0.29468998000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1613]" " -type \"float2\" -0.58736569000000005 -0.24852189"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1614]" " -type \"float2\" -0.57933341999999999 -0.22442894999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1615]" " -type \"float2\" -0.59002250000000001 -0.22125697"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1616]" " -type \"float2\" -0.59739100999999994 -0.24527325999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1617]" " -type \"float2\" 0.023442335000000002 -0.38143243999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1618]" " -type \"float2\" 0.015830480000000001 -0.39962809999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1619]" " -type \"float2\" 0.0096571817999999993 -0.38382807000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1620]" " -type \"float2\" 0.0010177865999999999 -0.40092769"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1621]" " -type \"float2\" -0.60609025000000005 -0.36167054999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1622]" " -type \"float2\" -0.62116837999999996 -0.35514258999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1623]" " -type \"float2\" -0.60961801000000004 -0.34371296000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1624]" " -type \"float2\" -0.62335479000000005 -0.33584725999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1625]" " -type \"float2\" 0.023616128 -0.35954030999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1626]" " -type \"float2\" 0.012232079999999999 -0.35915834000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1627]" " -type \"float2\" 0.028771959 -0.36029270000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1628]" " -type \"float2\" -0.0053806751999999998 -0.35890231"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1629]" " -type \"float2\" -0.029270750000000002 -0.35865988999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1630]" " -type \"float2\" -0.059614301000000001 -0.35832493999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1631]" " -type \"float2\" -0.096115395000000006 -0.3579464"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1632]" " -type \"float2\" -0.13852796000000001 -0.35752298999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1633]" " -type \"float2\" 0.19479626 -0.064435779999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1634]" " -type \"float2\" 0.14788436999999999 -0.074948608999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1635]" " -type \"float2\" 0.095659196000000002 -0.085314333000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1636]" " -type \"float2\" 0.038752823999999998 -0.095553218999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1637]" " -type \"float2\" -0.021812051999999998 -0.10546273"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1638]" " -type \"float2\" -0.084777504000000004 -0.11523348"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1639]" " -type \"float2\" -0.14907446999999999 -0.12483371"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1640]" " -type \"float2\" -0.21360892000000001 -0.13446516"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1641]" " -type \"float2\" -0.27712405000000001 -0.14397597000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1642]" " -type \"float2\" -0.33861583000000001 -0.15345842000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1643]" " -type \"float2\" -0.39663770999999998 -0.16265105999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1644]" " -type \"float2\" -0.45036027000000001 -0.17180908"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1645]" " -type \"float2\" -0.41729996000000003 -0.26084914999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1646]" " -type \"float2\" -0.46374017000000001 -0.26661607999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1647]" " -type \"float2\" -0.50469089 -0.27241185000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1648]" " -type \"float2\" -0.53981095999999995 -0.27825667999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1649]" " -type \"float2\" -0.56887591000000004 -0.28413685999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1650]" " -type \"float2\" -0.59158533999999996 -0.2899639"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1651]" " -type \"float2\" -0.60814237999999998 -0.29582202000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1652]" " -type \"float2\" -0.61863464000000001 -0.30180115000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1653]" " -type \"float2\" -0.62314248000000005 -0.30815904999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1654]" " -type \"float2\" -0.023825987999999999 -0.40184798999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1655]" " -type \"float2\" -0.034726067999999999 -0.41634595000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1656]" " -type \"float2\" -0.014780939 -0.38684499"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1657]" " -type \"float2\" -0.052067503000000001 -0.42847708000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1658]" " -type \"float2\" -0.071363032000000007 -0.43855229000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1659]" " -type \"float2\" -0.090168089000000007 -0.44695264000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1660]" " -type \"float2\" -0.10821697 -0.44825809999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1661]" " -type \"float2\" -0.13097216 -0.45399842000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1662]" " -type \"float2\" -0.15944344999999999 -0.4589549"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1663]" " -type \"float2\" -0.19385751000000001 -0.46193346000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1664]" " -type \"float2\" -0.23105872999999999 -0.46509054"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1665]" " -type \"float2\" -0.27112633000000003 -0.46748139999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1666]" " -type \"float2\" -0.31418246 -0.46669485999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1667]" " -type \"float2\" -0.35720646 -0.46248010000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1668]" " -type \"float2\" -0.39711543999999999 -0.45525252999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1669]" " -type \"float2\" -0.43406509999999998 -0.44746809999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1670]" " -type \"float2\" -0.46807020999999999 -0.44013411000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1671]" " -type \"float2\" -0.49586537000000003 -0.43124825"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1672]" " -type \"float2\" -0.51307767999999998 -0.42487817999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1673]" " -type \"float2\" -0.53119123000000001 -0.41734474999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1674]" " -type \"float2\" -0.54646802000000005 -0.40749585999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1675]" " -type \"float2\" -0.56177485000000005 -0.39615341999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1676]" " -type \"float2\" -0.57479429000000004 -0.38296974"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1677]" " -type \"float2\" -0.58568734 -0.35194468000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1678]" " -type \"float2\" -0.58119619 -0.36760679000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1679]" " -type \"float2\" 0.015262537 -0.36492825000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1680]" " -type \"float2\" -0.0070510655999999998 -0.37121850000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1681]" " -type \"float2\" -0.60961615999999996 -0.32427064"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1682]" " -type \"float2\" -0.58870750999999999 -0.33595532"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1683]" " -type \"float2\" 0.026791379000000001 -0.36175868"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1684]" " -type \"float2\" 0.02667015 -0.34015316000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1685]" " -type \"float2\" -0.62084508000000005 -0.31533006000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1686]" " -type \"float2\" -0.614254 -0.29298373999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1687]" " -type \"float2\" -0.55564212999999996 -0.20253199"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1688]" " -type \"float2\" -0.56110859000000002 -0.22695693"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1689]" " -type \"float2\" -0.569691 -0.25065249000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1690]" " -type \"float2\" -0.55454623999999997 -0.1776914"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1691]" " -type \"float2\" -0.55789511999999997 -0.15253401"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1692]" " -type \"float2\" -0.56577836999999997 -0.12751770000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1693]" " -type \"float2\" -0.57655084000000001 -0.1024453"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1694]" " -type \"float2\" -0.58873105000000003 -0.077288001999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1695]" " -type \"float2\" -0.59905909999999996 -0.051562934999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1696]" " -type \"float2\" -0.60422849999999995 -0.026036501"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1697]" " -type \"float2\" -0.60363745999999996 -0.0020474195000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1698]" " -type \"float2\" -0.59638703000000004 0.021176480000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1699]" " -type \"float2\" -0.58124589999999998 0.042515277999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1700]" " -type \"float2\" -0.55769908000000001 0.060177267"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1701]" " -type \"float2\" -0.53235304000000006 0.074419856000000006"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1702]" " -type \"float2\" -0.50713490999999999 0.085736975000000007"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1703]" " -type \"float2\" -0.48648955999999999 0.085954979000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1704]" " -type \"float2\" -0.45761341 0.093205049999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1705]" " -type \"float2\" -0.42173353000000002 0.099097832999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1706]" " -type \"float2\" -0.37981847000000002 0.104224"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1707]" " -type \"float2\" -0.33261022000000001 0.10776368"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1708]" " -type \"float2\" -0.28084998999999999 0.10688205000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1709]" " -type \"float2\" -0.22831491000000001 0.1041501"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1710]" " -type \"float2\" -0.17595282000000001 0.10063663"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1711]" " -type \"float2\" -0.12459059 0.095314159999999995"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1712]" " -type \"float2\" -0.078035309999999997 0.085808486000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1713]" " -type \"float2\" -0.037066355000000002 0.075102001000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1714]" " -type \"float2\" -0.0024982839999999999 0.064187019999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1715]" " -type \"float2\" 0.015904859 0.057448356999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1716]" " -type \"float2\" 0.038009359999999999 0.047386006000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1717]" " -type \"float2\" 0.058108031999999997 0.034610331000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1718]" " -type \"float2\" 0.077694997000000002 0.019180834000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1719]" " -type \"float2\" 0.094885960000000005 0.00058476627000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1720]" " -type \"float2\" 0.10327082999999999 -0.021490737999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1721]" " -type \"float2\" 0.10356559999999999 -0.045196548000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1722]" " -type \"float2\" 0.097110972000000004 -0.069431424000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1723]" " -type \"float2\" 0.084438041000000005 -0.094999223999999993"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1724]" " -type \"float2\" 0.066444501000000003 -0.12053168"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1725]" " -type \"float2\" 0.046699590999999999 -0.14528009"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1726]" " -type \"float2\" 0.028437018000000001 -0.16978156999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1727]" " -type \"float2\" 0.013216897999999999 -0.19411665"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1728]" " -type \"float2\" 0.0026462822999999999 -0.21852261000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1729]" " -type \"float2\" -0.0032749175999999998 -0.24257913"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1730]" " -type \"float2\" -0.0046333968999999996 -0.26622695000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1731]" " -type \"float2\" -0.0026102066000000001 -0.28912553000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1732]" " -type \"float2\" 0.025003098000000001 -0.31739690999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1733]" " -type \"float2\" 0.016953870999999999 -0.31553239"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1734]" " -type \"float2\" -0.60583328999999997 -0.26900098"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1735]" " -type \"float2\" -0.59690988 -0.27280816000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1736]" " -type \"float2\" 0.0032494515000000002 -0.31068700999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1737]" " -type \"float2\" -0.58171563999999998 -0.27277731999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1738]" " -type \"float2\" 0.024601296000000002 0.052861183999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1739]" " -type \"float2\" 0.020720824999999998 0.059697762000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1740]" " -type \"float2\" -0.48087856000000001 0.094029694999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1741]" " -type \"float2\" -0.49582918999999998 0.084165647999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1742]" " -type \"float2\" -0.51764977000000001 -0.42226297000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1743]" " -type \"float2\" -0.52078241000000003 -0.42549449"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1744]" " -type \"float2\" -0.11107124 -0.45268934999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1745]" " -type \"float2\" -0.098689764999999999 -0.44714689000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1746]" " -type \"float2\" -0.49919923999999999 -0.18101406"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1747]" " -type \"float2\" -0.41048034999999999 -0.24192885"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1748]" " -type \"float2\" -0.50773573000000005 -0.20377593999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1749]" " -type \"float2\" -0.18644807999999999 -0.35704434000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1750]" " -type \"float2\" 0.20649412 -0.040201008000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1751]" " -type \"float2\" -0.18695165 -0.37345817999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1752]" " -type \"float2\" 0.24891862000000001 0.039757431000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1753]" " -type \"float2\" -0.18203478000000001 -0.30367684"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1754]" " -type \"float2\" 0.26461183999999999 0.068788469000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1755]" " -type \"float2\" -0.39872348000000002 -0.18266386000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1756]" " -type \"float2\" -0.46819809000000001 -0.10575807"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1757]" " -type \"float2\" -0.39648947000000001 -0.16186997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1758]" " -type \"float2\" 0.21996024 -0.014701605"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1759]" " -type \"float2\" -0.40574083 -0.22262504999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1760]" " -type \"float2\" 0.16488433 -0.11211318000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1761]" " -type \"float2\" -0.19505206999999999 -0.40395724999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1762]" " -type \"float2\" -0.51246840000000005 -0.22508835999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1763]" " -type \"float2\" -0.51384532000000005 -0.24456655999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1764]" " -type \"float2\" -0.14515364 -0.068401188000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1765]" " -type \"float2\" 0.086453198999999994 0.42035767000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1766]" " -type \"float2\" -0.096229225000000002 -0.073755071000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1767]" " -type \"float2\" -0.38450831000000002 -0.33336461000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1768]" " -type \"float2\" -0.21852350000000001 -0.27466344999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1769]" " -type \"float2\" -0.42378547999999999 -0.32612460999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1770]" " -type \"float2\" 0.014714614000000001 -0.096268773000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1771]" " -type \"float2\" -0.016962767 -0.089278221000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1772]" " -type \"float2\" -0.14045045 0.0027708262000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1773]" " -type \"float2\" 0.035512082 -0.10135023"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1774]" " -type \"float2\" -0.054262726999999997 -0.081943579000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1775]" " -type \"float2\" -0.24436182000000001 -0.061646998000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1776]" " -type \"float2\" -0.29409707000000002 -0.060277711999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1777]" " -type \"float2\" -0.33730596000000002 -0.062365692"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1778]" " -type \"float2\" -0.37606191999999999 -0.064308434999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1779]" " -type \"float2\" -0.40905634000000002 -0.066769919999999996"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1780]" " -type \"float2\" -0.32260369999999999 0.10467835"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1781]" " -type \"float2\" -0.25584953999999999 0.33739382000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1782]" " -type \"float2\" -0.48647066999999999 0.10938266000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1783]" " -type \"float2\" -0.48426488000000001 0.11667863000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1784]" " -type \"float2\" -0.47382769000000002 0.1211511"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1785]" " -type \"float2\" -0.45744913999999998 0.12358846"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1786]" " -type \"float2\" -0.43806287999999999 0.12481461000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1787]" " -type \"float2\" -0.4179619 0.12398081"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1788]" " -type \"float2\" -0.39103865999999998 0.11923625"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1789]" " -type \"float2\" -0.36384760999999999 0.11394565"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1790]" " -type \"float2\" -0.33443123000000002 0.096473604000000004"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1791]" " -type \"float2\" -0.35006002000000003 0.084311336000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1792]" " -type \"float2\" -0.34021985999999999 0.10890001000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1793]" " -type \"float2\" -0.36698209999999998 0.069322362999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1794]" " -type \"float2\" -0.38158602000000003 0.051579027999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1795]" " -type \"float2\" -0.38724825000000002 0.032193720000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1796]" " -type \"float2\" -0.39066958000000002 0.012571364999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1797]" " -type \"float2\" -0.39403215000000003 -0.0080902874"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1798]" " -type \"float2\" -0.39688637999999998 -0.029544174999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1799]" " -type \"float2\" -0.39665917000000001 -0.051674694"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1800]" " -type \"float2\" -0.39593208000000002 -0.074062586"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1801]" " -type \"float2\" -0.39484321999999999 -0.096444786000000005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1802]" " -type \"float2\" -0.39419609 -0.11864659"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1803]" " -type \"float2\" -0.39486845999999998 -0.14050096000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1804]" " -type \"float2\" -0.42369868999999999 -0.33118206"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1805]" " -type \"float2\" -0.41597857999999999 -0.34456514999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1806]" " -type \"float2\" -0.40750918000000003 -0.35515624000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1807]" " -type \"float2\" -0.53185916 -0.30123084999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1808]" " -type \"float2\" -0.48691958000000002 -0.29262334000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1809]" " -type \"float2\" -0.545748 -0.41625524000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1810]" " -type \"float2\" -0.55955750000000004 -0.41063487999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1811]" " -type \"float2\" -0.56860721000000003 -0.40122735999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1812]" " -type \"float2\" -0.57284802000000001 -0.38876927"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1813]" " -type \"float2\" -0.57147371999999996 -0.37342208999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1814]" " -type \"float2\" -0.56417519000000005 -0.35623895999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1815]" " -type \"float2\" -0.55535758000000002 -0.33925420000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1816]" " -type \"float2\" -0.54667317999999998 -0.32396603000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1817]" " -type \"float2\" -0.51499742000000004 -0.30580539000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1818]" " -type \"float2\" -0.48949336999999998 -0.31182747999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1819]" " -type \"float2\" -0.53858149 -0.31071054999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1820]" " -type \"float2\" -0.45867127000000002 -0.31860548"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1821]" " -type \"float2\" -0.29810712 -0.33909839000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1822]" " -type \"float2\" -0.25815195000000002 -0.33733559000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1823]" " -type \"float2\" -0.22229059000000001 -0.33482039000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1824]" " -type \"float2\" -0.19039933000000001 -0.33241451"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1825]" " -type \"float2\" -0.16392076 -0.32998717"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1826]" " -type \"float2\" -0.23449603999999999 -0.44223078999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1827]" " -type \"float2\" 0.062769502000000005 -0.19883966"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1828]" " -type \"float2\" -0.099928147999999994 -0.46158278000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1829]" " -type \"float2\" -0.097608969000000004 -0.46569121000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1830]" " -type \"float2\" -0.10205972000000001 -0.46747789000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1831]" " -type \"float2\" -0.11286322 -0.46725373999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1832]" " -type \"float2\" -0.13021055000000001 -0.46470623999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1833]" " -type \"float2\" -0.15356513999999999 -0.4599973"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1834]" " -type \"float2\" -0.17754271999999999 -0.45479493999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1835]" " -type \"float2\" -0.20008622000000001 -0.45004883000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1836]" " -type \"float2\" -0.22577075999999999 -0.43666076999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1837]" " -type \"float2\" -0.21397819000000001 -0.42830634000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1838]" " -type \"float2\" -0.21983688000000001 -0.44573560000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1839]" " -type \"float2\" -0.20204858000000001 -0.41753927000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1840]" " -type \"float2\" -0.16560303000000001 -0.24310237000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1841]" " -type \"float2\" -0.15792466999999999 -0.22159955000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1842]" " -type \"float2\" -0.14873434999999999 -0.19978765000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1843]" " -type \"float2\" -0.13895676000000001 -0.17792240000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1844]" " -type \"float2\" -0.12944831000000001 -0.15623143"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1845]" " -type \"float2\" -0.12039714 -0.13492218"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1846]" " -type \"float2\" -0.11451195 -0.11457872"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1847]" " -type \"float2\" -0.10948771 -0.094765647999999994"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1848]" " -type \"float2\" -0.10500356 -0.075421870000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1849]" " -type \"float2\" -0.10301191 -0.055521563000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1850]" " -type \"float2\" -0.11046626 -0.036643191999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1851]" " -type \"float2\" -0.12119770000000001 -0.020116694000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1852]" " -type \"float2\" 0.024857952999999999 0.061727837000000001"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1853]" " -type \"float2\" 0.024253740999999999 0.062454416999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1854]" " -type \"float2\" 0.014929295 0.059959099000000002"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1855]" " -type \"float2\" -0.00083865225000000004 0.055330052999999997"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1856]" " -type \"float2\" -0.020075752999999998 0.049560792999999999"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1857]" " -type \"float2\" -0.040637337000000003 0.041910193999999998"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1858]" " -type \"float2\" -0.068672724000000004 0.030779555"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1859]" " -type \"float2\" -0.097124308000000006 0.019843005"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1860]" " -type \"float2\" -0.13188820000000001 -0.0065161660000000003"
+		
+		2 "Minion:polyTweakUV3" "uvTweak[1861]" " -type \"float2\" -0.12198491 0.01011014"
+		
+		2 "Minion:polyTweakUV4" "uvTweak" " -s 1006"
+		2 "Minion:polyTweakUV4" "uvTweak[0]" " -type \"float2\" 0.068589807000000003 0.70180165999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[1]" " -type \"float2\" 0.046555698 0.707995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[2]" " -type \"float2\" 0.099367558999999994 0.71219109999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[3]" " -type \"float2\" 0.11135077 0.70888114000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[4]" " -type \"float2\" 0.027854621 0.70686804999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[5]" " -type \"float2\" 0.085925459999999995 0.71043520999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[6]" " -type \"float2\" 0.15269505999999999 0.70278054000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[7]" " -type \"float2\" 0.16022777999999999 0.70516747000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[8]" " -type \"float2\" 0.1718421 0.70862221999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[9]" " -type \"float2\" 0.019249201000000001 0.70509367999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[10]" " -type \"float2\" 0.077328384 0.70818113999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[11]" " -type \"float2\" 0.013261795 0.70275175999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[12]" " -type \"float2\" 0.070017814999999997 0.70578932999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[13]" " -type \"float2\" 0.13478649000000001 0.69827448999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[14]" " -type \"float2\" 0.14411414 0.70041823000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[15]" " -type \"float2\" 0.20824413999999999 0.69307249999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[16]" " -type \"float2\" 0.21544898000000001 0.69555800999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[17]" " -type \"float2\" 0.19825404999999999 0.69102764000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[18]" " -type \"float2\" 0.25206911999999998 0.67559623999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[19]" " -type \"float2\" 0.17190546000000001 0.76698107000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[20]" " -type \"float2\" 0.16750371 0.77545542000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[21]" " -type \"float2\" 0.21655720000000001 0.69837278000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[22]" " -type \"float2\" 0.22935860999999999 0.70852"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[23]" " -type \"float2\" 0.15552634000000001 0.78210710999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[24]" " -type \"float2\" 0.14027487999999999 0.77965063000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[25]" " -type \"float2\" 0.095275335000000003 -0.11089295"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[26]" " -type \"float2\" 0.073990047000000003 -0.11390293"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[27]" " -type \"float2\" 0.060826719000000001 -0.066052437000000006"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[28]" " -type \"float2\" 0.091010384 -0.064859032999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[29]" " -type \"float2\" 0.063486277999999993 -0.11774778"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[30]" " -type \"float2\" 0.047203480999999999 -0.066377640000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[31]" " -type \"float2\" 0.061626434000000001 -0.010008751999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[32]" " -type \"float2\" 0.075033544999999993 -0.0095862745999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[33]" " -type \"float2\" 0.10300136 -0.0084735751000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[34]" " -type \"float2\" 0.065355361000000001 -0.11485177000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[35]" " -type \"float2\" 0.051437735999999998 -0.067050934000000006"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[36]" " -type \"float2\" 0.081014275999999996 -0.11201811"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[37]" " -type \"float2\" 0.072989643000000007 -0.066384017000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[38]" " -type \"float2\" 0.082286835000000003 -0.0087466835999999992"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[39]" " -type \"float2\" 0.064243792999999993 -0.0098820925"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[40]" " -type \"float2\" 0.074651778000000002 0.038266182000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[41]" " -type \"float2\" 0.076211631000000002 0.038977206"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[42]" " -type \"float2\" 0.086140990000000001 0.088381529"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[43]" " -type \"float2\" 0.085845351 0.087360858999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[44]" " -type \"float2\" 0.091294645999999993 0.040402353000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[45]" " -type \"float2\" 0.098387062999999997 0.089903653"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[46]" " -type \"float2\" 0.094172776 0.13000750999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[47]" " -type \"float2\" 0.1041041 0.13158184000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[48]" " -type \"float2\" 0.10569721999999999 0.17166625999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[49]" " -type \"float2\" 0.097113012999999998 0.16951531"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[50]" " -type \"float2\" 0.094837666000000001 0.12877625000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[51]" " -type \"float2\" 0.098449706999999997 0.16780340999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[52]" " -type \"float2\" 0.11246920000000001 0.038720368999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[53]" " -type \"float2\" 0.087274014999999996 0.038258553000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[54]" " -type \"float2\" 0.097610115999999997 0.086813032999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[55]" " -type \"float2\" 0.11974984 0.086603164999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[56]" " -type \"float2\" 0.10573435 0.12786834999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[57]" " -type \"float2\" 0.10876387 0.16660469999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[58]" " -type \"float2\" 0.1251331 0.12719565999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[59]" " -type \"float2\" 0.12643473999999999 0.16579400999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[60]" " -type \"float2\" 0.12779123000000001 0.20763825999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[61]" " -type \"float2\" 0.11181795999999999 0.20858078999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[62]" " -type \"float2\" 0.1036107 0.26421946000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[63]" " -type \"float2\" 0.12029409000000001 0.26303142000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[64]" " -type \"float2\" 0.10199487 0.21010923000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[65]" " -type \"float2\" 0.093757689000000005 0.26588582999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[66]" " -type \"float2\" 0.099246264000000001 0.29546094000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[67]" " -type \"float2\" 0.089131354999999995 0.29721910000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[68]" " -type \"float2\" 0.067602932000000004 0.374035"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[69]" " -type \"float2\" 0.079636276000000006 0.37229139"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[70]" " -type \"float2\" 0.11658984 0.29412860000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[71]" " -type \"float2\" 0.10142909999999999 0.37098539000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[72]" " -type \"float2\" 0.099839143000000005 0.21237576"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[73]" " -type \"float2\" 0.091897190000000004 0.26809888999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[74]" " -type \"float2\" 0.10693234 0.21519613000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[75]" " -type \"float2\" 0.099822223000000002 0.27065127999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[76]" " -type \"float2\" 0.087251841999999996 0.29942637999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[77]" " -type \"float2\" 0.095537305000000003 0.30186461999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[78]" " -type \"float2\" 0.077260314999999996 0.37885278"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[79]" " -type \"float2\" 0.066202939000000002 0.37628675"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[80]" " -type \"float2\" 0.045310735999999997 0.43528217000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[81]" " -type \"float2\" 0.04668808 0.43330460999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[82]" " -type \"float2\" 0.059172629999999997 0.43775761000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[83]" " -type \"float2\" 0.044046878999999997 0.47935306999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[84]" " -type \"float2\" 0.027777314000000001 0.47811258000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[85]" " -type \"float2\" 0.029278398000000001 0.47724276999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[86]" " -type \"float2\" 0.061826884999999998 0.43176429999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[87]" " -type \"float2\" 0.089041412 0.43062115000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[88]" " -type \"float2\" 0.047202228999999998 0.47641939"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[89]" " -type \"float2\" 0.079065204 0.47567797000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[90]" " -type \"float2\" 0.037623047999999999 0.50870740000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[91]" " -type \"float2\" 0.072020471000000003 0.50867121999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[92]" " -type \"float2\" 0.018215120000000001 0.50806205999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[93]" " -type \"float2\" 0.0091137886000000005 0.53164506"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[94]" " -type \"float2\" 0.029733300000000001 0.53373802000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[95]" " -type \"float2\" 0.065721154000000004 0.53424603000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[96]" " -type \"float2\" 0.016179441999999999 0.50660013999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[97]" " -type \"float2\" 0.033584237000000003 0.50463223000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[98]" " -type \"float2\" 0.022700965 0.52079456999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[99]" " -type \"float2\" 0.0053054093999999998 0.52746974999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[100]" " -type \"float2\" -0.00937289 0.54710703999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[101]" " -type \"float2\" -0.0019806026999999999 0.55379151999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[102]" " -type \"float2\" 0.0070858598000000002 0.53440416000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[103]" " -type \"float2\" -0.019513546999999999 0.54567509999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[104]" " -type \"float2\" -0.023176134000000001 0.56625729999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[105]" " -type \"float2\" -0.012430966 0.57425879999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[106]" " -type \"float2\" 0.020487726000000001 0.55654453999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[107]" " -type \"float2\" 0.058205009000000002 0.55696595000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[108]" " -type \"float2\" 0.011856973 0.57703148999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[109]" " -type \"float2\" 0.051278055000000003 0.57708609"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[110]" " -type \"float2\" 0.0058529376999999997 0.59507452999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[111]" " -type \"float2\" 0.046761869999999997 0.59487950999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[112]" " -type \"float2\" -0.019617558 0.59285635000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[113]" " -type \"float2\" -0.025032519999999999 0.61068933999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[114]" " -type \"float2\" 0.0012998580999999999 0.61235934000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[115]" " -type \"float2\" 0.043569028000000003 0.61243117000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[116]" " -type \"float2\" -0.031495094000000001 0.58576189999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[117]" " -type \"float2\" -0.042276800000000003 0.57165836999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[118]" " -type \"float2\" -0.048276662999999997 0.59589236999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[119]" " -type \"float2\" -0.036963701000000002 0.60580319000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[120]" " -type \"float2\" -0.027276456000000001 0.65130997000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[121]" " -type \"float2\" -0.038794695999999997 0.65074383999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[122]" " -type \"float2\" -0.018880366999999999 0.68119662999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[123]" " -type \"float2\" -0.0089191197999999999 0.68197518999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[124]" " -type \"float2\" -0.048336983 0.64843094000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[125]" " -type \"float2\" -0.026197076 0.67943829"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[126]" " -type \"float2\" 0.042275845999999999 0.65540372999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[127]" " -type \"float2\" -0.00065642594999999998 0.65320319000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[128]" " -type \"float2\" 0.014525533 0.68341631000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[129]" " -type \"float2\" 0.053037167000000003 0.68482332999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[130]" " -type \"float2\" 0.11051511999999999 -0.11280685999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[131]" " -type \"float2\" 0.11114097000000001 -0.063593923999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[132]" " -type \"float2\" 0.16301315999999999 -0.11287236"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[133]" " -type \"float2\" 0.15883917 -0.05975461"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[134]" " -type \"float2\" 0.15646868999999999 -0.0028568506"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[135]" " -type \"float2\" 0.11497962 -0.0063069462999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[136]" " -type \"float2\" 0.21662682 -0.10582185"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[137]" " -type \"float2\" 0.20932734 -0.056462645999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[138]" " -type \"float2\" 0.24981886 -0.10055840000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[139]" " -type \"float2\" 0.25349729999999998 -0.052853346000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[140]" " -type \"float2\" 0.24011356 0.0054184793999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[141]" " -type \"float2\" 0.2009908 0.0010662675"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[142]" " -type \"float2\" 0.15496075000000001 0.045667647999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[143]" " -type \"float2\" 0.19414139 0.049575149999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[144]" " -type \"float2\" 0.18873255999999999 0.098150670999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[145]" " -type \"float2\" 0.15376877999999999 0.094759284999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[146]" " -type \"float2\" 0.2286523 0.053919673000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[147]" " -type \"float2\" 0.21907908000000001 0.10182827999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[148]" " -type \"float2\" 0.18425727 0.13897013999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[149]" " -type \"float2\" 0.21134204000000001 0.14207571999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[150]" " -type \"float2\" 0.20572494999999999 0.18323886"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[151]" " -type \"float2\" 0.18078296999999999 0.18033719000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[152]" " -type \"float2\" 0.15270202999999999 0.13604492000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[153]" " -type \"float2\" 0.15108699 0.17720221999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[154]" " -type \"float2\" 0.11911678000000001 0.042581081"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[155]" " -type \"float2\" 0.1222989 0.091990172999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[156]" " -type \"float2\" 0.12479817999999999 0.13356035999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[157]" " -type \"float2\" 0.12488723 0.17425776000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[158]" " -type \"float2\" 0.12453525999999999 0.21850199000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[159]" " -type \"float2\" 0.11895393999999999 0.27346891000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[160]" " -type \"float2\" 0.14900648999999999 0.22196305"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[161]" " -type \"float2\" 0.14469594 0.27643972999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[162]" " -type \"float2\" 0.11549747 0.30447078"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[163]" " -type \"float2\" 0.14195627 0.30715274999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[164]" " -type \"float2\" 0.13316523999999999 0.38482797000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[165]" " -type \"float2\" 0.1020602 0.38173562"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[166]" " -type \"float2\" 0.17680055 0.22529167"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[167]" " -type \"float2\" 0.17258179000000001 0.27923065000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[168]" " -type \"float2\" 0.19962257 0.22802806"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[169]" " -type \"float2\" 0.19512779 0.28155070999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[170]" " -type \"float2\" 0.16991222 0.30965668000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[171]" " -type \"float2\" 0.19231266 0.31177616000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[172]" " -type \"float2\" 0.18770331000000001 0.39059681000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[173]" " -type \"float2\" 0.1635173 0.38783282000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[174]" " -type \"float2\" 0.15921025999999999 0.44941305999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[175]" " -type \"float2\" 0.12549525 0.44510263"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[176]" " -type \"float2\" 0.18619788000000001 0.45353091000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[177]" " -type \"float2\" 0.18802202000000001 0.50063639999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[178]" " -type \"float2\" 0.15775001 0.49327415000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[179]" " -type \"float2\" 0.12015766 0.48613876"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[180]" " -type \"float2\" 0.089144110999999998 0.44106679999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[181]" " -type \"float2\" 0.078752517999999994 0.48168492000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[182]" " -type \"float2\" 0.071755052 0.50295042999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[183]" " -type \"float2\" 0.117733 0.50588398999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[184]" " -type \"float2\" 0.11653297999999999 0.51026534999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[185]" " -type \"float2\" 0.064604163000000006 0.51171011"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[186]" " -type \"float2\" 0.15970719 0.51773053000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[187]" " -type \"float2\" 0.19338173 0.53143870999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[188]" " -type \"float2\" 0.20265895 0.55112302000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[189]" " -type \"float2\" 0.16490752 0.528225"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[190]" " -type \"float2\" 0.17300879999999999 0.53099823000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[191]" " -type \"float2\" 0.11522238999999999 0.505822"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[192]" " -type \"float2\" 0.21568799 0.56541156999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[193]" " -type \"float2\" 0.23652345 0.57635890999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[194]" " -type \"float2\" 0.18177223000000001 0.52261864999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[195]" " -type \"float2\" 0.11338835999999999 0.49347389000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[196]" " -type \"float2\" 0.054461061999999998 0.51460360999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[197]" " -type \"float2\" 0.042360723000000003 0.50772434"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[198]" " -type \"float2\" -0.040213048000000001 0.48245614999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[199]" " -type \"float2\" 0.013551831 0.46646714"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[200]" " -type \"float2\" 0.0089578031999999995 0.49762052000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[201]" " -type \"float2\" -0.063630879000000001 0.50756168000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[202]" " -type \"float2\" 0.10309136000000001 0.46440309000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[203]" " -type \"float2\" 0.10121822 0.49496435999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[204]" " -type \"float2\" 0.099158883000000003 0.53535067999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[205]" " -type \"float2\" 0.0044612287999999996 0.53893559999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[206]" " -type \"float2\" -0.070294559000000006 0.54914205999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[207]" " -type \"float2\" 0.18679148000000001 0.48080068999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[208]" " -type \"float2\" 0.18662006 0.51035249000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[209]" " -type \"float2\" 0.2338382 0.50339018999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[210]" " -type \"float2\" 0.24999726 0.52982509"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[211]" " -type \"float2\" 0.25221902000000002 0.56770414000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[212]" " -type \"float2\" 0.18705749999999999 0.54901624000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[213]" " -type \"float2\" 0.094158530000000004 0.62039834000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[214]" " -type \"float2\" 0.17799991000000001 0.62776619"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[215]" " -type \"float2\" 0.15530938 0.67203802000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[216]" " -type \"float2\" 0.088515400999999994 0.66550940000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[217]" " -type \"float2\" 0.24121213 0.63930798"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[218]" " -type \"float2\" 0.20699996000000001 0.68161749999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[219]" " -type \"float2\" 0.17260634999999999 0.70569908999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[220]" " -type \"float2\" 0.16089052000000001 0.67690748000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[221]" " -type \"float2\" 0.10076678 0.68371784999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[222]" " -type \"float2\" -0.059019029000000001 0.62609744000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[223]" " -type \"float2\" 0.0079472660999999993 0.62120956000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[224]" " -type \"float2\" 0.021616995 0.66397088999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[225]" " -type \"float2\" -0.02988553 0.66578203000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[226]" " -type \"float2\" 0.042954146999999998 0.69093585000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[227]" " -type \"float2\" -0.00069266558000000004 0.68725055000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[228]" " -type \"float2\" 0.26979572000000002 -0.10016996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[229]" " -type \"float2\" 0.28217059 -0.047713815999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[230]" " -type \"float2\" 0.28069925000000001 -0.10005528"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[231]" " -type \"float2\" 0.29389405000000002 -0.042155801999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[232]" " -type \"float2\" 0.27332968000000002 0.01635617"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[233]" " -type \"float2\" 0.26486402999999997 0.010677516"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[234]" " -type \"float2\" 0.28040129000000003 -0.094635546000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[235]" " -type \"float2\" 0.28704922999999999 -0.038602233"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[236]" " -type \"float2\" 0.26776498999999998 -0.093214094999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[237]" " -type \"float2\" 0.28669196000000002 -0.050049067000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[238]" " -type \"float2\" 0.23764426 0.026416360999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[239]" " -type \"float2\" 0.26328921 0.021506964999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[240]" " -type \"float2\" 0.25556951999999999 0.063814223000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[241]" " -type \"float2\" 0.24333930000000001 0.068688451999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[242]" " -type \"float2\" 0.22519243 0.11413598"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[243]" " -type \"float2\" 0.23837929999999999 0.11018430999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[244]" " -type \"float2\" 0.21729428000000001 0.073030530999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[245]" " -type \"float2\" 0.20056837999999999 0.11741698"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[246]" " -type \"float2\" 0.21147293 0.15205526"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[247]" " -type \"float2\" 0.18860411999999999 0.15451234999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[248]" " -type \"float2\" 0.18131887999999999 0.19211202999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[249]" " -type \"float2\" 0.20244836999999999 0.19070154"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[250]" " -type \"float2\" 0.22495836 0.14893728000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[251]" " -type \"float2\" 0.21546583999999999 0.18862187999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[252]" " -type \"float2\" 0.24986541000000001 0.058719098999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[253]" " -type \"float2\" 0.23600048000000001 0.10587679999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[254]" " -type \"float2\" 0.22496748 0.14541303999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[255]" " -type \"float2\" 0.21700430000000001 0.18597954999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[256]" " -type \"float2\" 0.20852630999999999 0.23019701000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[257]" " -type \"float2\" 0.20430403999999999 0.28342139999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[258]" " -type \"float2\" 0.20549268000000001 0.23202871999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[259]" " -type \"float2\" 0.20206678 0.28513873000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[260]" " -type \"float2\" 0.20164030999999999 0.31358777999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[261]" " -type \"float2\" 0.19983321000000001 0.31541954999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[262]" " -type \"float2\" 0.20138317 0.39574640999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[263]" " -type \"float2\" 0.20014309999999999 0.39313889000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[264]" " -type \"float2\" 0.19316232 0.23318469999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[265]" " -type \"float2\" 0.19090467999999999 0.28650975000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[266]" " -type \"float2\" 0.17414987000000001 0.23369175"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[267]" " -type \"float2\" 0.17252243 0.28756839000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[268]" " -type \"float2\" 0.18932610999999999 0.31712257999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[269]" " -type \"float2\" 0.17136567999999999 0.31868755999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[270]" " -type \"float2\" 0.23440581999999999 0.37044232999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[271]" " -type \"float2\" 0.1922248 0.39841138999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[272]" " -type \"float2\" 0.19753760000000001 0.464019"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[273]" " -type \"float2\" 0.20648789000000001 0.46044450999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[274]" " -type \"float2\" 0.24890756999999999 0.43056404999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[275]" " -type \"float2\" 0.26253784000000002 0.47583704999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[276]" " -type \"float2\" 0.20389777000000001 0.51475877000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[277]" " -type \"float2\" 0.21358794 0.51030028000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[278]" " -type \"float2\" 0.20234835000000001 0.45707028999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[279]" " -type \"float2\" 0.20747566000000001 0.50596291000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[280]" " -type \"float2\" 0.21474504 0.54014366999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[281]" " -type \"float2\" 0.22105938 0.54623239999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[282]" " -type \"float2\" 0.22833197999999999 0.57368450999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[283]" " -type \"float2\" 0.22403502 0.56494707"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[284]" " -type \"float2\" 0.20980006000000001 0.55193232999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[285]" " -type \"float2\" 0.27335071999999999 0.50858294999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[286]" " -type \"float2\" 0.28201788999999999 0.53389352999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[287]" " -type \"float2\" 0.21486353999999999 0.58087325000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[288]" " -type \"float2\" 0.21832359000000001 0.60740833999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[289]" " -type \"float2\" 0.2343142 0.59867828999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[290]" " -type \"float2\" 0.28926188000000003 0.55672580000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[291]" " -type \"float2\" 0.29441059000000003 0.57695209999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[292]" " -type \"float2\" 0.21969616 0.63110279999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[293]" " -type \"float2\" 0.23762053 0.62142056000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[294]" " -type \"float2\" 0.23495668 0.58618408"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[295]" " -type \"float2\" 0.24328237999999999 0.60623645999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[296]" " -type \"float2\" 0.24473756999999999 0.62756389000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[297]" " -type \"float2\" 0.25144249000000002 0.60650367000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[298]" " -type \"float2\" 0.23680287999999999 0.64215577000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[299]" " -type \"float2\" 0.23398869999999999 0.66390389000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[300]" " -type \"float2\" 0.24263900999999999 0.65145218000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[301]" " -type \"float2\" 0.25058192000000001 0.63420122999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[302]" " -type \"float2\" 0.21843845000000001 0.65157461000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[303]" " -type \"float2\" 0.29684864999999999 0.59442561999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[304]" " -type \"float2\" 0.2980566 0.61225026999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[305]" " -type \"float2\" 0.21584821000000001 0.67246227999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[306]" " -type \"float2\" 0.22300713999999999 0.71883308999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[307]" " -type \"float2\" 0.20561433000000001 0.72576766999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[308]" " -type \"float2\" 0.18744135000000001 0.75707769000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[309]" " -type \"float2\" 0.20293659 0.75059414000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[310]" " -type \"float2\" 0.17375736999999999 0.73116588999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[311]" " -type \"float2\" 0.28434426000000002 0.68606091000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[312]" " -type \"float2\" 0.23882079000000001 0.69704688000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[313]" " -type \"float2\" 0.23159241999999999 0.70982111000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[314]" " -type \"float2\" 0.20974803 0.74218410000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[315]" " -type \"float2\" 0.21410114 0.73099917000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[316]" " -type \"float2\" 0.23842788000000001 -0.10085964"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[317]" " -type \"float2\" 0.24193191999999999 -0.054013907999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[318]" " -type \"float2\" 0.18434529999999999 -0.11029404"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[319]" " -type \"float2\" 0.1904121 -0.058044612000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[320]" " -type \"float2\" 0.19245201000000001 -0.0040744542999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[321]" " -type \"float2\" 0.24000632999999999 -0.0019454956"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[322]" " -type \"float2\" 0.12871826 -0.11105323"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[323]" " -type \"float2\" 0.13718659 -0.062218249000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[324]" " -type \"float2\" 0.14440786999999999 -0.0064969659000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[325]" " -type \"float2\" 0.19117724999999999 0.040218651000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[326]" " -type \"float2\" 0.14890592999999999 0.039455353999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[327]" " -type \"float2\" 0.15094829000000001 0.086292505000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[328]" " -type \"float2\" 0.18699294 0.086053789000000006"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[329]" " -type \"float2\" 0.15162682999999999 0.12653977"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[330]" " -type \"float2\" 0.15014851000000001 0.165088"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[331]" " -type \"float2\" 0.18223858000000001 0.12579638000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[332]" " -type \"float2\" 0.17761289999999999 0.16449285"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[333]" " -type \"float2\" 0.23309684 0.040958940999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[334]" " -type \"float2\" 0.22313547 0.085730909999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[335]" " -type \"float2\" 0.21330392000000001 0.1249842"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[336]" " -type \"float2\" 0.20584214000000001 0.16419125000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[337]" " -type \"float2\" 0.19836878999999999 0.20736056999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[338]" " -type \"float2\" 0.19665806999999999 0.26192336999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[339]" " -type \"float2\" 0.17298806 0.20689278999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[340]" " -type \"float2\" 0.16931736 0.26177305000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[341]" " -type \"float2\" 0.19668095999999999 0.29265522999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[342]" " -type \"float2\" 0.16811620999999999 0.29262894"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[343]" " -type \"float2\" 0.16810839999999999 0.36956853000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[344]" " -type \"float2\" 0.20389491000000001 0.36974514000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[345]" " -type \"float2\" 0.14871662999999999 0.20706885999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[346]" " -type \"float2\" 0.14294278999999999 0.2622003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[347]" " -type \"float2\" 0.14041656 0.29316830999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[348]" " -type \"float2\" 0.13238179999999999 0.37004589999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[349]" " -type \"float2\" 0.12687283999999999 0.42988347999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[350]" " -type \"float2\" 0.17003655000000001 0.42953997999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[351]" " -type \"float2\" 0.12255388 0.47512632999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[352]" " -type \"float2\" 0.17190068999999999 0.47487860999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[353]" " -type \"float2\" 0.21284306 0.42978704000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[354]" " -type \"float2\" 0.22100437000000001 0.47508233999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[355]" " -type \"float2\" 0.22704858 0.50796264000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[356]" " -type \"float2\" 0.17295384 0.5078454"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[357]" " -type \"float2\" 0.17341608 0.53337473000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[358]" " -type \"float2\" 0.23169887 0.53342199000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[359]" " -type \"float2\" 0.11914830999999999 0.50825089000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[360]" " -type \"float2\" 0.11580592000000001 0.53390545"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[361]" " -type \"float2\" 0.11177576 0.55674188999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[362]" " -type \"float2\" 0.17360413 0.55634344000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[363]" " -type \"float2\" 0.10806865 0.57691437000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[364]" " -type \"float2\" 0.17358135999999999 0.57666141000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[365]" " -type \"float2\" 0.23573326999999999 0.55636662000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[366]" " -type \"float2\" 0.23872637999999999 0.57671094000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[367]" " -type \"float2\" 0.24025833999999999 0.59428477000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[368]" " -type \"float2\" 0.17347257999999999 0.59427184"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[369]" " -type \"float2\" 0.17335945 0.61207460999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[370]" " -type \"float2\" 0.24108242999999999 0.61214690999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[371]" " -type \"float2\" 0.10572701 0.59456313000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[372]" " -type \"float2\" 0.10412937 0.61225313000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[373]" " -type \"float2\" 0.17295951000000001 0.65764582000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[374]" " -type \"float2\" 0.10343765000000001 0.65676146999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[375]" " -type \"float2\" 0.10882217 0.68583243999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[376]" " -type \"float2\" 0.17252134999999999 0.68647855999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[377]" " -type \"float2\" 0.24021292 0.65824199000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[378]" " -type \"float2\" 0.23365664 0.68665361000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[379]" " -type \"float2\" 0.029795945000000001 0.48681795999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[380]" " -type \"float2\" -0.035282372999999999 0.51707809999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[381]" " -type \"float2\" 0.11074156 0.47429383000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[382]" " -type \"float2\" 0.1078853 0.45781738"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[383]" " -type \"float2\" 0.020057856999999998 0.46547681000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[384]" " -type \"float2\" -0.051373780000000001 0.49093323999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[385]" " -type \"float2\" 0.18864584000000001 0.50011748"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[386]" " -type \"float2\" 0.24557275000000001 0.54154599000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[387]" " -type \"float2\" 0.25438017000000002 0.51336694000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[388]" " -type \"float2\" 0.19187045 0.47816335999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[389]" " -type \"float2\" 0.18984818000000001 0.47083372000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[390]" " -type \"float2\" 0.1052587 0.45324165"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[391]" " -type \"float2\" 0.25263374999999999 0.50196700999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[392]" " -type \"float2\" 0.015830278 0.45715528999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[393]" " -type \"float2\" -0.056835294000000001 0.47860235000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[394]" " -type \"float2\" 0.26635694999999998 0.57752645000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[395]" " -type \"float2\" 0.26709038000000002 0.61118554999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[396]" " -type \"float2\" 0.28055017999999998 0.59004526999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[397]" " -type \"float2\" 0.27844 0.55164659000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[398]" " -type \"float2\" 0.22289466999999999 0.71631414000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[399]" " -type \"float2\" 0.25272280000000003 0.6790697"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[400]" " -type \"float2\" 0.244618 0.67258883000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[401]" " -type \"float2\" 0.23536663999999999 0.67063439000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[402]" " -type \"float2\" 0.22981167 0.70156503000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[403]" " -type \"float2\" 0.26441509000000002 0.66126096000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[404]" " -type \"float2\" 0.22839831999999999 0.69043611999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[405]" " -type \"float2\" 0.26533364999999998 0.64901310000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[406]" " -type \"float2\" 0.22093378999999999 0.67098701000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[407]" " -type \"float2\" 0.27674525999999999 0.53960657000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[408]" " -type \"float2\" 0.27930069000000002 0.57846016"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[409]" " -type \"float2\" 0.18875706 0.68951583000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[410]" " -type \"float2\" 0.12490540999999999 0.69662696000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[411]" " -type \"float2\" 0.11536043 0.69599133999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[412]" " -type \"float2\" 0.17846835 0.68904018"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[413]" " -type \"float2\" 0.060488462 0.70384252000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[414]" " -type \"float2\" 0.0026538372000000001 0.70012229999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[415]" " -type \"float2\" -0.0056610703000000004 0.69785976000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[416]" " -type \"float2\" 0.052378356000000001 0.70270496999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[417]" " -type \"float2\" 0.049709082000000002 0.70238560000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[418]" " -type \"float2\" 0.10736841 0.69628084000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[419]" " -type \"float2\" -0.0047094822000000001 0.69643241"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[420]" " -type \"float2\" 0.16628402 0.68977231000000006"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[421]" " -type \"float2\" -0.041541099999999997 0.67550337000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[422]" " -type \"float2\" -0.069116949999999996 0.64184403000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[423]" " -type \"float2\" -0.086774707000000006 0.63433598999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[424]" " -type \"float2\" -0.054037034999999997 0.67109339999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[425]" " -type \"float2\" -0.053012252000000003 0.62093651000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[426]" " -type \"float2\" -0.077041029999999996 0.61002820999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[427]" " -type \"float2\" -0.072904408000000004 0.57927298999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[428]" " -type \"float2\" -0.094957173000000006 0.56309896999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[429]" " -type \"float2\" -0.098066516000000006 0.59877026"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[430]" " -type \"float2\" -0.10023361 0.59261273999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[431]" " -type \"float2\" -0.087169699000000003 0.62971038000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[432]" " -type \"float2\" -0.0987764 0.55489659000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[433]" " -type \"float2\" -0.070600449999999995 0.58781623999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[434]" " -type \"float2\" -0.052948891999999997 0.66813259999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[435]" " -type \"float2\" 0.16826563999999999 -0.13970922999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[436]" " -type \"float2\" 0.22440230999999999 -0.12982874999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[437]" " -type \"float2\" 0.17362964 -0.14743065999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[438]" " -type \"float2\" 0.23217022000000001 -0.13327479"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[439]" " -type \"float2\" -0.0029672384000000002 0.63056319999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[440]" " -type \"float2\" 0.040584147000000001 0.63185912"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[441]" " -type \"float2\" -0.030112684000000001 0.62878250999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[442]" " -type \"float2\" -0.042096317000000001 0.62645059999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[443]" " -type \"float2\" 0.0031322836999999998 0.57967626999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[444]" " -type \"float2\" 0.097165048000000004 0.57688344000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[445]" " -type \"float2\" 0.18629324 0.58726834999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[446]" " -type \"float2\" 0.25274658 0.60258871000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[447]" " -type \"float2\" 0.24034625000000001 0.67921381999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[448]" " -type \"float2\" 0.24860889 0.66455883000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[449]" " -type \"float2\" 0.23132938 0.68969393000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[450]" " -type \"float2\" 0.21328712 0.69736140999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[451]" " -type \"float2\" 0.29936135000000003 0.63353859999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[452]" " -type \"float2\" 0.24186921 0.63339818000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[453]" " -type \"float2\" 0.17321735999999999 0.632994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[454]" " -type \"float2\" 0.10260463 0.63256716999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[455]" " -type \"float2\" 0.26492791999999998 0.64448457999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[456]" " -type \"float2\" 0.27846807000000001 0.62532288000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[457]" " -type \"float2\" 0.27886801999999999 0.61314922999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[458]" " -type \"float2\" -0.064517855999999998 0.54813944999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[459]" " -type \"float2\" -0.084728002999999996 0.52546769000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[460]" " -type \"float2\" -0.089795224000000007 0.51427566999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[461]" " -type \"float2\" 0.47329986000000002 0.56001526000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[462]" " -type \"float2\" 0.60280621000000001 0.53969544000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[463]" " -type \"float2\" 0.50720315999999999 0.54718864"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[464]" " -type \"float2\" 0.51085734000000005 0.56362920999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[465]" " -type \"float2\" 0.58671510000000004 0.53534382999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[466]" " -type \"float2\" 0.50479620999999997 0.54052113999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[467]" " -type \"float2\" 0.57197756 0.54526465999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[468]" " -type \"float2\" 0.56775808000000005 0.55181873000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[469]" " -type \"float2\" 0.56705457000000004 0.55957794000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[470]" " -type \"float2\" 0.57699065999999999 0.52926492999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[471]" " -type \"float2\" 0.50822710999999998 0.53281641000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[472]" " -type \"float2\" 0.56939404999999998 0.52148753000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[473]" " -type \"float2\" 0.51445383 0.52467333999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[474]" " -type \"float2\" 0.58253043999999998 0.52990006999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[475]" " -type \"float2\" 0.57691853999999998 0.53780097000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[476]" " -type \"float2\" 0.64852655000000003 0.54307245999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[477]" " -type \"float2\" 0.64334314999999997 0.55003272999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[478]" " -type \"float2\" 0.65212369000000003 0.53542084000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[479]" " -type \"float2\" 0.71341973999999997 0.53060472000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[480]" " -type \"float2\" 0.71104389000000001 0.53772807"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[481]" " -type \"float2\" 0.70550727999999996 0.54381466000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[482]" " -type \"float2\" 0.63271003999999997 0.55586380000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[483]" " -type \"float2\" 0.62629414000000005 0.55551826999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[484]" " -type \"float2\" 0.68886577999999998 0.54884701999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[485]" " -type \"float2\" 0.66841881999999997 0.54524260999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[486]" " -type \"float2\" 0.56716067000000003 -0.26985346999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[487]" " -type \"float2\" 0.55347811999999996 -0.27498340999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[488]" " -type \"float2\" 0.54623407000000002 -0.22607803000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[489]" " -type \"float2\" 0.57353246000000002 -0.22141039000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[490]" " -type \"float2\" 0.55030763000000005 -0.28348535000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[491]" " -type \"float2\" 0.53576630000000003 -0.23091328"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[492]" " -type \"float2\" 0.56575816999999995 -0.17298084"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[493]" " -type \"float2\" 0.55217499000000003 -0.17732476999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[494]" " -type \"float2\" 0.56471842999999999 -0.13279909000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[495]" " -type \"float2\" 0.57976216000000003 -0.12985854999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[496]" " -type \"float2\" 0.59475606999999997 -0.16905236000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[497]" " -type \"float2\" 0.60820441999999997 -0.12759960000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[498]" " -type \"float2\" 0.55793530000000002 -0.28542226999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[499]" " -type \"float2\" 0.54394633000000003 -0.23671955"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[500]" " -type \"float2\" 0.57563043000000003 -0.286147"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[501]" " -type \"float2\" 0.56947798000000005 -0.24122339000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[502]" " -type \"float2\" 0.55714976999999999 -0.18184185"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[503]" " -type \"float2\" 0.57882076999999998 -0.18546069000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[504]" " -type \"float2\" 0.58603609000000001 -0.13829041"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[505]" " -type \"float2\" 0.56746852000000003 -0.13581413000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[506]" " -type \"float2\" 0.57558465000000003 -0.087866604000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[507]" " -type \"float2\" 0.57577860000000003 -0.089580893999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[508]" " -type \"float2\" 0.58192818999999996 -0.050202011999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[509]" " -type \"float2\" 0.58349912999999998 -0.049393712999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[510]" " -type \"float2\" 0.59072709000000001 -0.090986549999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[511]" " -type \"float2\" 0.59411460000000005 -0.050874174000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[512]" " -type \"float2\" 0.58505147999999996 -0.0097137093999999993"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[513]" " -type \"float2\" 0.59528941000000002 -0.0098590850999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[514]" " -type \"float2\" 0.59646964000000002 0.034814774999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[515]" " -type \"float2\" 0.58826803999999999 0.034565329999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[516]" " -type \"float2\" 0.58773059000000005 -0.0097442864999999993"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[517]" " -type \"float2\" 0.59212129999999996 0.033847332000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[518]" " -type \"float2\" 0.61689888999999998 -0.085496843000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[519]" " -type \"float2\" 0.59075122999999996 -0.086362421999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[520]" " -type \"float2\" 0.59832191000000001 -0.048809350000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[521]" " -type \"float2\" 0.62213141000000005 -0.048710823"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[522]" " -type \"float2\" 0.60173732000000002 -0.010116279000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[523]" " -type \"float2\" 0.60523777999999995 0.032705723999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[524]" " -type \"float2\" 0.62358946000000004 -0.010939658"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[525]" " -type \"float2\" 0.62494271999999995 0.031200707000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[526]" " -type \"float2\" 0.62058197999999998 0.084055065999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[527]" " -type \"float2\" 0.6014834 0.085007190999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[528]" " -type \"float2\" 0.59991938 0.11472499"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[529]" " -type \"float2\" 0.56359320999999996 0.12782215999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[530]" " -type \"float2\" 0.58961015999999999 0.085915147999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[531]" " -type \"float2\" 0.58860767000000003 0.11534357000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[532]" " -type \"float2\" 0.57947539999999997 0.19156653000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[533]" " -type \"float2\" 0.58986044000000004 0.19162482"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[534]" " -type \"float2\" 0.54385011999999999 0.20856893000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[535]" " -type \"float2\" 0.58667970000000003 0.086717308000000007"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[536]" " -type \"float2\" 0.58606773999999995 0.1160692"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[537]" " -type \"float2\" 0.59525198000000001 0.087296724000000006"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[538]" " -type \"float2\" 0.59477681000000004 0.11675358"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[539]" " -type \"float2\" 0.59107107000000003 0.19216274999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[540]" " -type \"float2\" 0.57960396999999997 0.19179088"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[541]" " -type \"float2\" 0.57149070999999996 0.2513687"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[542]" " -type \"float2\" 0.56900918 0.25164729000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[543]" " -type \"float2\" 0.58615397999999996 0.25122487999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[544]" " -type \"float2\" 0.57982754999999997 0.29455166999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[545]" " -type \"float2\" 0.56223314999999996 0.29601896"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[546]" " -type \"float2\" 0.55823195000000003 0.29707771999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[547]" " -type \"float2\" 0.57979875999999997 0.25241601000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[548]" " -type \"float2\" 0.52378994000000001 0.27280861000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[549]" " -type \"float2\" 0.5702855 0.29865049999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[550]" " -type \"float2\" 0.50590747999999996 0.32171773999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[551]" " -type \"float2\" 0.56229340999999999 0.33216332999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[552]" " -type \"float2\" 0.49185061000000002 0.35721529000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[553]" " -type \"float2\" 0.54830098000000005 0.32940989999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[554]" " -type \"float2\" 0.53911483000000004 0.35405278000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[555]" " -type \"float2\" 0.55563032999999995 0.35816651999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[556]" " -type \"float2\" 0.4805429 0.38464623999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[557]" " -type \"float2\" 0.55217039999999995 0.32676803999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[558]" " -type \"float2\" 0.57156068000000004 0.32234085000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[559]" " -type \"float2\" 0.55997026000000005 0.33972645000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[560]" " -type \"float2\" 0.5406183 0.34887505000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[561]" " -type \"float2\" 0.52740604000000002 0.36778592999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[562]" " -type \"float2\" 0.53134161000000002 0.37651432000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[563]" " -type \"float2\" 0.54443902 0.35189235000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[564]" " -type \"float2\" 0.52000630000000003 0.36068361999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[565]" " -type \"float2\" 0.51697689000000002 0.38573843000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[566]" " -type \"float2\" 0.52643346999999996 0.39707744"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[567]" " -type \"float2\" 0.55071466999999996 0.38199723000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[568]" " -type \"float2\" 0.47078126999999997 0.40928543000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[569]" " -type \"float2\" 0.54803460999999998 0.40341705"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[570]" " -type \"float2\" 0.46329111000000001 0.43106073"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[571]" " -type \"float2\" 0.54815625999999995 0.42218864"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[572]" " -type \"float2\" 0.45874363000000001 0.44991934"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[573]" " -type \"float2\" 0.52591431 0.41601259000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[574]" " -type \"float2\" 0.52738415999999999 0.43578649000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[575]" " -type \"float2\" 0.54955357000000005 0.44127761999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[576]" " -type \"float2\" 0.58575237000000002 0.44460714000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[577]" " -type \"float2\" 0.51385837999999995 0.40499829999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[578]" " -type \"float2\" 0.50285888000000001 0.38721448000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[579]" " -type \"float2\" 0.50182181999999997 0.41210413000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[580]" " -type \"float2\" 0.51436519999999997 0.42650515"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[581]" " -type \"float2\" 0.53496999000000001 0.48499185"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[582]" " -type \"float2\" 0.52155799000000003 0.47858625999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[583]" " -type \"float2\" 0.54121154999999999 0.50763546999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[584]" " -type \"float2\" 0.55305523000000001 0.51358336000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[585]" " -type \"float2\" 0.50906706000000002 0.46830981999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[586]" " -type \"float2\" 0.53110146999999996 0.49887228"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[587]" " -type \"float2\" 0.45145833000000002 0.51619261999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[588]" " -type \"float2\" 0.55654024999999996 0.48921615000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[589]" " -type \"float2\" 0.57256602999999995 0.51758963000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[590]" " -type \"float2\" 0.45967733999999999 0.54426903000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[591]" " -type \"float2\" 0.60720909000000001 -0.29064202"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[592]" " -type \"float2\" 0.61097133000000003 -0.24348133999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[593]" " -type \"float2\" 0.65885698999999998 -0.29599476000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[594]" " -type \"float2\" 0.65927619000000004 -0.24473464"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[595]" " -type \"float2\" 0.61535949000000001 -0.18769180999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[596]" " -type \"float2\" 0.65784567999999999 -0.18891007000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[597]" " -type \"float2\" 0.65583038000000005 -0.1408906"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[598]" " -type \"float2\" 0.61836438999999999 -0.14002669000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[599]" " -type \"float2\" 0.70968390000000003 -0.29393047"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[600]" " -type \"float2\" 0.70570140999999997 -0.24607551"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[601]" " -type \"float2\" 0.73856473 -0.29156953000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[602]" " -type \"float2\" 0.74334502000000002 -0.24625158"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[603]" " -type \"float2\" 0.69804292999999995 -0.18942553000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[604]" " -type \"float2\" 0.73020834000000001 -0.18887298999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[605]" " -type \"float2\" 0.71786541000000004 -0.13993198000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[606]" " -type \"float2\" 0.69054013000000003 -0.14085375999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[607]" " -type \"float2\" 0.65306735000000005 -0.092169523000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[608]" " -type \"float2\" 0.68364 -0.091858089000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[609]" " -type \"float2\" 0.67766815000000002 -0.050683141000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[610]" " -type \"float2\" 0.65050392999999995 -0.051141024"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[611]" " -type \"float2\" 0.70710510000000004 -0.090935230000000006"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[612]" " -type \"float2\" 0.69793379 -0.049803078000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[613]" " -type \"float2\" 0.67383890999999996 -0.010396004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[614]" " -type \"float2\" 0.69267093999999996 -0.01024133"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[615]" " -type \"float2\" 0.68717903000000002 0.032442092999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[616]" " -type \"float2\" 0.66990024000000004 0.033148169999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[617]" " -type \"float2\" 0.64820701000000003 -0.010299027000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[618]" " -type \"float2\" 0.64584953000000001 0.033946335000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[619]" " -type \"float2\" 0.61942642999999997 -0.091885805000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[620]" " -type \"float2\" 0.61995613999999999 -0.051249743"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[621]" " -type \"float2\" 0.61931866000000002 -0.010095298000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[622]" " -type \"float2\" 0.61865216000000001 0.034546136999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[623]" " -type \"float2\" 0.61716806999999996 0.087511897000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[624]" " -type \"float2\" 0.61652826999999999 0.1172086"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[625]" " -type \"float2\" 0.64441912999999995 0.087502896999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[626]" " -type \"float2\" 0.64381312999999996 0.11750901"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[627]" " -type \"float2\" 0.64376897 0.19281638000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[628]" " -type \"float2\" 0.61431891000000005 0.19248813000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[629]" " -type \"float2\" 0.66961037999999995 0.087294459000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[630]" " -type \"float2\" 0.66965543999999999 0.11764330000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[631]" " -type \"float2\" 0.68832188999999999 0.087141097000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[632]" " -type \"float2\" 0.68910784000000003 0.1177758"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[633]" " -type \"float2\" 0.69827086000000005 0.19374537"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[634]" " -type \"float2\" 0.67408115000000002 0.19321917999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[635]" " -type \"float2\" 0.67967438999999996 0.25120156999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[636]" " -type \"float2\" 0.64433001999999995 0.25073421000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[637]" " -type \"float2\" 0.70896161000000002 0.25220661999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[638]" " -type \"float2\" 0.71858679999999997 0.29420215"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[639]" " -type \"float2\" 0.68480938999999996 0.29129094"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[640]" " -type \"float2\" 0.64472282000000003 0.29000389999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[641]" " -type \"float2\" 0.61180687 0.25088601999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[642]" " -type \"float2\" 0.60854702999999999 0.29184335"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[643]" " -type \"float2\" 0.60386598000000002 0.31425393000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[644]" " -type \"float2\" 0.64450585999999999 0.30879193999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[645]" " -type \"float2\" 0.64390480999999999 0.31258069999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[646]" " -type \"float2\" 0.59669620000000001 0.32337701000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[647]" " -type \"float2\" 0.68880838 0.31255525000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[648]" " -type \"float2\" 0.72550957999999999 0.32024288000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[649]" " -type \"float2\" 0.73377263999999998 0.33696741000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[650]" " -type \"float2\" 0.69400441999999996 0.32128393999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[651]" " -type \"float2\" 0.70206153000000004 0.32407861999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[652]" " -type \"float2\" 0.64328057000000005 0.30755537999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[653]" " -type \"float2\" 0.74641824000000001 0.35103709"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[654]" " -type \"float2\" 0.76901335000000004 0.36256372999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[655]" " -type \"float2\" 0.71163845000000003 0.31640083000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[656]" " -type \"float2\" 0.64263700999999995 0.29452919999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[657]" " -type \"float2\" 0.58661741000000001 0.32496828"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[658]" " -type \"float2\" 0.57521093000000001 0.31594926000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[659]" " -type \"float2\" 0.50587928000000004 0.29331046"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[660]" " -type \"float2\" 0.55235129999999999 0.27357726999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[661]" " -type \"float2\" 0.54869431000000002 0.30272025000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[662]" " -type \"float2\" 0.48726093999999998 0.31841993000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[663]" " -type \"float2\" 0.63525772000000003 0.26149391999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[664]" " -type \"float2\" 0.63297576 0.29181438999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[665]" " -type \"float2\" 0.63112926000000003 0.33182126000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[666]" " -type \"float2\" 0.54462927999999999 0.34059441000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[667]" " -type \"float2\" 0.48204016999999999 0.35492836999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[668]" " -type \"float2\" 0.72367453999999998 0.2678681"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[669]" " -type \"float2\" 0.72436875000000001 0.29899495999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[670]" " -type \"float2\" 0.77675194000000003 0.28699321"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[671]" " -type \"float2\" 0.79724514000000002 0.31310772999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[672]" " -type \"float2\" 0.80046569999999995 0.35556209"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[673]" " -type \"float2\" 0.72502743999999997 0.34044134999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[674]" " -type \"float2\" 0.62892413000000003 0.41462862"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[675]" " -type \"float2\" 0.71425408000000001 0.42128283"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[676]" " -type \"float2\" 0.69588011999999999 0.46376222"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[677]" " -type \"float2\" 0.62964134999999999 0.45878648999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[678]" " -type \"float2\" 0.78225314999999995 0.43219851999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[679]" " -type \"float2\" 0.74876182999999996 0.47219282000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[680]" " -type \"float2\" 0.71635716999999999 0.494412"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[681]" " -type \"float2\" 0.66933942000000002 0.49837804000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[682]" " -type \"float2\" 0.60687453000000002 0.49176508000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[683]" " -type \"float2\" 0.48720026 0.42297428999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[684]" " -type \"float2\" 0.54697287000000006 0.41641574999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[685]" " -type \"float2\" 0.56503813999999997 0.45917308000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[686]" " -type \"float2\" 0.51714395999999996 0.46332174999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[687]" " -type \"float2\" 0.54252332000000003 0.48735231000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[688]" " -type \"float2\" 0.49396329999999999 0.47492259999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[689]" " -type \"float2\" 0.75453543999999995 -0.29274951999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[690]" " -type \"float2\" 0.76502912999999995 -0.24429065"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[691]" " -type \"float2\" 0.75760627000000003 -0.29352950999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[692]" " -type \"float2\" 0.77006887999999996 -0.24108183"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[693]" " -type \"float2\" 0.74834436000000004 -0.18702662"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[694]" " -type \"float2\" 0.75169176000000004 -0.18420494000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[695]" " -type \"float2\" 0.73510562999999995 -0.13599157000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[696]" " -type \"float2\" 0.73299015000000001 -0.13830202999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[697]" " -type \"float2\" 0.74842966 -0.28764479999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[698]" " -type \"float2\" 0.75800729 -0.23851335000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[699]" " -type \"float2\" 0.72843009000000003 -0.28360807999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[700]" " -type \"float2\" 0.72994661000000005 -0.23556542"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[701]" " -type \"float2\" 0.73965389000000004 -0.18100268"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[702]" " -type \"float2\" 0.71347391999999998 -0.17747223000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[703]" " -type \"float2\" 0.69961786000000004 -0.12997991"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[704]" " -type \"float2\" 0.72350853999999998 -0.13308030000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[705]" " -type \"float2\" 0.71985792999999998 -0.087559521000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[706]" " -type \"float2\" 0.70870632 -0.085251331"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[707]" " -type \"float2\" 0.69650065999999999 -0.045170724000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[708]" " -type \"float2\" 0.70709193000000004 -0.046976268000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[709]" " -type \"float2\" 0.68733770000000005 -0.082903445000000006"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[710]" " -type \"float2\" 0.67750889000000003 -0.043420493999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[711]" " -type \"float2\" 0.68948841000000005 -0.0073876977000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[712]" " -type \"float2\" 0.67202264 -0.0059859157000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[713]" " -type \"float2\" 0.6659041 0.034611045999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[714]" " -type \"float2\" 0.68183726 0.033454000999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[715]" " -type \"float2\" 0.69967407000000004 -0.0087196231000000006"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[716]" " -type \"float2\" 0.69170045999999996 0.032555162999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[717]" " -type \"float2\" 0.71927679 -0.089492790000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[718]" " -type \"float2\" 0.70768589000000004 -0.048559843999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[719]" " -type \"float2\" 0.70105039999999996 -0.0096950531"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[720]" " -type \"float2\" 0.69401747000000003 0.032211185000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[721]" " -type \"float2\" 0.69589268999999998 0.087213337000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[722]" " -type \"float2\" 0.69698470999999995 0.11806208"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[723]" " -type \"float2\" 0.69377630999999995 0.087635695999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[724]" " -type \"float2\" 0.69482445999999998 0.11863058999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[725]" " -type \"float2\" 0.70734280000000005 0.19573408"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[726]" " -type \"float2\" 0.70893711000000004 0.19454741"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[727]" " -type \"float2\" 0.68380021999999996 0.088392137999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[728]" " -type \"float2\" 0.68458914999999998 0.11945467999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[729]" " -type \"float2\" 0.66712587999999995 0.089320779000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[730]" " -type \"float2\" 0.66729592999999998 0.12041789"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[731]" " -type \"float2\" 0.67368262999999995 0.19883155999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[732]" " -type \"float2\" 0.69529074000000002 0.19721192000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[733]" " -type \"float2\" 0.70623504999999998 0.25837004000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[734]" " -type \"float2\" 0.72116363000000006 0.25604223999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[735]" " -type \"float2\" 0.67943770000000003 0.26075435000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[736]" " -type \"float2\" 0.68445926999999995 0.30791806999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[737]" " -type \"float2\" 0.71571439999999997 0.30477117999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[738]" " -type \"float2\" 0.73323625000000003 0.30136352999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[739]" " -type \"float2\" 0.72253889000000004 0.25387293"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[740]" " -type \"float2\" 0.73459089 0.29767627000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[741]" " -type \"float2\" 0.74244863000000005 0.32728027999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[742]" " -type \"float2\" 0.74054556999999999 0.33347063999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[743]" " -type \"float2\" 0.74670820999999998 0.35811269000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[744]" " -type \"float2\" 0.75041442999999997 0.34900295999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[745]" " -type \"float2\" 0.72159863000000002 0.33849961000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[746]" " -type \"float2\" 0.68789058999999997 0.34253161999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[747]" " -type \"float2\" 0.69135696000000002 0.36935139"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[748]" " -type \"float2\" 0.72659503999999997 0.36469591000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[749]" " -type \"float2\" 0.73312473 0.38864523000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[750]" " -type \"float2\" 0.75495952 0.38125575"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[751]" " -type \"float2\" 0.69626003999999997 0.39321756000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[752]" " -type \"float2\" 0.70085955 0.41443068"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[753]" " -type \"float2\" 0.73931223000000001 0.41026281999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[754]" " -type \"float2\" 0.76276522999999996 0.40280575000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[755]" " -type \"float2\" 0.76204824000000004 0.36935078999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[756]" " -type \"float2\" 0.77285367000000005 0.38947815000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[757]" " -type \"float2\" 0.77845043000000003 0.41056299000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[758]" " -type \"float2\" 0.78778756000000005 0.39158117999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[759]" " -type \"float2\" 0.76763879999999995 0.42269628999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[760]" " -type \"float2\" 0.77090376999999999 0.44173044"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[761]" " -type \"float2\" 0.78132385000000004 0.43220966999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[762]" " -type \"float2\" 0.79067677000000003 0.41788721000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[763]" " -type \"float2\" 0.74323136000000001 0.42946756000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[764]" " -type \"float2\" 0.70341580999999997 0.43331491999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[765]" " -type \"float2\" 0.70469862000000005 0.45184803000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[766]" " -type \"float2\" 0.74582170999999997 0.44778459999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[767]" " -type \"float2\" 0.76831221999999999 0.48422956"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[768]" " -type \"float2\" 0.74316024999999997 0.49029303000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[769]" " -type \"float2\" 0.72440243000000004 0.52212632000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[770]" " -type \"float2\" 0.74618088999999999 0.51669984999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[771]" " -type \"float2\" 0.70122653000000001 0.49641979000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[772]" " -type \"float2\" 0.68691294999999997 0.52724563999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[773]" " -type \"float2\" 0.78390813000000004 0.47302163000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[774]" " -type \"float2\" 0.77741777999999995 0.47948563"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[775]" " -type \"float2\" 0.75340492000000003 0.51178007999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[776]" " -type \"float2\" 0.75733978000000002 0.50563305999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[777]" " -type \"float2\" 0.69690317000000002 -0.28335326999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[778]" " -type \"float2\" 0.68628716000000001 -0.23133819999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[779]" " -type \"float2\" 0.64443236999999998 -0.28286349999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[780]" " -type \"float2\" 0.63613534000000005 -0.22623204999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[781]" " -type \"float2\" 0.67409651999999998 -0.17339951000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[782]" " -type \"float2\" 0.62840688 -0.16896903999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[783]" " -type \"float2\" 0.62375860999999999 -0.12370253"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[784]" " -type \"float2\" 0.66451579000000005 -0.12695479000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[785]" " -type \"float2\" 0.59389210000000003 -0.27471054"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[786]" " -type \"float2\" 0.58782648999999998 -0.22207689"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[787]" " -type \"float2\" 0.58331626999999997 -0.16483754"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[788]" " -type \"float2\" 0.58327507999999995 -0.12041825"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[789]" " -type \"float2\" 0.62162684999999995 -0.078546881999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[790]" " -type \"float2\" 0.58612198000000004 -0.076339125999999993"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[791]" " -type \"float2\" 0.59028398999999998 -0.038807094"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[792]" " -type \"float2\" 0.62112551999999999 -0.040331661999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[793]" " -type \"float2\" 0.59293233999999995 -0.0014154911000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[794]" " -type \"float2\" 0.59556704999999999 0.040109753999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[795]" " -type \"float2\" 0.62113333000000004 -0.0032253264999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[796]" " -type \"float2\" 0.620938 0.037671327999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[797]" " -type \"float2\" 0.65693073999999996 -0.080765783999999993"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[798]" " -type \"float2\" 0.65139627 -0.041893363000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[799]" " -type \"float2\" 0.64847356 -0.0047252177999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[800]" " -type \"float2\" 0.64509791000000005 0.035889149000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[801]" " -type \"float2\" 0.64465684000000001 0.090411126999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[802]" " -type \"float2\" 0.64374476999999997 0.12154913000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[803]" " -type \"float2\" 0.61856562000000004 0.092004836000000007"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[804]" " -type \"float2\" 0.61647819999999998 0.12314778999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[805]" " -type \"float2\" 0.60820669000000005 0.20283097"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[806]" " -type \"float2\" 0.64321284999999995 0.20062094999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[807]" " -type \"float2\" 0.59149932999999999 0.094203471999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[808]" " -type \"float2\" 0.58840144000000005 0.12532926"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[809]" " -type \"float2\" 0.57330113999999999 0.20557231000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[810]" " -type \"float2\" 0.55847590999999996 0.26936281000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[811]" " -type \"float2\" 0.60010308000000001 0.26612204"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[812]" " -type \"float2\" 0.54584741999999997 0.31789714000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[813]" " -type \"float2\" 0.59359640000000002 0.31428056999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[814]" " -type \"float2\" 0.64231609999999995 0.26327771"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[815]" " -type \"float2\" 0.64182317 0.31098878000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[816]" " -type \"float2\" 0.64171690000000003 0.34593545999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[817]" " -type \"float2\" 0.58911484000000003 0.34932297000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[818]" " -type \"float2\" 0.58595324000000004 0.37641292999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[819]" " -type \"float2\" 0.64230186 0.37297135999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[820]" " -type \"float2\" 0.53645140000000002 0.35316741000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[821]" " -type \"float2\" 0.52912313 0.38043117999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[822]" " -type \"float2\" 0.52259814999999998 0.40491508999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[823]" " -type \"float2\" 0.58329606000000001 0.40073317000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[824]" " -type \"float2\" 0.51736826000000002 0.42661273"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[825]" " -type \"float2\" 0.58109312999999996 0.42226195"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[826]" " -type \"float2\" 0.64380974000000002 0.39701676000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[827]" " -type \"float2\" 0.64527040999999996 0.41829794999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[828]" " -type \"float2\" 0.64568137999999997 0.43704987000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[829]" " -type \"float2\" 0.57927143999999997 0.44104099000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[830]" " -type \"float2\" 0.57744551 0.45987505000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[831]" " -type \"float2\" 0.64535790999999998 0.45572430000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[832]" " -type \"float2\" 0.51386659999999995 0.44545525000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[833]" " -type \"float2\" 0.51102977999999999 0.4643988"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[834]" " -type \"float2\" 0.57286239000000005 0.50683248000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[835]" " -type \"float2\" 0.50673056000000005 0.51179737000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[836]" " -type \"float2\" 0.50981045000000003 0.54080569999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[837]" " -type \"float2\" 0.56990224 0.53654866999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[838]" " -type \"float2\" 0.64115350999999998 0.50171392999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[839]" " -type \"float2\" 0.63230090999999999 0.53190135999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[840]" " -type \"float2\" 0.56459539999999997 0.29338883999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[841]" " -type \"float2\" 0.50624424000000001 0.32843172999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[842]" " -type \"float2\" 0.64198195999999996 0.27451122"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[843]" " -type \"float2\" 0.64072978000000003 0.25702303999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[844]" " -type \"float2\" 0.55696011000000001 0.27143812"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[845]" " -type \"float2\" 0.49297785999999999 0.30154281999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[846]" " -type \"float2\" 0.72081678999999999 0.29374771999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[847]" " -type \"float2\" 0.78190934999999995 0.32959973999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[848]" " -type \"float2\" 0.79445648000000002 0.30030972"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[849]" " -type \"float2\" 0.72649980000000003 0.27033621000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[850]" " -type \"float2\" 0.72596329000000004 0.25988048000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[851]" " -type \"float2\" 0.63819647000000002 0.25122195000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[852]" " -type \"float2\" 0.79588692999999999 0.28507023999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[853]" " -type \"float2\" 0.55398762000000001 0.26390736999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[854]" " -type \"float2\" 0.49016911000000002 0.29095231999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[855]" " -type \"float2\" 0.80764263999999997 0.36402129999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[856]" " -type \"float2\" 0.81275772999999996 0.39742756000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[857]" " -type \"float2\" 0.83158701999999995 0.37769216"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[858]" " -type \"float2\" 0.82464850000000001 0.33791148999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[859]" " -type \"float2\" 0.76941645000000003 0.49697219999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[860]" " -type \"float2\" 0.80163841999999996 0.46215605999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[861]" " -type \"float2\" 0.72052801 0.52277052000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[862]" " -type \"float2\" 0.72566735999999998 0.51515031"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[863]" " -type \"float2\" 0.77867346999999998 0.48767018000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[864]" " -type \"float2\" 0.81602662999999998 0.45026200999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[865]" " -type \"float2\" 0.77440100999999995 0.47967516999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[866]" " -type \"float2\" 0.81295346999999996 0.44090544999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[867]" " -type \"float2\" 0.72196965999999996 0.50856506999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[868]" " -type \"float2\" 0.82596480999999999 0.32332385000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[869]" " -type \"float2\" 0.83160073000000001 0.36567425999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[870]" " -type \"float2\" 0.65810210000000002 0.52772039000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[871]" " -type \"float2\" 0.58889908000000002 0.52202778999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[872]" " -type \"float2\" 0.59564364000000003 0.51507002000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[873]" " -type \"float2\" 0.66320341999999999 0.52067779999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[874]" " -type \"float2\" 0.52044641999999997 0.51665521000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[875]" " -type \"float2\" 0.55897987000000005 0.51237690000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[876]" " -type \"float2\" 0.54994684000000005 0.50383811999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[877]" " -type \"float2\" 0.52804476 0.50980771000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[878]" " -type \"float2\" 0.53873450000000001 0.50504243000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[879]" " -type \"float2\" 0.60174209000000001 0.50966739999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[880]" " -type \"float2\" 0.54743248 0.49798048"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[881]" " -type \"float2\" 0.66364551000000005 0.51497841"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[882]" " -type \"float2\" 0.51636028 0.48694944000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[883]" " -type \"float2\" 0.48997837 0.45303470000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[884]" " -type \"float2\" 0.47315359000000001 0.43807739000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[885]" " -type \"float2\" 0.50365983999999997 0.47545815000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[886]" " -type \"float2\" 0.50163387999999998 0.43919997999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[887]" " -type \"float2\" 0.48047625999999999 0.42167461000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[888]" " -type \"float2\" 0.48067116999999998 0.39152962000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[889]" " -type \"float2\" 0.46249568000000002 0.37252146000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[890]" " -type \"float2\" 0.46208369999999999 0.40493286000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[891]" " -type \"float2\" 0.45669465999999997 0.39535557999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[892]" " -type \"float2\" 0.46723628 0.42897898000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[893]" " -type \"float2\" 0.45894474000000002 0.36281854000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[894]" " -type \"float2\" 0.47867208999999999 0.38814974000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[895]" " -type \"float2\" 0.49994253999999999 0.46809142999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[896]" " -type \"float2\" 0.71002513 -0.31949294"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[897]" " -type \"float2\" 0.70421778999999995 -0.31117463000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[898]" " -type \"float2\" 0.65431446000000004 -0.32585710000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[899]" " -type \"float2\" 0.64972149999999995 -0.31316036000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[900]" " -type \"float2\" 0.55062829999999996 0.46365988000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[901]" " -type \"float2\" 0.45146614000000002 0.49101876999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[902]" " -type \"float2\" 0.52843684000000002 0.45888649999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[903]" " -type \"float2\" 0.51480782000000003 0.45124227"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[904]" " -type \"float2\" 0.54205566999999999 0.37749182999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[905]" " -type \"float2\" 0.62953526000000004 0.37232238000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[906]" " -type \"float2\" 0.72274744999999996 0.38054514"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[907]" " -type \"float2\" 0.79738635000000002 0.39421475"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[908]" " -type \"float2\" 0.78378581999999997 0.45401536999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[909]" " -type \"float2\" 0.79215378000000003 0.44431943000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[910]" " -type \"float2\" 0.77378714000000004 0.46068411999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[911]" " -type \"float2\" 0.74800783000000004 0.46673863999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[912]" " -type \"float2\" 0.70551962000000001 0.47201604000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[913]" " -type \"float2\" 0.64466124999999996 0.47675705000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[914]" " -type \"float2\" 0.57532322000000002 0.48152041000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[915]" " -type \"float2\" 0.50787753000000002 0.48638504999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[916]" " -type \"float2\" 0.81338160999999998 0.42944728999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[917]" " -type \"float2\" 0.83116347000000002 0.41427313999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[918]" " -type \"float2\" 0.82965487000000004 0.40380233999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[919]" " -type \"float2\" 0.48350810999999999 0.36076891"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[920]" " -type \"float2\" 0.46695589999999998 0.33675343000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[921]" " -type \"float2\" 0.46410793 0.32612044000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[922]" " -type \"float2\" 0.11206315999999999 -0.13762062999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[923]" " -type \"float2\" 0.11431164000000001 -0.14233958999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[924]" " -type \"float2\" 0.59757351999999997 -0.31354957999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[925]" " -type \"float2\" 0.59626031000000002 -0.30363362999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[926]" " -type \"float2\" 0.12140554000000001 -0.13635504000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[927]" " -type \"float2\" 0.17909907999999999 -0.13747901000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[928]" " -type \"float2\" 0.23559569999999999 -0.12633412999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[929]" " -type \"float2\" 0.65670401 -0.32068037999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[930]" " -type \"float2\" 0.71063799000000005 -0.31680351000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[931]" " -type \"float2\" 0.60264379000000001 -0.31251842000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[932]" " -type \"float2\" 0.56704478999999997 0.096697389999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[933]" " -type \"float2\" 0.57196963000000001 0.042701423000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[934]" " -type \"float2\" 0.22145419999999999 0.26243293000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[935]" " -type \"float2\" 0.22210531999999999 0.29316567999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[936]" " -type \"float2\" 0.56684345000000003 0.00024706125"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[937]" " -type \"float2\" 0.56194239999999995 -0.037665188000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[938]" " -type \"float2\" 0.23179746000000001 0.16386074"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[939]" " -type \"float2\" 0.22193890999999999 0.20809162"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[940]" " -type \"float2\" 0.55401312999999996 -0.074734448999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[941]" " -type \"float2\" 0.54713993999999999 -0.11783718999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[942]" " -type \"float2\" 0.25549084 0.084945678999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[943]" " -type \"float2\" 0.24163759000000001 0.12395674"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[944]" " -type \"float2\" 0.54378742000000002 -0.16127115"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[945]" " -type \"float2\" 0.54621017000000005 -0.21736639999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[946]" " -type \"float2\" 0.28151219999999999 -0.00054824352"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[947]" " -type \"float2\" 0.27015746000000002 0.041033386999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[948]" " -type \"float2\" 0.58691888999999997 0.46662854999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[949]" " -type \"float2\" 0.45535766999999999 0.46891564000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[950]" " -type \"float2\" 0.59197657999999997 0.49183226000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[951]" " -type \"float2\" 0.48000454999999997 0.48791558000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[952]" " -type \"float2\" 0.54801606999999997 0.48611057000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[953]" " -type \"float2\" 0.46695119000000002 0.4931373"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[954]" " -type \"float2\" 0.46050906000000003 0.50148588000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[955]" " -type \"float2\" 0.45672351 0.51108872999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[956]" " -type \"float2\" 0.58317571999999995 0.491292"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[957]" " -type \"float2\" 0.63031917999999998 0.49045836999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[958]" " -type \"float2\" 0.67836421999999996 0.49561578000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[959]" " -type \"float2\" 0.60487418999999998 0.52001673000000004"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[960]" " -type \"float2\" 0.47178012000000003 0.53252356999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[961]" " -type \"float2\" 0.62085586999999998 0.53583628000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[962]" " -type \"float2\" 0.58459079000000003 0.42578852"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[963]" " -type \"float2\" 0.58437680999999997 0.40718030999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[964]" " -type \"float2\" 0.58600682000000004 0.38579696000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[965]" " -type \"float2\" 0.58890790000000004 0.36172842999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[966]" " -type \"float2\" 0.59259552000000004 0.33507376999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[967]" " -type \"float2\" 0.59714937000000001 0.30068760999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[968]" " -type \"float2\" 0.60317063000000004 0.25359607000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[969]" " -type \"float2\" 0.61028373000000002 0.19192892"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[970]" " -type \"float2\" 0.61875206000000005 0.11427640999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[971]" " -type \"float2\" 0.62451475999999995 0.55112481000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[972]" " -type \"float2\" 0.56437165 0.54767668000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[973]" " -type \"float2\" 0.45149856999999999 0.52005738000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[974]" " -type \"float2\" 0.45020288000000003 0.52807742000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[975]" " -type \"float2\" 0.50848930999999997 0.54314905000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[976]" " -type \"float2\" 0.45817119000000001 0.53484845000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[977]" " -type \"float2\" 0.18070412 0.70312381000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[978]" " -type \"float2\" 0.29629195000000003 0.65821183000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[979]" " -type \"float2\" 0.18333500999999999 0.67856854"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[980]" " -type \"float2\" 0.1762917 0.72250031999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[981]" " -type \"float2\" 0.20634781999999999 0.66204673000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[982]" " -type \"float2\" 0.17930942999999999 0.73277437999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[983]" " -type \"float2\" 0.17692930000000001 0.74495095"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[984]" " -type \"float2\" 0.17327917000000001 0.75683135000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[985]" " -type \"float2\" 0.15831171999999999 0.76216262999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[986]" " -type \"float2\" 0.251288 0.68007898"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[987]" " -type \"float2\" 0.26805389000000002 0.70195174000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[988]" " -type \"float2\" 0.18566471000000001 0.65794145999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[989]" " -type \"float2\" 0.18694896 0.63759869000000002"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[990]" " -type \"float2\" 0.18648410000000001 0.61386615"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[991]" " -type \"float2\" 0.18481897999999999 0.58699696999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[992]" " -type \"float2\" 0.18244094 0.55731052000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[993]" " -type \"float2\" 0.17956358 0.51921558000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[994]" " -type \"float2\" 0.17611563 0.46759193999999998"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[995]" " -type \"float2\" 0.17310882 0.40098083000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[996]" " -type \"float2\" 0.26327717 -0.035504757999999997"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[997]" " -type \"float2\" 0.034310638999999997 0.69469267000000001"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[998]" " -type \"float2\" 0.08212477 0.69794761999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[999]" " -type \"float2\" 0.13259994999999999 0.70632154000000003"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[1000]" " -type \"float2\" 0.21780527 0.69141929999999996"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[1001]" " -type \"float2\" 0.16611892 0.69783287999999999"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[1002]" " -type \"float2\" 0.26217341 0.68426447999999995"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[1003]" " -type \"float2\" 0.26641577 0.68106853999999994"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[1004]" " -type \"float2\" 0.26119703 0.67829919000000005"
+		
+		2 "Minion:polyTweakUV4" "uvTweak[1005]" " -type \"float2\" 0.1098358 0.70438396999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak" " -s 382"
+		2 "Minion:polyTweakUV5" "uvTweak[0]" " -type \"float2\" -0.39722717000000002 -0.43802539000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[1]" " -type \"float2\" -0.38657947999999998 -0.45891621999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[2]" " -type \"float2\" -0.44571650000000002 -0.50188303000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[3]" " -type \"float2\" -0.46674556 -0.46061670999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[4]" " -type \"float2\" -0.37000376000000001 -0.47549784"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[5]" " -type \"float2\" -0.4129642 -0.53463519000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[6]" " -type \"float2\" -0.34910755999999998 -0.48614019000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[7]" " -type \"float2\" -0.37169807999999999 -0.55565845999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[8]" " -type \"float2\" -0.32595017999999998 -0.48981251999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[9]" " -type \"float2\" -0.32595017999999998 -0.56290627000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[10]" " -type \"float2\" -0.30279282000000002 -0.48614019000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[11]" " -type \"float2\" -0.28020209000000001 -0.55565845999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[12]" " -type \"float2\" -0.28190242999999998 -0.47549784"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[13]" " -type \"float2\" -0.23893608 -0.53463519000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[14]" " -type \"float2\" -0.26532077999999998 -0.45891621999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[15]" " -type \"float2\" -0.20618363000000001 -0.50188303000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[16]" " -type \"float2\" -0.25467914000000003 -0.43802539000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[17]" " -type \"float2\" -0.18516052 -0.46061670999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[18]" " -type \"float2\" -0.25101230000000002 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[19]" " -type \"float2\" -0.17791352999999999 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[20]" " -type \"float2\" -0.25467914000000003 -0.39171152999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[21]" " -type \"float2\" -0.18516052 -0.36912023999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[22]" " -type \"float2\" -0.26532077999999998 -0.3708207"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[23]" " -type \"float2\" -0.20618363000000001 -0.32785388999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[24]" " -type \"float2\" -0.28190242999999998 -0.35423905"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[25]" " -type \"float2\" -0.23893608 -0.29510178999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[26]" " -type \"float2\" -0.30279282000000002 -0.34359124000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[27]" " -type \"float2\" -0.28020209000000001 -0.27407115999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[28]" " -type \"float2\" -0.32595017999999998 -0.33992440000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[29]" " -type \"float2\" -0.32595017999999998 -0.26683067999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[30]" " -type \"float2\" -0.34910755999999998 -0.34359124000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[31]" " -type \"float2\" -0.37169807999999999 -0.27407115999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[32]" " -type \"float2\" -0.37000376000000001 -0.35423905"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[33]" " -type \"float2\" -0.4129642 -0.29510178999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[34]" " -type \"float2\" -0.38657947999999998 -0.3708207"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[35]" " -type \"float2\" -0.44571650000000002 -0.32785388999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[36]" " -type \"float2\" -0.39722717000000002 -0.39171152999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[37]" " -type \"float2\" -0.46674556 -0.36912023999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[38]" " -type \"float2\" -0.40089390000000003 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[39]" " -type \"float2\" -0.47398686000000001 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[40]" " -type \"float2\" -0.50190413 -0.54270255999999995"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[41]" " -type \"float2\" -0.53279423999999997 -0.48207404999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[42]" " -type \"float2\" -0.45379055000000001 -0.59082192"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[43]" " -type \"float2\" -0.39316127000000001 -0.62171458999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[44]" " -type \"float2\" -0.32595017999999998 -0.63236057999999995"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[45]" " -type \"float2\" -0.25874471999999998 -0.62171458999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[46]" " -type \"float2\" -0.19811562999999999 -0.59082192"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[47]" " -type \"float2\" -0.14999614999999999 -0.54270255999999995"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[48]" " -type \"float2\" -0.11910613 -0.48207404999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[49]" " -type \"float2\" -0.10846426000000001 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[50]" " -type \"float2\" -0.11910613 -0.34765646"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[51]" " -type \"float2\" -0.14999614999999999 -0.28702798000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[52]" " -type \"float2\" -0.19811562999999999 -0.23891318"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[53]" " -type \"float2\" -0.25874471999999998 -0.20802235999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[54]" " -type \"float2\" -0.32595017999999998 -0.19737636"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[55]" " -type \"float2\" -0.39316127000000001 -0.20802235999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[56]" " -type \"float2\" -0.45379055000000001 -0.23891318"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[57]" " -type \"float2\" -0.50190413 -0.28702798000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[58]" " -type \"float2\" -0.53279423999999997 -0.34765646"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[59]" " -type \"float2\" -0.54344183000000001 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[60]" " -type \"float2\" -0.55375969000000003 -0.58037877000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[61]" " -type \"float2\" -0.59375321999999997 -0.50188303000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[62]" " -type \"float2\" -0.49146473000000002 -0.64267945000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[63]" " -type \"float2\" -0.4129642 -0.68267387000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[64]" " -type \"float2\" -0.32595017999999998 -0.69645577999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[65]" " -type \"float2\" -0.23893608 -0.68267387000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[66]" " -type \"float2\" -0.16044122999999999 -0.64267945000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[67]" " -type \"float2\" -0.098146304000000004 -0.58037877000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[68]" " -type \"float2\" -0.058147088 -0.50188303000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[69]" " -type \"float2\" -0.044364809999999998 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[70]" " -type \"float2\" -0.058147088 -0.32785388999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[71]" " -type \"float2\" -0.098146304000000004 -0.24935265000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[72]" " -type \"float2\" -0.16044122999999999 -0.18705749999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[73]" " -type \"float2\" -0.23893608 -0.14706308000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[74]" " -type \"float2\" -0.32595017999999998 -0.13328113999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[75]" " -type \"float2\" -0.4129642 -0.14706308000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[76]" " -type \"float2\" -0.49146473000000002 -0.18705749999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[77]" " -type \"float2\" -0.55375969000000003 -0.24935265000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[78]" " -type \"float2\" -0.59375321999999997 -0.32785388999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[79]" " -type \"float2\" -0.60753548000000002 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[80]" " -type \"float2\" -0.60000545000000005 -0.61398160000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[81]" " -type \"float2\" -0.64811878999999994 -0.51954566999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[82]" " -type \"float2\" -0.52506160999999996 -0.68892567999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[83]" " -type \"float2\" -0.43063307000000001 -0.73703956999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[84]" " -type \"float2\" -0.32595017999999998 -0.75362026999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[85]" " -type \"float2\" -0.22127314000000001 -0.73703956999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[86]" " -type \"float2\" -0.12683865 -0.68892567999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[87]" " -type \"float2\" -0.051900878999999997 -0.61398160000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[88]" " -type \"float2\" -0.0037814975000000002 -0.51954566999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[89]" " -type \"float2\" 0.012794435 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[90]" " -type \"float2\" -0.0037814975000000002 -0.3101913"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[91]" " -type \"float2\" -0.051900878999999997 -0.21575533999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[92]" " -type \"float2\" -0.12683865 -0.14081128000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[93]" " -type \"float2\" -0.22127314000000001 -0.092697374999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[94]" " -type \"float2\" -0.32595017999999998 -0.076116643999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[95]" " -type \"float2\" -0.43062723000000003 -0.092697374999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[96]" " -type \"float2\" -0.52506160999999996 -0.14081128000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[97]" " -type \"float2\" -0.60000545000000005 -0.21575533999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[98]" " -type \"float2\" -0.64811878999999994 -0.3101913"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[99]" " -type \"float2\" -0.66470039000000003 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[100]" " -type \"float2\" -0.63950127000000001 -0.64267945000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[101]" " -type \"float2\" -0.69454956000000001 -0.53463519000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[102]" " -type \"float2\" -0.55375969000000003 -0.72842114999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[103]" " -type \"float2\" -0.44571650000000002 -0.78347032999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[104]" " -type \"float2\" -0.32595017999999998 -0.80243867999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[105]" " -type \"float2\" -0.20618363000000001 -0.78347032999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[106]" " -type \"float2\" -0.098146304000000004 -0.72842114999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[107]" " -type \"float2\" -0.012399092 -0.64267945000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[108]" " -type \"float2\" 0.042649195000000001 -0.53463519000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[109]" " -type \"float2\" 0.061619356 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[110]" " -type \"float2\" 0.042649195000000001 -0.29510178999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[111]" " -type \"float2\" -0.012399092 -0.18705749999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[112]" " -type \"float2\" -0.098146304000000004 -0.10131577"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[113]" " -type \"float2\" -0.20618363000000001 -0.046266578000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[114]" " -type \"float2\" -0.32595017999999998 -0.027297333"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[115]" " -type \"float2\" -0.44571650000000002 -0.046266578000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[116]" " -type \"float2\" -0.55375969000000003 -0.10131577"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[117]" " -type \"float2\" -0.63950127000000001 -0.18705749999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[118]" " -type \"float2\" -0.69454956000000001 -0.29510178999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[119]" " -type \"float2\" -0.71351951000000002 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[120]" " -type \"float2\" -0.67127627000000001 -0.66576141"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[121]" " -type \"float2\" -0.73190557999999994 -0.54676961999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[122]" " -type \"float2\" -0.57684796999999999 -0.76019650999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[123]" " -type \"float2\" -0.45785645000000003 -0.82082677000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[124]" " -type \"float2\" -0.32595017999999998 -0.84171766000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[125]" " -type \"float2\" -0.19404972000000001 -0.82082677000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[126]" " -type \"float2\" -0.075058252000000006 -0.76019650999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[127]" " -type \"float2\" 0.019375995 -0.66576141"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[128]" " -type \"float2\" 0.080005407000000001 -0.54676961999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[129]" " -type \"float2\" 0.10089569 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[130]" " -type \"float2\" 0.080005407000000001 -0.28296185000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[131]" " -type \"float2\" 0.019375995 -0.16396911"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[132]" " -type \"float2\" -0.075058252000000006 -0.069540448000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[133]" " -type \"float2\" -0.19404972000000001 -0.0089101344000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[134]" " -type \"float2\" -0.32595017999999998 0.011980711999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[135]" " -type \"float2\" -0.45785645000000003 -0.0089101344000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[136]" " -type \"float2\" -0.57684796999999999 -0.069540448000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[137]" " -type \"float2\" -0.67127627000000001 -0.16396911"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[138]" " -type \"float2\" -0.73190557999999994 -0.28296185000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[139]" " -type \"float2\" -0.75279616999999999 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[140]" " -type \"float2\" -0.69454956000000001 -0.68267387000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[141]" " -type \"float2\" -0.75926769000000005 -0.55565845999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[142]" " -type \"float2\" -0.59375321999999997 -0.78347032999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[143]" " -type \"float2\" -0.46674556 -0.84818875999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[144]" " -type \"float2\" -0.32595017999999998 -0.87048398999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[145]" " -type \"float2\" -0.18516052 -0.84818875999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[146]" " -type \"float2\" -0.058147088 -0.78347032999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[147]" " -type \"float2\" 0.042649195000000001 -0.68267387000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[148]" " -type \"float2\" 0.10736163999999999 -0.55565845999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[149]" " -type \"float2\" 0.12966307999999999 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[150]" " -type \"float2\" 0.10736163999999999 -0.27407115999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[151]" " -type \"float2\" 0.042649195000000001 -0.14706308000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[152]" " -type \"float2\" -0.058147088 -0.046266578000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[153]" " -type \"float2\" -0.18516052 0.018451816999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[154]" " -type \"float2\" -0.32595017999999998 0.040747076"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[155]" " -type \"float2\" -0.46674556 0.018451816999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[156]" " -type \"float2\" -0.59375321999999997 -0.046266578000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[157]" " -type \"float2\" -0.69454956000000001 -0.14706308000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[158]" " -type \"float2\" -0.75926769000000005 -0.27407115999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[159]" " -type \"float2\" -0.78156340000000002 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[160]" " -type \"float2\" -0.70874815999999996 -0.69299089999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[161]" " -type \"float2\" -0.77595901 -0.56108427000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[162]" " -type \"float2\" -0.60407113999999995 -0.79766893000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[163]" " -type \"float2\" -0.47216469 -0.86487453999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[164]" " -type \"float2\" -0.32595017999999998 -0.88803785999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[165]" " -type \"float2\" -0.17973542000000001 -0.86487453999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[166]" " -type \"float2\" -0.047834843000000002 -0.79766893000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[167]" " -type \"float2\" 0.056847914999999999 -0.69299089999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[168]" " -type \"float2\" 0.12405317 -0.56108427000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[169]" " -type \"float2\" 0.14721065999999999 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[170]" " -type \"float2\" 0.12405317 -0.26865267999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[171]" " -type \"float2\" 0.056847914999999999 -0.13674605000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[172]" " -type \"float2\" -0.047834843000000002 -0.032067961999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[173]" " -type \"float2\" -0.17973542000000001 0.035137631000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[174]" " -type \"float2\" -0.32595017999999998 0.058300942000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[175]" " -type \"float2\" -0.47216469 0.035137631000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[176]" " -type \"float2\" -0.60407113999999995 -0.032067961999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[177]" " -type \"float2\" -0.70874815999999996 -0.13674605000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[178]" " -type \"float2\" -0.77595901 -0.26865267999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[179]" " -type \"float2\" -0.79911661 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[180]" " -type \"float2\" -0.71351951000000002 -0.69645577999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[181]" " -type \"float2\" -0.78156917999999997 -0.56290627000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[182]" " -type \"float2\" -0.60753548000000002 -0.80243867999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[183]" " -type \"float2\" -0.47398686000000001 -0.87048398999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[184]" " -type \"float2\" -0.32595017999999998 -0.89393151000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[185]" " -type \"float2\" -0.17791352999999999 -0.87048398999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[186]" " -type \"float2\" -0.044364809999999998 -0.80243867999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[187]" " -type \"float2\" 0.061619356 -0.69645577999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[188]" " -type \"float2\" 0.12966307999999999 -0.56290627000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[189]" " -type \"float2\" 0.15310988 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[190]" " -type \"float2\" 0.12966307999999999 -0.26683067999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[191]" " -type \"float2\" 0.061619356 -0.13328113999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[192]" " -type \"float2\" -0.044364809999999998 -0.027297333"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[193]" " -type \"float2\" -0.17791352999999999 0.040747076"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[194]" " -type \"float2\" -0.32595017999999998 0.064194567999999994"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[195]" " -type \"float2\" -0.47398686000000001 0.040747076"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[196]" " -type \"float2\" -0.60753548000000002 -0.027297333"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[197]" " -type \"float2\" -0.71351951000000002 -0.13328113999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[198]" " -type \"float2\" -0.78156340000000002 -0.26683067999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[199]" " -type \"float2\" -0.80501621999999995 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[200]" " -type \"float2\" -0.70874815999999996 -0.69299089999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[201]" " -type \"float2\" -0.77595901 -0.56108427000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[202]" " -type \"float2\" -0.60407113999999995 -0.79766893000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[203]" " -type \"float2\" -0.47216469 -0.86487453999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[204]" " -type \"float2\" -0.32595017999999998 -0.88803785999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[205]" " -type \"float2\" -0.17973542000000001 -0.86487453999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[206]" " -type \"float2\" -0.047834843000000002 -0.79766893000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[207]" " -type \"float2\" 0.056847914999999999 -0.69299089999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[208]" " -type \"float2\" 0.12405317 -0.56108427000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[209]" " -type \"float2\" 0.14721065999999999 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[210]" " -type \"float2\" 0.12405317 -0.26865267999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[211]" " -type \"float2\" 0.056847914999999999 -0.13674605000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[212]" " -type \"float2\" -0.047834843000000002 -0.032067961999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[213]" " -type \"float2\" -0.17973542000000001 0.035137631000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[214]" " -type \"float2\" -0.32595017999999998 0.058300942000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[215]" " -type \"float2\" -0.47216469 0.035137631000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[216]" " -type \"float2\" -0.60407113999999995 -0.032067961999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[217]" " -type \"float2\" -0.70874815999999996 -0.13674605000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[218]" " -type \"float2\" -0.77595901 -0.26865267999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[219]" " -type \"float2\" -0.79911661 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[220]" " -type \"float2\" -0.69454956000000001 -0.68267387000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[221]" " -type \"float2\" -0.75926769000000005 -0.55565845999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[222]" " -type \"float2\" -0.59375321999999997 -0.78347032999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[223]" " -type \"float2\" -0.46674556 -0.84818875999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[224]" " -type \"float2\" -0.32595017999999998 -0.87048398999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[225]" " -type \"float2\" -0.18516052 -0.84818875999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[226]" " -type \"float2\" -0.058147088 -0.78347032999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[227]" " -type \"float2\" 0.042649195000000001 -0.68267387000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[228]" " -type \"float2\" 0.10736163999999999 -0.55565845999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[229]" " -type \"float2\" 0.12966307999999999 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[230]" " -type \"float2\" 0.10736163999999999 -0.27407115999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[231]" " -type \"float2\" 0.042649195000000001 -0.14706308000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[232]" " -type \"float2\" -0.058147088 -0.046266578000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[233]" " -type \"float2\" -0.18516052 0.018451816999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[234]" " -type \"float2\" -0.32595017999999998 0.040747076"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[235]" " -type \"float2\" -0.46674556 0.018451816999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[236]" " -type \"float2\" -0.59375321999999997 -0.046266578000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[237]" " -type \"float2\" -0.69454956000000001 -0.14706308000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[238]" " -type \"float2\" -0.75926769000000005 -0.27407115999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[239]" " -type \"float2\" -0.78156340000000002 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[240]" " -type \"float2\" -0.67127627000000001 -0.66576141"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[241]" " -type \"float2\" -0.73190557999999994 -0.54676961999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[242]" " -type \"float2\" -0.57684796999999999 -0.76019650999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[243]" " -type \"float2\" -0.45785645000000003 -0.82082677000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[244]" " -type \"float2\" -0.32595017999999998 -0.84171766000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[245]" " -type \"float2\" -0.19404972000000001 -0.82082677000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[246]" " -type \"float2\" -0.075058252000000006 -0.76019650999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[247]" " -type \"float2\" 0.019375995 -0.66576141"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[248]" " -type \"float2\" 0.080005407000000001 -0.54676961999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[249]" " -type \"float2\" 0.10089569 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[250]" " -type \"float2\" 0.080005407000000001 -0.28296185000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[251]" " -type \"float2\" 0.019375995 -0.16396911"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[252]" " -type \"float2\" -0.075058252000000006 -0.069540448000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[253]" " -type \"float2\" -0.19404972000000001 -0.0089101344000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[254]" " -type \"float2\" -0.32595017999999998 0.011980711999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[255]" " -type \"float2\" -0.45785645000000003 -0.0089101344000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[256]" " -type \"float2\" -0.57684796999999999 -0.069540448000000005"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[257]" " -type \"float2\" -0.67127627000000001 -0.16396911"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[258]" " -type \"float2\" -0.73190557999999994 -0.28296185000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[259]" " -type \"float2\" -0.75279616999999999 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[260]" " -type \"float2\" -0.63950127000000001 -0.64267945000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[261]" " -type \"float2\" -0.69454956000000001 -0.53463519000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[262]" " -type \"float2\" -0.55375969000000003 -0.72842114999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[263]" " -type \"float2\" -0.44571650000000002 -0.78347032999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[264]" " -type \"float2\" -0.32595017999999998 -0.80243867999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[265]" " -type \"float2\" -0.20618363000000001 -0.78347032999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[266]" " -type \"float2\" -0.098146304000000004 -0.72842114999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[267]" " -type \"float2\" -0.012399092 -0.64267945000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[268]" " -type \"float2\" 0.042649195000000001 -0.53463519000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[269]" " -type \"float2\" 0.061619356 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[270]" " -type \"float2\" 0.042649195000000001 -0.29510178999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[271]" " -type \"float2\" -0.012399092 -0.18705749999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[272]" " -type \"float2\" -0.098146304000000004 -0.10131577"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[273]" " -type \"float2\" -0.20618363000000001 -0.046266578000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[274]" " -type \"float2\" -0.32595017999999998 -0.027297333"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[275]" " -type \"float2\" -0.44571650000000002 -0.046266578000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[276]" " -type \"float2\" -0.55375969000000003 -0.10131577"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[277]" " -type \"float2\" -0.63950127000000001 -0.18705749999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[278]" " -type \"float2\" -0.69454956000000001 -0.29510178999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[279]" " -type \"float2\" -0.71351951000000002 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[280]" " -type \"float2\" -0.60000545000000005 -0.61398160000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[281]" " -type \"float2\" -0.64811878999999994 -0.51954566999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[282]" " -type \"float2\" -0.52506160999999996 -0.68892567999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[283]" " -type \"float2\" -0.43063307000000001 -0.73703956999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[284]" " -type \"float2\" -0.32595017999999998 -0.75362026999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[285]" " -type \"float2\" -0.22127314000000001 -0.73703956999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[286]" " -type \"float2\" -0.12683865 -0.68892567999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[287]" " -type \"float2\" -0.051900878999999997 -0.61398160000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[288]" " -type \"float2\" -0.0037814975000000002 -0.51954566999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[289]" " -type \"float2\" 0.012794435 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[290]" " -type \"float2\" -0.0037814975000000002 -0.3101913"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[291]" " -type \"float2\" -0.051900878999999997 -0.21575533999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[292]" " -type \"float2\" -0.12683865 -0.14081128000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[293]" " -type \"float2\" -0.22127314000000001 -0.092697374999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[294]" " -type \"float2\" -0.32595017999999998 -0.076116643999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[295]" " -type \"float2\" -0.43062723000000003 -0.092697374999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[296]" " -type \"float2\" -0.52506160999999996 -0.14081128000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[297]" " -type \"float2\" -0.60000545000000005 -0.21575533999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[298]" " -type \"float2\" -0.64811878999999994 -0.3101913"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[299]" " -type \"float2\" -0.66470039000000003 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[300]" " -type \"float2\" -0.55375969000000003 -0.58037877000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[301]" " -type \"float2\" -0.59375321999999997 -0.50188303000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[302]" " -type \"float2\" -0.49146473000000002 -0.64267945000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[303]" " -type \"float2\" -0.4129642 -0.68267387000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[304]" " -type \"float2\" -0.32595017999999998 -0.69645577999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[305]" " -type \"float2\" -0.23893608 -0.68267387000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[306]" " -type \"float2\" -0.16044122999999999 -0.64267945000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[307]" " -type \"float2\" -0.098146304000000004 -0.58037877000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[308]" " -type \"float2\" -0.058147088 -0.50188303000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[309]" " -type \"float2\" -0.044364809999999998 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[310]" " -type \"float2\" -0.058147088 -0.32785388999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[311]" " -type \"float2\" -0.098146304000000004 -0.24935265000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[312]" " -type \"float2\" -0.16044122999999999 -0.18705749999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[313]" " -type \"float2\" -0.23893608 -0.14706308000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[314]" " -type \"float2\" -0.32595017999999998 -0.13328113999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[315]" " -type \"float2\" -0.4129642 -0.14706308000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[316]" " -type \"float2\" -0.49146473000000002 -0.18705749999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[317]" " -type \"float2\" -0.55375969000000003 -0.24935265000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[318]" " -type \"float2\" -0.59375321999999997 -0.32785388999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[319]" " -type \"float2\" -0.60753548000000002 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[320]" " -type \"float2\" -0.50190413 -0.54270255999999995"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[321]" " -type \"float2\" -0.53279423999999997 -0.48207404999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[322]" " -type \"float2\" -0.45379055000000001 -0.59082192"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[323]" " -type \"float2\" -0.39316127000000001 -0.62171458999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[324]" " -type \"float2\" -0.32595017999999998 -0.63236057999999995"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[325]" " -type \"float2\" -0.25874471999999998 -0.62171458999999996"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[326]" " -type \"float2\" -0.19811562999999999 -0.59082192"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[327]" " -type \"float2\" -0.14999614999999999 -0.54270255999999995"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[328]" " -type \"float2\" -0.11910613 -0.48207404999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[329]" " -type \"float2\" -0.10846426000000001 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[330]" " -type \"float2\" -0.11910613 -0.34765646"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[331]" " -type \"float2\" -0.14999614999999999 -0.28702798000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[332]" " -type \"float2\" -0.19811562999999999 -0.23891318"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[333]" " -type \"float2\" -0.25874471999999998 -0.20802235999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[334]" " -type \"float2\" -0.32595017999999998 -0.19737636"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[335]" " -type \"float2\" -0.39316127000000001 -0.20802235999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[336]" " -type \"float2\" -0.45379055000000001 -0.23891318"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[337]" " -type \"float2\" -0.50190413 -0.28702798000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[338]" " -type \"float2\" -0.53279423999999997 -0.34765646"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[339]" " -type \"float2\" -0.54344183000000001 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[340]" " -type \"float2\" -0.44571650000000002 -0.50188303000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[341]" " -type \"float2\" -0.46674556 -0.46061670999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[342]" " -type \"float2\" -0.4129642 -0.53463519000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[343]" " -type \"float2\" -0.37169807999999999 -0.55565845999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[344]" " -type \"float2\" -0.32595017999999998 -0.56290627000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[345]" " -type \"float2\" -0.28020209000000001 -0.55565845999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[346]" " -type \"float2\" -0.23893608 -0.53463519000000004"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[347]" " -type \"float2\" -0.20618363000000001 -0.50188303000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[348]" " -type \"float2\" -0.18516052 -0.46061670999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[349]" " -type \"float2\" -0.17791352999999999 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[350]" " -type \"float2\" -0.18516052 -0.36912023999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[351]" " -type \"float2\" -0.20618363000000001 -0.32785388999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[352]" " -type \"float2\" -0.23893608 -0.29510178999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[353]" " -type \"float2\" -0.28020209000000001 -0.27407115999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[354]" " -type \"float2\" -0.32595017999999998 -0.26683067999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[355]" " -type \"float2\" -0.37169807999999999 -0.27407115999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[356]" " -type \"float2\" -0.4129642 -0.29510178999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[357]" " -type \"float2\" -0.44571650000000002 -0.32785388999999998"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[358]" " -type \"float2\" -0.46674556 -0.36912023999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[359]" " -type \"float2\" -0.47398686000000001 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[360]" " -type \"float2\" -0.38657947999999998 -0.45891621999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[361]" " -type \"float2\" -0.39722717000000002 -0.43802539000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[362]" " -type \"float2\" -0.37000376000000001 -0.47549784"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[363]" " -type \"float2\" -0.34910755999999998 -0.48614019000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[364]" " -type \"float2\" -0.32595017999999998 -0.48981251999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[365]" " -type \"float2\" -0.30279282000000002 -0.48614019000000003"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[366]" " -type \"float2\" -0.28190242999999998 -0.47549784"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[367]" " -type \"float2\" -0.26532077999999998 -0.45891621999999999"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[368]" " -type \"float2\" -0.25467914000000003 -0.43802539000000001"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[369]" " -type \"float2\" -0.25101230000000002 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[370]" " -type \"float2\" -0.25467914000000003 -0.39171152999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[371]" " -type \"float2\" -0.26532077999999998 -0.3708207"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[372]" " -type \"float2\" -0.28190242999999998 -0.35423905"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[373]" " -type \"float2\" -0.30279282000000002 -0.34359124000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[374]" " -type \"float2\" -0.32595017999999998 -0.33992440000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[375]" " -type \"float2\" -0.34910755999999998 -0.34359124000000002"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[376]" " -type \"float2\" -0.37000376000000001 -0.35423905"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[377]" " -type \"float2\" -0.38657947999999998 -0.3708207"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[378]" " -type \"float2\" -0.39722717000000002 -0.39171152999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[379]" " -type \"float2\" -0.40089390000000003 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[380]" " -type \"float2\" -0.32595017999999998 -0.41486754999999997"
+		
+		2 "Minion:polyTweakUV5" "uvTweak[381]" " -type \"float2\" -0.32595017999999998 -0.41486754999999997";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "swordRN";
@@ -3867,18 +13664,18 @@ createNode reference -n "swordRN";
 		
 		2 "|sword:materialXStack1" "visibility" " 0"
 		2 "|sword:materialXStack1" "translate" " -type \"double3\" 0 6 0"
-		3 "sword:polyTweakUV4.output" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.inMesh" 
-		""
 		3 "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.instObjGroups" 
 		"sword:Maya_Lambert3SG.dagSetMembers" "-na"
-		3 "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups" 
-		"sword:Maya_Lambert4SG.dagSetMembers" "-na"
 		3 "sword:polyTweakUV2.output" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.inMesh" 
+		""
+		3 "sword:polyTweakUV3.output" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.inMesh" 
 		""
 		3 "|swordRNfosterParent1|sword:transform1|sword:bladeShape.instObjGroups" 
 		"sword:Maya_Lambert2SG.dagSetMembers" "-na"
-		3 "sword:polyTweakUV3.output" "|swordRNfosterParent1|sword:transform2|sword:crossguardShape.inMesh" 
+		3 "sword:polyTweakUV4.output" "|swordRNfosterParent1|sword:transform1|sword:bladeShape.inMesh" 
 		""
+		3 "|swordRNfosterParent1|sword:transform3|sword:hiltShape.instObjGroups" 
+		"sword:Maya_Lambert4SG.dagSetMembers" "-na"
 		5 3 "swordRN" "|sword:materialXStack1|sword:materialXStackShape1.stack" 
 		"swordRN.placeHolderList[44]" ""
 		5 4 "swordRN" "|swordRNfosterParent1|sword:transform3|sword:hiltShape.inMesh" 
@@ -4023,17 +13820,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 379\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 378\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 655\n            -height 378\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 804\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 804\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n"
@@ -4060,8 +13857,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -excludeObjectPreset \"All\" \n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n"
 		+ "            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 804\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1117\\n    -height 804\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 804\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 804\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -4344,7 +14141,7 @@ createNode polyPlanarProj -n "polyPlanarProj1";
 	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 1.475166595008861 0.061478818248380362 1;
 	setAttr ".ws" yes;
 	setAttr ".pc" -type "double3" -0.014255168847739697 1.4636088609695435 0.094734370708465576 ;
-	setAttr ".ro" -type "double3" -11.13835307108512 -3.399999754262188 -1.2301957618914017e-08 ;
+	setAttr ".ro" -type "double3" -11.13835307108512 -3.399999754262188 -1.2301957618914019e-08 ;
 	setAttr ".ps" -type "double2" 1.1693282846475475 1.2203830427699582 ;
 	setAttr ".per" yes;
 	setAttr ".cam" -type "matrix" 1.9410219192504883 0.023076154291629791 0.058190416544675827 0.058189254254102707
@@ -4394,29 +14191,470 @@ createNode polyMapCut -n "polyMapCut3";
 createNode polyTweakUV -n "polyTweakUV2";
 	rename -uid "0AD1B140-4EF6-B99B-78F7-DF88A12802C4";
 	setAttr ".uopa" yes;
-	setAttr -s 84 ".uvtk[0:83]" -type "float2" 0.16882098 0.093405396 0.15966153
-		 0.045207962 0.19965053 0.046741918 0.19903231 0.092964977 0.01042584 0.071344942
-		 0.021101348 0.11622846 0.20658574 0.16117668 0.23823559 0.12799725 -0.48237985 0.48768002
-		 -0.47512865 0.44206774 -0.43664384 0.44764549 -0.44270596 0.49355662 0.069420695
-		 0.10469848 0.061727718 0.05914025 0.10000396 0.051937237 0.10914707 0.097653657 0.11392912
-		 0.049503535 0.12354612 0.094826579 0.11870444 0.048824221 0.12827182 0.094197243
-		 0.13178653 0.047181964 0.14110917 0.092480183 0.147627 0.045187771 0.15077254 0.090785801
-		 0.21175504 0.046270415 0.21016246 0.092470706 0.22777575 0.047148585 0.22006601 0.092932463
-		 0.24097288 0.048209935 0.23306388 0.094034195 0.24482763 0.04871951 0.23704147 0.094576567
-		 0.05498381 0.10720986 0.047844902 0.061892048 0.047780856 0.10897958 0.040361382
-		 0.063699961 0.041017212 0.11071759 0.033121862 0.065498263 0.031342894 0.11337695
-		 0.022212312 0.068301469 -0.40440762 0.50043011 -0.39706337 0.45502412 -0.41413379
-		 0.49812728 -0.40800112 0.45265532 -0.42271319 0.49616539 -0.41734308 0.45067531 -0.42824647
-		 0.49545747 -0.42269135 0.44984305 0.15763465 -0.0016657207 0.19928724 6.4510436e-07
-		 0.21202117 0.00018634944 0.22515541 0.00065400987 0.23887318 0.0016871006 0.2502988
-		 0.0031005507 0.26492321 0.0049722809 -0.42949462 0.40243602 -0.41511872 0.40489459
-		 -0.4096213 0.40588701 -0.3999446 0.40767705 -0.38873374 0.409821 -0.37675291 0.41213
-		 0.29472476 0.1209693 0.011877198 0.02359058 0.022983007 0.020954251 0.030414134 0.019226171
-		 0.038142778 0.017466336 0.052489385 0.014332861 0.092089742 0.0065282956 0.10659263
-		 0.0041169487 0.11829415 0.0021777693 0.13187957 0.00044348277 0.14494744 -0.00075534265
-		 0.26142311 0.15249273 0.22675973 0.18248874 -0.38523847 0.45759973 0.27153724 0.096473783
-		 -0.39411843 0.50292134 0 0.026419438 0.1666103 0.047684938 0.16457376 0.0005869579
-		 0.16186166 0.0907107 0.25892752 0.050641865 -0.4691855 0.39679843 0.25161219 0.096657425;
+	setAttr -s 84 ".uvtk[0:83]" -type "float2" -0.081254363 0.6087262 0.30375385
+		 -0.044247545 -0.10911635 0.65089798 -0.10855761 0.60912424 0.43963012 -0.068044767
+		 0.42991027 -0.10891037 0.36026379 -0.14728099 0.3314566 -0.11708157 -0.14096045 0.1098682
+		 -0.14760393 0.15165785 -0.18286347 0.14654759 -0.17730939 0.10448411 0.38591644 -0.098412544
+		 0.39292073 -0.056932613 0.35807091 -0.050374418 0.34974632 -0.091998369 0.34539238
+		 -0.048158586 0.33663628 -0.089424372 0.34104452 -0.047540084 0.33233362 -0.088851348
+		 0.32913351 -0.046044834 0.32064545 -0.087287992 0.31471103 -0.04422915 0.31184712
+		 -0.085745305 -0.12005574 0.65132415 -0.1186164 0.60957098 -0.1345343 0.65053052 -0.12756673
+		 0.60915363 -0.14646113 0.6495713 -0.1393134 0.60815793 -0.14994484 0.64911079 -0.14290822
+		 0.6076678 0.39906096 -0.10069908 0.40556079 -0.059438087 0.40561908 -0.10231039 0.41237438
+		 -0.061084151 0.41177726 -0.10389281 0.41896582 -0.062721491 0.42058554 -0.10631409
+		 0.42889878 -0.065273762 -0.21239811 0.098186702 -0.21912688 0.13978729 -0.20348704
+		 0.1002965 -0.20910579 0.14195758 -0.19562662 0.10209399 -0.20054668 0.14377168 -0.19055712
+		 0.10274258 -0.19564664 0.1445342 0.3055993 -0.0015699477 -0.10878801 0.69314015 -0.12029621
+		 0.6929723 -0.13216621 0.69254965 -0.14456356 0.69161606 -0.1548894 0.69033867 -0.16810608
+		 0.68864703 -0.18941355 0.18796816 -0.20258468 0.18571565 -0.20762134 0.18480638 -0.21648705
+		 0.18316637 -0.22675836 0.1812021 -0.23773515 0.17908657 0.28004098 -0.11068483 0.43830872
+		 -0.024565332 0.42819706 -0.022165 0.42143118 -0.020591617 0.41439438 -0.018989317
+		 0.40133205 -0.01613635 0.36527669 -0.0090304445 0.35207209 -0.0068349596 0.34141812
+		 -0.0050693722 0.32904881 -0.0034903372 0.31715074 -0.0023988297 0.31035161 -0.13937703
+		 0.34190172 -0.16667885 -0.22996074 0.13742754 0.30114591 -0.088389397 -0.221825 0.095904201
+		 0.44912267 -0.027140953 -0.079256505 0.65004575 -0.077415973 0.69261026 0.30175072
+		 -0.085676923 -0.16268754 0.6473735 -0.15304905 0.19313329 -0.15607631 0.60578722;
+createNode polyTweakUV -n "polyTweakUV3";
+	rename -uid "25C631CC-40F3-F0EE-E66C-30BB4BC13E1B";
+	setAttr ".uopa" yes;
+	setAttr -s 666 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.14853543 -0.34204224 -0.14853543
+		 -0.31239623 -0.17880452 -0.31239623 -0.17880452 -0.34204224 -0.14853543 -0.28275034
+		 -0.17880452 -0.28275034 -0.086162388 -0.31239635 -0.086162388 -0.28275034 -0.11643153
+		 -0.28275034 -0.11643153 -0.31239635 -0.086162388 -0.34204227 -0.11643153 -0.34204227
+		 0.2398932 0.32051164 0.23278934 0.32051164 0.23278934 0.12251574 0.2398932 0.12251574
+		 0.22715163 0.32051164 0.22715163 0.12251574 0.24776798 0.32051164 0.24776798 0.12251574
+		 0.25564265 0.32051164 0.25564265 0.12251574 0.26274669 0.32051164 0.26274669 0.12251574
+		 0.2683844 0.32051164 0.2683844 0.12251574 -0.08933866 0.38853189 -0.09644264 0.38853189
+		 -0.09644264 0.19053599 -0.08933866 0.19053599 -0.10431731 0.38853189 -0.10431731
+		 0.19053599 -0.083700955 0.38853189 -0.083700955 0.19053599 -0.11219215 0.38853189
+		 -0.11219215 0.19053599 -0.11929601 0.38853189 -0.11929601 0.19053599 -0.12493372
+		 0.38853189 -0.12493372 0.19053599 -0.71654308 -0.14962362 -0.72440869 -0.14962362
+		 -0.72552651 -0.15421462 -0.7171306 -0.15421462 -0.71574062 -0.14538674 -0.72288251
+		 -0.14538674 -0.73065096 -0.14962362 -0.73218942 -0.15421462 -0.72620833 -0.15904646
+		 -0.71748912 -0.15904646 -0.70782381 -0.14962362 -0.70782381 -0.15421462 -0.71474338
+		 -0.14160809 -0.72098565 -0.14160809 -0.72855037 -0.14538674 -0.70782381 -0.14538674
+		 -0.73312795 -0.15904646 -0.72643745 -0.16400026 -0.71760958 -0.16400026 -0.70782381
+		 -0.15904646 -0.69910455 -0.14962362 -0.69851702 -0.15421462 -0.71357578 -0.13838089
+		 -0.7187646 -0.13838089 -0.72593951 -0.14160809 -0.70782381 -0.14160809 -0.699907
+		 -0.14538674 -0.73344332 -0.16400026 -0.72620833 -0.16895419 -0.71748912 -0.16895419
+		 -0.70782381 -0.16400026 -0.69815856 -0.15904646 -0.69123894 -0.14962362 -0.69012123
+		 -0.15421462 -0.70782381 -0.13838089 -0.70090425 -0.14160809 -0.69276512 -0.14538674
+		 -0.73312795 -0.16895419 -0.72552651 -0.17378615 -0.7171306 -0.17378615 -0.70782381
+		 -0.16895419 -0.69803804 -0.16400026 -0.6894393 -0.15904646 -0.68499666 -0.14962362
+		 -0.68345821 -0.15421462 -0.70782381 -0.13578445 -0.71226645 -0.13578445 -0.70207185
+		 -0.13838089 -0.69466197 -0.14160809 -0.68709725 -0.14538674 -0.73218942 -0.17378615
+		 -0.72440869 -0.17837703 -0.71654308 -0.17837703 -0.70782381 -0.17378615 -0.69815856
+		 -0.16895419 -0.68921018 -0.16400026 -0.68251967 -0.15904646 -0.70338124 -0.13578445
+		 -0.69688302 -0.13838089 -0.68970817 -0.14160809 -0.73065096 -0.17837703 -0.72288251
+		 -0.18261404 -0.71574062 -0.18261404 -0.70782381 -0.17837703 -0.69851702 -0.17378615
+		 -0.6894393 -0.16895419 -0.68220431 -0.16400026 -0.72855037 -0.18261404 -0.72098565
+		 -0.18639255 -0.71474338 -0.18639255 -0.70782381 -0.18261404 -0.69910455 -0.17837703
+		 -0.69012123 -0.17378615 -0.68251967 -0.16895419 -0.72593951 -0.18639255 -0.7187646
+		 -0.18961976 -0.71357578 -0.18961976 -0.70782381 -0.18639255 -0.699907 -0.18261404
+		 -0.69123894 -0.17837703 -0.68345821 -0.17378615 -0.70782381 -0.18961976 -0.70090425
+		 -0.18639255 -0.69276512 -0.18261404 -0.68499666 -0.17837703 -0.71226645 -0.19221632
+		 -0.70782381 -0.19221632 -0.70207185 -0.18961976 -0.69466197 -0.18639255 -0.68709725
+		 -0.18261404 -0.70338124 -0.19221632 -0.69688302 -0.18961976 -0.68970817 -0.18639255
+		 -0.84723675 -0.10057259 -0.85510242 -0.10057259 -0.85451478 -0.1051636 -0.84611899
+		 -0.1051636 -0.84876287 -0.096335709 -0.85590476 -0.096335709 -0.86382163 -0.10057259
+		 -0.86382163 -0.1051636 -0.85415632 -0.10999542 -0.84543711 -0.10999542 -0.84099448
+		 -0.10057259 -0.83945602 -0.1051636 -0.85065979 -0.092557065 -0.85690206 -0.092557065
+		 -0.86382163 -0.096335709 -0.84309506 -0.096335709 -0.87254083 -0.10057259 -0.87312847
+		 -0.1051636 -0.86382163 -0.10999542 -0.85403585 -0.11494923 -0.84520793 -0.11494923
+		 -0.83851755 -0.10999542 -0.85288084 -0.089329861 -0.85806966 -0.089329861 -0.86382163
+		 -0.092557065 -0.84570587 -0.092557065 -0.87173843 -0.096335709 -0.8804065 -0.10057259
+		 -0.88152426 -0.1051636 -0.87348694 -0.10999542 -0.86382163 -0.11494923 -0.85415632
+		 -0.11990317 -0.84543711 -0.11990317 -0.83820212 -0.11494923 -0.86382163 -0.089329861
+		 -0.87074125 -0.092557065 -0.87888038 -0.096335709 -0.88664877 -0.10057259 -0.88818723
+		 -0.1051636 -0.88220608 -0.10999542 -0.8736074 -0.11494923 -0.86382163 -0.11990317
+		 -0.85451478 -0.12473512 -0.84611899 -0.12473512 -0.83851755 -0.11990317 -0.85937899
+		 -0.086733431 -0.86382163 -0.086733431 -0.86957359 -0.089329861 -0.87698346 -0.092557065
+		 -0.88454819 -0.096335709 -0.8891257 -0.10999542 -0.88243526 -0.11494923 -0.87348694
+		 -0.11990317 -0.86382163 -0.12473512 -0.85510242 -0.129326 -0.84723675 -0.129326 -0.83945602
+		 -0.12473512 -0.86826426 -0.086733431 -0.87476242 -0.089329861 -0.88193733 -0.092557065
+		 -0.88944113 -0.11494923 -0.88220608 -0.11990317 -0.87312847 -0.12473512 -0.86382163
+		 -0.129326 -0.85590476 -0.13356301 -0.84876287 -0.13356301 -0.84099448 -0.129326 -0.8891257
+		 -0.11990317 -0.88152426 -0.12473512 -0.87254083 -0.129326 -0.86382163 -0.13356301
+		 -0.85690206 -0.13734153 -0.85065979 -0.13734153 -0.84309506 -0.13356301 -0.88818723
+		 -0.12473512 -0.8804065 -0.129326 -0.87173843 -0.13356301 -0.86382163 -0.13734153
+		 -0.85806966 -0.14056873 -0.85288084 -0.14056873 -0.84570587 -0.13734153 -0.88664877
+		 -0.129326 -0.87888038 -0.13356301 -0.87074125 -0.13734153 -0.86382163 -0.14056873
+		 -0.88454819 -0.13356301 -0.87698346 -0.13734153 -0.86957359 -0.14056873 -0.86382163
+		 -0.14316531 -0.85937899 -0.14316531 -0.88193733 -0.13734153 -0.87476242 -0.14056873
+		 -0.86826426 -0.14316531 0.1221664 -0.097545713 0.13582414 -0.064872146 0.13582414
+		 -0.034606006 0.1221664 -0.0019324303 0.10850859 -0.034606006 0.10850859 -0.064872146
+		 0.1508649 0.06180197 0.1508649 0.11291538 0.12126678 0.11291538 0.12126678 0.06180197
+		 0.1508649 0.16402879 0.12126678 0.16402879 0.091668874 0.11291538 0.091668874 0.06180197
+		 0.1508649 0.21514222 0.12126678 0.21514222 0.091668874 0.16402879 0.1508649 0.26625562
+		 0.12126678 0.26625562 0.091668874 0.21514222 0.091668874 0.26625562 0.27564996 -0.022071928
+		 0.27564996 0.029041484 0.24605197 0.029041484;
+	setAttr ".uvtk[250:499]" 0.24605197 -0.022071928 0.30524799 -0.022071928 0.30524799
+		 0.029041484 0.27564996 0.080154955 0.24605197 0.080154955 0.30524799 0.080154955
+		 0.27564996 0.13126838 0.24605197 0.13126838 0.30524799 0.13126838 0.27564996 0.18238181
+		 0.24605197 0.18238181 0.30524799 0.18238181 -0.10741878 -0.29355606 -0.11114186 -0.30086297
+		 -0.086213291 -0.30896279 -0.11242467 -0.30896279 -0.10161996 -0.28775722 -0.11114186
+		 -0.31706259 -0.094313085 -0.28403416 -0.10741878 -0.32436949 -0.086213291 -0.28275129
+		 -0.10161996 -0.33016834 -0.078113437 -0.28403416 -0.094313085 -0.33389139 -0.070806503
+		 -0.28775725 -0.086213291 -0.33517429 -0.065007687 -0.29355606 -0.078113437 -0.33389139
+		 -0.061284602 -0.300863 -0.070806503 -0.33016834 -0.060001791 -0.30896279 -0.065007687
+		 -0.32436949 -0.061284602 -0.31706259 -0.054359317 -0.31860071 -0.050636232 -0.32590762
+		 -0.029430747 -0.31050089 -0.044837415 -0.3317064 -0.055642128 -0.31050089 -0.037530541
+		 -0.33542946 -0.054359317 -0.30240116 -0.029430747 -0.33671236 -0.050636232 -0.29509413
+		 -0.021330893 -0.33542946 -0.044837415 -0.28929535 -0.014023989 -0.3317064 -0.037530541
+		 -0.28557229 -0.008225143 -0.32590762 -0.029430747 -0.28428936 -0.0045020878 -0.31860071
+		 -0.021330893 -0.28557229 -0.0032192469 -0.31050089 -0.014023989 -0.28929535 -0.0045020878
+		 -0.30240116 -0.008225143 -0.29509413 -0.68120772 -0.028730664 -0.68050009 -0.027341906
+		 -0.68443114 -0.024485825 -0.68582898 -0.027229104 -0.6764698 -0.030270105 -0.67939806
+		 -0.026239801 -0.68225408 -0.022308709 -0.6881662 -0.021772135 -0.69021976 -0.025802471
+		 -0.68145156 -0.030270105 -0.68631059 -0.030270105 -0.67800927 -0.025532192 -0.67951077
+		 -0.020910937 -0.68496776 -0.018573692 -0.69161332 -0.01926774 -0.69427204 -0.024485825
+		 -0.69092739 -0.030270105 -0.68120772 -0.031809542 -0.68582898 -0.033311073 -0.6764698
+		 -0.025288373 -0.6764698 -0.02042928 -0.68093747 -0.016520128 -0.68747222 -0.015126658
+		 -0.69021976 -0.03473774 -0.68050009 -0.033198304 -0.68443114 -0.036054384 -0.67493033
+		 -0.025532192 -0.67342889 -0.020910937 -0.6764698 -0.01581255 -0.68225408 -0.012467916
+		 -0.68970561 -0.012052493 -0.69468743 -0.017034221 -0.6881662 -0.038768038 -0.67939806
+		 -0.034300406 -0.68225408 -0.03823147 -0.67354167 -0.026239801 -0.67068553 -0.022308709
+		 -0.67200214 -0.016520128 -0.6764698 -0.011551773 -0.68342829 -0.0088540176 -0.69427204
+		 -0.036054384 -0.69161332 -0.041272469 -0.68496776 -0.041966517 -0.67800927 -0.035008017
+		 -0.67951077 -0.039629273 -0.67243952 -0.027341906 -0.66850841 -0.024485825 -0.66797185
+		 -0.018573692 -0.67068553 -0.012467916 -0.6764698 -0.0077519128 -0.68443114 -0.0057674916
+		 -0.69161332 -0.009426916 -0.68747222 -0.045413546 -0.68093747 -0.044020049 -0.6764698
+		 -0.035251833 -0.6764698 -0.040110894 -0.67173195 -0.028730664 -0.66711068 -0.027229104
+		 -0.6647734 -0.021772169 -0.66546738 -0.015126658 -0.66951132 -0.0088540502 -0.6764698
+		 -0.0045065209 -0.685238 -0.0032842781 -0.69314796 -0.00731458 -0.69468743 -0.043505952
+		 -0.68970561 -0.048487682 -0.68225408 -0.048072286 -0.6764698 -0.044727661 -0.67493033
+		 -0.035008017 -0.67342889 -0.039629273 -0.67148805 -0.030270105 -0.66662896 -0.030270105
+		 -0.66271991 -0.025802471 -0.66132635 -0.01926774 -0.66323394 -0.012052493 -0.66850841
+		 -0.0057674916 -0.6764698 -0.0018955185 -0.68342829 -0.051686157 -0.6764698 -0.048988432
+		 -0.67200214 -0.044020049 -0.67354167 -0.034300406 -0.67068553 -0.03823147 -0.67173195
+		 -0.031809542 -0.66711068 -0.033311073 -0.66201228 -0.030270105 -0.65866762 -0.024485825
+		 -0.65825218 -0.017034255 -0.66132635 -0.0094269477 -0.6677016 -0.0032842781 -0.69161332
+		 -0.051113259 -0.68443114 -0.054772712 -0.6764698 -0.052788258 -0.67068553 -0.048072286
+		 -0.66797185 -0.041966517 -0.67243952 -0.033198304 -0.66850841 -0.036054384 -0.66271991
+		 -0.03473774 -0.65979159 -0.00731458 -0.69314796 -0.053225596 -0.685238 -0.057255898
+		 -0.6764698 -0.056033656 -0.66951132 -0.051686157 -0.66546738 -0.045413546 -0.6647734
+		 -0.038768038 -0.6764698 -0.058644656 -0.66850841 -0.054772712 -0.66323394 -0.048487682
+		 -0.66132635 -0.041272469 -0.65866762 -0.036054384 -0.6677016 -0.057255898 -0.66132635
+		 -0.051113259 -0.65825218 -0.043505952 -0.65979159 -0.053225629 -0.4310756 -0.32436278
+		 -0.42609382 -0.32934445 -0.4238604 -0.32627031 -0.42800149 -0.32212922 -0.41981649
+		 -0.33254302 -0.41864222 -0.32892913 -0.42135596 -0.32282335 -0.42455441 -0.31962481
+		 -0.42800149 -0.33197004 -0.42081934 -0.33562952 -0.41285798 -0.33364511 -0.41285798
+		 -0.32984522 -0.41732568 -0.32487684 -0.41864222 -0.31908822 -0.42081934 -0.31691119
+		 -0.43066019 -0.31691119 -0.42660794 -0.31559449 -0.42953613 -0.33408242 -0.42162621
+		 -0.33811271 -0.41285798 -0.33689049 -0.40589947 -0.33254302 -0.40707374 -0.32892913
+		 -0.41285798 -0.32558453 -0.41589892 -0.32048598 -0.41578618 -0.3151572 -0.4168883
+		 -0.31405509 -0.42221716 -0.31416789 -0.41285798 -0.3395015 -0.40489662 -0.33562952
+		 -0.39962205 -0.32934445 -0.40185556 -0.32627031 -0.40839034 -0.32487684 -0.41285798
+		 -0.32096767 -0.41439739 -0.31586486 -0.41285798 -0.31112689 -0.41759589 -0.3126663
+		 -0.42731553 -0.31112689 -0.4226988 -0.31112689 -0.40408978 -0.33811271 -0.39771447
+		 -0.33197004 -0.39464033 -0.32436278 -0.39771447 -0.32212922 -0.40436003 -0.32282335
+		 -0.40981704 -0.32048598 -0.41285798 -0.31610867 -0.41783971 -0.31112689 -0.42660794
+		 -0.30665928 -0.42221716 -0.30808589 -0.39617974 -0.33408242 -0.40116155 -0.31962481
+		 -0.40707374 -0.31908822 -0.41131854 -0.31586486 -0.41759589 -0.30958748 -0.42455441
+		 -0.30262899 -0.42081934 -0.30534258 -0.39505574 -0.31691119 -0.39910802 -0.31559449
+		 -0.40489662 -0.31691119 -0.40992978 -0.3151572 -0.4168883 -0.30819869 -0.42800149
+		 -0.30012456 -0.43066019 -0.30534258 -0.42135596 -0.29943052 -0.41864222 -0.30316556
+		 -0.40349883 -0.31416789 -0.40882766 -0.31405509 -0.41578618 -0.30709657 -0.4238604
+		 -0.29598346 -0.41732568 -0.29737693 -0.41589892 -0.30176777 -0.39840043 -0.31112689
+		 -0.40301713 -0.31112689 -0.40812007 -0.3126663 -0.41439739 -0.30638903 -0.42609382
+		 -0.29290932 -0.4310756 -0.29789099 -0.41864222 -0.29332474 -0.41285798 -0.29666939
+		 -0.41285798 -0.3012861 -0.39910802 -0.30665928 -0.40349883 -0.30808589 -0.40787622
+		 -0.31112689 -0.41285798 -0.3061451;
+	setAttr ".uvtk[500:665]" -0.41981649 -0.28971076 -0.41285798 -0.29240856 -0.40839034
+		 -0.29737693 -0.40981704 -0.30176777 -0.40116155 -0.30262899 -0.40489662 -0.30534258
+		 -0.40812007 -0.30958748 -0.41131854 -0.30638903 -0.42081934 -0.28662425 -0.42800149
+		 -0.29028374 -0.41285798 -0.28860867 -0.40707374 -0.29332474 -0.40436003 -0.29943052
+		 -0.40707374 -0.30316556 -0.39505574 -0.30534258 -0.39771447 -0.30012456 -0.40882766
+		 -0.30819869 -0.40992978 -0.30709657 -0.42162621 -0.28414103 -0.42953613 -0.28817135
+		 -0.41285798 -0.28536329 -0.40589947 -0.28971076 -0.40185556 -0.29598346 -0.41285798
+		 -0.28275239 -0.40489662 -0.28662425 -0.39962205 -0.29290932 -0.39464033 -0.29789099
+		 -0.40408978 -0.28414103 -0.39771447 -0.29028374 -0.39617974 -0.28817135 0.93033576
+		 -0.70697629 0.93033576 -0.0018935055 0.9003734 -0.0018935055 0.9003734 -0.70697629
+		 0.91535455 -0.72675931 0.96268141 -0.0018935055 0.96268141 -0.66426253 0.86802775
+		 -0.0018935055 0.86802775 -0.66426253 0.75789714 -0.72681177 0.75789714 -0.02172894
+		 0.74291593 -0.0019458337 0.72793478 -0.02172894 0.72793478 -0.72681177 0.79024279
+		 -0.72681177 0.79024279 -0.06444259 0.69558913 -0.72681177 0.69558913 -0.06444259
+		 0.38322258 0.25326329 0.37346607 0.30445951 0.36270991 0.30445951 0.35295346 0.25326329
+		 0.37346607 0.35565573 0.36270991 0.35565573 0.37346607 0.40685198 0.36270991 0.40685198
+		 0.38322258 0.45804816 0.35295346 0.45804816 0.27731869 0.25234836 0.26756218 0.30354458
+		 0.25680605 0.30354458 0.24704957 0.25234836 0.26756218 0.3547408 0.25680605 0.3547408
+		 0.26756218 0.40593702 0.25680605 0.40593702 0.27731869 0.4571332 0.24704957 0.4571332
+		 -0.63714665 -0.037878692 -0.6299234 -0.037878692 -0.6299234 0.16344374 -0.63714665
+		 0.16344374 -0.62191629 -0.037878692 -0.62191629 0.16344374 -0.61390924 -0.037878692
+		 -0.61390924 0.16344374 -0.606686 -0.037878692 -0.606686 0.16344374 -0.050318718 0.45573616
+		 -0.057541966 0.45573616 -0.057541966 0.25441366 -0.050318718 0.25441366 -0.065549076
+		 0.45573616 -0.065549076 0.25441366 -0.073556125 0.45573616 -0.073556125 0.25441366
+		 -0.080779433 0.45573616 -0.080779433 0.25441366 -0.14406967 -0.28639275 -0.14406967
+		 -0.29454485 -0.13931146 -0.29393592 -0.13931146 -0.28523433 -0.14406967 -0.30358168
+		 -0.13931146 -0.30358168 -0.13430363 -0.29356435 -0.13430363 -0.28452766 -0.14406967
+		 -0.31261849 -0.13931146 -0.31322742 -0.13430363 -0.30358168 -0.12916937 -0.29343948
+		 -0.12916937 -0.28429005 -0.14406967 -0.32077062 -0.13931146 -0.32192904 -0.13430363
+		 -0.31359899 -0.12916937 -0.30358168 -0.124035 -0.29356435 -0.124035 -0.28452766 -0.13430363
+		 -0.32263571 -0.12916937 -0.31372398 -0.124035 -0.30358168 -0.11902708 -0.29393592
+		 -0.11902708 -0.28523433 -0.12916937 -0.32287329 -0.124035 -0.31359899 -0.11902708
+		 -0.30358168 -0.11426896 -0.29454485 -0.11426896 -0.28639275 -0.124035 -0.32263571
+		 -0.11902708 -0.31322742 -0.11426896 -0.30358168 -0.11902708 -0.32192904 -0.11426896
+		 -0.31261849 -0.11426896 -0.32077062 0.17787087 -0.3207705 0.17787087 -0.31261837
+		 0.17311263 -0.3132273 0.17311263 -0.32192892 0.17787087 -0.30358154 0.17311263 -0.30358154
+		 0.16810483 -0.31359887 0.16810483 -0.32263559 0.17787087 -0.29454473 0.17311263 -0.29393581
+		 0.16810483 -0.30358154 0.16297057 -0.31372386 0.16297057 -0.32287318 0.17787087 -0.2863926
+		 0.17311263 -0.28523418 0.16810483 -0.2935642 0.16297057 -0.30358154 0.1578362 -0.31359887
+		 0.1578362 -0.32263559 0.16810483 -0.28452751 0.16297057 -0.29343936 0.1578362 -0.30358154
+		 0.15282828 -0.3132273 0.15282828 -0.32192892 0.16297057 -0.28429005 0.1578362 -0.2935642
+		 0.15282828 -0.30358154 0.14807016 -0.31261837 0.14807016 -0.3207705 0.1578362 -0.28452751
+		 0.15282828 -0.29393581 0.14807016 -0.30358154 0.15282828 -0.28523418 0.14807016 -0.29454473
+		 0.14807016 -0.2863926 -0.28162879 -0.06239327 -0.28162879 -0.04327362 -0.29469609
+		 -0.0019920319 -0.30776346 -0.04327362 -0.30776346 -0.06239327 -0.29469609 -0.0019920319
+		 -0.28162879 -0.04327362 -0.30776346 -0.04327362;
+createNode polyTweakUV -n "polyTweakUV4";
+	rename -uid "08993E79-4D06-1FCC-DCD1-1699DEF7BE4F";
+	setAttr ".uopa" yes;
+	setAttr -s 42 ".uvtk[0:41]" -type "float2" -0.2092216 0.51168472 -0.22735241
+		 0.51168472 -0.11666407 0.10594541 -0.096659318 0.10594541 -0.22735241 -0.29979378
+		 -0.2092216 -0.29979378 0.30195528 0.6006636 0.28382456 0.6006636 0.17126226 0.19492447
+		 0.19126695 0.19492447 0.28382456 -0.2108146 0.30195528 -0.2108146 -0.59065771 -0.12850595
+		 -0.59065771 -0.065199643 -0.60878843 -0.065199643 -0.60878843 -0.12850595 -0.59065771
+		 -0.001893342 -0.60878843 -0.001893342 0.068817854 -0.12850599 0.068817854 -0.065199666
+		 0.050687015 -0.065199666 0.050687015 -0.12850599 0.068817854 -0.001893342 0.050687015
+		 -0.001893342 0.96827173 0.26920423 0.90542883 0.26920423 0.90542883 -0.13356483 0.96827173
+		 -0.13356483 0.84258592 0.26920423 0.84258592 -0.13356483 0.90542883 -0.5363338 0.96827173
+		 -0.5363338 0.84258592 -0.5363338 0.60158312 0.19468409 0.53873444 0.19468409 0.53873444
+		 -0.20812196 0.60158312 -0.20812196 0.60158312 0.59749019 0.53873444 0.59749019 0.47588578
+		 0.19468409 0.47588578 -0.20812196 0.47588578 0.59749019;
+createNode polyTweakUV -n "polyTweakUV5";
+	rename -uid "6582A406-4F6A-636D-5A0E-EDAE5C8925E5";
+	setAttr ".uopa" yes;
+	setAttr -s 60 ".uvtk[0:59]" -type "float2" -0.31596825 0.28350931 -0.31596825
+		 0.47776374 -0.47464463 0.47776374 -0.47464463 0.28350931 -0.57645237 0.47776374 -0.57645237
+		 0.28350931 -0.47464463 0.18646744 -0.31596825 0.18646744 -0.31596825 0.13790807 -0.47464463
+		 0.13790807 -0.31596825 0.10236096 -0.47464463 0.10236096 -0.57853097 -0.37693709
+		 -0.57853097 -0.18268263 -0.73720735 -0.18268263 -0.73720735 -0.37693709 -0.57853097
+		 -0.085640728 -0.73720735 -0.085640728 -0.83901507 -0.18268263 -0.83901507 -0.37693709
+		 -0.57853097 -0.037081376 -0.73720735 -0.037081376 -0.57853097 -0.0015342431 -0.73720735
+		 -0.0015342431 0.91666794 0.58564252 0.67339885 0.58564252 0.67339885 0.38920027 0.91666794
+		 0.38920027 0.85585678 0.20601162 0.90037364 0.24195912 0.91666794 0.29106539 0.67339885
+		 0.29106539 0.68969315 0.24195912 0.73421001 0.20601162 0.7950334 0.19285405 -0.33752584
+		 -0.71215695 -0.30157834 -0.66764009 -0.28842074 -0.60681671 -0.30157834 -0.54599327
+		 -0.33752584 -0.50147641 -0.38663211 -0.48518214 -0.48476693 -0.48518214 -0.48476693
+		 -0.72845125 -0.38663211 -0.72845125 -0.32828173 -0.48388293 -0.57155085 -0.48388293
+		 -0.57155085 -0.64434648 -0.32828173 -0.64434648 -0.38813028 -0.38092861 -0.5117023
+		 -0.38092861 0.22769165 -0.37879527 0.1670526 -0.37879527 0.1670526 -0.53877252 0.22769165
+		 -0.53877252 0.28833073 -0.37879527 0.28833073 -0.53877252 0.12339339 -0.68317121
+		 0.12339339 -0.4399021 0.020439088 -0.49975061 0.020439088 -0.62332261;
+createNode polyTweakUV -n "polyTweakUV6";
+	rename -uid "B6B880DB-4647-A370-CA72-F696C707F7C2";
+	setAttr ".uopa" yes;
+	setAttr -s 60 ".uvtk[0:59]" -type "float2" 0.056599408 -0.19578867 0.056599408
+		 -0.0015342431 -0.10207698 -0.0015342431 -0.10207698 -0.19578867 -0.20388469 -0.0015342431
+		 -0.20388469 -0.19578867 -0.10207698 -0.29283053 0.056599408 -0.29283053 0.056599408
+		 -0.34138992 -0.10207698 -0.34138992 0.056599408 -0.37693703 -0.10207698 -0.37693703
+		 -0.65508598 -0.37693709 -0.65508598 -0.18268263 -0.81376237 -0.18268263 -0.81376237
+		 -0.37693709 -0.65508598 -0.085640728 -0.81376237 -0.085640728 -0.91557008 -0.18268263
+		 -0.91557008 -0.37693709 -0.65508598 -0.037081376 -0.81376237 -0.037081376 -0.65508598
+		 -0.0015342431 -0.81376237 -0.0015342431 0.93197894 0.48215684 0.68870986 0.48215684
+		 0.68870986 0.28571457 0.93197894 0.28571457 0.87116778 0.10252598 0.91568464 0.13847348
+		 0.93197894 0.18757975 0.68870986 0.18757975 0.70500416 0.13847348 0.74952102 0.10252598
+		 0.8103444 0.089368403 -0.046616822 -0.33239737 -0.010669351 -0.28788048 0.0024882555
+		 -0.22705713 -0.010669351 -0.16623372 -0.046616822 -0.12171686 -0.095723122 -0.10542256
+		 -0.19385794 -0.10542256 -0.19385794 -0.34869167 -0.095723122 -0.34869167 -0.19048274
+		 -0.36529836 -0.43375188 -0.36529836 -0.43375188 -0.5257619 -0.19048274 -0.5257619
+		 -0.25033128 -0.26234406 -0.37390327 -0.26234406 0.52880794 -0.31990248 0.46816894
+		 -0.31990248 0.46816894 -0.47987974 0.52880794 -0.47987974 0.58944702 -0.31990248
+		 0.58944702 -0.47987974 -0.30021092 -0.64084518 -0.30021092 -0.39757606 -0.40316525
+		 -0.45742461 -0.40316525 -0.58099657;
+createNode polyTweakUV -n "polyTweakUV7";
+	rename -uid "B74DE6F9-4FD3-B049-204F-0B9C3650191F";
+	setAttr ".uopa" yes;
+	setAttr -s 402 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.16856217 0.45584869 -0.1653371 0.46217817
+		 -0.18325379 0.47499138 -0.18962452 0.46248817 -0.1469681 0.44891721 -0.16031396 0.46720135
+		 -0.17333119 0.484914 -0.20027702 0.48714826 -0.20963651 0.46877927 -0.16967343 0.44883239
+		 -0.19181965 0.44862825 -0.15398443 0.47042644 -0.16082799 0.49128467 -0.18569928
+		 0.50172597 -0.21598759 0.49843818 -0.22810541 0.47465563 -0.21286152 0.44841707 -0.16856213
+		 0.441816 -0.18962446 0.43476835 -0.1469681 0.47153771 -0.1469681 0.49347991 -0.16733029
+		 0.51108551 -0.19711369 0.51731205 -0.22999871 0.50859851 -0.24457642 0.4799881 -0.23228084
+		 0.44829249 -0.20963646 0.42805484 -0.16533709 0.4354865 -0.18325379 0.42226517 -0.13995177
+		 0.47042644 -0.13310818 0.49128467 -0.1469681 0.51431048 -0.17333119 0.52942985 -0.20729335
+		 0.53130382 -0.24196531 0.5172928 -0.25864401 0.48455894 -0.24959952 0.44827324 -0.22810532
+		 0.42192945 -0.20027699 0.40968585 -0.16031396 0.43046334 -0.17333119 0.41234258 -0.13362223
+		 0.46720135 -0.12060499 0.48491398 -0.1266059 0.51108551 -0.1469681 0.53360534 -0.17868295
+		 0.54588157 -0.21598759 0.54327047 -0.25159279 0.52428752 -0.26996177 0.48823631 -0.26439103
+		 0.44827324 -0.24457639 0.41655836 -0.21598756 0.39814693 -0.18569927 0.39510813 -0.15398441
+		 0.42723829 -0.16082799 0.40597191 -0.12859908 0.46217817 -0.11068239 0.47499138 -0.10823689
+		 0.50172597 -0.12060499 0.52942985 -0.1469681 0.55090475 -0.18325379 0.55994916 -0.22298236
+		 0.55289793 -0.25864401 0.52941054 -0.27825105 0.49092966 -0.27629119 0.44827324 -0.25864398
+		 0.41198754 -0.22999863 0.38794798 -0.19711368 0.37927306 -0.16733029 0.38574868 -0.1469681
+		 0.42612702 -0.1469681 0.40377668 -0.12537403 0.45584869 -0.10431169 0.46248817 -0.09365917
+		 0.48714823 -0.096822485 0.51731205 -0.11525322 0.54588157 -0.1469681 0.56569624 -0.18693113
+		 0.57126689 -0.22810541 0.55994916 -0.26294544 0.53253573 -0.28330767 0.49257261 -0.28500706
+		 0.44827324 -0.26996168 0.40831023 -0.24196526 0.37925377 -0.20729332 0.36524269 -0.17333119
+		 0.36715528 -0.1469681 0.3825236 -0.13995177 0.42723829 -0.13310818 0.40597188 -0.12426276
+		 0.44883239 -0.10211652 0.44862825 -0.084299691 0.46877927 -0.0779486 0.49843812 -0.086642832
+		 0.53130382 -0.11068239 0.55994916 -0.1469681 0.57759649 -0.18962447 0.57955617 -0.23123057
+		 0.56425059 -0.26439109 0.53358603 -0.28500715 0.49312487 -0.29032391 0.44827324 -0.27825093
+		 0.40561688 -0.25159273 0.37225899 -0.21598756 0.35327604 -0.17868294 0.35066494 -0.1469681
+		 0.36297974 -0.1266059 0.38574868 -0.13362223 0.43046334 -0.12060499 0.41234258 -0.12537403
+		 0.441816 -0.10431169 0.43476835 -0.08107464 0.44841707 -0.065830812 0.4746556 -0.0639375
+		 0.50859851 -0.077948585 0.54327047 -0.10700503 0.57126689 -0.1469681 0.58631223 -0.19126749
+		 0.58461279 -0.23228092 0.56569624 -0.29211086 0.44827324 -0.28330758 0.40397388 -0.25864398
+		 0.36713594 -0.2229823 0.34364864 -0.18325379 0.33659738 -0.1469681 0.34564182 -0.12060499
+		 0.36715528 -0.1082369 0.39510813 -0.12859908 0.4354865 -0.11068239 0.42226517 -0.084299691
+		 0.42805484 -0.061655309 0.44829249 -0.04935978 0.4799881 -0.051970903 0.51729274
+		 -0.070953831 0.55289793 -0.10431169 0.57955617 -0.1469681 0.59162909 -0.1918197 0.58631223
+		 -0.28500706 0.40342167 -0.26294535 0.36401081 -0.22810532 0.33659738 -0.18693113
+		 0.32527965 -0.1469681 0.3308503 -0.11525324 0.35066494 -0.0968225 0.37927306 -0.09365917
+		 0.40968585 -0.065830812 0.42192945 -0.044336647 0.44827324 -0.035292201 0.48455894
+		 -0.042343453 0.52428746 -0.065830797 0.55994916 -0.10266868 0.58461279 -0.1469681
+		 0.59341604 -0.26439103 0.36296049 -0.2312305 0.33229595 -0.18962446 0.31699041 -0.1469681
+		 0.31895012 -0.11068239 0.33659738 -0.086642854 0.36524269 -0.0779486 0.39814693 -0.04935978
+		 0.41655836 -0.029545113 0.44827324 -0.023974447 0.48823631 -0.035292193 0.52941054
+		 -0.062705636 0.56425059 -0.1021165 0.58631229 -0.23228084 0.3308503 -0.19126746 0.31193376
+		 -0.1469681 0.31023431 -0.10700504 0.32527962 -0.0779486 0.35327604 -0.0639375 0.38794798
+		 -0.035292201 0.41198754 -0.017644918 0.44827324 -0.015685197 0.49092963 -0.030990778
+		 0.53253567 -0.061655298 0.56569624 -0.19181964 0.31023431 -0.1469681 0.30491745 -0.10431169
+		 0.31699041 -0.070953846 0.34364864 -0.05197091 0.37925377 -0.023974447 0.40831023
+		 -0.0089290999 0.44827324 -0.010628588 0.49257264 -0.029545104 0.53358603 -0.1469681
+		 0.30313051 -0.10266871 0.31193376 -0.065830812 0.33659738 -0.042343453 0.37225899
+		 -0.015685197 0.40561688 -0.0036122566 0.44827324 -0.0089290999 0.49312484 -0.10211652
+		 0.31023431 -0.062705651 0.33229592 -0.035292201 0.36713594 -0.010628588 0.40397385
+		 -0.0018253135 0.44827324 -0.061655309 0.3308503 -0.030990785 0.36401081 -0.0089290999
+		 0.40342167 -0.029545113 0.36296049 -0.14488226 -0.14457113 -0.12428826 -0.18498909
+		 -0.12284416 -0.18393987 -0.1431846 -0.14401948 -0.092212439 -0.21706492 -0.091163158
+		 -0.21562082 -0.11854738 -0.18081802 -0.13813341 -0.14237827 -0.15197837 -0.099767447
+		 -0.15019333 -0.099767447 -0.05179441 -0.23765892 -0.051242828 -0.23596126 -0.088041365
+		 -0.21132398 -0.11150366 -0.17570049 -0.12985301 -0.13968778 -0.1448822 -0.099767447
+		 -0.1448822 -0.054963827 -0.14318454 -0.055515468 -0.0069907904 -0.24475515 -0.0069907904
+		 -0.24297011 -0.049601614 -0.23091006 -0.08292377 -0.20428032 -0.10188645 -0.16871321
+		 -0.11854738 -0.13601434 -0.13617563 -0.099767447 -0.13813335 -0.057156622 -0.1242882
+		 -0.014545858 -0.1228441 -0.015595078 0.037812829 -0.23765892 0.037261248 -0.23596126
+		 -0.0069907904 -0.23765892 -0.04691112 -0.22262967 -0.075936556 -0.19466311 -0.089932621
+		 -0.16002822 -0.10449475 -0.13144839 -0.1242882 -0.099767447 -0.12985295 -0.059847116
+		 -0.11854726 -0.018716872 -0.092212379 0.017530024 -0.091163158 0.016085863 0.078230798
+		 -0.21706492 0.077181578 -0.21562082 0.035620034 -0.23091006 -0.0069907904 -0.22895241
+		 -0.043237746 -0.21132398 -0.067251563 -0.18270934 -0.075936556 -0.14988047 -0.088041365
+		 -0.12612343 -0.10951251 -0.099767447;
+	setAttr ".uvtk[250:401]" -0.11854726 -0.063520551 -0.11150354 -0.023834467
+		 -0.088041306 0.011789083 -0.05179441 0.038123965 -0.051242828 0.036426306 0.11030668
+		 -0.18498904 0.10886255 -0.18393981 0.074059784 -0.21132398 0.032929599 -0.22262967
+		 -0.0069907904 -0.21706492 -0.038671732 -0.19727141 -0.057082832 -0.16873425 -0.060242772
+		 -0.13860697 -0.069592178 -0.12025762 -0.092212379 -0.099788487 -0.10449475 -0.068086505
+		 -0.10188639 -0.030821741 -0.08292377 0.0047453046 -0.049601555 0.03137511 -0.0069907904
+		 0.045220137 -0.0069907904 0.043435156 0.13090065 -0.14457113 0.12920299 -0.14401948
+		 0.10456574 -0.18081802 0.068942249 -0.20428026 0.029256105 -0.21132398 -0.0069907904
+		 -0.20228916 -0.033325732 -0.18083906 -0.045680642 -0.15316916 -0.043237746 -0.12646824
+		 -0.049601614 -0.11397845 -0.072813809 -0.099917173 -0.088041306 -0.073453546 -0.089932621
+		 -0.039506674 -0.075936496 -0.0048718452 -0.04691112 0.023094714 -0.0069907904 0.038123965
+		 0.037812829 0.038123965 0.037261248 0.036426306 0.13799682 -0.099767447 0.13621184
+		 -0.099767447 0.1241518 -0.14237827 0.097521991 -0.17570043 0.061954975 -0.19466311
+		 0.024690151 -0.19727141 -0.0069907904 -0.18501008 -0.027331173 -0.16251856 -0.033325732
+		 -0.13638026 -0.02534014 -0.11367321 -0.028561771 -0.10735047 -0.05179441 -0.1001333
+		 -0.069592178 -0.079576731 -0.075936496 -0.049696505 -0.067251503 -0.016825676 -0.043237686
+		 0.011789083 -0.0069907904 0.029417455 0.035620034 0.03137511 0.078230798 0.017530024
+		 0.077181578 0.016085923 0.13090065 -0.054963827 0.12920299 -0.055515409 0.13090065
+		 -0.099767447 0.1158714 -0.13968778 0.087904871 -0.16871321 0.053269982 -0.18270928
+		 0.019344151 -0.18083906 -0.0069907904 -0.16574019 -0.020835876 -0.14274412 -0.020322382
+		 -0.11869097 -0.0069907904 -0.10042816 -0.029671848 -0.10034162 -0.049601555 -0.086288273
+		 -0.060242653 -0.061227381 -0.057082772 -0.030842781 -0.038671732 -0.0022634864 -0.0069907904
+		 0.017530024 0.03292954 0.023094714 0.074059725 0.011789083 0.11030665 -0.014545858
+		 0.10886255 -0.015595078 0.1241518 -0.057156622 0.12219414 -0.099767447 0.10456571
+		 -0.13601434 0.07595104 -0.16002822 0.043101251 -0.16873425 0.013349652 -0.16251856
+		 -0.0069907904 -0.14493698 -0.013999641 -0.1219126 -0.028561711 -0.093332827 -0.043237686
+		 -0.073798418 -0.045680583 -0.046665251 -0.033325672 -0.018737912 -0.0069907904 0.002754271
+		 0.029256105 0.011789083 0.068942249 0.0047453046 0.10456571 -0.018716872 0.1158714
+		 -0.059847116 0.11030665 -0.099767447 0.0905132 -0.13144839 0.061954975 -0.14988047
+		 0.031699002 -0.1531691 0.0068542957 -0.14274412 -0.0069907904 -0.12302268 -0.02534014
+		 -0.087010026 -0.033325672 -0.063886404 -0.027331173 -0.037315726 -0.0069907904 -0.014566898
+		 0.024690151 -0.0022634864 0.061954916 -0.0048718452 0.097521991 -0.023834467 0.10456571
+		 -0.063520551 0.095530987 -0.099767447 0.074059725 -0.12612343 0.046261132 -0.13860697
+		 0.019344151 -0.13638026 1.8060207e-05 -0.1219126 -0.020322382 -0.081992269 -0.020835876
+		 -0.057522535 -0.0069907904 -0.034094155 0.019344151 -0.018737912 0.053269982 -0.016825676
+		 0.087904811 -0.030821741 0.0905132 -0.068086505 0.078230798 -0.099788487 0.055610597
+		 -0.12025756 0.029256105 -0.12646824 0.0063408017 -0.11869097 -0.013999641 -0.078770638
+		 -0.0069907904 -0.05532968 0.013349652 -0.037315726 0.043101192 -0.030842781 0.07595104
+		 -0.039506674 0.074059725 -0.073453546 0.058832228 -0.099917173 0.035620034 -0.11397845
+		 0.011358619 -0.11367321 -0.0069907904 -0.077660561 0.0068542957 -0.057522535 0.031699002
+		 -0.046665251 0.061954916 -0.049696505 0.055610597 -0.079576731 0.037812829 -0.1001333
+		 0.01458025 -0.10735047 1.8060207e-05 -0.078770638 0.019344151 -0.063886404 0.046261132
+		 -0.061227381 0.035620034 -0.086288273 0.015690267 -0.10034162 0.0063408017 -0.081992269
+		 0.029256105 -0.073798418 0.01458025 -0.093332827 0.011358619 -0.087010026;
+createNode polyTweakUV -n "polyTweakUV8";
+	rename -uid "4F4B08A0-4E27-3B09-6370-7CB3ECF8BAA9";
+	setAttr ".uopa" yes;
+	setAttr -s 275 ".uvtk";
+	setAttr ".uvtk[0:249]" -type "float2" -0.21238759 0.6205582 -0.21238759 0.66751528
+		 -0.23873812 0.6662963 -0.23873812 0.61991739 -0.1223096 0.6205582 -0.1223096 0.66751528
+		 -0.21238759 0.70478052 -0.23873812 0.70310277 -0.26443982 0.66266936 -0.26443982
+		 0.61801064 -0.21238759 0.56850594 -0.23873812 0.56850594 -0.1223096 0.56850594 -0.1223096
+		 0.70478052 -0.26443982 0.69811076 -0.28885978 0.65672386 -0.28885978 0.61488485 -0.26443982
+		 0.56850594 -0.21238759 0.51645374 -0.23873812 0.51709461 -0.1223096 0.51645374 -0.28885978
+		 0.68992752 -0.31139678 0.64860612 -0.31139678 0.6106171 -0.28885978 0.56850594 -0.26443982
+		 0.51900136 -0.21238759 0.46949679 -0.23873812 0.47071573 -0.1223096 0.46949679 -0.31139678
+		 0.67875439 -0.33149582 0.63851607 -0.33149582 0.60531247 -0.31139678 0.56850594 -0.28885978
+		 0.52212703 -0.26443982 0.47434258 -0.21238759 0.43223146 -0.23873812 0.43390921 -0.1223096
+		 0.43223146 -0.33149582 0.66486669 -0.34866211 0.62670219 -0.34866211 0.59910154 -0.33149582
+		 0.56850594 -0.31139678 0.52639484 -0.28885978 0.48028809 -0.26443982 0.43890119 -0.34866211
+		 0.56850594 -0.33149582 0.53169948 -0.31139678 0.48840579 -0.28885978 0.44708449 -0.36247274
+		 0.59213722 -0.36247274 0.56850594 -0.34866211 0.53791046 -0.33149582 0.49849588 -0.31139678
+		 0.45825759 -0.36247274 0.54487467 -0.34866211 0.51030982 -0.33149582 0.47214538 0.080005646
+		 -0.69783604 0.080005646 -0.65087903 0.053655088 -0.65023816 0.053655088 -0.69661707
+		 0.17008364 -0.69783604 0.17008364 -0.65087903 0.080005646 -0.59882683 0.053655088
+		 -0.59882683 0.027953386 -0.6483314 0.027953386 -0.69299018 0.080005646 -0.7351014
+		 0.053655088 -0.73342359 0.17008364 -0.7351014 0.17008364 -0.59882683 0.080005646
+		 -0.54677457 0.053655088 -0.54741544 0.027953386 -0.59882683 0.0035334229 -0.64520574
+		 0.0035334229 -0.68704468 0.027953386 -0.72843158 0.17008364 -0.54677457 0.080005646
+		 -0.49981758 0.053655088 -0.50103652 0.027953386 -0.54932219 0.0035334229 -0.59882683
+		 -0.01900357 -0.64093798 -0.01900357 -0.67892694 0.0035334229 -0.72024834 0.17008364
+		 -0.49981758 0.080005646 -0.46255231 0.053655088 -0.46423009 0.027953386 -0.50466341
+		 0.0035334229 -0.55244792 -0.01900357 -0.59882683 -0.039102614 -0.63563335 -0.039102614
+		 -0.66883689 -0.01900357 -0.70907527 0.17008364 -0.46255231 0.027953386 -0.46922204
+		 0.0035334229 -0.51060897 -0.01900357 -0.55671567 -0.039102614 -0.59882683 -0.056268871
+		 -0.62942231 -0.056268871 -0.65702295 -0.039102614 -0.69518751 0.0035334229 -0.47740534
+		 -0.01900357 -0.51872665 -0.039102614 -0.5620203 -0.056268871 -0.59882683 -0.01900357
+		 -0.48857844 -0.039102614 -0.5288167 -0.056268871 -0.56823128 -0.070079505 -0.59882683
+		 -0.070079505 -0.62245804 -0.039102614 -0.5024662 -0.056268871 -0.54063064 -0.070079505
+		 -0.57519561 0.64394331 0.063135594 0.67006755 0.037011355 0.68177998 0.053132206
+		 0.66006416 0.074848056 0.702986 0.020238608 0.70914358 0.039189786 0.69491315 0.071208417
+		 0.6781404 0.087981164 0.66006422 0.023242921 0.69772691 0.0040528178 0.73947632 0.014459133
+		 0.73947632 0.034385592 0.71604812 0.060439616 0.70914358 0.090794921 0.69772691 0.10221162
+		 0.64612174 0.10221162 0.66737163 0.10911614 0.65201616 0.012165785 0.69349581 -0.0089691281
+		 0.73947632 -0.0025596321 0.7759667 0.020238608 0.76980907 0.039189786 0.73947632
+		 0.056728959 0.72352946 0.08346495 0.72412091 0.11140943 0.71834141 0.11718896 0.6903969
+		 0.1165975 0.73947632 -0.016251713 0.7812258 0.0040528178 0.8088851 0.037011415 0.79717261
+		 0.053132266 0.76290458 0.060439676 0.73947632 0.080939204 0.73140353 0.10769877 0.73947632
+		 0.13254437 0.71463072 0.12447155 0.663661 0.13254437 0.68787122 0.13254437 0.78545684
+		 -0.0089691281 0.81888849 0.023242921 0.83500928 0.063135624 0.81888849 0.074848086
+		 0.7840395 0.071208417 0.75542319 0.08346495 0.73947632 0.10642016 0.71335214 0.13254437
+		 0.66737163 0.15597263 0.69039696 0.14849123 0.82693642 0.012165844 0.80081224 0.087981224
+		 0.76980907 0.090794921 0.74754918 0.10769877 0.71463078 0.14061719 0.6781404 0.17710754
+		 0.69772691 0.16287708 0.83283091 0.10221162 0.81158108 0.10911614 0.7812258 0.10221162
+		 0.75483173 0.11140946 0.71834141 0.14789979 0.66006422 0.19024065 0.64612174 0.16287708
+		 0.69491315 0.19388027 0.70914358 0.17429379 0.78855574 0.1165975 0.76061124 0.11718896
+		 0.72412091 0.15367928 0.6817801 0.2119565 0.71604812 0.20464905 0.72352946 0.18162376
+		 0.8152917 0.13254437 0.79108149 0.13254437 0.76432192 0.12447155 0.73140353 0.15738994
+		 0.67006761 0.22807728 0.64394337 0.2019531 0.70914358 0.22589892 0.73947632 0.20835975
+		 0.73947632 0.18414949 0.81158108 0.15597263 0.78855574 0.14849123 0.7656005 0.13254437
+		 0.73947632 0.15866858 0.702986 0.24485007 0.73947632 0.23070316 0.76290452 0.20464909
+		 0.75542319 0.18162376 0.80081224 0.17710754 0.7812258 0.16287713 0.76432192 0.14061719
+		 0.74754918 0.15738994 0.69772691 0.26103586 0.66006422 0.24184576 0.73947632 0.25062954
+		 0.76980907 0.22589892 0.7840395 0.19388032 0.76980907 0.1742938 0.83283091 0.16287708
+		 0.81888849 0.19024065 0.76061124 0.14789979 0.75483173 0.15367928 0.69349587 0.27405781
+		 0.65201628 0.25292289 0.73947632 0.26764834 0.77596664 0.24485007 0.79717261 0.2119565
+		 0.73947632 0.28134042 0.7812258 0.26103586 0.8088851 0.22807732 0.83500928 0.2019531
+		 0.78545684 0.27405784 0.81888849 0.24184579 0.82693648 0.25292289 -0.28812164 0.28781158
+		 -0.28812164 0.238675 -0.26054797 0.23800445 -0.26054797 0.28653604 -0.38238066 0.28781158
+		 -0.38238066 0.238675 -0.28812164 0.18420672 -0.26054797 0.18420672 -0.23365328 0.23600912
+		 -0.23365328 0.28274083 -0.38238066 0.18420672 -0.28812164 0.12973845 -0.26054797
+		 0.130409 -0.23365328 0.18420672 -0.2080999 0.23273838 -0.2080999 0.2765193 -0.38238066
+		 0.12973845 -0.28812164 0.080601871 -0.26054797 0.08187741 -0.23365328 0.13240427
+		 -0.2080999 0.18420672 -0.38238066 0.080601871 -0.23365328 0.085672677;
+	setAttr ".uvtk[250:274]" -0.2080999 0.13567507 -0.2080999 0.09189415 0.33011702
+		 -0.41631114 0.33011702 -0.34234211 0.3025825 -0.36657459 0.3025825 -0.41503736 0.33011702
+		 -0.31285316 0.3025825 -0.31285316 0.27572593 -0.36458212 0.27572593 -0.41124752 0.4242425
+		 -0.34234211 0.4242425 -0.31285316 0.33011702 -0.28336415 0.3025825 -0.25913173 0.27572593
+		 -0.31285316 0.25020874 -0.36131597 0.25020874 -0.40503487 0.4242425 -0.28336415 0.33011702
+		 -0.20939517 0.3025825 -0.21066895 0.27572593 -0.26112416 0.25020874 -0.31285316 0.27572593
+		 -0.21445876 0.25020874 -0.26439032 0.25020874 -0.22067145;
 select -ne :time1;
 	setAttr ".o" 5;
 	setAttr ".unw" 5;
@@ -4503,14 +14741,20 @@ connectAttr "swordRN.phl[86]" "swordRN.phl[87]";
 connectAttr "sword:groupId3.msg" "swordRN.phl[88]";
 connectAttr "sword:groupId4.msg" "swordRN.phl[89]";
 connectAttr "polyUnite1.out" "|sword:knob1|sword:knobShape.i";
-connectAttr "polyAutoProj2.out" "pSphereShape1.i";
-connectAttr "polyAutoProj3.out" "pCubeShape1.i";
+connectAttr "polyTweakUV7.out" "pSphereShape1.i";
+connectAttr "polyTweakUV7.uvtk[0]" "pSphereShape1.uvst[0].uvtw";
+connectAttr "polyTweakUV4.out" "pCubeShape1.i";
+connectAttr "polyTweakUV4.uvtk[0]" "pCubeShape1.uvst[0].uvtw";
 connectAttr "groupId1.id" "pCube4Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCube4Shape.iog.og[0].gco";
-connectAttr "polyAutoProj1.out" "pCube4Shape.i";
-connectAttr "polyAutoProj4.out" "pSphereShape3.i";
-connectAttr "polyAutoProj5.out" "pCubeShape3.i";
-connectAttr "polyAutoProj6.out" "pCubeShape7.i";
+connectAttr "polyTweakUV3.out" "pCube4Shape.i";
+connectAttr "polyTweakUV3.uvtk[0]" "pCube4Shape.uvst[0].uvtw";
+connectAttr "polyTweakUV8.out" "pSphereShape3.i";
+connectAttr "polyTweakUV8.uvtk[0]" "pSphereShape3.uvst[0].uvtw";
+connectAttr "polyTweakUV5.out" "pCubeShape3.i";
+connectAttr "polyTweakUV5.uvtk[0]" "pCubeShape3.uvst[0].uvtw";
+connectAttr "polyTweakUV6.out" "pCubeShape7.i";
+connectAttr "polyTweakUV6.uvtk[0]" "pCubeShape7.uvst[0].uvtw";
 connectAttr "polyTweakUV2.out" "pCubeShape9.i";
 connectAttr "polyTweakUV2.uvtk[0]" "pCubeShape9.uvst[0].uvtw";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -4593,6 +14837,12 @@ connectAttr "polyMapCut1.out" "polyTweakUV1.ip";
 connectAttr "polyTweakUV1.out" "polyMapCut2.ip";
 connectAttr "polyMapCut2.out" "polyMapCut3.ip";
 connectAttr "polyMapCut3.out" "polyTweakUV2.ip";
+connectAttr "polyAutoProj1.out" "polyTweakUV3.ip";
+connectAttr "polyAutoProj3.out" "polyTweakUV4.ip";
+connectAttr "polyAutoProj5.out" "polyTweakUV5.ip";
+connectAttr "polyAutoProj6.out" "polyTweakUV6.ip";
+connectAttr "polyAutoProj2.out" "polyTweakUV7.ip";
+connectAttr "polyAutoProj4.out" "polyTweakUV8.ip";
 connectAttr "Maya_Lambert1SG.pa" ":renderPartition.st" -na;
 connectAttr "Maya_Lambert1.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
