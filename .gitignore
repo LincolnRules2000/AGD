@@ -125,3 +125,21 @@ UnityGame/Assets/Maya/scenes/.mayaSwatches/vit_walk.ma.swatches
 UnityGame/Assets/Maya/scenes/vit_walk.ma
 
 *.exr
+
+# ================================ # Houdini # ================================ # Houdini autosaves 
+*.hip~ *.hipnc~ *.hiplc~ 
+# Temp files 
+*.tmp *.bak 
+# Houdini cache folders 
+cache/ caches/ geo/ sim/ dops/ flip/ pyro/ vellum/ crowd/ particles/ oceans/ 
+# Geometry cache formats 
+*.bgeo *.bgeo.sc *.vdb 
+# ================================ # Renders / Outputs # ================================ 
+renders/ render/ images/ output/ 
+# ================================ # Logs # ================================ 
+*.log 
+# ================================ # OS / Editor junk # ================================ .DS_Store Thumbs.db *.swp *.swo .idea/ .vscode/ 
+# ================================ # Unity (if validating assets) # ================================ 
+Library/ Temp/ Obj/ Build/ Builds/ Logs/ UserSettings/ 
+# ================================ # Python # ================================ 
+__pycache__/ *.pyc 
