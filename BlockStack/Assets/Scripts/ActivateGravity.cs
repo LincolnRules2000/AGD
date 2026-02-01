@@ -1,12 +1,15 @@
-﻿//using System.Collections;
-using UnityEngine;
-//using UnityEngine.Events;
+﻿using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class ActivateGravity : MonoBehaviour
     {
-        void Update()
-        {
-            if (Input.GetMouseButtonDown(0))
-                Debug.Log("Pressed left-click.");
+        public GameObject targetObject;
+        public UnityEvent ClickEvent;
+
+        void OnMouseDown(){
+            ClickEvent.Invoke();
+            
+           // Debug.Log("AAAAAAA");
         }
     }
