@@ -143,3 +143,8 @@ renders/ render/ images/ output/
 Library/ Temp/ Obj/ Build/ Builds/ Logs/ UserSettings/ 
 # ================================ # Python # ================================ 
 __pycache__/ *.pyc 
+UnityGame/Assets/Maya/scenes/lamp_rig_1.ma
+
+UnityGame/Assets/Maya/scenes/lamp_rig_2.ma
+
+UnityGame/Assets/Maya/scenes/lamp_rig_3.ma
