@@ -33,6 +33,6 @@ public class BlockMove : MonoBehaviour
         if (movingRight)
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-        }
+        } 
     }
 }
