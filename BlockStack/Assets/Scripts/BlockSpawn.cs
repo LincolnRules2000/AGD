@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BlockSpawn : MonoBehaviour
 {
+    public List<GameObject> blocks = new List<GameObject>(); 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,17 +18,26 @@ public class BlockSpawn : MonoBehaviour
     public void CreateBlock(GameObject target)
     {
         int counter = 0;
+        Vector3 spawnPos = new Vector3(0,20,0);
         while (counter < 1)
         {
-            Instantiate(target);
+            Instantiate(target, spawnPos, Quaternion.identity);
             counter++;
+            blocks.Add(target);
             Debug.Log(counter);
         }
+    }
 
-        if (counter > 1)
+    public void ClearBlocks()
+    {
+        foreach (GameObject block in blocks)
         {
-            Destroy(target);
+            if(block == blocks[0])
+            {
+                continue;
+            }
+            blocks.Remove(block);
+            Destroy(block);
         }
-            
     }
 }
